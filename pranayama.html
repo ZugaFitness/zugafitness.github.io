@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
+  <meta name="description" content="Register for premium yoga classes at Zuga Fitness. Join certified instructors for personalized sessions.">
+  <title>Register for Yoga Classes - Zuga Fitness</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=veL3gy"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=veL3gy" type="text/css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Custom styling to match index.html theme */
+    .form-container {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    
+    #confirmation-message {
+      display: none;
+      margin-top: 20px;
+      text-align: center; /* Center the message and button */
+      padding: 30px; /* Add some padding */
+      border-radius: 15px; /* Softer edges */
+      background-color: #e9f5ee; /* Light green background */
+      border: 1px solid #c3e6cb; /* Green border */
+      color: #155724; /* Dark green text */
+      font-size: 1.2em; /* Slightly larger font */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    #confirmation-message h3 {
+        color: #1a3a5f; /* Match theme blue for heading */
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    
+    #confirmation-message p {
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    #confirmation-message .btn-primary {
+        background: linear-gradient(135deg, #1a3a5f 0%, #2a5a8f 100%);
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    #confirmation-message .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(26, 58, 95, 0.3);
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .form-header h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #1a3a5f;
+    }
+    
+    .form-header p {
+      font-size: 19px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .input-icon {
+      position: relative;
+    }
+    
+    .input-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1a3a5f;
+      font-size: 18px;
+      z-index: 10;
+    }
+    
+    .input-icon input, 
+    .input-icon select, 
+    .input-icon textarea {
+      padding-left: 45px;
+      border-radius: 10px;
+      border: 1px solid #e1e5eb;
+      transition: all 0.3s ease;
+      background-color: #fafbfd;
+      height: 50px;
+    }
+    
+    .input-icon input:focus, 
+    .input-icon select:focus, 
+    .input-icon textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+      background-color: #fff;
+    }
+    
+    textarea.form-control {
+      height: auto !important;
+      min-height: 120px;
+      padding-top: 15px;
+    }
+    
+    .checkbox-group {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .checkbox-group h3 {
+      margin-bottom: 18px;
+      color: #1a3a5f;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .checkbox-group h3 i {
+      margin-right: 10px;
+      color: #d4af37;
+    }
+    
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    
+    .checkbox-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+    
+    .checkbox-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-color: #e6c875;
+    }
+    
+    .phone-container {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .phone-container .country-code {
+      flex: 0 0 120px;
+    }
+    
+    .phone-container .phone-input {
+      flex: 1;
+    }
+    
+    .same-as-contact {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      padding-left: 5px;
+    }
+    
+    .same-as-contact input {
+      margin-right: 10px;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, #1a3a5f 0%, #2a5a8f 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 30px auto 0;
+      width: 240px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(26, 58, 95, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(26, 58, 95, 0.35);
+    }
+    
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .form-group-col {
+      flex: 1 1 calc(50% - 30px);
+      margin: 0 15px 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .form-group-col {
+        flex: 1 1 100%;
+      }
+      
+      .phone-container {
+        flex-direction: column;
+      }
+      
+      .phone-container .country-code {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" alt="zuga fitness logo" style="height: 4.3rem;">
+            </a>
+          </span>
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-4" href="index.html">Zuga Fitness</a></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html#features017-1" aria-expanded="false">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://forms.gle/pWFv6fxdqcxUc6FD7" target="_blank">Join Us</a></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- New form matching the specified Google Form -->
+  <section class="form-container cid-uNI9xBgcqE" id="registration-form">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 content-head">
+          <div class="form-header">
+            <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Join Our Meditation Community</strong>
+            </h2>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+              Fill out the form below to register for our meditation sessions. Our team will contact you shortly to complete your enrollment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div id="confirmation-message" class="alert alert-success col-12">
+            <h3>Thank You for Your Registration!</h3>
+            <p>Your interest in Zuga Fitness has been successfully received. Our dedicated team will be in touch with you shortly to finalize your enrollment and commence your personalized meditation journey. We look forward to welcoming you to our community!</p>
+            <a href="index.html" class="btn btn-primary">Return to Home Page</a>
+          </div>
+          
+          <form id="meditation-registration-form" class="mbr-form form-with-styler">
+            <div class="dragArea">
+              <div class="form-row">
+                <div class="form-group-col">
+                  <label for="full-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" id="full-name" name="entry.755930631" required placeholder="John Smith">
+                  </div>
+                </div>
+                
+                <div class="form-group-col">
+                  <label for="email" class="form-label">Email <span class="required-star">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" class="form-control" id="email" name="entry.2138703679" required placeholder="john@example.com">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group-col">
+                  <label for="country" class="form-label">Country (currently living in) <span class="required-star">*</span></label>
+                  <div class="input-icon">
+                    <i class="fas fa-globe"></i>
+                    <input type="text" class="form-control" id="country" name="entry.560033932" required placeholder="India">
+                  </div>
+                </div>
+                
+                <div class="form-group-col">
+                  <label for="phone" class="form-label">Contact Number <span class="required-star">*</span></label>
+                  <div class="phone-container">
+                    <div class="form-group country-code">
+                      <div class="input-icon">
+                        <i class="fas fa-flag"></i>
+                        <select class="form-control" id="country-code-contact" required>
+                          <option value="" disabled selected>Code</option>
+                          <option value="+91">India (+91)</option>
+                          <option value="+1">USA (+1)</option>
+                          <option value="+44">UK (+44)</option>
+                          <option value="+61">Australia (+61)</option>
+                          <option value="+65">Singapore (+65)</option>
+                          <option value="+971">UAE (+971)</option>
+                          <option value="+86">China (+86)</option>
+                          <option value="+81">Japan (+81)</option>
+                          <option value="+82">South Korea (+82)</option>
+                          <option value="+60">Malaysia (+60)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group phone-input">
+                      <div class="input-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" class="form-control phone-number" id="phone-number-contact" placeholder="Phone Number" required>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" id="phone" name="entry.1612789451">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group-col">
+                  <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                  <div class="phone-container">
+                    <div class="form-group country-code">
+                      <div class="input-icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <select class="form-control" id="country-code-whatsapp">
+                          <option value="" disabled selected>Code</option>
+                          <option value="+91">India (+91)</option>
+                          <option value="+1">USA (+1)</option>
+                          <option value="+44">UK (+44)</option>
+                          <option value="+61">Australia (+61)</option>
+                          <option value="+65">Singapore (+65)</option>
+                          <option value="+971">UAE (+971)</option>
+                          <option value="+86">China (+86)</option>
+                          <option value="+81">Japan (+81)</option>
+                          <option value="+82">South Korea (+82)</option>
+                          <option value="+60">Malaysia (+60)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group phone-input">
+                      <div class="input-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <input type="tel" class="form-control phone-number" id="whatsapp-number" placeholder="WhatsApp Number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="same-as-contact">
+                    <input class="form-check-input" type="checkbox" id="same-as-contact">
+                    <label class="form-check-label" for="same-as-contact">Same as contact number</label>
+                  </div>
+                  <input type="hidden" id="whatsapp" name="entry.1085692733">
+                </div>
+              </div>
+              
+              <!-- Meditation Goals Section -->
+              <div class="form-row">
+                <div class="form-group-col">
+                  <div class="checkbox-group">
+                    <h3><i class="fas fa-bullseye"></i> Your Meditation Goals (Select all that apply)</h3>
+                    <div class="checkbox-grid">
+                      <div class="checkbox-item">
+                        <input class="form-check-input" type="checkbox" id="stress" name="entry.572719167" value="Reduce stress/anxiety">
+                        <label class="form-check-label" for="stress">Reduce stress/anxiety</label>
+                      </div>
+                      
+                      <div class="checkbox-item">
+                        <input class="form-check-input" type="checkbox" id="sleep" name="entry.572719167" value="Improve sleep quality">
+                        <label class="form-check-label" for="sleep">Improve sleep quality</label>
+                      </div>
+                      
+                      <div class="checkbox-item">
+                        <input class="form-check-input" type="checkbox" id="focus" name="entry.572719167" value="Enhance focus/productivity">
+                        <label class="form-check-label" for="focus">Enhance focus/productivity</label>
+                      </div>
+                      
+                      <div class="checkbox-item">
+                        <input class="form-check-input" type="checkbox" id="emotional" name="entry.572719167" value="Emotional balance/healing">
+                        <label class="form-check-label" for="emotional">Emotional balance/healing</label>
+                      </div>
+                      
+                      <div class="checkbox-item">
+                        <input class="form-check-input" type="checkbox" id="breathwork" name="entry.572719167" value="Explore breathwork basics">
+                        <label class="form-check-label" for="breathwork">Explore breathwork basics</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Meditation Experience Section -->
+              <div class="form-row">
+                <div class="form-group-col">
+                  <div class="checkbox-group">
+                    <h3><i class="fas fa-hourglass-half"></i> Meditation Frequency</h3>
+                    <div class="radio-group">
+                      <div class="radio-item">
+                        <input class="form-check-input" type="radio" id="occasional" name="entry.37118880" value="Occasionally (1–2 times/week)">
+                        <label class="form-check-label" for="occasional">Occasionally (1–2 times/week)</label>
+                      </div>
+                      
+                      <div class="radio-item">
+                        <input class="form-check-input" type="radio" id="regular" name="entry.37118880" value="Regularly (3–4 times/week)">
+                        <label class="form-check-label" for="regular">Regularly (3–4 times/week)</label>
+                      </div>
+                      
+                      <div class="radio-item">
+                        <input class="form-check-input" type="radio" id="daily" name="entry.37118880" value="Daily (5+ times/week)">
+                        <label class="form-check-label" for="daily">Daily (5+ times/week)</label>
+                      </div>
+                      
+                      <div class="radio-item">
+                        <input class="form-check-input" type="radio" id="never" name="entry.37118880" value="Never meditated">
+                        <label class="form-check-label" for="never">Never meditated</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Health Information -->
+              <div class="form-row">
+                <div class="form-group-col">
+                  <div class="checkbox-group">
+                    <h3><i class="fas fa-heartbeat"></i> Health Information</h3>
+                    <div class="form-group">
+                      <label for="health-concerns" class="form-label">Any injuries or health conditions?</label>
+                      <div class="input-icon">
+                        <i class="fas fa-file-medical-alt" style="top: 20px;"></i>
+                        <textarea class="form-control" id="health-concerns" name="entry.565957959" rows="3" placeholder="Please describe any injuries, health conditions, or physical limitations..."></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Available Timing -->
+              <div class="form-row">
+                <div class="form-group-col">
+                  <div class="checkbox-group">
+                    <h3><i class="fas fa-clock"></i> Scheduling</h3>
+                    <div class="form-group">
+                      <label for="time-slot" class="form-label">Available timing for Call <span class="required-star">*</span></label>
+                      <div class="input-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" class="form-control" id="time-slot" name="entry.1228218832" placeholder="Example: Weekdays after 6PM, Weekends anytime" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" class="submit-btn">Register Now <i class="fas fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer remains unchanged -->
+  <section data-bs-version="5.1" class="footer3 cid-uEEJbxW94M" once="footers" id="footer-3-uEEJbxW94M">
+    <div class="container">
+      <div class="row">
+        <div class="row-links">
+          <ul class="header-menu">
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="index.html" class="text-white text-primary">Home</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="index.html#features017-1" class="text-white text-primary">Classes</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="index.html#about-us-5-uEEJbxUmPk" class="text-white text-primary">Blog</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="contact.html" class="text-white text-primary">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 mt-4">
+          <div class="social-row">
+            <div class="soc-item">
+              <a href="https://www.facebook.com/share/15zQqbzBEd/?mibextid=wwXIfr" target="_blank">
+                <span class="mbr-iconfont display-7 socicon-facebook socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-twitter socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://www.instagram.com/zuga_fitness?igsh=cjgxaXcxOTRpdXhy&utm_source=qr" target="_blank">
+                <span class="mbr-iconfont socicon-instagram socicon"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon socicon-linkedin"></span>
+              </a>
+            </div>
+            <div class="soc-item">
+              <a href="https://mobiri.se/" target="_blank">
+                <span class="mbr-iconfont socicon-twitch"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-5">
+          <p class="mbr-fonts-style copyright display-7">© 2025 Zuga Fitness. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+
+  <script>
+    // Handle "Same as contact number" checkbox
+    const sameAsContact = document.getElementById('same-as-contact');
+    sameAsContact.addEventListener('change', function() {
+      if (this.checked) {
+        const contactCode = document.getElementById('country-code-contact').value;
+        const contactNumber = document.getElementById('phone-number-contact').value;
+        
+        document.getElementById('country-code-whatsapp').value = contactCode;
+        document.getElementById('whatsapp-number').value = contactNumber;
+      } else {
+        document.getElementById('country-code-whatsapp').value = '';
+        document.getElementById('whatsapp-number').value = '';
+      }
+    });
+    
+    // Form submission to Google Forms
+    const form = document.getElementById('meditation-registration-form');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      submitBtn.disabled = true;
+      
+      // Combine country code and phone number
+      const contactCode = document.getElementById('country-code-contact').value;
+      const contactNumber = document.getElementById('phone-number-contact').value;
+      document.getElementById('phone').value = contactCode + contactNumber;
+      
+      const whatsappCode = document.getElementById('country-code-whatsapp').value;
+      const whatsappNumber = document.getElementById('whatsapp-number').value;
+      document.getElementById('whatsapp').value = whatsappCode + whatsappNumber;
+      
+      // Prepare form data for Google Forms
+      const formData = new FormData(form);
+      const url = 'https://docs.google.com/forms/d/e/1FAIpQLSfeG8VFvRcyyXtalAeqY3GhL3ZbY8oVb9V91ZVmpEx4tr2NHQ/formResponse';
+      
+      // Create URL parameters
+      const params = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        if (key === 'entry.572719167') {
+          // For checkboxes, we need to handle multiple values
+          const existingValues = params.getAll(key);
+          if (!existingValues.includes(value)) {
+            params.append(key, value);
+          }
+        } else {
+          params.append(key, value);
+        }
+      }
+      
+      // Submit to Google Forms
+      fetch(`${url}?${params.toString()}`, {
+        method: 'POST',
+        mode: 'no-cors'
+      })
+      .then(() => {
+        // Success message
+        document.getElementById('confirmation-message').style.display = 'block';
+        form.style.display = 'none';
+      })
+      .catch(() => {
+        // Error message
+        alert('There was an error submitting your form. Please try again.');
+      })
+      .finally(() => {
+        // Reset button state
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>
