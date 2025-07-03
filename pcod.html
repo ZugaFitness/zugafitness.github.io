@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCOS Management Program Registration - Zuga Wellness</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #8a4a76;
+      --secondary: #d8a5b5;
+      --accent: #5d9b9b;
+      --light: #f8f4f7;
+      --dark: #3a2e3a;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdf9fc 0%, #f5eef7 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d8a5b533' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    .header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      box-shadow: 0 4px 15px rgba(138, 74, 118, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-icon {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 28px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(138, 74, 118, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(138, 74, 118, 0.4);
+    }
+
+    /* Form Container */
+    .form-container {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .form-content {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(138, 74, 118, 0.15);
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .form-decoration {
+      flex: 1;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .decoration-content {
+      text-align: center;
+      color: white;
+      max-width: 400px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .decoration-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .decoration-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .feature-list {
+      text-align: left;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    .feature-icon {
+      background: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .form-section {
+      flex: 1.5;
+      padding: 60px;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .form-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .form-header p {
+      font-size: 18px;
+      color: var(--dark);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-divider {
+      height: 4px;
+      width: 100px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      margin: 25px auto;
+      border-radius: 10px;
+    }
+
+    /* Form Styles */
+    #pcos-management-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .required-star {
+      color: #e74c3c;
+    }
+
+    .input-icon {
+      position: relative;
+    }
+
+    .input-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+      font-size: 18px;
+      z-index: 10;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 15px 15px 15px 45px;
+      border: 1px solid #e1e5eb;
+      border-radius: 12px;
+      background-color: #fafbfd;
+      transition: var(--transition);
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 120px;
+      padding-top: 15px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(93, 155, 155, 0.15);
+      background-color: #fff;
+    }
+
+    .phone-container {
+      display: flex;
+      gap: 15px;
+    }
+
+    .country-code {
+      flex: 0 0 120px;
+    }
+
+    .phone-input {
+      flex: 1;
+    }
+
+    .same-as-contact {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .same-as-contact input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    /* Checkbox and Radio Groups */
+    .form-group-container {
+      background-color: #f8f4f7;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid #e9dde6;
+    }
+
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .group-header i {
+      color: var(--primary);
+      font-size: 24px;
+    }
+
+    .group-header h3 {
+      font-size: 20px;
+      color: var(--primary);
+    }
+
+    .checkbox-grid, .radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
+    }
+
+    .checkbox-item, .radio-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #e9dde6;
+      transition: var(--transition);
+    }
+
+    .checkbox-item:hover, .radio-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(138, 74, 118, 0.1);
+      border-color: var(--secondary);
+    }
+
+    .checkbox-item input, .radio-item input {
+      width: auto;
+      margin-right: 12px;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border: none;
+      padding: 18px;
+      font-size: 18px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      box-shadow: 0 5px 20px rgba(138, 74, 118, 0.3);
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(138, 74, 118, 0.4);
+    }
+
+    .submit-btn i {
+      margin-left: 10px;
+    }
+
+    /* Confirmation Message */
+    #confirmation-message {
+      display: none;
+      text-align: center;
+      padding: 50px 30px;
+      border-radius: 20px;
+      background-color: #e9f5f5;
+      border: 1px solid #c3e6e6;
+      color: #155754;
+      margin-top: 40px;
+    }
+
+    #confirmation-message h3 {
+      color: var(--accent);
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    #confirmation-message p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 5px 15px rgba(138, 74, 118, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(138, 74, 118, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-about p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .footer-links h4, .footer-contact h4 {
+      font-size: 20px;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-links h4::after, .footer-contact h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--secondary);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .contact-item i {
+      color: var(--secondary);
+      font-size: 20px;
+      margin-top: 3px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0.7;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .form-content {
+        flex-direction: column;
+      }
+      
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #pcos-management-form {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-section {
+        padding: 40px;
+      }
+      
+      .phone-container {
+        flex-direction: column;
+      }
+      
+      .country-code {
+        flex: 1;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form-section {
+        padding: 30px 20px;
+      }
+      
+      .form-header h1 {
+        font-size: 32px;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <div class="logo-text">Zuga Wellness</div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#">Programs</a>
+          <a href="#">About</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Contact</a>
+        </nav>
+        <button class="cta-button">Join Our Community</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Form Container -->
+  <div class="form-container">
+    <div class="container">
+      <div class="form-content">
+        <div class="form-decoration">
+          <div class="decoration-content">
+            <h2>Your Journey to Wellness Starts Here</h2>
+            <p>Join our specialized PCOS Management Program designed to help you regain balance and vitality through holistic approaches.</p>
+            
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+                <div>
+                  <h4>Hormonal Balance</h4>
+                  <p>Natural approaches to regulate your cycle</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-apple-alt"></i>
+                </div>
+                <div>
+                  <h4>Nutrition Guidance</h4>
+                  <p>Personalized dietary plans</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-hands"></i>
+                </div>
+                <div>
+                  <h4>Yoga Therapy</h4>
+                  <p>Specially designed yoga sequences</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <div class="form-header">
+            <h1>PCOS Management Program</h1>
+            <div class="form-divider"></div>
+            <p>Take the first step toward hormonal balance and wellness. Complete this form to schedule your consultation with our specialists.</p>
+          </div>
+          
+          <!-- Confirmation Message -->
+          <div id="confirmation-message">
+            <h3>Thank You for Registering!</h3>
+            <p>Your application for the PCOS Management Program has been received. Our specialist will contact you within 24 hours to discuss your personalized wellness plan.</p>
+            <a href="index.html" class="btn-primary">Return to Home Page</a>
+          </div>
+          
+          <!-- Registration Form -->
+          <form id="pcos-management-form">
+            <div class="form-group">
+              <label for="full-name">Full Name <span class="required-star">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" id="full-name" name="entry.755930631" required placeholder="Your full name">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email <span class="required-star">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="entry.2138703679" required placeholder="your.email@example.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="country">Country <span class="required-star">*</span></label>
+              <div class="input-icon">
+                <i class="fas fa-globe"></i>
+                <input type="text" id="country" name="entry.560033932" required placeholder="Where you currently live">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Contact Number <span class="required-star">*</span></label>
+              <div class="phone-container">
+                <div class="country-code">
+                  <div class="input-icon">
+                    <i class="fas fa-flag"></i>
+                    <select id="country-code-contact" required>
+                      <option value="" disabled selected>Code</option>
+                      <option value="+91">India (+91)</option>
+                      <option value="+1">USA (+1)</option>
+                      <option value="+44">UK (+44)</option>
+                      <option value="+61">Australia (+61)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="phone-input">
+                  <div class="input-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone-number-contact" placeholder="Phone number" required>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" id="phone" name="entry.1612789451">
+            </div>
+            
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp Number</label>
+              <div class="phone-container">
+                <div class="country-code">
+                  <div class="input-icon">
+                    <i class="fab fa-whatsapp"></i>
+                    <select id="country-code-whatsapp">
+                      <option value="" disabled selected>Code</option>
+                      <option value="+91">India (+91)</option>
+                      <option value="+1">USA (+1)</option>
+                      <option value="+44">UK (+44)</option>
+                      <option value="+61">Australia (+61)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="phone-input">
+                  <div class="input-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <input type="tel" id="whatsapp-number" placeholder="WhatsApp number">
+                  </div>
+                </div>
+              </div>
+              <div class="same-as-contact">
+                <input type="checkbox" id="same-as-contact">
+                <label for="same-as-contact">Same as contact number</label>
+              </div>
+              <input type="hidden" id="whatsapp" name="entry.1085692733">
+            </div>
+            
+            <!-- PCOS Diagnosis Section -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-stethoscope"></i>
+                  <h3>PCOS Diagnosis Status <span class="required-star">*</span></h3>
+                </div>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="diagnosed" name="entry.301936254" value="Yes (diagnosed by a doctor)" required>
+                    <label for="diagnosed">Yes (diagnosed by a doctor)</label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="symptoms" name="entry.301936254" value="No, but experiencing symptoms">
+                    <label for="symptoms">No, but experiencing symptoms</label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="testing" name="entry.301936254" value="Undergoing testing">
+                    <label for="testing">Undergoing testing</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Symptoms Section -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-file-medical"></i>
+                  <h3>Current Symptoms (Select all that apply)</h3>
+                </div>
+                <div class="checkbox-grid">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="irregular-periods" name="entry.1335570978" value="Irregular periods">
+                    <label for="irregular-periods">Irregular periods</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="weight-gain" name="entry.1335570978" value="Weight gain/retention">
+                    <label for="weight-gain">Weight gain/retention</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="fatigue" name="entry.1335570978" value="Fatigue/low energy">
+                    <label for="fatigue">Fatigue/low energy</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="mood-swings" name="entry.1335570978" value="Mood swings/anxiety">
+                    <label for="mood-swings">Mood swings/anxiety</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="acne" name="entry.1335570978" value="Acne/skin issues">
+                    <label for="acne">Acne/skin issues</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="hair-loss" name="entry.1335570978" value="Hair loss/excess hair">
+                    <label for="hair-loss">Hair loss/excess hair</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Preferred Approach -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-heart"></i>
+                  <h3>Preferred Management Approach</h3>
+                </div>
+                <div class="checkbox-grid">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="ayurveda" name="entry.572719167" value="Ayurveda/homeopathy">
+                    <label for="ayurveda">Ayurveda/homeopathy</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="conventional" name="entry.572719167" value="Conventional medicine">
+                    <label for="conventional">Conventional medicine</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="lifestyle" name="entry.572719167" value="Lifestyle modifications">
+                    <label for="lifestyle">Lifestyle modifications</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="combination" name="entry.572719167" value="Combination approach">
+                    <label for="combination">Combination approach</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Program Goals -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-bullseye"></i>
+                  <h3>Primary Goals for Program</h3>
+                </div>
+                <div class="checkbox-grid">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="regulate" name="entry.825316178" value="Regulate menstrual cycles">
+                    <label for="regulate">Regulate menstrual cycles</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="manage-weight" name="entry.825316178" value="Manage weight naturally">
+                    <label for="manage-weight">Manage weight naturally</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="reduce-stress" name="entry.825316178" value="Reduce stress/anxiety">
+                    <label for="reduce-stress">Reduce stress/anxiety</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="improve-fertility" name="entry.825316178" value="Improve fertility">
+                    <label for="improve-fertility">Improve fertility</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="boost-energy" name="entry.825316178" value="Boost energy levels">
+                    <label for="boost-energy">Boost energy levels</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Activity Level -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-walking"></i>
+                  <h3>Current Activity Level <span class="required-star">*</span></h3>
+                </div>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="light" name="entry.1073390947" value="Light activity (1–2 days/week)" required>
+                    <label for="light">Light activity (1–2 days/week)</label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="moderate" name="entry.1073390947" value="Moderate activity (3–4 days/week)">
+                    <label for="moderate">Moderate activity (3–4 days/week)</label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="active" name="entry.1073390947" value="Active (5+ days/week)">
+                    <label for="active">Active (5+ days/week)</label>
+                  </div>
+                  
+                  <div class="radio-item">
+                    <input type="radio" id="sedentary" name="entry.1073390947" value="Mostly sedentary">
+                    <label for="sedentary">Mostly sedentary</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Health Conditions -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-file-medical-alt"></i>
+                  <h3>Other Health Conditions</h3>
+                </div>
+                <div class="checkbox-grid">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="diabetes" name="entry.1041641137" value="Diabetes">
+                    <label for="diabetes">Diabetes</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="thyroid" name="entry.1041641137" value="Thyroid issues">
+                    <label for="thyroid">Thyroid issues</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="hypertension" name="entry.1041641137" value="Hypertension">
+                    <label for="hypertension">Hypertension</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="cholesterol" name="entry.1041641137" value="High cholesterol">
+                    <label for="cholesterol">High cholesterol</label>
+                  </div>
+                  
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="insulin" name="entry.1041641137" value="Insulin resistance">
+                    <label for="insulin">Insulin resistance</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Scheduling -->
+            <div class="form-group full-width">
+              <div class="form-group-container">
+                <div class="group-header">
+                  <i class="fas fa-clock"></i>
+                  <h3>Available Timing for Call <span class="required-star">*</span></h3>
+                </div>
+                <div class="input-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                  <input type="text" id="time-slot" name="entry.1228218832" placeholder="Example: Weekdays after 6PM, Weekends anytime" required>
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Apply Now <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">Zuga Wellness</div>
+        <p>Specializing in holistic approaches to women's health and hormonal balance through yoga, nutrition, and lifestyle medicine.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">PCOS Program</a></li>
+          <li><a href="#">Yoga Classes</a></li>
+          <li><a href="#">Nutrition Plans</a></li>
+          <li><a href="#">Success Stories</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">PCOS Guide</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Meditations</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Wellness Street, Mumbai, India</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@zugawellness.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      &copy; 2025 Zuga Wellness. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Handle "Same as contact number" checkbox
+    const sameAsContact = document.getElementById('same-as-contact');
+    sameAsContact.addEventListener('change', function() {
+      if (this.checked) {
+        const contactCode = document.getElementById('country-code-contact').value;
+        const contactNumber = document.getElementById('phone-number-contact').value;
+        
+        document.getElementById('country-code-whatsapp').value = contactCode;
+        document.getElementById('whatsapp-number').value = contactNumber;
+      } else {
+        document.getElementById('country-code-whatsapp').value = '';
+        document.getElementById('whatsapp-number').value = '';
+      }
+    });
+    
+    // Form submission to Google Forms
+    const form = document.getElementById('pcos-management-form');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      submitBtn.disabled = true;
+      
+      // Combine country code and phone number
+      const contactCode = document.getElementById('country-code-contact').value;
+      const contactNumber = document.getElementById('phone-number-contact').value;
+      document.getElementById('phone').value = contactCode + contactNumber;
+      
+      const whatsappCode = document.getElementById('country-code-whatsapp').value;
+      const whatsappNumber = document.getElementById('whatsapp-number').value;
+      document.getElementById('whatsapp').value = whatsappCode + whatsappNumber;
+      
+      // Prepare form data for Google Forms
+      const formData = new FormData(form);
+      const url = 'https://docs.google.com/forms/d/e/1FAIpQLScTQU9pJPltZX0KEzPqk4TMRalZY-LFJp_lXEJjhsxAzcMGng/formResponse';
+      
+      // Create URL parameters
+      const params = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        if (key === 'entry.1335570978' || key === 'entry.572719167' || 
+            key === 'entry.825316178' || key === 'entry.1041641137') {
+          // For checkboxes, we need to handle multiple values
+          const existingValues = params.getAll(key);
+          if (!existingValues.includes(value)) {
+            params.append(key, value);
+          }
+        } else {
+          params.append(key, value);
+        }
+      }
+      
+      // Submit to Google Forms
+      fetch(`${url}?${params.toString()}`, {
+        method: 'POST',
+        mode: 'no-cors'
+      })
+      .then(() => {
+        // Success message
+        document.getElementById('confirmation-message').style.display = 'block';
+        form.style.display = 'none';
+      })
+      .catch(() => {
+        // Error message
+        alert('There was an error submitting your form. Please try again.');
+      })
+      .finally(() => {
+        // Reset button state
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>
