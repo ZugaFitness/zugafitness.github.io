@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
+  <meta name="description" content="Register for senior yoga classes at Zuga Fitness. Gentle sessions designed for seniors to improve flexibility and balance.">
+  <title>Senior Yoga Registration - Zuga Fitness</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=veL3gy"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=veL3gy" type="text/css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Senior Yoga Custom Styling */
+    .senior-yoga-header {
+      background: linear-gradient(135deg, #1a3a5f 0%, #2a5a8f 100%);
+      color: white;
+      padding: 60px 0 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .senior-yoga-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M20,20 Q40,5 60,20 T100,20 Q85,40 100,60 T100,100 Q60,85 60,100 T20,100 Q5,85 20,60 T20,20" fill="white"/></svg>');
+      background-size: 200px;
+    }
+    
+    .senior-yoga-header h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .senior-yoga-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      opacity: 0.9;
+    }
+    
+    .senior-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #d4af37;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .form-container {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+    
+    #confirmation-message {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #e9f5ee;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      font-size: 1.2em;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #confirmation-message h3 {
+        color: #1a3a5f;
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    
+    #confirmation-message p {
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    #confirmation-message .btn-primary {
+        background: linear-gradient(135deg, #1a3a5f 0%, #2a5a8f 100%);
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+    }
+
+    #confirmation-message .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(26, 58, 95, 0.3);
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .form-header h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #1a3a5f;
+    }
+    
+    .form-header p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.7;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .input-icon {
+      position: relative;
+    }
+    
+    .input-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1a3a5f;
+      font-size: 18px;
+      z-index: 10;
+    }
+    
+    .input-icon input, 
+    .input-icon select, 
+    .input-icon textarea {
+      padding-left: 45px;
+      border-radius: 10px;
+      border: 1px solid #e1e5eb;
+      transition: all 0.3s ease;
+      background-color: #fafbfd;
+      height: 50px;
+    }
+    
+    .input-icon input:focus, 
+    .input-icon select:focus, 
+    .input-icon textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+      background-color: #fff;
+    }
+    
+    textarea.form-control {
+      height: auto !important;
+      min-height: 120px;
+      padding-top: 15px;
+    }
+    
+    .checkbox-group, .radio-group {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .checkbox-group h3, .radio-group h3 {
+      margin-bottom: 18px;
+      color: #1a3a5f;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .checkbox-group h3 i, .radio-group h3 i {
+      margin-right: 10px;
+      color: #d4af37;
+    }
+    
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    
+    .checkbox-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+    
+    .checkbox-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-color: #e6c875;
+    }
+    
+    .phone-container {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .phone-container .country-code {
+      flex: 0 0 120px;
+    }
+    
+    .phone-container .phone-input {
+      flex: 1;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, #1a3a5f 0%, #2a5a8f 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 30px auto 0;
+      width: 240px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(26, 58, 95, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(26, 58, 95, 0.35);
+    }
+    
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .form-group-col {
+      flex: 1 1 calc(50% - 30px);
+      margin: 0 15px 30px;
+    }
+    
+    .senior-benefits {
+      background: #f0f7ff;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+      border-left: 4px solid #1a3a5f;
+    }
+    
+    .senior-benefits h3 {
+      color: #1a3a5f;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .senior-benefits h3 i {
+      margin-right: 10px;
+      color: #d4af37;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    
+    .benefit-item {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .benefit-item i {
+      font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    
+    .benefit-item h4 {
+      color: #1a3a5f;
+      margin-bottom: 5px;
+    }
+    
+    @media (max-width: 768px) {
+      .form-group-col {
+        flex: 1 1 100%;
+      }
+      
+      .phone-container {
+        flex-direction: column;
+      }
+      
+      .phone-container .country-code {
+        flex: 1;
+      }
+      
+      .form-header h2 {
+        font-size: 28px;
+      }
+      
+      .senior-yoga-header h2 {
+        font-size: 2.2rem;
+      }
+    }
+    
+    .required::after {
+      content: " *";
+      color: #e53e3e;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header Section -->
+  <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" alt="zuga fitness logo" style="height: 4.3rem;">
+            </a>
+          </span>
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-4" href="index.html">Zuga Fitness</a></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html#features017-1" aria-expanded="false">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://forms.gle/pWFv6fxdqcxUc6FD7" target="_blank">Join Us</a></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+        
+        <!-- Registration Form -->
+        <form id="registration-form" class="form-container" action="https://docs.google.com/forms/d/e/1FAIpQLSdy-eC1qAtPlPBt7ZEMXj_Q_kPjitf-l7UM5Y5ZnxEa9cS7lg/formResponse" method="POST">
+            <!-- Personal Information Section -->
+            <div class="section-title">Personal Information</div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="full-name" class="required">Full Name</label>
+                    <input type="text" id="full-name" name="entry.755930631" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="entry.2138703679" required placeholder="Enter your email">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="country" class="required">Country Currently Living In</label>
+                    <input type="text" id="country" name="entry.560033932" required placeholder="Enter your country">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="required">Contact Number (with Country Code)</label>
+                    <input type="tel" id="phone" name="entry.1612789451" required placeholder="e.g., +1 1234567890">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="emergency-contact" class="required">Emergency Contact Name & Number (with Country Code)</label>
+                <input type="text" id="emergency-contact" name="entry.1085692733" required placeholder="Name and phone number with country code">
+            </div>
+            
+            <!-- Yoga Experience Section -->
+            <div class="section-title">Yoga Experience</div>
+            
+            <div class="form-group">
+                <label class="required">Age Group</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="age-50-60" name="entry.713141589" value="50–60 years" required>
+                        <label for="age-50-60" class="radio-label">50–60 years</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="age-61-70" name="entry.713141589" value="61–70 years">
+                        <label for="age-61-70" class="radio-label">61–70 years</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="age-71-plus" name="entry.713141589" value="71 and above">
+                        <label for="age-71-plus" class="radio-label">71 and above</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Experience Level</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="beginner" name="entry.1204961857" value="Beginner (tried a few classes)" required>
+                        <label for="beginner" class="radio-label">Beginner (tried a few classes)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="intermediate" name="entry.1204961857" value="Intermediate (6+ months)">
+                        <label for="intermediate" class="radio-label">Intermediate (6+ months)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="advanced" name="entry.1204961857" value="Advanced (2+ years)">
+                        <label for="advanced" class="radio-label">Advanced (2+ years)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Expected Commitment</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="commit-1-6" name="entry.37118880" value="1–6 months of practice" required>
+                        <label for="commit-1-6" class="radio-label">1–6 months of practice</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="commit-7-12" name="entry.37118880" value="7–12 months of practice">
+                        <label for="commit-7-12" class="radio-label">7–12 months of practice</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="commit-1-plus" name="entry.37118880" value="More than 1 year">
+                        <label for="commit-1-plus" class="radio-label">More than 1 year</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Health Information Section -->
+            <div class="section-title">Health Information</div>
+            
+            <div class="form-group">
+                <label class="required">Health Conditions (select all that apply)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="arthritis" name="entry.572719167" value="Arthritis/Joint Pain">
+                        <label for="arthritis" class="checkbox-label">Arthritis/Joint Pain</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hypertension" name="entry.572719167" value="Hypertension">
+                        <label for="hypertension" class="checkbox-label">Hypertension</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="surgery" name="entry.572719167" value="Recent Surgery (e.g., hip/knee replacement)">
+                        <label for="surgery" class="checkbox-label">Recent Surgery (e.g., hip/knee replacement)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="balance" name="entry.572719167" value="Balance Issues">
+                        <label for="balance" class="checkbox-label">Balance Issues</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="none" name="entry.572719167" value="None">
+                        <label for="none" class="checkbox-label">None</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="medical-info" class="required">Do you have any injuries, medical conditions, or physical limitations we should know about?</label>
+                <textarea id="medical-info" name="entry.565957959" rows="4" required placeholder="Please describe any relevant health information"></textarea>
+            </div>
+            
+            <!-- Availability Section -->
+            <div class="section-title">Availability</div>
+            
+            <div class="form-group">
+                <label for="call-timing" class="required">Available Timing for Call</label>
+                <input type="text" id="call-timing" name="entry.1228218832" required placeholder="e.g., Weekdays 2-4 PM, Weekends mornings">
+            </div>
+            
+            <div class="note">
+                <strong>Note:</strong> After submitting this form, we will contact you to discuss class schedules and answer any questions you may have about our senior yoga program. All information provided will be kept confidential.
+            </div>
+            
+            <div class="btn-container">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Registration
+                </button>
+            </div>
+        </form>
+        
+        <!-- Thank You Message (Hidden by default) -->
+        <div id="thank-you-message">
+            <div class="thank-you-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2>Thank You for Registering!</h2>
+            <p>Your registration has been received successfully. We will contact you within 2 business days to discuss your yoga class schedule and answer any questions you may have.</p>
+            <p>In the meantime, take a deep breath and prepare for your journey to better wellness!</p>
+            <button class="submit-btn" onclick="location.reload()">
+                <i class="fas fa-undo"></i> Submit Another Response
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Serenity Yoga</h3>
+                    <p>Specializing in gentle yoga for seniors since 2010. Our certified instructors focus on safety, accessibility, and creating a supportive community for all fitness levels.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Peaceful Lane, Tranquil City</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@serenityyoga.com</span>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Serenity Yoga for Seniors. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e53e3e;"></i> for your well-being</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create a temporary iframe for form submission
+            const iframe = document.createElement('iframe');
+            iframe.name = 'form-iframe';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            
+            // Set form target to the iframe
+            this.target = 'form-iframe';
+            
+            // Submit the form
+            this.submit();
+            
+            // Show thank you message after a short delay
+            setTimeout(function() {
+                document.getElementById('registration-form').style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+                document.body.appendChild(iframe);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
