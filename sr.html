@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuga Fitness - Senior Yoga Classes</title>
+    <style>
+        :root {
+            --primary: #4a8fe7;
+            --secondary: #44c7b6;
+            --dark: #2d3748;
+            --light: #f7fafc;
+            --accent: #ff6b6b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-title {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 143, 231, 0.2);
+        }
+        
+        .checkbox-group {
+            margin-top: 0.5rem;
+        }
+        
+        .checkbox-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-item input {
+            margin-right: 0.5rem;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-item input {
+            margin-right: 0.5rem;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Thank you message styles */
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .thank-you-message h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .thank-you-message p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Zuga Fitness</div>
+            <div class="tagline">Nurturing Wellness Through Movement</div>
+            <nav class="nav">
+                <a href="https://zugafitness.in/">Home</a>
+                <a href="index.html#features017-1">Classes</a>
+                <a href="index.html#contact-form-3-uEEJbxWtIk">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div id="thankYouMessage" class="thank-you-message">
+            <div class="thank-you-icon">✓</div>
+            <h2>Thank You for Registering!</h2>
+            <p>We've received your registration for our Senior Yoga Classes. Our team will review your information and contact you shortly to confirm your enrollment.</p>
+            <p>In the meantime, feel free to explore our <a href="index.html#features017-1" aria-expanded="false">other class offerings</a> or learn more about <a href=""index.html#features017-1" aria-expanded="false"">our approach to senior yoga</a>.</p>
+        </div>
+
+        <div id="registrationForm" class="form-container">
+            <h2 class="form-title">Senior Yoga Class Registration</h2>
+            <form id="yogaForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdy-eC1qAtPlPBt7ZEMXj_Q_kPjitf-l7UM5Y5ZnxEa9cS7lg/formResponse" method="POST" target="hiddenFrame">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="entry.2138703679" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="entry.755930631" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country Currently You Are Living In</label>
+                    <input type="text" id="country" name="entry.560033932" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact No (Mention Country Code)</label>
+                    <input type="tel" id="contact" name="entry.1612789451" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="emergency">Emergency Contact Name & Number</label>
+                    <input type="text" id="emergency" name="entry.1085692733" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Age Group</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="age-50-60" name="entry.713141589" value="50–60 years" required>
+                            <label for="age-50-60">50–60 years</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="age-60-70" name="entry.713141589" value="60–70 years">
+                            <label for="age-60-70">60–70 years</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="age-70plus" name="entry.713141589" value="70+ years">
+                            <label for="age-70plus">70+ years</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Experience Level</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="beginner" name="entry.1204961857" value="Beginner (tried a few classes)" required>
+                            <label for="beginner">Beginner (tried a few classes)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="intermediate" name="entry.1204961857" value="Intermediate (practiced regularly)">
+                            <label for="intermediate">Intermediate (practiced regularly)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="advanced" name="entry.1204961857" value="Advanced (practiced for years)">
+                            <label for="advanced">Advanced (practiced for years)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Health Considerations (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="arthritis" name="entry.572719167" value="Arthritis/Joint Pain">
+                            <label for="arthritis">Arthritis/Joint Pain</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hypertension" name="entry.572719167" value="Hypertension">
+                            <label for="hypertension">Hypertension</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="surgery" name="entry.572719167" value="Recent Surgery (e.g., hip/knee replacement)">
+                            <label for="surgery">Recent Surgery (e.g., hip/knee replacement)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="balance" name="entry.572719167" value="Balance Issues">
+                            <label for="balance">Balance Issues</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="medical-info">Do you have any injuries, medical conditions, or physical limitations we should know about?</label>
+                    <textarea id="medical-info" name="entry.565957959" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timing">Available timing for Call</label>
+                    <input type="text" id="timing" name="entry.1228218832" placeholder="e.g., Weekdays 2-4pm" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Register for Yoga Classes</button>
+            </form>
+            <iframe name="hiddenFrame" style="display: none;"></iframe>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Zuga Fitness</div>
+            <p>Gentle yoga for vibrant aging</p>
+            
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+                <a href="#">Our Instructors</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">IG</a>
+                <a href="#" class="social-icon">YT</a>
+                <a href="#" class="social-icon">TW</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Zuga Fitness. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('yogaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Submit the form to Google Forms
+            this.submit();
+            
+            // Show thank you message
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+            
+            // Optional: Scroll to thank you message
+            document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
+            
+            // Optional: Reset form after delay
+            setTimeout(function() {
+                document.getElementById('yogaForm').reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
