@@ -1,372 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Yoga - Senior Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Site made with Mobirise Website Builder v6.0.1, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
+  <meta name="description" content="Yoga is accessible and enjoyable for all. Join certified instructors for personalized sessions to enhance flexibility, strength, and mental wellness.">
+  
+  
+  <title>Affordable  Online Yoga Classes for Everyone at Zuga Fitness - Join Us Today</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=dhqZ2g"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=dhqZ2g" type="text/css">
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9f5f0 100%);
-            color: #4a5568;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Header Styles */
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #48bb78, #38a169, #2f855a);
-        }
-
-        .logo {
-            font-size: 2.8rem;
-            color: #2f855a;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            color: #2d3748;
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #718096;
-            max-width: 700px;
-            margin: 0 auto 20px;
-        }
-
-        /* Form Styles */
-        .form-container {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .form-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(to bottom, #48bb78, #2f855a);
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: #2f855a;
-            margin: 30px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e2e8f0;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 80px;
-            height: 2px;
-            background: #48bb78;
-        }
-
-        .form-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #2d3748;
-        }
-
-        .required::after {
-            content: " *";
-            color: #e53e3e;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #48bb78;
-            box-shadow: 0 0 0 4px rgba(72, 187, 120, 0.2);
-        }
-
-        .checkbox-group, .radio-group {
-            background: #f7fafc;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .checkbox-item, .radio-item {
-            margin: 12px 0;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .checkbox-item input, .radio-item input {
-            width: auto;
-            margin-right: 12px;
-            margin-top: 5px;
-        }
-
-        .checkbox-label, .radio-label {
-            font-weight: normal;
-            color: #4a5568;
-        }
-
-        .note {
-            background: #ebf8ff;
-            border-left: 4px solid #4299e1;
-            padding: 15px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
-        }
-
-        .btn-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(to right, #48bb78, #38a169);
-            color: white;
-            border: none;
-            padding: 16px 45px;
-            font-size: 18px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Thank You Message */
-        #thank-you-message {
-            display: none;
-            text-align: center;
-            padding: 60px 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            margin: 40px 0;
-        }
-
-        .thank-you-icon {
-            font-size: 5rem;
-            color: #48bb78;
-            margin-bottom: 25px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        #thank-you-message h2 {
-            font-family: 'Playfair Display', serif;
-            color: #2f855a;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        #thank-you-message p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: #4a5568;
-        }
-
-        /* Footer Styles */
-        footer {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            text-align: left;
-        }
-
-        .footer-section h3 {
-            color: #2f855a;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #e2e8f0;
-            border-radius: 50%;
-            color: #2f855a;
-            transition: all 0.3s;
-        }
-
-        .social-icons a:hover {
-            background: #48bb78;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-            color: #718096;
-            font-size: 0.9rem;
-        }
-
-        /* Yoga Elements */
-        .yoga-elements {
-            position: absolute;
-            opacity: 0.1;
-            z-index: -1;
-            font-size: 10rem;
-        }
-
-        .element-1 {
-            top: 10%;
-            right: 5%;
-            transform: rotate(15deg);
-        }
-
-        .element-2 {
-            bottom: 10%;
-            left: 5%;
-            transform: rotate(-10deg);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .form-container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title {
-                font-size: 1.3rem;
-            }
-            
-            .form-row {
-                gap: 15px;
-            }
-        }
-    </style>
+  
+  
+  
 </head>
 <body>
-<section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
 	
 
 	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -403,14 +66,6 @@
 		</div>
 	</nav>
 </section>
-
-<section data-bs-version="5.1" class="header18 cid-uEEJbxTrw0 mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/6BK_ZPSqVew?autoplay=1&amp;loop=1&amp;playlist=6BK_ZPSqVew&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent" id="hero-15-uEEJbxTrw0">
-  </section>
-
-    <div class="container">
-        <!-- Decorative yoga elements -->
-        <div class="yoga-elements element-1">☮</div>
-        
         
         <!-- Header -->
         <header>
