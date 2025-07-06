@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Yogi Studio - Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f8bbd0);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0,     0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 2;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .logo-text {
+            font-family: 'Comic Neue', cursive;
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            z-index: 2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 20px;
+            background: rgba(129, 199, 132, 0.3);
+            border-radius: 50%;
+            filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-family: 'Comic Neue', cursive;
+            color: #4CAF50;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
+
+        .yoga-poses {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .pose {
+            font-size: 3rem;
+            animation: bounce 3s infinite;
+        }
+
+        .pose:nth-child(1) { animation-delay: 0.2s; color: #FF5722; }
+        .pose:nth-child(2) { animation-delay: 0.4s; color: #4CAF50; }
+        .pose:nth-child(3) { animation-delay: 0.6s; color: #2196F3; }
+        .pose:nth-child(4) { animation-delay: 0.8s; color: #9C27B0; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Form Styles */
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4CAF50;
+            font-size: 1.8rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 4px;
+            height: 16px;
+            background: #81C784;
+            border-radius: 2px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #81C784;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+        }
+
+        .checkbox-group {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed #81C784;
+        }
+
+        .checkbox-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-item input {
+            width: auto;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto 0;
+            padding: 15px;
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.6);
+        }
+
+        /* Thank You Message */
+        .thank-you {
+            text-align: center;
+            padding: 50px 20px;
+            display: none;
+        }
+
+        .thank-you i {
+            font-size: 5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            animation: celebrate 1s ease infinite alternate;
+        }
+
+        @keyframes celebrate {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        .thank-you h2 {
+            font-family: 'Comic Neue', cursive;
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .thank-you p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.6);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Floating elements */
+        .floating {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .floating.yoga-mat {
+            top: 20%;
+            left: 5%;
+            font-size: 10rem;
+            transform: rotate(20deg);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .floating.lotus {
+            bottom: 20%;
+            right: 5%;
+            font-size: 8rem;
+            transform: rotate(-15deg);
+            animation: float 18s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .yoga-poses {
+                gap: 15px;
+            }
+            
+            .pose {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating decorative elements -->
+        <div class="floating yoga-mat">
+            <i class="fas fa-spa"></i>
+        </div>
+        <div class="floating lotus">
+            <i class="fas fa-leaf"></i>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-child"></i>
+                <div class="logo-text">Little Yogi Studio</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Kids Yoga Registration</h1>
+            <p>Help your child discover balance, strength, and mindfulness through our fun yoga classes designed specifically for kids!</p>
+            <div class="yoga-poses">
+                <div class="pose"><i class="fas fa-tree"></i></div>
+                <div class="pose"><i class="fas fa-dog"></i></div>
+                <div class="pose"><i class="fas fa-cat"></i></div>
+                <div class="pose"><i class="fas fa-frog"></i></div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <div class="form-container" id="form-container">
+            <form 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeA2EQef1WdSoyXJxlvnHnzhLA9-sxODokPszkedLlliMn4jA/formResponse" 
+                method="POST" 
+                id="yoga-form"
+                target="_self"
+            >
+                <h2 class="form-header">Register Your Child</h2>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="parent-name">Parent/Guardian Name *</label>
+                        <input type="text" id="parent-name" name="entry.2138703679" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="entry.755930631" required placeholder="Child's full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country Currently Living In *</label>
+                        <input type="text" id="country" name="entry.560033932" required placeholder="Enter country name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact">Parent/Guardian Contact No (WhatsApp) *</label>
+                        <input type="tel" id="contact" name="entry.1612789451" required placeholder="Include country code (e.g. +1)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="child-name">Child's Name & Age *</label>
+                        <input type="text" id="child-name" name="entry.1085692733" required placeholder="e.g. Emma, 5 years">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timing">Available Timing for Call *</label>
+                        <input type="text" id="timing" name="entry.1228218832" required placeholder="e.g. Weekdays after 5 PM">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>What goals do you have for your child? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-options">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="goal1" name="entry.572719167" value="Improve focus/attention">
+                                <label for="goal1">Improve focus/attention</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="goal2" name="entry.572719167" value="Build physical confidence">
+                                <label for="goal2">Build physical confidence</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="goal3" name="entry.572719167" value="Manage anxiety/stress">
+                                <label for="goal3">Manage anxiety/stress</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="goal4" name="entry.572719167" value="Encourage social skills">
+                                <label for="goal4">Encourage social skills</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="goal5" name="entry.572719167" value="Introduce mindfulness habits">
+                                <label for="goal5">Introduce mindfulness habits</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="allergies">Does your child have any allergies, medical conditions, or sensory sensitivities?</label>
+                    <textarea id="allergies" name="entry.565957959" rows="4" placeholder="Example: 'Peanut allergy', 'ADHD', 'Sensitive to loud noises'"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Register Now <i class="fas fa-leaf"></i></button>
+            </form>
+            
+            <!-- Thank You Message -->
+            <div class="thank-you" id="thank-you">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You for Registering!</h2>
+                <p>Your registration has been received. We'll contact you soon to schedule your child's first yoga session.</p>
+                <a href="#" class="home-btn" id="home-btn"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Little Yogi Studio</h3>
+                <p>Helping children grow through yoga and mindfulness</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+                
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@littleyogistudio.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2023 Little Yogi Studio. All rights reserved.</p>
+                    <p>Designed with <i class="fas fa-heart" style="color: #f48fb1;"></i> for happy little yogis</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('yoga-form');
+            const formContainer = document.getElementById('form-container');
+            const thankYouMessage = document.getElementById('thank-you');
+            const homeBtn = document.getElementById('home-btn');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show submitting animation
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Submitting <i class="fas fa-spinner fa-spin"></i>';
+                submitBtn.disabled = true;
+                
+                // Create a temporary iframe to handle form submission
+                const iframe = document.createElement('iframe');
+                iframe.name = 'form-submission-iframe';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                
+                form.target = 'form-submission-iframe';
+                
+                // Submit the form
+                form.submit();
+                
+                // After a short delay, show the thank you message
+                setTimeout(function() {
+                    form.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                    
+                    // Add celebration effect
+                    formContainer.style.transform = 'scale(1.02)';
+                    formContainer.style.boxShadow = '0 15px 40px rgba(76, 175, 80, 0.3)';
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // Remove iframe after submission
+                    setTimeout(function() {
+                        document.body.removeChild(iframe);
+                    }, 3000);
+                }, 1500);
+            });
+            
+            // Home button functionality
+            homeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                form.style.display = 'block';
+                thankYouMessage.style.display = 'none';
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
