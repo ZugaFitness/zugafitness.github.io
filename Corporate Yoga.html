@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Yoga Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #fff5f5, #ffecec);
+            color: #5a2a2a;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(190, 60, 60, 0.15);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        header {
+            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #5a2a2a;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #fffafa;
+            border-radius: 12px;
+            border-left: 4px solid #ff9a9e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-section h2 {
+            color: #7b1fa2;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+        
+        .form-section h2 i {
+            background: #ffebee;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d32f2f;
+        }
+        
+        .form-group {
+            margin-bottom: 22px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #7b1fa2;
+            font-size: 15px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ffcdd2;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #d32f2f;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+        }
+        
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item, .radio-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #f8bbd0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        
+        .checkbox-item:hover, .radio-item:hover {
+            background: #fce4ec;
+            border-color: #f48fb1;
+            transform: translateY(-2px);
+        }
+        
+        .checkbox-item input, .radio-item input {
+            width: auto;
+            margin-right: 12px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        button {
+            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #5a2a2a;
+            border: none;
+            padding: 16px 45px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            display: block;
+            margin: 40px auto 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20px;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(25deg);
+            transition: all 0.6s;
+        }
+        
+        button:hover::after {
+            left: 120%;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+        }
+        
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: #fffafa;
+            border-radius: 12px;
+            padding: 25px 20px;
+            flex: 1 1 200px;
+            text-align: center;
+            border: 1px solid #f8bbd0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            border-color: #f48fb1;
+        }
+        
+        .benefit-card i {
+            font-size: 2.8rem;
+            color: #d32f2f;
+            margin-bottom: 20px;
+            background: #ffebee;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        .benefit-card h3 {
+            color: #7b1fa2;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #7b1fa2;
+            font-size: 0.95rem;
+            background: #ffebee;
+            margin-top: 10px;
+            border-top: 1px solid #f8bbd0;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+            
+            .benefit-card {
+                flex: 1 1 100%;
+            }
+        }
+        
+        /* Thank you message */
+        #thank-you {
+            display: none;
+            text-align: center;
+            padding: 60px 30px;
+        }
+        
+        #thank-you i {
+            font-size: 5rem;
+            color: #d32f2f;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        #thank-you h2 {
+            font-size: 2.5rem;
+            color: #7b1fa2;
+            margin-bottom: 20px;
+        }
+        
+        #thank-you p {
+            font-size: 1.2rem;
+            color: #5a2a2a;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        #back-to-form {
+            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #5a2a2a;
+            border: none;
+            padding: 14px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+        }
+        
+        #back-to-form:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(211, 47, 47, 0.3);
+        }
+        
+        .yoga-icon {
+            position: absolute;
+            opacity: 0.05;
+            font-size: 15rem;
+            z-index: 0;
+            color: #d32f2f;
+        }
+        
+        .icon-1 {
+            top: 30%;
+            left: 5%;
+            transform: rotate(15deg);
+        }
+        
+        .icon-2 {
+            bottom: 20%;
+            right: 5%;
+            transform: rotate(-10deg);
+        }
+        
+        .lotus {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: #ffebee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d32f2f;
+            font-size: 2rem;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lotus-1 {
+            top: 20px;
+            left: 20px;
+        }
+        
+        .lotus-2 {
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        /* Submission animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-animation {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lotus lotus-1">
+            <i class="fas fa-spa"></i>
+        </div>
+        <div class="lotus lotus-2">
+            <i class="fas fa-leaf"></i>
+        </div>
+        
+        <i class="fas fa-spa yoga-icon icon-1"></i>
+        <i class="fas fa-leaf yoga-icon icon-2"></i>
+        
+        <header>
+            <h1><i class="fas fa-spa"></i> Corporate Yoga Program</h1>
+            <p>Bring wellness to your workplace with our tailored yoga sessions</p>
+        </header>
+        
+        <div class="form-container" id="form-section">
+            <form id="yoga-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe-H5uYZQBVLM_NAVPeshpUyQFZlkOVOx3q-Zuj1dz1eoktGQ/formResponse" method="POST" target="hidden-form-submit">
+                <!-- Contact Information Section -->
+                <div class="form-section">
+                    <h2><i class="fas fa-user"></i> Contact Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="entry.392622731" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role">Designation / Role</label>
+                            <input type="text" id="role" name="entry.639080576" required placeholder="Your position">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company / Organization Name</label>
+                            <input type="text" id="company" name="entry.1489404516" required placeholder="Your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Contact Email</label>
+                            <input type="email" id="email" name="entry.1355167358" required placeholder="your.email@company.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address">Company Address or Location (Bangalore area)</label>
+                            <input type="text" id="address" name="entry.1379720893" required placeholder="Company address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="entry.1853894836" placeholder="+91 9876543210">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Session Details Section -->
+                <div class="form-section">
+                    <h2><i class="fas fa-calendar-alt"></i> Session Details</h2>
+                    
+                    <div class="form-group">
+                        <label>Select Yoga Session Type(s)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="Chair Yoga (30 mins)">
+                                Chair Yoga (30 mins)
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="Desk Mobility & Stretching">
+                                Desk Mobility & Stretching
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="Breathwork & Guided Meditation">
+                                Breathwork & Guided Meditation
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="General Yoga Session (60 mins)">
+                                General Yoga Session (60 mins)
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="Restorative / Relaxation Focus">
+                                Restorative / Relaxation Focus
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.782007064" value="Custom Workshop">
+                                Custom Workshop
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="participants">Number of Participants</label>
+                            <select id="participants" name="entry.980060760" required>
+                                <option value="" disabled selected>Select number of participants</option>
+                                <option value="Less than 20">Less than 20</option>
+                                <option value="20-50">20-50</option>
+                                <option value="50-100">50-100</option>
+                                <option value="100+">100+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Desired Date</label>
+                            <input type="date" id="date" name="entry.1002629211" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" name="entry.84466501" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Session Format</label>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="entry.1344890590" value="On-site (At your workplace)" required>
+                                    On-site (At your workplace)
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="entry.1344890590" value="Online (Virtual session)">
+                                    Online (Virtual session)
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="entry.1344890590" value="Hybrid">
+                                    Hybrid
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wellness Goals Section -->
+                <div class="form-section">
+                    <h2><i class="fas fa-bullseye"></i> Wellness Goals</h2>
+                    
+                    <div class="form-group">
+                        <label>What are your primary wellness goals? (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1424335701" value="Reduce stress & anxiety">
+                                Reduce stress & anxiety
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1424335701" value="Improve posture & flexibility">
+                                Improve posture & flexibility
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1424335701" value="Boost morale & team bonding">
+                                Boost morale & team bonding
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1424335701" value="Prevent workplace fatigue">
+                                Prevent workplace fatigue
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1424335701" value="Introduce wellness culture">
+                                Introduce wellness culture
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Additional Comments / Requests</label>
+                        <textarea id="comments" name="entry.1780076455" rows="4" placeholder="Any special requests or additional information..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Benefits Section -->
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Reduce Stress</h3>
+                        <p>Lower anxiety levels and improve mental wellbeing</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Team Bonding</h3>
+                        <p>Shared experiences that build stronger teams</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Boost Energy</h3>
+                        <p>Increase productivity and combat fatigue</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Improve Focus</h3>
+                        <p>Enhance concentration and decision-making</p>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Registration
+                </button>
+            </form>
+        </div>
+        
+        <!-- Thank You Section -->
+        <div id="thank-you">
+            <i class="fas fa-check-circle success-animation"></i>
+            <h2 class="success-animation">Thank You for Registering!</h2>
+            <p class="success-animation">Your corporate yoga session request has been successfully submitted.</p>
+            <p class="success-animation">Our wellness coordinator will contact you within 24 hours to confirm your booking and discuss session details.</p>
+            <button id="back-to-form" class="success-animation"><i class="fas fa-arrow-left"></i> Back to Form</button>
+        </div>
+        
+        <footer>
+            <p>© 2023 Corporate Wellness Solutions | Bringing mindfulness to the workplace since 2010</p>
+        </footer>
+        
+        <!-- Hidden iframe for form submission -->
+        <iframe name="hidden-form-submit" style="display: none;"></iframe>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('yoga-form');
+            const formSection = document.getElementById('form-section');
+            const thankYouSection = document.getElementById('thank-you');
+            const backButton = document.getElementById('back-to-form');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            // Set min date to today
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            document.getElementById('date').min = formattedDate;
+            
+            // Set default time to 15:30
+            document.getElementById('time').value = "15:30";
+            
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                // Show loading state
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+                
+                // Simulate form processing
+                setTimeout(() => {
+                    // Hide form and show thank you message
+                    formSection.style.display = 'none';
+                    thankYouSection.style.display = 'block';
+                    
+                    // Reset button state
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        form.reset();
+                    }, 2000);
+                }, 1500);
+            });
+            
+            // Back to form button handler
+            backButton.addEventListener('click', function() {
+                // Show form and hide thank you message
+                formSection.style.display = 'block';
+                thankYouSection.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
