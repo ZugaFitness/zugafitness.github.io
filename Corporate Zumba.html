@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm & Move | Zumba Session Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a0633 0%, #4a1e8c 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Musical notes floating in background */
+        .music-note {
+            position: absolute;
+            opacity: 0.2;
+            font-size: 2rem;
+            animation: float 8s infinite linear;
+            z-index: 0;
+        }
+        
+        .music-note:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .music-note:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .music-note:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 2s; }
+        .music-note:nth-child(4) { bottom: 15%; right: 20%; animation-delay: 3s; }
+        .music-note:nth-child(5) { top: 40%; left: 25%; animation-delay: 4s; }
+        .music-note:nth-child(6) { top: 25%; right: 30%; animation-delay: 5s; }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(20deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #ff00cc, #333399);
+            color: white;
+            padding: 40px 30px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff0077, #ffcc00, #00ffcc, #ff0077);
+            background-size: 300% 300%;
+            animation: gradient 3s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: white;
+            font-family: 'Righteous', cursive;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-family: 'Righteous', cursive;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .dancers {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .dancer {
+            font-size: 40px;
+            animation: dance 2s infinite;
+        }
+        
+        .dancer:nth-child(1) { animation-delay: 0s; color: #ffcc00; }
+        .dancer:nth-child(2) { animation-delay: 0.2s; color: #ff0077; }
+        .dancer:nth-child(3) { animation-delay: 0.4s; color: #00ffcc; }
+        .dancer:nth-child(4) { animation-delay: 0.6s; color: #cc00ff; }
+        .dancer:nth-child(5) { animation-delay: 0.8s; color: #00ccff; }
+        
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(10deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-10px) rotate(-10deg); }
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #fff;
+            font-size: 1.05rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ff00cc;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 0, 204, 0.2);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .checkbox-group {
+            margin-top: 12px;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: normal;
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .checkbox-group label:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 12px;
+            accent-color: #ff00cc;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .form-section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff00cc;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0077, #ffcc00, #00ffcc, #ff0077);
+            background-size: 300% 300%;
+            animation: gradient 3s ease infinite;
+        }
+        
+        .form-section h3 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .form-section h3 i {
+            font-size: 1.6rem;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #ff00cc, #333399);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn i {
+            margin-right: 10px;
+        }
+        
+        .thank-you {
+            text-align: center;
+            padding: 80px 30px 60px;
+            display: none;
+        }
+        
+        .thank-you i {
+            font-size: 100px;
+            color: #4affa1;
+            margin-bottom: 30px;
+            animation: bounce 1s;
+            text-shadow: 0 0 20px rgba(74, 255, 161, 0.5);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-40px);}
+            60% {transform: translateY(-20px);}
+        }
+        
+        .thank-you h2 {
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 25px;
+            font-family: 'Righteous', cursive;
+            letter-spacing: 2px;
+        }
+        
+        .thank-you p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .thank-you .btn {
+            max-width: 350px;
+            margin: 30px auto 0;
+            background: linear-gradient(45deg, #00ccff, #cc00ff);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            color: #ffcc00;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header {
+                padding: 30px 20px 20px;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+            
+            .thank-you {
+                padding: 60px 20px 40px;
+            }
+            
+            .thank-you h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background musical notes -->
+    <div class="music-note">♪</div>
+    <div class="music-note">♫</div>
+    <div class="music-note">♩</div>
+    <div class="music-note">♬</div>
+    <div class="music-note">♪</div>
+    <div class="music-note">♫</div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-music"></i> RHYTHM & MOVE
+            </div>
+            <h1>BOOK YOUR ZUMBA EXPERIENCE</h1>
+            <p>Bring the rhythm to your workplace with our energetic Zumba sessions!</p>
+            <div class="dancers">
+                <div class="dancer"><i class="fas fa-child"></i></div>
+                <div class="dancer"><i class="fas fa-running"></i></div>
+                <div class="dancer"><i class="fas fa-user"></i></div>
+                <div class="dancer"><i class="fas fa-child"></i></div>
+                <div class="dancer"><i class="fas fa-running"></i></div>
+            </div>
+        </div>
+        
+        <form id="zumbaForm" class="form-container">
+            <div class="form-section">
+                <h3><i class="fas fa-user"></i> Personal Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="entry.392622731" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation / Role *</label>
+                        <input type="text" id="designation" name="entry.639080576" required placeholder="Your position">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-building"></i> Company Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="companyName">Company / Organization Name *</label>
+                        <input type="text" id="companyName" name="entry.1489404516" required placeholder="Company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyAddress">Company Address or Location (Bangalore area) *</label>
+                        <input type="text" id="companyAddress" name="entry.1379720893" required placeholder="Office location">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="email">Contact Email *</label>
+                        <input type="email" id="email" name="entry.1355167358" required placeholder="your.email@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="entry.1853894836" required placeholder="+91 9876543210">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-music"></i> Session Preferences</h3>
+                <div class="form-group">
+                    <label>Zumba Session Types (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="entry.782007064" value="High-energy team Zumba (45–60 mins)">
+                            High-energy team Zumba (45–60 mins)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.782007064" value="Low-impact Zumba Gold">
+                            Low-impact Zumba Gold
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.782007064" value="Themed sessions (e.g., Bollywood, Retro, Latin Beats)">
+                            Themed sessions (e.g., Bollywood, Retro, Latin Beats)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.782007064" value="Weekly Wellness Program">
+                            Weekly Wellness Program
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="participants">Estimated Number of Participants *</label>
+                        <select id="participants" name="entry.980060760" required>
+                            <option value="">Select an option</option>
+                            <option value="Less than 20">Less than 20</option>
+                            <option value="20-50">20-50</option>
+                            <option value="50-100">50-100</option>
+                            <option value="Over 100">Over 100</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Session Format (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="entry.1344890590" value="On-site (At your workplace)">
+                                On-site (At your workplace)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="entry.1344890590" value="Online (Virtual session)">
+                                Online (Virtual session)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="entry.1344890590" value="Hybrid">
+                                Hybrid
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-bullseye"></i> Objectives</h3>
+                <div class="form-group">
+                    <label>What are your main objectives? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="entry.1424335701" value="Boost team energy & morale">
+                            Boost team energy & morale
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1424335701" value="Fun fitness break during work hours">
+                            Fun fitness break during work hours
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1424335701" value="Encourage movement & engagement">
+                            Encourage movement & engagement
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1424335701" value="De-stress + music therapy">
+                            De-stress + music therapy
+                        </label>
+                        <label>
+                            <input type="checkbox" name="entry.1424335701" value="Launch wellness initiative">
+                            Launch wellness initiative
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-calendar-alt"></i> Session Timing</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="date">Preferred Start Date *</label>
+                        <input type="date" id="date" name="entry.1002629211" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Start Time *</label>
+                        <input type="time" id="time" name="entry.84466501" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3><i class="fas fa-comment"></i> Additional Information</h3>
+                <div class="form-group">
+                    <label for="comments">Additional Comments / Request</label>
+                    <textarea id="comments" name="entry.1780076455" rows="4" placeholder="Any special requests or additional information..."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">
+                <i class="fas fa-paper-plane"></i> BOOK YOUR RHYTHM EXPERIENCE
+            </button>
+        </form>
+        
+        <div id="thankYou" class="thank-you">
+            <i class="fas fa-check-circle"></i>
+            <h2>THANK YOU FOR YOUR BOOKING!</h2>
+            <p>We've received your Zumba session request. Our team will contact you within 24 hours to confirm the details and get you moving!</p>
+            <p>Get ready to dance, energize, and transform your workplace with rhythm!</p>
+            <button onclick="location.reload()" class="btn">
+                <i class="fas fa-redo"></i> BOOK ANOTHER SESSION
+            </button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 RHYTHM & MOVE | Bringing Energy to Workplaces</p>
+            <p>Bangalore, India | Contact: rhythm@move.com | +91 9876543210</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('zumbaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let valid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#ff0077';
+                    field.style.boxShadow = '0 0 0 3px rgba(255, 0, 119, 0.3)';
+                } else {
+                    field.style.borderColor = '';
+                    field.style.boxShadow = '';
+                }
+            });
+            
+            if (!valid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Create a new FormData object
+            const formData = new FormData(this);
+            
+            // Convert FormData to URLSearchParams
+            const urlParams = new URLSearchParams();
+            for (const pair of formData) {
+                // For checkbox groups, we need to append each value separately
+                if (pair[0].startsWith('entry.')) {
+                    urlParams.append(pair[0], pair[1]);
+                }
+            }
+            
+            // Google Form URL
+            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdhvJYB4zyY9xNHz1PvDgjhCAysN8qxeymydICuYpCrx8ir9Q/formResponse';
+            
+            // Submit the form data to Google Forms
+            fetch(googleFormUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: urlParams
+            })
+            .then(() => {
+                // Hide the form and show the thank you message
+                document.getElementById('zumbaForm').style.display = 'none';
+                document.getElementById('thankYou').style.display = 'block';
+                
+                // Add celebration confetti
+                createConfetti();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Still show thank you message to the user
+                document.getElementById('zumbaForm').style.display = 'none';
+                document.getElementById('thankYou').style.display = 'block';
+                createConfetti();
+            });
+        });
+        
+        // Set min date to today for date input
+        document.getElementById('date').min = new Date().toISOString().split("T")[0];
+        
+        // Set default time to 3:30 PM
+        document.getElementById('time').value = '15:30';
+        
+        // Confetti effect for celebration
+        function createConfetti() {
+            const colors = ['#ff00cc', '#ffcc00', '#00ffcc', '#cc00ff', '#00ccff'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.innerHTML = ['♪', '♫', '🎉', '💃', '🕺'][Math.floor(Math.random() * 5)];
+                confetti.style.position = 'fixed';
+                confetti.style.fontSize = Math.random() * 20 + 15 + 'px';
+                confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-50px';
+                confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                confetti.style.zIndex = '1000';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.textShadow = '0 0 5px rgba(255,255,255,0.5)';
+                
+                document.body.appendChild(confetti);
+                
+                // Animate confetti
+                const duration = Math.random() * 3 + 3;
+                const targetY = Math.random() * 100 + 100;
+                
+                confetti.animate([
+                    { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+                    { transform: `translateY(${targetY}vh) rotate(${Math.random() * 360}deg)`, opacity: 0.5 },
+                    { transform: `translateY(${targetY + 20}vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: duration * 1000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
+                });
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, duration * 1000);
+            }
+        }
+    </script>
+</body>
+</html>
