@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zuga Fitness | Yoga & Zumba Wellness Studio in Bengaluru</title>
-    <meta name="description" content="Zuga Fitness in Bengaluru offers the perfect fusion of yoga and zumba classes for complete wellness. Join our studio for mindful and energetic workouts.">
+    <meta name="description" content="Top-rated corporate yoga and zumba programs in Bengaluru. Boost team wellness with our certified instructors serving Koramangala, Whitefield, and Electronic City.">
+    <meta name="keywords" content="yoga classes bangalore, zumba classes bangalore, corporate wellness bangalore, zuga fitness, yoga studio koramangala, zumba whitefield, electronic city fitness">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --yoga-red: #ff4d4d;
-            --yoga-light: #ffd6d6;
-            --zumba-blue: #4d79ff;
-            --zumba-light: #d6e0ff;
-            --accent-blue: #a2d2e2;
+            --primary-blue: #5b8cff;
+            --light-blue: #e0edff;
+            --zumba-red: #ff6b6b;
+            --zumba-light: #ffd8d8;
             --white: #ffffff;
             --light-gray: #f8f9fa;
-            --dark-gray: #2d3a4b;
+            --text-dark: #2d3a4b;
+            --text-light: #5a6b82;
             --shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -29,8 +30,8 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            color: var(--dark-gray);
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--accent-blue) 100%);
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--light-blue) 100%);
             line-height: 1.7;
             overflow-x: hidden;
         }
@@ -66,32 +67,52 @@
             font-size: 1.1rem;
             letter-spacing: 0.5px;
             text-align: center;
+            min-width: 220px;
         }
 
         .btn-yoga {
-            background-color: var(--yoga-red);
-            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+            background-color: var(--primary-blue);
+            box-shadow: 0 4px 15px rgba(91, 140, 255, 0.3);
         }
 
         .btn-yoga:hover {
-            background-color: #e04444;
+            background-color: #4a7ae8;
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+            box-shadow: 0 8px 25px rgba(91, 140, 255, 0.4);
         }
 
         .btn-zumba {
-            background-color: var(--zumba-blue);
-            box-shadow: 0 4px 15px rgba(77, 121, 255, 0.3);
+            background-color: var(--zumba-red);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
         }
 
         .btn-zumba:hover {
-            background-color: #3d69e6;
+            background-color: #e05a5a;
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(77, 121, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
         }
 
         .text-center {
             text-align: center;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
         }
 
         /* Header & Navigation */
@@ -120,12 +141,28 @@
             gap: 0.8rem;
         }
 
-        .logo-text {
-            font-size: 2rem;
+        .logo i {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
             font-weight: 700;
-            background: linear-gradient(135deg, var(--yoga-red) 0%, var(--zumba-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .logo .location-tag {
+            background: var(--primary-blue);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-left: 10px;
         }
 
         .nav-links {
@@ -136,7 +173,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark-gray);
+            color: var(--text-dark);
             font-weight: 500;
             font-size: 1.1rem;
             transition: var(--transition);
@@ -151,12 +188,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, var(--yoga-red) 0%, var(--zumba-blue) 100%);
+            background: var(--primary-blue);
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--yoga-red);
+            color: var(--primary-blue);
         }
 
         .nav-links a:hover:after {
@@ -168,7 +205,7 @@
             background: none;
             border: none;
             font-size: 1.8rem;
-            color: var(--dark-gray);
+            color: var(--text-dark);
             cursor: pointer;
             z-index: 1001;
         }
@@ -203,7 +240,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(45, 58, 75, 0.7) 0%, rgba(255, 77, 77, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(45, 58, 75, 0.7) 0%, rgba(91, 140, 255, 0.5) 100%);
             z-index: -1;
         }
 
@@ -239,59 +276,10 @@
             opacity: 0;
         }
 
-        /* About Section */
-        .about {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            padding: 100px 5%;
-            background-color: var(--white);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            margin: 40px auto;
-        }
-
-        .about-img {
-            flex: 1;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            height: 500px;
-        }
-
-        .about-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-content {
-            flex: 1;
-        }
-
-        .about-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-gray);
-            background: linear-gradient(135deg, var(--yoga-red) 0%, var(--zumba-blue) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-content p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            color: var(--dark-gray);
-        }
-
         /* Service Categories */
         .service-categories {
             padding: 80px 5%;
+            background-color: var(--white);
         }
 
         .categories-grid {
@@ -343,27 +331,170 @@
             max-width: 500px;
         }
 
+        /* Benefits Section */
+        .benefits-section {
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            padding: 80px 5%;
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+        }
+
+        .yoga-icon {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+        }
+
+        .zumba-icon {
+            background-color: var(--zumba-light);
+            color: var(--zumba-red);
+        }
+
+        .benefit-card h4 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Corporate Services */
+        .services-section {
+            padding: 80px 5% 40px;
+            background-color: var(--white);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-yoga:hover {
+            border-color: var(--primary-blue);
+        }
+
+        .service-zumba:hover {
+            border-color: var(--zumba-red);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .service-yoga .service-icon {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+        }
+
+        .service-zumba .service-icon {
+            background-color: var(--zumba-light);
+            color: var(--zumba-red);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+        }
+
+        .service-features {
+            margin: 25px 0;
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .service-feature i {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .service-yoga .service-feature i {
+            color: var(--primary-blue);
+        }
+
+        .service-zumba .service-feature i {
+            color: var(--zumba-red);
+        }
+
         /* Gallery Section */
         .gallery-section {
             padding: 80px 5%;
-            background-color: var(--white);
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
             border-radius: 20px;
-            box-shadow: var(--shadow);
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
             margin-top: 40px;
         }
 
         .gallery-item {
-            border-radius: 16px;
+            position: relative;
+            border-radius: 15px;
             overflow: hidden;
             height: 300px;
-            position: relative;
-            box-shadow: var(--shadow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
         }
 
         .gallery-item img {
@@ -371,6 +502,10 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
         }
 
         .gallery-item:hover img {
@@ -383,7 +518,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(45, 58, 75, 0.4);
+            background: rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -396,14 +531,15 @@
         }
 
         .gallery-overlay i {
-            color: var(--white);
-            font-size: 2.5rem;
+            color: white;
+            font-size: 3rem;
+            opacity: 0.8;
         }
 
         /* Testimonials */
         .testimonials-section {
-            background: linear-gradient(135deg, var(--yoga-red) 0%, var(--zumba-blue) 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
+            color: gry;
             padding: 100px 5%;
             border-radius: 20px;
         }
@@ -421,6 +557,11 @@
             padding: 30px;
             border-radius: 20px;
             position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
         }
 
         .testimonial-card:before {
@@ -478,7 +619,7 @@
         .cta-section {
             padding: 100px 5%;
             text-align: center;
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
             border-radius: 20px;
         }
 
@@ -497,7 +638,7 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--dark-gray) 0%, #1a2230 100%);
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1a2230 100%);
             color: var(--white);
             padding: 6rem 5% 2rem;
             position: relative;
@@ -511,7 +652,7 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: linear-gradient(90deg, var(--yoga-red), var(--zumba-blue));
+            background: linear-gradient(90deg, var(--primary-blue), var(--zumba-red));
         }
 
         .footer-container {
@@ -531,10 +672,14 @@
             margin-bottom: 1.5rem;
         }
 
-        .footer-logo-text {
+        .footer-logo i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .footer-logo h3 {
             font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--yoga-red) 0%, var(--zumba-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -558,7 +703,7 @@
         }
 
         .contact-info i {
-            color: var(--yoga-red);
+            color: var(--primary-blue);
             font-size: 1.2rem;
             width: 25px;
         }
@@ -583,7 +728,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--yoga-red);
+            background-color: var(--primary-blue);
             transform: translateY(-5px);
         }
 
@@ -601,7 +746,7 @@
             left: 0;
             width: 50px;
             height: 3px;
-            background: var(--yoga-red);
+            background: var(--primary-blue);
             border-radius: 2px;
         }
 
@@ -623,12 +768,12 @@
         }
 
         .footer-links a i {
-            color: var(--yoga-red);
+            color: var(--primary-blue);
             transition: var(--transition);
         }
 
         .footer-links a:hover {
-            color: var(--yoga-red);
+            color: var(--primary-blue);
             transform: translateX(5px);
         }
 
@@ -686,16 +831,14 @@
                 font-size: 2.5rem;
             }
             
-            .categories-grid {
+            .categories-grid,
+            .services-container,
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
             
-            .about {
-                flex-direction: column;
-            }
-            
-            .about-img, .about-content {
-                width: 100%;
+            .category-card {
+                height: 350px;
             }
         }
 
@@ -757,6 +900,14 @@
             .category-content h3 {
                 font-size: 2rem;
             }
+            
+            .service-card {
+                padding: 25px;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -765,16 +916,17 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <span class="logo-text">ZUGA FITNESS</span>
+                <i class="fas fa-heartbeat"></i>
+                <h1>Zuga Fitness <span class="location-tag">Bengaluru</span></h1>
             </div>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html#top">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -790,49 +942,160 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h2>Bengaluru's Fusion Fitness Destination</h2>
-            <p class="tagline">Where yoga meets zumba for complete wellness in the heart of Bengaluru</p>
+            <p class="tagline">Where zumba meets yoga for complete wellness in the heart of Bengaluru</p>
             <div class="hero-btns">
-                <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga Programs</a>
+                <a href="#services" class="btn btn-yoga">Explore Yoga</a>
                 <a href="#services" class="btn btn-zumba">Discover Zumba</a>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zuga Fitness Studio in Bengaluru">
-        </div>
-        <div class="about-content">
-            <h2>Welcome to Zuga Fitness Bengaluru</h2>
-            <p>Zuga Fitness is Bengaluru's premier destination where the mindful practice of yoga meets the energetic rhythms of zumba. Our unique approach combines the best of both worlds to create a holistic wellness experience that nurtures both body and soul.</p>
-            <p>Founded in 2018, Zuga Fitness Bengaluru has transformed the lives of thousands through our innovative fusion classes. Our certified instructors bring expertise in both disciplines, creating classes that balance inner peace with joyful movement.</p>
-            <p>Located in the heart of Bengaluru, we offer the perfect environment to achieve your wellness goals. Whether you're looking to build strength, find your center, or simply have fun while getting fit, Zuga Fitness Bengaluru is your ideal fitness partner.</p>
         </div>
     </section>
 
     <!-- Service Categories -->
     <section class="service-categories" id="services">
         <div class="section-header">
-            <h2>Our Signature Services in Bengaluru</h2>
-            <p>Experience the perfect blend of mindfulness and energy</p>
+            <h2>Our Wellness Services</h2>
+            <p>Choose the perfect wellness solution for your Bengaluru team</p>
         </div>
         
         <div class="categories-grid">
             <div class="category-card category-yoga">
                 <div class="category-content">
-                    <h3>Yoga Programs</h3>
-                    <p>Find your center with our diverse yoga offerings designed for all levels and goals. Perfect for Bengaluru's busy professionals.</p>
-                    <a href="Corporate Yoga.html" class="btn btn-yoga">Enquire About Yoga</a>
+                    <h3>Corporate Yoga & Workshops</h3>
+                    <p>Bring mindfulness and flexibility to your workplace with our tailored yoga programs designed specifically for Bengaluru professionals.</p>
+                    <a href="#contact" class="btn btn-yoga">Explore Yoga</a>
                 </div>
             </div>
             
             <div class="category-card category-zumba">
                 <div class="category-content">
-                    <h3>Zumba Programs</h3>
-                    <p>Ignite your energy with our high-intensity zumba classes that make fitness fun. Bengaluru's favorite dance fitness program.</p>
-                    <a href="#contact" class="btn btn-zumba">Enquire About Zumba</a>
+                    <h3>Corporate Zumba & Workshops</h3>
+                    <p>Energize your team with high-energy Zumba sessions that boost morale, fitness, and workplace camaraderie.</p>
+                    <a href="#contact" class="btn btn-zumba">Discover Zumba</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="section-header">
+            <h2>Transformative Benefits</h2>
+            <p>How our programs enhance workplace wellness in Bengaluru</p>
+        </div>
+        
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <div class="benefit-icon yoga-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h4>Stress Reduction</h4>
+                <p>Our yoga programs help Bengaluru professionals manage workplace stress and prevent burnout through mindfulness techniques.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon zumba-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h4>Energy Boost</h4>
+                <p>Zumba sessions inject energy and enthusiasm into your team, combating afternoon slumps and boosting productivity.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon yoga-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Team Cohesion</h4>
+                <p>Shared wellness experiences build stronger relationships and improve collaboration among team members.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon zumba-icon">
+                    <i class="fas fa-laugh"></i>
+                </div>
+                <h4>Morale Enhancement</h4>
+                <p>Fun, engaging Zumba sessions create positive workplace experiences that employees look forward to.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Services -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2>Corporate Wellness Solutions</h2>
+            <p>Tailored programs for Bengaluru businesses</p>
+        </div>
+        
+        <div class="services-container">
+            <div class="service-card service-yoga">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Corporate Yoga Programs</h3>
+                </div>
+                <p>Our corporate yoga sessions are designed to fit seamlessly into the workday, helping employees find balance in Bengaluru's fast-paced environment.</p>
+                
+                <div class="service-features">
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>On-site & Virtual Sessions</h4>
+                            <p>Flexible delivery for Bengaluru offices of all sizes</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Customized Formats</h4>
+                            <p>Chair yoga, desk stretches, mindfulness sessions</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Ergonomic Focus</h4>
+                            <p>Combat tech neck and desk-related posture issues</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="Corporate Yoga.html" class="btn btn-yoga">Request Yoga Program</a>
+            </div>
+            
+            <div class="service-card service-zumba">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Corporate Zumba Programs</h3>
+                </div>
+                <p>Bring energy and excitement to your workplace with our high-energy Zumba sessions designed specifically for Bengaluru corporate teams.</p>
+                
+                <div class="service-features">
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Team Building Events</h4>
+                            <p>Perfect for Friday fun or team celebrations</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>All Fitness Levels</h4>
+                            <p>Inclusive sessions for everyone in your organization</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Stress Relief</h4>
+                            <p>Dance away workplace tension and pressure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="Corporate Zumba.html" class="btn btn-zumba">Request Zumba Program</a>
             </div>
         </div>
     </section>
@@ -840,48 +1103,48 @@
     <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="section-header">
-            <h2>Our Bengaluru Studio Gallery</h2>
+            <h2>Our Bengaluru Workshop Gallery</h2>
             <p>Moments of mindfulness, energy, and community in Bengaluru</p>
         </div>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga Class in Bengaluru">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga Class in Koramangala, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zumba Class in Bengaluru">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zumba Class in Whitefield, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Meditation Bengaluru">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Meditation in Electronic City, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fitness Workshop Bengaluru">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fitness Workshop in Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zumba Session Bengaluru">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zumba Session in Koramangala, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga Retreat Bengaluru">
+                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga Retreat in Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
@@ -892,21 +1155,21 @@
     <!-- Testimonials -->
     <section class="testimonials-section" id="testimonials">
         <div class="section-header">
-            <h2>What Bengaluru Members Say</h2>
-            <p>Success stories from our Bengaluru fitness community</p>
+            <h2>What Bengaluru Companies Say</h2>
+            <p>Success stories from our corporate partners</p>
         </div>
         
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"Zuga Fitness Bengaluru has transformed my approach to wellness. The combination of yoga and zumba gives me both the calm and energy I need in this busy city."</p>
+                    <p class="testimonial-text">"The yoga program transformed our workplace culture. Employees are more focused and collaborative since we started. We've seen a 27% reduction in sick days."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Johnson Bengaluru">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Rajesh Kumar">
                         </div>
                         <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Koramangala Resident</p>
+                            <h4>Divya</h4>
+                            <p>HR Director, Tech Solutions, Koramangala</p>
                         </div>
                     </div>
                 </div>
@@ -914,14 +1177,14 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"The energy in the zumba classes is incredible! But what I love most is how the yoga sessions help me recover from Bengaluru's traffic stress."</p>
+                    <p class="testimonial-text">"We had an amazing experience during our last yoga session! You had created such a calming and supportive environment, which made it easy to connect with both our body and mind. The flow was well-paced, and the instructions were clear, allowing us to fully immerse ourselves in the practice. We really appreciated how the session was tailored to all levels—everyone felt included, and we could challenge ourselves while still feeling comfortable. We  left the session feeling relaxed, energized, and more centered. Thank you very much 😊"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Michael Chen Bengaluru">
+                            <img src="https://https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Shalini Kunal">
                         </div>
                         <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>IT Professional, Whitefield</p>
+                            <h4>Shalini Kunal</h4>
+                            <p>HR, Alshaya India, Whitefield</p>
                         </div>
                     </div>
                 </div>
@@ -929,14 +1192,14 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"As a busy Bengaluru mom, Zuga's unique combination of yoga and zumba is what finally kept me motivated and coming back. Best fitness decision ever!"</p>
+                    <p class="testimonial-text">"The mindfulness workshops helped our team manage the unique pressures of Bengaluru's tech industry. Productivity has increased significantly."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Priya Sharma Bengaluru">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Arjun Patel">
                         </div>
                         <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Jayanagar Resident</p>
+                            <h4>Gareema Patel</h4>
+                            <p>CTO, Startup Ventures, Electronic City</p>
                         </div>
                     </div>
                 </div>
@@ -947,13 +1210,13 @@
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-content">
-            <h2>Ready to Begin Your Zuga Journey in Bengaluru?</h2>
-            <p>Join our Bengaluru community today and experience the perfect balance of mindfulness and energy.</p>
+            <h2>Ready to Transform Your Workplace?</h2>
+            <p>Contact us today to schedule a consultation and discover how our corporate wellness programs can benefit your Bengaluru team.</p>
             
             <div class="cta-buttons">
-                <a href="Corporate Yoga.html" class="btn btn-yoga">Start Yoga Program</a>
-                <a href="#" class="btn btn-zumba">Start Zumba Program</a>
-                <a href="#" class="btn" style="background: #333; color: white;">Book Bengaluru Studio Tour</a>
+                <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
+                <a href="Corporate Zumba.html" class="btn btn-zumba">
+Discover Zumba</a>
             </div>
         </div>
     </section>
@@ -963,20 +1226,20 @@
         <div class="footer-container">
             <div class="footer-about">
                 <div class="footer-logo">
-                    <span class="footer-logo-text">ZUGA FITNESS</span>
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Zuga Fitness Bengaluru</h3>
                 </div>
-                <p>Bengaluru's premier destination for yoga and zumba fusion. Our studio offers the perfect balance of mindfulness and energy for individuals and corporate groups in Bengaluru.</p>
+                <p>Bringing wellness to Bengaluru workplaces through yoga and zumba programs. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and all over Bengaluru.</p>
                 
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Koramangala, Bengaluru</p>
-                    <p><i class="fas fa-phone"></i> +91 80 4567 8910</p>
-                    <p><i class="fas fa-envelope"></i> bengaluru@zugafitness.com</p>
-                    <p><i class="fas fa-clock"></i> Mon-Sat: 6am-9pm | Sun: 8am-6pm</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Lane, Koramangala, Bengaluru</p>
+                    <p><i class="fas fa-phone"></i> +91 80 4123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@zugafitnessbangalore.com</p>
                 </div>
                 
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1CBk3du3Vh/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/zuga_fitness?igsh=cjgxaXcxOTRpdXhy"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
@@ -986,28 +1249,28 @@
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
                     <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
                     <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Benefits</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
             
             <div class="footer-links-container">
-                <h4 class="footer-heading">Bengaluru Locations</h4>
+                <h4 class="footer-heading">Our Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Koramangala Studio</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Indiranagar Studio</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Jayanagar Studio</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Whitefield Studio</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Malleshwaram Studio</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Corporate Yoga</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Corporate Zumba</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Yoga Workshops</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Zumba Workshops</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Online Yoga Classes</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Online Zumba Classes</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="copyright">
-            <p>&copy; 2023 Zuga Fitness Bengaluru. All rights reserved. | Yoga + Zumba = Zuga</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">Bengaluru's #1 Fusion Fitness Studio</p>
+            <p>&copy; 2023 Zuga Fitness - Bengaluru. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1040,17 +1303,20 @@
             });
         });
 
-        // Add animation to elements when they come into view
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate');
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
-        document.querySelectorAll('section, .category-card, .gallery-item, .testimonial-card').forEach((el, index) => {
-            el.classList.add(`delay-${(index % 3) + 1}`);
+        document.querySelectorAll('section, .category-card, .benefit-card, .service-card, .gallery-item, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
     </script>
