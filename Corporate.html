@@ -43,7 +43,7 @@
         }
 
         section {
-            padding: 6rem 5%;
+            padding: 4rem 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -57,17 +57,17 @@
         .btn {
             display: inline-block;
             color: var(--white);
-            padding: 14px 32px;
+            padding: 14px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            font-size: 1.1rem;
+            font-size: 1rem;
             letter-spacing: 0.5px;
             text-align: center;
-            min-width: 220px;
+            min-width: 180px;
         }
 
         .btn-yoga {
@@ -99,11 +99,11 @@
         .section-header {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 4rem;
+            margin: 0 auto 3rem;
         }
 
         .section-header h2 {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             margin-bottom: 1.2rem;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
             -webkit-background-clip: text;
@@ -111,7 +111,7 @@
         }
 
         .section-header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-light);
         }
 
@@ -130,7 +130,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 5%;
+            padding: 1rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -138,17 +138,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.6rem;
         }
 
         .logo i {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: var(--primary-blue);
             transition: var(--transition);
         }
 
         .logo h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--text-dark);
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
@@ -159,15 +159,15 @@
         .logo .location-tag {
             background: var(--primary-blue);
             color: white;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             padding: 3px 8px;
             border-radius: 20px;
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
@@ -175,7 +175,7 @@
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: var(--transition);
             position: relative;
             padding: 5px 0;
@@ -204,7 +204,7 @@
             display: none;
             background: none;
             border: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--text-dark);
             cursor: pointer;
             z-index: 1001;
@@ -212,7 +212,7 @@
 
         /* Hero Section */
         .hero {
-            height: 90vh;
+            height: 85vh;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -220,7 +220,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             color: var(--white);
         }
 
@@ -251,17 +251,17 @@
         }
 
         .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
             font-weight: 700;
             animation: fadeInUp 1s ease-out;
         }
 
         .tagline {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             max-width: 700px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
             text-shadow: 0 1px 3px rgba(0,0,0,0.3);
             animation: fadeInUp 1s ease-out 0.2s forwards;
             opacity: 0;
@@ -269,38 +269,38 @@
 
         .hero-btns {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             margin-top: 2rem;
+            flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.4s forwards;
             opacity: 0;
         }
 
         /* Service Categories */
         .service-categories {
-            padding: 80px 5%;
             background-color: var(--white);
         }
 
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .category-card {
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
-            height: 400px;
+            height: 300px;
         }
 
         .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
 
         .category-yoga {
@@ -316,57 +316,56 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 40px;
+            padding: 25px;
             color: white;
             z-index: 2;
         }
 
         .category-content h3 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
 
         .category-content p {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             max-width: 500px;
         }
 
         /* Benefits Section */
         .benefits-section {
             background-color: var(--light-gray);
-            border-radius: 20px;
-            padding: 80px 5%;
+            border-radius: 15px;
         }
 
         .benefits-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .benefit-card {
             background-color: var(--white);
-            border-radius: 20px;
-            padding: 40px 30px;
+            border-radius: 15px;
+            padding: 30px 20px;
             box-shadow: var(--shadow);
             transition: var(--transition);
             text-align: center;
         }
 
         .benefit-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .benefit-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2.5rem;
+            margin: 0 auto 15px;
+            font-size: 2rem;
         }
 
         .yoga-icon {
@@ -380,35 +379,38 @@
         }
 
         .benefit-card h4 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
         }
 
         /* Corporate Services */
         .services-section {
-            padding: 80px 5% 40px;
             background-color: var(--white);
         }
 
         .services-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .service-card {
             background-color: var(--white);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 15px;
+            padding: 30px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 3px solid transparent;
+            border: 2px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
         }
 
         .service-yoga:hover {
@@ -422,18 +424,18 @@
         .service-header {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
         .service-icon {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .service-yoga .service-icon {
@@ -447,22 +449,22 @@
         }
 
         .service-card h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         .service-features {
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         .service-feature {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
         .service-feature i {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 5px;
         }
 
@@ -474,26 +476,33 @@
             color: var(--zumba-red);
         }
 
+        .service-feature h4 {
+            font-size: 1.1rem;
+        }
+
+        .service-feature p {
+            font-size: 0.95rem;
+        }
+
         /* Gallery Section */
         .gallery-section {
-            padding: 80px 5%;
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .gallery-item {
             position: relative;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            height: 300px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: var(--transition);
         }
 
@@ -505,11 +514,11 @@
         }
 
         .gallery-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .gallery-overlay {
@@ -532,47 +541,35 @@
 
         .gallery-overlay i {
             color: white;
-            font-size: 3rem;
+            font-size: 2.5rem;
             opacity: 0.8;
         }
 
         /* Testimonials */
         .testimonials-section {
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
-            color: gry;
-            padding: 100px 5%;
-            border-radius: 20px;
+            color: var(--text-dark);
+            border-radius: 15px;
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 25px;
+            border-radius: 15px;
             position: relative;
             transition: var(--transition);
         }
 
         .testimonial-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .testimonial-card:before {
-            content: """;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(255,255,255,0.2);
-            font-family: Georgia, serif;
-            line-height: 1;
+            transform: translateY(-5px);
         }
 
         .testimonial-content {
@@ -582,22 +579,24 @@
 
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 25px;
-            line-height: 1.8;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .author-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid white;
+            flex-shrink: 0;
         }
 
         .author-avatar img {
@@ -608,19 +607,19 @@
 
         .author-info h4 {
             margin-bottom: 5px;
+            font-size: 1.1rem;
         }
 
         .author-info p {
             opacity: 0.9;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 100px 5%;
             text-align: center;
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
         .cta-content {
@@ -631,8 +630,8 @@
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 20px;
+            margin-top: 30px;
             flex-wrap: wrap;
         }
 
@@ -640,7 +639,7 @@
         footer {
             background: linear-gradient(135deg, var(--text-dark) 0%, #1a2230 100%);
             color: var(--white);
-            padding: 6rem 5% 2rem;
+            padding: 4rem 5% 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -651,16 +650,16 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: linear-gradient(90deg, var(--primary-blue), var(--zumba-red));
         }
 
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
+            grid-template-columns: 1fr;
+            gap: 3rem;
             max-width: 1400px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
             position: relative;
             z-index: 2;
         }
@@ -668,63 +667,65 @@
         .footer-logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
         }
 
         .footer-logo i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary-blue);
         }
 
         .footer-logo h3 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .footer-about p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             opacity: 0.85;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         .contact-info {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .contact-info p {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 1rem;
+            gap: 12px;
+            margin-bottom: 0.8rem;
             opacity: 0.85;
+            font-size: 0.95rem;
         }
 
         .contact-info i {
             color: var(--primary-blue);
-            font-size: 1.2rem;
-            width: 25px;
+            font-size: 1.1rem;
+            width: 22px;
         }
 
         .social-links {
             display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.1);
             color: var(--white);
             transition: var(--transition);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         .social-links a:hover {
@@ -733,10 +734,10 @@
         }
 
         .footer-heading {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
         }
 
         .footer-heading:after {
@@ -744,7 +745,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 40px;
             height: 3px;
             background: var(--primary-blue);
             border-radius: 2px;
@@ -755,7 +756,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .footer-links a {
@@ -764,12 +765,14 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-size: 0.95rem;
         }
 
         .footer-links a i {
             color: var(--primary-blue);
             transition: var(--transition);
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
@@ -783,10 +786,10 @@
 
         .copyright {
             text-align: center;
-            padding-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
-            font-size: 1rem;
+            font-size: 0.9rem;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -795,7 +798,7 @@
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -819,63 +822,156 @@
             animation-delay: 0.3s;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero h2 {
-                font-size: 3rem;
-            }
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100%;
+            background: var(--white);
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            padding: 80px 30px 30px;
+            overflow-y: auto;
         }
 
-        @media (max-width: 992px) {
-            .hero h2 {
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary-blue);
+            transform: translateX(5px);
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            section {
+                padding: 5rem 3rem;
+            }
+            
+            .section-header h2 {
                 font-size: 2.5rem;
             }
             
-            .categories-grid,
-            .services-container,
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .hero h2 {
+                font-size: 2.8rem;
             }
             
-            .category-card {
-                height: 350px;
+            .tagline {
+                font-size: 1.5rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1.5fr 1fr 1fr;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 992px) {
+            .hero h2 {
+                font-size: 3.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.7rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.8rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 767px) {
             .mobile-menu-btn {
                 display: block;
             }
             
             .nav-links {
                 display: none;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                gap: 0;
-                padding: 2rem 0;
-                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-                text-align: center;
             }
             
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                padding: 1.2rem 0;
-                width: 100%;
+            .hero {
+                height: 75vh;
             }
             
             .hero h2 {
-                font-size: 2.2rem;
+                font-size: 1.9rem;
             }
             
             .tagline {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
             }
             
             .cta-buttons {
@@ -884,29 +980,29 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 480px) {
+            .hero {
+                height: 70vh;
+            }
+            
             .hero h2 {
+                font-size: 1.7rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
                 font-size: 1.9rem;
             }
             
-            .category-card {
-                height: 400px;
+            .benefits-container {
+                grid-template-columns: 1fr;
             }
             
-            .category-content {
-                padding: 25px;
-            }
-            
-            .category-content h3 {
-                font-size: 2rem;
-            }
-            
-            .service-card {
-                padding: 25px;
-            }
-            
-            .gallery-item {
-                height: 250px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -933,9 +1029,25 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <video class="hero-video" autoplay muted loop>
+        <video class="hero-video" autoplay muted loop playsinline>
             <source src="https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-doing-yoga-4690-large.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -944,8 +1056,8 @@
             <h2>Bengaluru's Fusion Fitness Destination</h2>
             <p class="tagline">Where zumba meets yoga for complete wellness in the heart of Bengaluru</p>
             <div class="hero-btns">
-                <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
-                <a href="Corporate Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                <a href="#services" class="btn btn-yoga">Explore Yoga</a>
+                <a href="#services" class="btn btn-zumba">Discover Zumba</a>
             </div>
         </div>
     </section>
@@ -962,7 +1074,7 @@
                 <div class="category-content">
                     <h3>Corporate Yoga & Workshops</h3>
                     <p>Bring mindfulness and flexibility to your workplace with our tailored yoga programs designed specifically for Bengaluru professionals.</p>
-                    <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
+                    <a href="#contact" class="btn btn-yoga">Explore Yoga</a>
                 </div>
             </div>
             
@@ -970,7 +1082,7 @@
                 <div class="category-content">
                     <h3>Corporate Zumba & Workshops</h3>
                     <p>Energize your team with high-energy Zumba sessions that boost morale, fitness, and workplace camaraderie.</p>
-                    <a href="Corporate Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                    <a href="#contact" class="btn btn-zumba">Discover Zumba</a>
                 </div>
             </div>
         </div>
@@ -1104,47 +1216,33 @@
     <section class="gallery-section" id="gallery">
         <div class="section-header">
             <h2>Our Bengaluru Workshop Gallery</h2>
-            <p>Moments of mindfulness, energy, and Corporate zumba in Bengaluru</p>
+            <p>Moments of mindfulness, energy, and community in Bengaluru</p>
         </div>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.05_128fc33c.jpg" alt="Yoga Class in Koramangala, Bengaluru">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga Class in Koramangala, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.07_0d11007f.jpg" alt="Zumba Class in Whitefield, Bengaluru">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Zumba Class in Whitefield, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.10_cd7107e6.jpg" alt="Group Meditation in Electronic City, Bengaluru">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Meditation in Electronic City, Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.08_49c01d74.jpg" alt="Fitness Workshop in Bengaluru">
-                <div class="gallery-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.09_6982db20.jpg" alt="Zumba Session in Koramangala, Bengaluru">
-                <div class="gallery-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.08_6f7d4886.jpg" alt="Yoga Retreat in Bengaluru">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fitness Workshop in Bengaluru">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
@@ -1165,7 +1263,7 @@
                     <p class="testimonial-text">"The yoga program transformed our workplace culture. Employees are more focused and collaborative since we started. We've seen a 27% reduction in sick days."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Rajesh Kumar">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Divya">
                         </div>
                         <div class="author-info">
                             <h4>Divya</h4>
@@ -1177,10 +1275,10 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"We really appreciated how the session was tailored to all levels—everyone felt included, and we could challenge ourselves while still feeling comfortable. We  left the session feeling relaxed, energized, and more centered. Thank you very much 😊"</p>
+                    <p class="testimonial-text">"We had an amazing experience during our last yoga session! You had created such a calming and supportive environment, which made it easy to connect with both our body and mind."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Shalini Kunal">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Shalini Kunal">
                         </div>
                         <div class="author-info">
                             <h4>Shalini Kunal</h4>
@@ -1195,7 +1293,7 @@
                     <p class="testimonial-text">"The mindfulness workshops helped our team manage the unique pressures of Bengaluru's tech industry. Productivity has increased significantly."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Arjun Patel">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gareema Patel">
                         </div>
                         <div class="author-info">
                             <h4>Gareema Patel</h4>
@@ -1215,8 +1313,7 @@
             
             <div class="cta-buttons">
                 <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
-                <a href="Corporate Zumba.html" class="btn btn-zumba">
-Discover Zumba</a>
+                <a href="Corporate Zumba.html" class="btn btn-zumba">Discover Zumba</a>
             </div>
         </div>
     </section>
@@ -1232,9 +1329,9 @@ Discover Zumba</a>
                 <p>Bringing wellness to Bengaluru workplaces through yoga and zumba programs. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and all over Bengaluru.</p>
                 
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Zuga Fitness Studio, Koramangala, Bengaluru</p>
-                    <p><i class="fas fa-phone"></i> +91 7676379909</p>
-                    <p><i class="fas fa-envelope"></i> zugafitness24@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Lane, Koramangala, Bengaluru</p>
+                    <p><i class="fas fa-phone"></i> +91 80 4123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@zugafitnessbangalore.com</p>
                 </div>
                 
                 <div class="social-links">
@@ -1277,12 +1374,26 @@ Discover Zumba</a>
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
         
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
         
         // Smooth scrolling for navigation links
@@ -1297,8 +1408,9 @@ Discover Zumba</a>
                     });
                     
                     // Close mobile menu if open
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
                 }
             });
         });
@@ -1319,6 +1431,12 @@ Discover Zumba</a>
         document.querySelectorAll('section, .category-card, .benefit-card, .service-card, .gallery-item, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
+        
+        // Add playsinline for mobile video
+        const heroVideo = document.querySelector('.hero-video');
+        heroVideo.setAttribute('playsinline', '');
+        heroVideo.setAttribute('muted', '');
+        heroVideo.setAttribute('loop', '');
     </script>
 </body>
 </html>
