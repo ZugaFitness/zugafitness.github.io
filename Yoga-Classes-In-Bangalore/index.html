@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zuga Fitness | Corporate Yoga & Zumba Classes in Bangalore</title>
-    <meta name="description" content="Top-rated corporate yoga classes and zumba classes in Bangalore. Enhance workplace wellness with our certified instructors serving Koramangala, Whitefield, and Electronic City.">
-    <meta name="keywords" content="yoga classes bangalore, zumba classes bangalore, corporate wellness bangalore, zuga fitness, yoga studio koramangala, zumba whitefield, electronic city fitness">
+    <title>Zuga Fitness | Corporate & Apartment Wellness in Bangalore</title>
+    <meta name="description" content="Premium corporate wellness programs and apartment community wellness services in Bangalore. Enhance workplace productivity and residential wellbeing with Zuga Fitness.">
+    <meta name="keywords" content="corporate wellness bangalore, apartment wellness bangalore, employee wellbeing, community fitness, RWA wellness programs, corporate health bangalore">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #5b8cff;
-            --light-blue: #e0edff;
-            --zumba-red: #ff6b6b;
-            --zumba-light: #ffd8d8;
+            --primary-green: #4CAF50;
+            --light-green: #e8f5e9;
+            --vibrant-blue: #2196F3;
+            --light-blue: #e3f2fd;
+            --sunshine-yellow: #FFC107;
+            --light-yellow: #fff8e1;
             --white: #ffffff;
             --light-gray: #f8f9fa;
             --text-dark: #2d3a4b;
             --text-light: #5a6b82;
             --shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--zumba-red) 100%);
+            --gradient: linear-gradient(135deg, var(--vibrant-blue) 0%, var(--primary-green) 100%);
         }
 
         * {
@@ -72,24 +74,24 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
-        .btn-yoga {
-            background-color: var(--primary-blue);
+        .btn-corporate {
+            background-color: var(--vibrant-blue);
         }
 
-        .btn-yoga:hover {
-            background-color: #4a7ae8;
+        .btn-corporate:hover {
+            background-color: #0d8aee;
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(91, 140, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
         }
 
-        .btn-zumba {
-            background-color: var(--zumba-red);
+        .btn-apartment {
+            background-color: var(--primary-green);
         }
 
-        .btn-zumba:hover {
-            background-color: #e05a5a;
+        .btn-apartment:hover {
+            background-color: #3d8b40;
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
         }
 
         .text-center {
@@ -157,7 +159,7 @@
 
         .logo i {
             font-size: 2rem;
-            color: var(--primary-blue);
+            color: var(--primary-green);
             transition: var(--transition);
         }
 
@@ -207,7 +209,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
         }
 
         .nav-links a:hover:after {
@@ -236,7 +238,7 @@
             text-align: center;
             padding: 0 1.5rem;
             color: var(--white);
-            background: linear-gradient(135deg, rgba(45, 58, 75, 0.9) 0%, rgba(91, 140, 255, 0.7) 100%), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(45, 58, 75, 0.85) 0%, rgba(33, 150, 243, 0.8) 100%), url('https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
         }
 
         .hero-content {
@@ -297,12 +299,12 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        .category-yoga {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        .category-corporate {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
         }
 
-        .category-zumba {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        .category-apartment {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
         }
 
         .category-content {
@@ -354,12 +356,12 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        .benefit-card.yoga-card {
-            border-top-color: var(--primary-blue);
+        .benefit-card.corporate-card {
+            border-top-color: var(--vibrant-blue);
         }
 
-        .benefit-card.zumba-card {
-            border-top-color: var(--zumba-red);
+        .benefit-card.apartment-card {
+            border-top-color: var(--primary-green);
         }
 
         .benefit-icon {
@@ -373,14 +375,14 @@
             font-size: 2.5rem;
         }
 
-        .yoga-icon {
+        .corporate-icon {
             background-color: var(--light-blue);
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
         }
 
-        .zumba-icon {
-            background-color: var(--zumba-light);
-            color: var(--zumba-red);
+        .apartment-icon {
+            background-color: var(--light-green);
+            color: var(--primary-green);
         }
 
         .benefit-card h4 {
@@ -451,14 +453,14 @@
             flex-shrink: 0;
         }
 
-        .service-yoga .service-icon {
+        .service-corporate .service-icon {
             background-color: var(--light-blue);
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
         }
 
-        .service-zumba .service-icon {
-            background-color: var(--zumba-light);
-            color: var(--zumba-red);
+        .service-apartment .service-icon {
+            background-color: var(--light-green);
+            color: var(--primary-green);
         }
 
         .service-card h3 {
@@ -490,12 +492,12 @@
             margin-top: 5px;
         }
 
-        .service-yoga .service-feature i {
-            color: var(--primary-blue);
+        .service-corporate .service-feature i {
+            color: var(--vibrant-blue);
         }
 
-        .service-zumba .service-feature i {
-            color: var(--zumba-red);
+        .service-apartment .service-feature i {
+            color: var(--primary-green);
         }
 
         .service-feature h4 {
@@ -509,7 +511,7 @@
 
         /* Gallery Section */
         .gallery-section {
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
             border-radius: 15px;
         }
 
@@ -569,9 +571,110 @@
             opacity: 0.8;
         }
 
+        /* Blog Section */
+        .blog-section {
+            background-color: var(--white);
+            border-radius: 15px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .blog-meta .date {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta .category {
+            display: flex;
+            align-items: center;
+            background: var(--light-blue);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .blog-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .blog-link {
+            color: var(--vibrant-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .blog-link:hover {
+            color: var(--primary-green);
+            gap: 12px;
+        }
+
+        .blog-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
         /* Testimonials */
         .testimonials-section {
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--zumba-light) 100%);
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
             color: var(--text-dark);
             border-radius: 15px;
         }
@@ -753,7 +856,7 @@
 
         .footer-logo i {
             font-size: 2.5rem;
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
         }
 
         .footer-logo h3 {
@@ -784,7 +887,7 @@
         }
 
         .contact-info i {
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
             font-size: 1.3rem;
             width: 30px;
         }
@@ -827,7 +930,7 @@
             left: 0;
             width: 50px;
             height: 4px;
-            background: var(--primary-blue);
+            background: var(--vibrant-blue);
             border-radius: 2px;
         }
 
@@ -850,13 +953,13 @@
         }
 
         .footer-links a i {
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
             transition: var(--transition);
             font-size: 1rem;
         }
 
         .footer-links a:hover {
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
             transform: translateX(5px);
         }
 
@@ -941,7 +1044,7 @@
         }
 
         .mobile-nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--vibrant-blue);
             transform: translateX(5px);
         }
 
@@ -1004,6 +1107,10 @@
                 grid-template-columns: 1fr 1fr;
             }
             
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             .footer-container {
                 grid-template-columns: 1.5fr 1fr 1fr;
             }
@@ -1023,6 +1130,10 @@
             }
             
             .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .blog-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
             
@@ -1117,8 +1228,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1134,8 +1245,8 @@
         <ul class="mobile-nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1144,11 +1255,11 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>Premium Yoga & Zumba Classes in Bangalore</h2>
-            <p class="tagline">Corporate wellness programs that energize your team and boost productivity</p>
+            <h2>Premium Corporate & Apartment Wellness in Bangalore</h2>
+            <p class="tagline">Elevate workplace productivity and community health with our expert wellness solutions</p>
             <div class="hero-btns">
-                <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
-                <a href="Corporate Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                <a href="#corporate" class="btn btn-corporate">Corporate Wellness</a>
+                <a href="#apartment" class="btn btn-apartment">Apartment Wellness</a>
             </div>
         </div>
     </section>
@@ -1156,24 +1267,24 @@
     <!-- Service Categories -->
     <section class="service-categories" id="services">
         <div class="section-header">
-            <h2>Our Corporate Wellness Services</h2>
-            <p>Transform your workplace with our specialized programs designed for Bangalore companies</p>
+            <h2>Our Wellness Solutions</h2>
+            <p>Transform your workplace or community with specialized wellness programs designed for Bangalore</p>
         </div>
         
         <div class="categories-grid">
-            <div class="category-card category-yoga">
+            <div class="category-card category-corporate" id="corporate">
                 <div class="category-content">
-                    <h3>Corporate Yoga Classes in Bangalore</h3>
-                    <p>Professional yoga sessions tailored for Bangalore workplaces to reduce stress and improve focus.</p>
-                    <a href="Corporate Yoga.html" class="btn btn-yoga">Explore Yoga</a>
+                    <h3>Corporate Wellness Programs</h3>
+                    <p>Tailored wellness solutions for Bangalore businesses to boost employee well-being and productivity.</p>
+                    <a href="#corporate-wellness" class="btn btn-corporate">Explore Corporate</a>
                 </div>
             </div>
             
-            <div class="category-card category-zumba">
+            <div class="category-card category-apartment" id="apartment">
                 <div class="category-content">
-                    <h3>Corporate Zumba Classes in Bangalore</h3>
-                    <p>Energetic Zumba sessions that boost team morale and create a positive work environment.</p>
-                    <a href="Corporate Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                    <h3>Apartment Community Wellness</h3>
+                    <p>Community wellness initiatives designed for Bangalore apartments to foster health and social connection.</p>
+                    <a href="#apartment-wellness" class="btn btn-apartment">Discover Apartment</a>
                 </div>
             </div>
         </div>
@@ -1183,60 +1294,60 @@
     <section class="benefits-section" id="benefits">
         <div class="section-header">
             <h2>Transformative Benefits</h2>
-            <p>How our Yoga and Zumba programs enhance workplace wellness in Bangalore</p>
+            <p>How our wellness programs enhance workplace and community health in Bangalore</p>
         </div>
         
         <div class="benefits-container">
-            <div class="benefit-card yoga-card">
-                <div class="benefit-icon yoga-icon">
-                    <i class="fas fa-heartbeat"></i>
+            <div class="benefit-card corporate-card">
+                <div class="benefit-icon corporate-icon">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <h4>Stress Reduction</h4>
-                <p>Our yoga classes in Bangalore help professionals manage workplace stress through mindfulness techniques.</p>
+                <h4>Increased Productivity</h4>
+                <p>Corporate wellness programs in Bangalore reduce stress and improve focus, leading to higher output.</p>
             </div>
             
-            <div class="benefit-card zumba-card">
-                <div class="benefit-icon zumba-icon">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <h4>Energy Boost</h4>
-                <p>Zumba classes in Bangalore inject energy and enthusiasm into your team, combating afternoon slumps.</p>
-            </div>
-            
-            <div class="benefit-card yoga-card">
-                <div class="benefit-icon yoga-icon">
+            <div class="benefit-card apartment-card">
+                <div class="benefit-icon apartment-icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <h4>Team Cohesion</h4>
-                <p>Shared wellness experiences build stronger relationships and improve collaboration among team members.</p>
+                <h4>Community Building</h4>
+                <p>Apartment wellness programs foster social connections and neighborly relationships.</p>
             </div>
             
-            <div class="benefit-card zumba-card">
-                <div class="benefit-icon zumba-icon">
-                    <i class="fas fa-laugh"></i>
+            <div class="benefit-card corporate-card">
+                <div class="benefit-icon corporate-icon">
+                    <i class="fas fa-stethoscope"></i>
                 </div>
-                <h4>Morale Enhancement</h4>
-                <p>Fun, engaging Zumba sessions create positive workplace experiences that employees look forward to.</p>
+                <h4>Reduced Absenteeism</h4>
+                <p>Healthier employees mean fewer sick days and lower healthcare costs for Bangalore companies.</p>
+            </div>
+            
+            <div class="benefit-card apartment-card">
+                <div class="benefit-icon apartment-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h4>Healthy Lifestyle Habits</h4>
+                <p>Regular wellness activities help residents establish sustainable health routines.</p>
             </div>
         </div>
     </section>
 
-    <!-- Corporate Services -->
+    <!-- Wellness Solutions -->
     <section class="services-section">
         <div class="section-header">
-            <h2>Corporate Wellness Solutions</h2>
-            <p>Tailored programs for Bangalore businesses of all sizes</p>
+            <h2>Comprehensive Wellness Solutions</h2>
+            <p>Tailored programs for Bangalore businesses and apartment communities</p>
         </div>
         
         <div class="services-container">
-            <div class="service-card service-yoga">
+            <div class="service-card service-corporate" id="corporate-wellness">
                 <div class="service-header">
                     <div class="service-icon">
-                        <i class="fas fa-spa"></i>
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Yoga Classes in Bangalore</h3>
+                    <h3>Corporate Wellness Programs</h3>
                 </div>
-                <p>Our corporate yoga sessions in Bangalore are designed to fit seamlessly into the workday, helping employees find balance in the city's fast-paced environment.</p>
+                <p>Our corporate wellness solutions in Bangalore are designed to fit seamlessly into the workday, helping employees thrive in the city's competitive environment.</p>
                 
                 <div class="service-features">
                     <div class="service-feature">
@@ -1249,105 +1360,164 @@
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Customized Formats</h4>
-                            <p>Chair yoga, desk stretches, mindfulness sessions</p>
+                            <h4>Holistic Wellness</h4>
+                            <p>Physical, mental, and nutritional wellbeing programs</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Ergonomic Focus</h4>
+                            <h4>Ergonomic Assessments</h4>
                             <p>Combat tech neck and desk-related posture issues</p>
                         </div>
                     </div>
                 </div>
                 
-                <a href="Corporate Yoga.html" class="btn btn-yoga">Request Yoga Program</a>
+                <a href="#contact" class="btn btn-corporate">Request Corporate Program</a>
             </div>
             
-            <div class="service-card service-zumba">
+            <div class="service-card service-apartment" id="apartment-wellness">
                 <div class="service-header">
                     <div class="service-icon">
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-home"></i>
                     </div>
-                    <h3>Zumba Classes in Bangalore</h3>
+                    <h3>Apartment Community Wellness</h3>
                 </div>
-                <p>Bring energy and excitement to your workplace with our high-energy Zumba sessions in Bangalore designed specifically for corporate teams.</p>
+                <p>Bring health and vitality to your residential community with our specialized wellness programs designed for Bangalore apartments.</p>
                 
                 <div class="service-features">
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Team Building Events</h4>
-                            <p>Perfect for Friday fun or team celebrations</p>
+                            <h4>Community Events</h4>
+                            <p>Group fitness sessions, health workshops, and social activities</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>All Fitness Levels</h4>
-                            <p>Inclusive sessions for everyone in your organization</p>
+                            <h4>All Age Groups</h4>
+                            <p>Programs for children, adults, and seniors</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Stress Relief</h4>
-                            <p>Dance away workplace tension and pressure</p>
+                            <h4>Customized Scheduling</h4>
+                            <p>Morning, evening, and weekend sessions to suit community needs</p>
                         </div>
                     </div>
                 </div>
                 
-                <a href="Corporate Zumba.html" class="btn btn-zumba">Request Zumba Program</a>
+                <a href="#contact" class="btn btn-apartment">Request Apartment Program</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="section-header">
+            <h2>Wellness Insights & Tips</h2>
+            <p>Latest articles on corporate and community wellness in Bangalore</p>
+        </div>
+        
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workplace stress management">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date"><i class="far fa-calendar"></i> July 10, 2023</span>
+                        <span class="category"><i class="fas fa-tag"></i> Corporate Wellness</span>
+                    </div>
+                    <h3>5 Ways to Reduce Workplace Stress in Bangalore's Tech Industry</h3>
+                    <p>Discover practical strategies to combat workplace stress and boost employee morale in Bangalore's fast-paced tech environment.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community fitness program">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date"><i class="far fa-calendar"></i> June 28, 2023</span>
+                        <span class="category"><i class="fas fa-tag"></i> Apartment Wellness</span>
+                    </div>
+                    <h3>Building Healthy Communities: Wellness Programs for Bangalore Apartments</h3>
+                    <p>Learn how apartment communities in Bangalore are using wellness programs to create healthier, more connected neighborhoods.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ergonomic office setup">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date"><i class="far fa-calendar"></i> June 15, 2023</span>
+                        <span class="category"><i class="fas fa-tag"></i> Workplace Health</span>
+                    </div>
+                    <h3>Ergonomic Solutions for Bangalore's Office Workers</h3>
+                    <p>Prevent common workplace injuries with these ergonomic tips designed specifically for Bangalore's office professionals.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-cta">
+            <a href="#" class="btn btn-corporate">View All Blog Posts</a>
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="section-header">
-            <h2>Yoga & Zumba Classes in Bangalore Gallery</h2>
-            <p>Moments of mindfulness, energy, and community in corporate Bangalore</p>
+            <h2>Wellness Programs in Action</h2>
+            <p>Moments of health, energy, and community in corporate and residential Bangalore</p>
         </div>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.05_128fc33c.jpg" alt="Yoga Classes in Koramangala, Bangalore">
+                <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Corporate wellness session in Bangalore">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.07_0d11007f.jpg" alt="Zumba Classes in Whitefield, Bangalore">
+                <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Apartment fitness class in Bangalore">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.10_cd7107e6.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Corporate meditation session in Bangalore">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
 
-             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.07_de6efe5e.jpg" alt="Corporate Fitness Workshop in Bangalore">
-                <div class="gallery-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            
-             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.09_6982db20.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate team building activity">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.08_8d3a86c2.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment community yoga session">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate wellness workshop">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
@@ -1358,14 +1528,14 @@
     <!-- Testimonials -->
     <section class="testimonials-section" id="testimonials">
         <div class="section-header">
-            <h2>What Bangalore Companies Say</h2>
-            <p>Success stories from our corporate partners</p>
+            <h2>What Our Clients Say</h2>
+            <p>Success stories from our corporate and apartment partners</p>
         </div>
         
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"The yoga classes in Bangalore transformed our workplace culture. Employees are more focused and collaborative since we started. We've seen a 27% reduction in sick days."</p>
+                    <p class="testimonial-text">"The corporate wellness program transformed our workplace culture. Employees are more focused and collaborative since we started. We've seen a 27% reduction in sick days."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Divya">
@@ -1380,14 +1550,14 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"We had an amazing experience during our Zumba classes in Bangalore! The energy was incredible and it brought our team closer together in ways I didn't expect."</p>
+                    <p class="testimonial-text">"Zuga Fitness brought our apartment community together through their wellness programs. The regular sessions have created a real sense of community among residents."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Rajesh">
                         </div>
                         <div class="author-info">
-                            <h4>Shree Vidya</h4>
-                            <p>Team Lead, Marketing Agency, MG Road</p>
+                            <h4>Rajesh Kumar</h4>
+                            <p>RWA President, Prestige Apartments</p>
                         </div>
                     </div>
                 </div>
@@ -1395,7 +1565,7 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"The mindfulness workshops helped our team manage the unique pressures of Bangalore's tech industry. Productivity has increased significantly."</p>
+                    <p class="testimonial-text">"The mindfulness workshops helped our team manage the unique pressures of Bangalore's tech industry. Productivity has increased by 35% since implementing the wellness program."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gareema Patel">
@@ -1413,12 +1583,12 @@
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-content">
-            <h2>Ready to Transform Your Workplace?</h2>
-            <p>Contact us today to schedule a consultation and discover how our corporate wellness programs can benefit your Bangalore team.</p>
+            <h2>Ready to Transform Your Workplace or Community?</h2>
+            <p>Contact us today to schedule a consultation and discover how our wellness programs can benefit your organization or apartment community.</p>
             
             <div class="cta-buttons">
-                <a href="Corporate Yoga.html" class="btn btn-cta btn-yoga">Book Yoga Classes</a>
-                <a href="Corporate Yoga.html" class="btn btn-cta btn-zumba">Book Zumba Classes</a>
+                <a href="#contact" class="btn btn-cta btn-corporate">Corporate Wellness Inquiry</a>
+                <a href="#contact" class="btn btn-cta btn-apartment">Apartment Wellness Inquiry</a>
             </div>
         </div>
     </section>
@@ -1431,12 +1601,12 @@
                     <i class="fas fa-heartbeat"></i>
                     <h3>Zuga Fitness Bangalore</h3>
                 </div>
-                <p>Offering the best Yoga Classes and Zumba Classes in Bangalore for corporate wellness. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and all over Bangalore.</p>
+                <p>Offering premium corporate wellness programs and apartment community wellness services throughout Bangalore. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and all over Bangalore.</p>
                 
                 <div class="contact-info">
                     <p><i class="fas fa-map-marker-alt"></i> Zuga Fitness, Sarjapur Road, Bangalore</p>
                     <p><i class="fas fa-phone"></i> +91 76763 79909</p>
-                    <p><i class="fas fa-envelope"></i> zugafiness24@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> zugafitness24@gmail.com</p>
                 </div>
                 
                 <div class="social-links">
@@ -1452,7 +1622,7 @@
                 <ul class="footer-links">
                     <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                     <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                    <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
                     <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Benefits</a></li>
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
@@ -1461,12 +1631,12 @@
             <div class="footer-links-container">
                 <h4 class="footer-heading">Our Services</h4>
                 <ul class="footer-links">
-                    <li><a href="Corporate Yoga.html"><i class="fas fa-chevron-right"></i> Corporate Yoga Classes</a></li>
-                    <li><a href="Corporate Zumba.html"><i class="fas fa-chevron-right"></i> Corporate Zumba Classes</a></li>
-                    <li><a href="Corporate Yoga.html"><i class="fas fa-chevron-right"></i> Yoga Workshops</a></li>
-                    <li><a href="Corporate Zumba.html"><i class="fas fa-chevron-right"></i> Zumba Workshops</a></li>
-                    <li><a href="123.html"><i class="fas fa-chevron-right"></i> Online Yoga Classes</a></li>
-                    <li><a href="Corporate Zumba.html"><i class="fas fa-chevron-right"></i> Online Zumba Classes</a></li>
+                    <li><a href="#corporate"><i class="fas fa-chevron-right"></i> Corporate Wellness</a></li>
+                    <li><a href="#apartment"><i class="fas fa-chevron-right"></i> Apartment Wellness</a></li>
+                    <li><a href="#corporate"><i class="fas fa-chevron-right"></i> Employee Health Programs</a></li>
+                    <li><a href="#apartment"><i class="fas fa-chevron-right"></i> Community Fitness</a></li>
+                    <li><a href="#corporate"><i class="fas fa-chevron-right"></i> Stress Management</a></li>
+                    <li><a href="#apartment"><i class="fas fa-chevron-right"></i> Senior Wellness</a></li>
                 </ul>
             </div>
             
@@ -1545,7 +1715,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section, .category-card, .benefit-card, .service-card, .gallery-item, .testimonial-card').forEach(el => {
+        document.querySelectorAll('section, .category-card, .benefit-card, .service-card, .gallery-item, .testimonial-card, .blog-card').forEach(el => {
             observer.observe(el);
         });
     </script>
