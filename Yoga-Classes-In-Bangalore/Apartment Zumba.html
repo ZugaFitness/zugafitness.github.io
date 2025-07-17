@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuga Fitness - Apartment Zumba Classes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --zumba-red: #E31C25;
+            --zumba-orange: #F15A29;
+            --zumba-yellow: #FFDE17;
+            --zumba-purple: #662D91;
+            --zumba-blue: #00AEEF;
+            --zumba-pink: #ED1E79;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, var(--zumba-red), var(--zumba-orange));
+            color: white;
+            padding: 50px 30px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .zumba-stickers {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 2;
+        }
+        
+        .sticker {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .sticker:nth-child(1) {
+            background: var(--zumba-yellow);
+            animation-delay: 0s;
+        }
+        
+        .sticker:nth-child(2) {
+            background: var(--zumba-purple);
+            animation-delay: 0.5s;
+        }
+        
+        .sticker:nth-child(3) {
+            background: var(--zumba-blue);
+            animation-delay: 1s;
+        }
+        
+        .sticker i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .logo {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #ffffff, #ffd166);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-weight: 500;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-weight: 600;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+        }
+        
+        .form-container {
+            padding: 40px 30px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-section {
+            grid-column: span 2;
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+            color: var(--zumba-red);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--zumba-yellow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--zumba-yellow);
+            border-radius: 15px;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            background: #fffdf0;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .form-control:focus {
+            border-color: var(--zumba-orange);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.3);
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .checkbox-item {
+            background: #fffdf0;
+            padding: 16px;
+            border-radius: 12px;
+            border: 2px solid var(--zumba-yellow);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .checkbox-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--zumba-red), var(--zumba-orange));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+        
+        .checkbox-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.25);
+        }
+        
+        .checkbox-item:hover::before {
+            opacity: 0.1;
+        }
+        
+        .checkbox-item input {
+            margin-right: 12px;
+            accent-color: var(--zumba-red);
+            transform: scale(1.2);
+            z-index: 1;
+        }
+        
+        .checkbox-item span {
+            z-index: 1;
+        }
+        
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+        
+        .required::after {
+            content: " *";
+            color: var(--zumba-red);
+        }
+        
+        .btn-submit {
+            grid-column: span 2;
+            background: linear-gradient(90deg, var(--zumba-red), var(--zumba-orange));
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(227, 28, 37, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-submit::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(227, 28, 37, 0.6);
+        }
+        
+        .btn-submit:hover::before {
+            left: 100%;
+        }
+        
+        .footer {
+            background: linear-gradient(to right, var(--zumba-red), var(--zumba-orange));
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+            border-top: 4px solid var(--zumba-yellow);
+        }
+        
+        .footer a {
+            color: var(--zumba-yellow);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(to bottom right, #fffdf0, #ffec8c);
+            padding: 25px 15px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.4s;
+            border: 2px solid var(--zumba-yellow);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--zumba-red), var(--zumba-orange));
+            transition: height 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.25);
+        }
+        
+        .benefit-card:hover::before {
+            height: 100%;
+            opacity: 0.1;
+        }
+        
+        .benefit-card i {
+            font-size: 2.8rem;
+            color: var(--zumba-red);
+            margin-bottom: 20px;
+            background: rgba(227, 28, 37, 0.1);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .benefit-card h4 {
+            margin-bottom: 10px;
+            color: var(--zumba-red);
+            font-size: 1.4rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .benefit-card p {
+            font-size: 1rem;
+            color: #666;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .thank-you {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--zumba-red), var(--zumba-orange));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.8s ease;
+            z-index: 20;
+            border-radius: 25px;
+        }
+        
+        .thank-you.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .thank-you-content {
+            max-width: 800px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .thank-you i {
+            font-size: 6rem;
+            color: var(--zumba-yellow);
+            margin-bottom: 30px;
+            animation: pulse 1.5s infinite, dance 2s infinite;
+        }
+        
+        .thank-you h2 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #ffffff, var(--zumba-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .thank-you p {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .thank-you .message {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+        }
+        
+        .thank-you .btn-back {
+            background: white;
+            color: var(--zumba-red);
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .thank-you .btn-back:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+            background: var(--zumba-yellow);
+            color: var(--zumba-red);
+        }
+        
+        /* Dancing Zumba figures */
+        .dancing-figures {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .dancer {
+            font-size: 3rem;
+            animation: dance 2s infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .dancer:nth-child(1) { animation-delay: 0s; color: white; }
+        .dancer:nth-child(2) { animation-delay: 0.2s; color: var(--zumba-yellow); }
+        .dancer:nth-child(3) { animation-delay: 0.4s; color: white; }
+        .dancer:nth-child(4) { animation-delay: 0.6s; color: var(--zumba-yellow); }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-20px) rotate(-5deg); }
+            50% { transform: translateY(0) rotate(0); }
+            75% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+            
+            .form-section, .btn-submit {
+                grid-column: span 1;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo h1 {
+                font-size: 2.5rem;
+            }
+            
+            .logo p {
+                font-size: 1.1rem;
+            }
+            
+            .thank-you h2 {
+                font-size: 3rem;
+            }
+            
+            .thank-you p {
+                font-size: 1.2rem;
+            }
+            
+            .zumba-stickers {
+                top: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+            
+            .sticker {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .sticker i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="zumba-stickers">
+                <div class="sticker">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="sticker">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="sticker">
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+            
+            <div class="logo">
+                <h1>ZUGA FITNESS</h1>
+                <p>Bringing the Zumba Party to Your Apartment in Bangalore!</p>
+                <div class="tagline">Dance Your Way to Fitness with Certified Zumba Instructors</div>
+            </div>
+        </div>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdfl_VDz4mfDKfZ1bvwYDBssH8Z69yfFPGl7ti6VR7zrCuEAQ/formResponse" method="POST" id="zumba-form" target="hidden_iframe">
+            <div class="form-container" id="form-content">
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Personal Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="name" class="required">Full Name</label>
+                        <input type="text" id="name" name="entry.1067782258" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apartment" class="required">Apartment Name & Location</label>
+                        <input type="text" id="apartment" name="entry.1365814284" class="form-control" placeholder="Your apartment name and area in Bangalore" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="entry.1329094099" class="form-control" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" name="entry.1659782347" class="form-control" placeholder="Enter 10-digit mobile number" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-heartbeat"></i> Class Preferences</h2>
+                    
+                    <div class="form-group">
+                        <label class="required">Type of Classes</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.367928117" value="Group sessions in the apartment clubhouse/community hall">
+                                <span>Group sessions in clubhouse</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.367928117" value="Individual sessions">
+                                <span>Individual sessions</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.367928117" value="Online classes (for flexibility)">
+                                <span>Online classes</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.367928117" value="Hybrid option">
+                                <span>Hybrid option</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Preferred Timings</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1585150371" value="Early Morning (6–7 AM)">
+                                <span>Early Morning (6–7 AM)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1585150371" value="Morning (7:30–8:30 AM)">
+                                <span>Morning (7:30–8:30 AM)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1585150371" value="Evening (6–7 PM)">
+                                <span>Evening (6–7 PM)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1585150371" value="Weekend Only">
+                                <span>Weekend Only</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="entry.1585150371" value="Flexible / Open to any time">
+                                <span>Flexible / Open to any time</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="suggestions">Any suggestions, concerns, or specific requests?</label>
+                        <textarea id="suggestions" name="entry.68176095" class="form-control" placeholder="Let us know how we can serve you better..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-star"></i> Why Choose Zuga Fitness?</h2>
+                    <div class="benefits">
+                        <div class="benefit-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Certified Instructors</h4>
+                            <p>Professionally trained Zumba specialists</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-music"></i>
+                            <h4>Energetic Music</h4>
+                            <p>Latest international & Bollywood hits</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Community Building</h4>
+                            <p>Meet neighbors and build friendships</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> REGISTER FOR FREE TRIAL
+                </button>
+            </div>
+        </form>
+        
+        <div class="thank-you" id="thank-you">
+            <div class="thank-you-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>THANK YOU!</h2>
+                <div class="message">
+                    <p>Your registration for Zuga Fitness Apartment Zumba Classes has been received!</p>
+                    <p>Our team will contact you shortly with class details and your FREE trial schedule.</p>
+                </div>
+                <p><strong>Get ready to dance your way to fitness with Bangalore's best Zumba instructors!</strong></p>
+                <button class="btn-back" id="btn-back">
+                    <i class="fas fa-arrow-left"></i> BACK TO FORM
+                </button>
+                
+                <div class="dancing-figures">
+                    <div class="dancer">💃</div>
+                    <div class="dancer">🕺</div>
+                    <div class="dancer">💃</div>
+                    <div class="dancer">🕺</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 Zuga Fitness. All rights reserved. | Contact us: <a href="mailto:info@zugafitness.com">info@zugafitness.com</a> | <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p>Transform your apartment into a fitness hub with our specialized Zumba programs!</p>
+        </div>
+    </div>
+    
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        document.getElementById('zumba-form').addEventListener('submit', function(e) {
+            const requiredFields = document.querySelectorAll('[required]');
+            let valid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#ff416c';
+                    field.style.backgroundColor = '#ffebee';
+                } else {
+                    field.style.borderColor = '#ffd166';
+                    field.style.backgroundColor = '#fff9e6';
+                }
+            });
+            
+            // Check at least one class type is selected
+            const classTypes = document.querySelectorAll('input[name="entry.367928117"]:checked');
+            if (classTypes.length === 0) {
+                valid = false;
+                alert('Please select at least one class type');
+            }
+            
+            // Check at least one timing is selected
+            const timings = document.querySelectorAll('input[name="entry.1585150371"]:checked');
+            if (timings.length === 0) {
+                valid = false;
+                alert('Please select at least one preferred timing');
+            }
+            
+            if (valid) {
+                // Show thank you message
+                document.getElementById('thank-you').classList.add('active');
+                
+                // Reset the form after submission
+                setTimeout(() => {
+                    this.reset();
+                }, 1000);
+            } else {
+                e.preventDefault();
+                alert('Please fill all required fields correctly');
+            }
+        });
+        
+        // Back to form button
+        document.getElementById('btn-back').addEventListener('click', function() {
+            document.getElementById('thank-you').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
