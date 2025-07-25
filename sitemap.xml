@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://zugafftness.github.io/</loc>
+    <loc>https://zugafftness.in/</loc>
     <lastmod>2024-07-25</lastmod> <!-- Update with current date -->
     <priority>1.0</priority>
   </url>
   
   <!-- Add all your HTML pages -->
   <url>
-    <loc>https://zugafftness.github.io/Blog6.html</loc>
+    <loc>https://zugafftness.in/Blog6.html</loc>
     <lastmod>2024-07-18</lastmod> <!-- Your "last week" date -->
   </url>
   <url>
-    <loc>https://zugafftness.github.io/Yoga-Classes-In-Bangalore.html</loc>
+    <loc>https://zugafftness.in/Yoga-Classes-In-Bangalore.html</loc>
   </url>
   <url>
-    <loc>https://zugafftness.github.io/apartment.html</loc>
+    <loc>https://zugafftness.in/apartment.html</loc>
     <lastmod>2024-07-18</lastmod>
   </url>
   <!-- Add other pages similarly -->
