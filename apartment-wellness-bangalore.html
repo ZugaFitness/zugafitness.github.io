@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuga Fitness | Apartment Wellness Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --color-light-green: #f0f7f4;
+            --color-mint: #d4ede4;
+            --color-sage: #a3ceb1;
+            --color-forest: #4c956c;
+            --color-dark-green: #2c6e49;
+            --color-wood: #8d7b68;
+            --color-light-wood: #c8b6a6;
+            --color-dark: #333333;
+            --shadow-soft: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark);
+            background-color: var(--color-light-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23a3ceb1" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.2"/></svg>');
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--color-dark-green);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background: var(--color-forest);
+        }
+
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--color-forest);
+            color: var(--color-white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: var(--color-dark-green);
+            box-shadow: 0 5px 15px rgba(76, 149, 108, 0.3);
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-soft);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--color-forest);
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(15deg);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-dark-green);
+        }
+
+        .logo-text span {
+            color: var(--color-forest);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--color-forest);
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-mint) 0%, var(--color-light-green) 100%);
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--color-sage);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            background: var(--color-sage);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .hero h1 {
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 1.2rem;
+        }
+
+        .nature-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            z-index: 0;
+            opacity: 0.1;
+        }
+
+        .leaf-1 {
+            top: 20%;
+            left: 10%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,5 C70,15 85,40 80,65 C75,90 45,95 25,80 C5,65 0,40 15,20 C30,0 50,5 50,5 Z" fill="%232c6e49"/></svg>');
+        }
+
+        .leaf-2 {
+            bottom: 30%;
+            right: 15%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,5 C30,15 15,40 20,65 C25,90 55,95 75,80 C95,65 100,40 85,20 C70,0 50,5 50,5 Z" fill="%232c6e49"/></svg>');
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--color-white);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--color-white);
+            border-radius: 15px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--color-mint);
+        }
+
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--color-forest);
+            transform: translateX(-100%);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover:before {
+            transform: translateX(0);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--color-forest);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1);
+            background: var(--color-forest);
+            color: var(--color-white);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: var(--color-light-green);
+            position: relative;
+        }
+
+        .form-container {
+            background: var(--color-white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            border: 1px solid var(--color-mint);
+        }
+
+        .form-header {
+            background: linear-gradient(to right, var(--color-mint), var(--color-light-green));
+            padding: 30px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            color: var(--color-dark-green);
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-content {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--color-dark-green);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .form-group label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid var(--color-forest);
+            border-radius: 3px;
+        }
+
+        .form-group label.required:after {
+            content: '*';
+            color: #e74c3c;
+            margin-left: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--color-light-green);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-forest);
+            box-shadow: 0 0 0 2px rgba(76, 149, 108, 0.2);
+            background: var(--color-white);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex: 1 1 200px;
+            background: var(--color-mint);
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .checkbox-item:hover {
+            background: var(--color-sage);
+        }
+
+        .checkbox-item input {
+            width: auto;
+            margin-right: 10px;
+            accent-color: var(--color-forest);
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: normal;
+            padding-left: 0;
+        }
+
+        .checkbox-item label:before {
+            display: none;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--color-white);
+            position: relative;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--color-white);
+            border-radius: 15px;
+            padding: 35px 30px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid var(--color-mint);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--color-mint);
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--color-mint);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--color-forest);
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--color-dark-green);
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Thank You Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            transform: translateY(30px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--color-mint);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--color-mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--color-forest);
+            font-size: 3rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--color-forest);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark-green);
+            color: var(--color-white);
+            padding: 60px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+
+        .footer-logo span {
+            color: var(--color-mint);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            color: #ddd;
+        }
+
+        .footer-heading {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--color-white);
+        }
+
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--color-mint);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .contact-info i {
+            color: var(--color-mint);
+            margin-right: 15px;
+            min-width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--color-mint);
+            color: var(--color-dark-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .tagline {
+                margin-top: 10px;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .form-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .benefit-card, .testimonial-card {
+                padding: 25px 20px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="logo-text">Zuga <span>Fitness</span></div>
+                </a>
+                <div class="tagline">Elevate Your Wellness. Right Where You Live.</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Nature-Inspired Wellness in Your Apartment Community</h1>
+            <p>Zuga Fitness brings the serenity of nature to your doorstep. Experience revitalizing yoga, energizing Zumba, and holistic wellness programs designed for luxury apartment communities in Bengaluru.</p>
+            <a href="#form-section" class="btn">Begin Your Wellness Journey</a>
+        </div>
+        <div class="nature-decoration leaf-1"></div>
+        <div class="nature-decoration leaf-2"></div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Zuga Difference</h2>
+                <p>Holistic wellness solutions rooted in nature</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Natural Movement</h3>
+                    <p>Programs designed to reconnect you with natural movement patterns and rhythms.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Morning serenity or evening energy - choose sessions that align with your lifestyle.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Outdoor Sessions</h3>
+                    <p>Enjoy classes in your community gardens and green spaces when weather permits.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Connection</h3>
+                    <p>Build meaningful connections with neighbors through shared wellness experiences.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Stress Reduction</h3>
+                    <p>Nature-inspired techniques to lower stress and enhance overall wellbeing.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Holistic Approach</h3>
+                    <p>Programs addressing physical, mental and emotional wellness for complete harmony.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Bring Wellness to Your Community</h2>
+                    <p>Share your preferences and we'll create a bespoke wellness program for your residence</p>
+                </div>
+                <div class="form-content">
+                    <form id="wellness-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd_0HxpgxKpOSN6_U3ALz2G3taOp8ts4N4mP-I0mYuu0N5aWQ/formResponse" method="POST" target="hidden_iframe">
+                        <div class="form-group">
+                            <label for="name" class="required">Full Name *</label>
+                            <input type="text" id="name" name="entry.1067782258" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apartment">Apartment Name</label>
+                            <input type="text" id="apartment" name="entry.172749836" placeholder="Your apartment community name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="entry.1329094099" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="required">Phone Number *</label>
+                            <input type="tel" id="phone" name="entry.1659782347" required placeholder="+91 1234567890">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="required">Wellness Preferences *</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="group-sessions" name="entry.367928117" value="Group sessions in the apartment clubhouse/community hall">
+                                    <label for="group-sessions">Group Clubhouse Sessions</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="individual-apartment" name="entry.367928117" value="Individual sessions in the apartment">
+                                    <label for="individual-apartment">Individual Apartment Sessions</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="online-group" name="entry.367928117" value="Online group classes">
+                                    <label for="online-group">Online Group Classes</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="individual-online" name="entry.367928117" value="Individual sessions online">
+                                    <label for="individual-online">Individual Online Sessions</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="suggestions">Any suggestions, concerns, or specific requests?</label>
+                            <textarea id="suggestions" name="entry.68176095" rows="4" placeholder="Share your thoughts or special requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="btn">Submit Your Interest</button>
+                            <p style="margin-top: 20px; font-size: 0.9rem;">We respect your privacy and will never share your information</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resident Experiences</h2>
+                <p>Hear from residents who transformed their wellness journey</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The outdoor yoga sessions in our community garden have been transformative. Connecting with nature while practicing mindfulness has reduced my stress levels significantly.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">A</div>
+                        <div class="author-info">
+                            <h4>Ananya Sharma</h4>
+                            <p>Resident, Prestige Lakeside Habitat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Zuga's nature-inspired approach to fitness has made exercise enjoyable again. The instructors incorporate natural movements that feel organic and sustainable.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">R</div>
+                        <div class="author-info">
+                            <h4>Rajiv Mehta</h4>
+                            <p>Resident, Brigade Metropolis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As a busy professional, the flexibility of Zuga's programs has been invaluable. I can choose between outdoor, clubhouse, or online sessions based on my schedule.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">P</div>
+                        <div class="author-info">
+                            <h4>Priya Chatterjee</h4>
+                            <p>Resident, Sobha City</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Zuga <span>Fitness</span></div>
+                    <p>Bringing nature-inspired wellness experiences to luxury apartment communities across Bengaluru since 2018.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Koramangala, Bengaluru, Karnataka 560034</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>wellness@zugafitness.com</span></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3 class="footer-heading">Office Hours</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-clock"></i> <span>Monday - Friday: 9am - 6pm</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Saturday: 10am - 4pm</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sunday: Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Zuga Fitness. All rights reserved. Crafted with care in Bengaluru.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thank-you-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Thank You for Connecting with Nature!</h2>
+            <p>We've received your details and are excited to bring nature-inspired wellness to your apartment community.</p>
+            <p>Our wellness coordinator will contact you within 24 hours to discuss the next steps and customize your program.</p>
+            <div style="margin-top: 30px; background: var(--color-mint); padding: 20px; border-radius: 10px;">
+                <p><i class="fas fa-gift" style="color: var(--color-forest); margin-right: 10px;"></i> As a thank you, we're including a complimentary nature meditation session with your sign-up!</p>
+            </div>
+            <button class="btn modal-close-btn" style="margin-top: 30px;">Continue Exploring</button>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        // Form submission with Google Forms
+        document.getElementById('wellness-form').addEventListener('submit', function(e) {
+            // Form validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const checkboxes = document.querySelectorAll('input[name="entry.367928117"]:checked');
+            
+            if (name === '') {
+                alert('Please enter your full name');
+                e.preventDefault();
+                return;
+            }
+            
+            if (phone === '') {
+                alert('Please enter your phone number');
+                e.preventDefault();
+                return;
+            }
+            
+            if (checkboxes.length === 0) {
+                alert('Please select at least one wellness preference');
+                e.preventDefault();
+                return;
+            }
+            
+            // Show thank you modal after successful validation
+            setTimeout(function() {
+                document.getElementById('thank-you-modal').classList.add('active');
+            }, 1000);
+        });
+
+        // Close modal functionality
+        document.querySelector('.modal-close').addEventListener('click', function() {
+            document.getElementById('thank-you-modal').classList.remove('active');
+        });
+        
+        document.querySelector('.modal-close-btn').addEventListener('click', function() {
+            document.getElementById('thank-you-modal').classList.remove('active');
+        });
+        
+        // Close modal when clicking outside content
+        document.getElementById('thank-you-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.benefit-card, .testimonial-card');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect();
+                if (position.top < window.innerHeight * 0.8) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize elements for animation
+        document.querySelectorAll('.benefit-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        // Trigger initial scroll check
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
