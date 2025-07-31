@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zuga Fitness | Apartment Yoga & Zumba Classes in Bangalore</title>
-    <meta name="description" content="Top-rated apartment yoga and zumba classes in Bangalore. Enhance community wellness with our certified instructors serving Koramangala, Whitefield, and Electronic City.">
-    <meta name="keywords" content="yoga classes bangalore, zumba classes bangalore, apartment wellness bangalore, zuga fitness, yoga studio koramangala, zumba whitefield, electronic city fitness">
+    <title>Zuga Wellness | Apartment Fitness Programs in Bangalore</title>
+    <meta name="description" content="Apartment wellness programs in Bangalore. Enhance community health with yoga, zumba, fitness, and pilates classes.">
+    <meta name="keywords" content="apartment wellness bangalore, zuga wellness, yoga classes, zumba classes, fitness classes, pilates classes, bangalore fitness">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,8 @@
             --primary-orange: #FF7E5F;
             --light-peach: #FFF9F5;
             --zumba-purple: #8A4FFF;
-            --zumba-light: #F0E7FF;
+            --fitness-blue: #4F7DFF;
+            --pilates-green: #4FFF8A;
             --white: #ffffff;
             --light-gray: #f8f9fa;
             --text-dark: #2d3a4b;
@@ -21,6 +22,7 @@
             --shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             --gradient: linear-gradient(135deg, var(--primary-orange) 0%, var(--zumba-purple) 100%);
+            --four-gradient: linear-gradient(135deg, var(--primary-orange) 0%, var(--zumba-purple) 33%, var(--fitness-blue) 66%, var(--pilates-green) 100%);
         }
 
         * {
@@ -35,6 +37,7 @@
             background-color: var(--light-peach);
             line-height: 1.7;
             overflow-x: hidden;
+            position: relative;
         }
 
         h1, h2, h3, h4, h5 {
@@ -72,22 +75,12 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
-        .btn-yoga {
-            background-color: var(--primary-orange);
+        .btn-wellness {
+            background: var(--gradient);
         }
 
-        .btn-yoga:hover {
-            background-color: #e06d4f;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 126, 95, 0.4);
-        }
-
-        .btn-zumba {
-            background-color: var(--zumba-purple);
-        }
-
-        .btn-zumba:hover {
-            background-color: #7a46e0;
+        .btn-wellness:hover {
+            background: var(--four-gradient);
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(138, 79, 255, 0.4);
         }
@@ -263,10 +256,137 @@
 
         .hero-btns {
             display: flex;
-            gap: 20px;
             justify-content: center;
             margin-top: 2rem;
+            gap: 20px;
             flex-wrap: wrap;
+        }
+
+        /* New CTA Buttons */
+        .cta-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-bubble.whatsapp {
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .cta-bubble.whatsapp:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .floating-cta {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--gradient);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 30px 0 0 30px;
+            z-index: 998;
+            box-shadow: -3px 5px 15px rgba(0,0,0,0.15);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            max-width: 300px;
+            overflow: hidden;
+        }
+        
+        .floating-cta:hover {
+            padding-right: 20px;
+            max-width: 300px;
+        }
+        
+        .floating-cta i {
+            font-size: 1.5rem;
+        }
+        
+        .floating-cta span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .floating-cta:hover span {
+            animation: slideIn 0.5s forwards;
+        }
+        
+        .section-cta {
+            background: var(--light-peach);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 126, 95, 0.1);
+        }
+        
+        .section-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .section-cta p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-cta .btn {
+            min-width: 220px;
+            font-size: 1.1rem;
+            padding: 16px 32px;
+        }
+        
+        .section-cta:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--gradient);
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .section-cta:after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--zumba-purple) 0%, var(--fitness-blue) 100%);
+            opacity: 0.1;
+            z-index: -1;
         }
 
         /* Service Categories */
@@ -304,6 +424,14 @@
 
         .category-zumba {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        }
+
+        .category-fitness {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        }
+
+        .category-pilates {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
         }
 
         .category-content {
@@ -363,6 +491,14 @@
             border-top-color: var(--zumba-purple);
         }
 
+        .benefit-card.fitness-card {
+            border-top-color: var(--fitness-blue);
+        }
+
+        .benefit-card.pilates-card {
+            border-top-color: var(--pilates-green);
+        }
+
         .benefit-icon {
             width: 80px;
             height: 80px;
@@ -382,6 +518,16 @@
         .zumba-icon {
             background-color: rgba(138, 79, 255, 0.1);
             color: var(--zumba-purple);
+        }
+
+        .fitness-icon {
+            background-color: rgba(79, 125, 255, 0.1);
+            color: var(--fitness-blue);
+        }
+
+        .pilates-icon {
+            background-color: rgba(79, 255, 138, 0.1);
+            color: var(--pilates-green);
         }
 
         .benefit-card h4 {
@@ -407,6 +553,12 @@
             grid-template-columns: 1fr;
             gap: 40px;
             margin-top: 40px;
+        }
+
+        @media (min-width: 992px) {
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         .service-card {
@@ -463,6 +615,16 @@
             color: var(--zumba-purple);
         }
 
+        .service-fitness .service-icon {
+            background-color: rgba(79, 125, 255, 0.1);
+            color: var(--fitness-blue);
+        }
+
+        .service-pilates .service-icon {
+            background-color: rgba(79, 255, 138, 0.1);
+            color: var(--pilates-green);
+        }
+
         .service-card h3 {
             font-size: 1.8rem;
         }
@@ -498,6 +660,14 @@
 
         .service-zumba .service-feature i {
             color: var(--zumba-purple);
+        }
+
+        .service-fitness .service-feature i {
+            color: var(--fitness-blue);
+        }
+
+        .service-pilates .service-feature i {
+            color: var(--pilates-green);
         }
 
         .service-feature h4 {
@@ -583,6 +753,18 @@
             grid-template-columns: 1fr;
             gap: 30px;
             margin-top: 50px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .testimonial-card {
@@ -699,8 +881,8 @@
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 25px;
             margin-top: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -715,6 +897,12 @@
         .btn-cta:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-cta.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
         }
 
         /* Footer */
@@ -744,6 +932,18 @@
             margin: 0 auto 2rem;
             position: relative;
             z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1.5fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footer-container {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
         }
 
         .footer-logo {
@@ -887,6 +1087,29 @@
                 transform: translateY(0);
             }
         }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                max-width: 0;
+                opacity: 0;
+            }
+            to {
+                max-width: 300px;
+                opacity: 1;
+            }
+        }
 
         .animate {
             animation: fadeInUp 0.8s ease-out forwards;
@@ -995,19 +1218,7 @@
             }
             
             .categories-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .services-container {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1.5fr 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -1024,12 +1235,8 @@
                 font-size: 3.2rem;
             }
             
-            .testimonials-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .footer-container {
-                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            .categories-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
@@ -1054,23 +1261,12 @@
                 font-size: 1.3rem;
             }
             
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
             .service-feature {
                 padding: 10px;
+            }
+            
+            .floating-cta {
+                display: none;
             }
         }
 
@@ -1102,16 +1298,32 @@
             .service-card {
                 padding: 25px;
             }
+            
+            .section-cta {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Floating CTA Elements -->
+    <div class="cta-bubble whatsapp">
+        <a href="https://wa.me/917676379909" target="_blank" style="color: white;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <a href="#contact" class="floating-cta">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book a Free Demo Today!</span>
+    </a>
+
     <!-- Header & Navigation -->
     <header>
         <div class="navbar">
             <div class="logo">
                 <i class="fas fa-heartbeat"></i>
-                <h1>Zuga Fitness <span class="location-tag">Bangalore</span></h1>
+                <h1>Zuga Wellness <span class="location-tag">Bangalore</span></h1>
             </div>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -1146,11 +1358,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>Apartment Yoga & Zumba Classes in Bangalore</h2>
-            <p class="tagline">Bring wellness to your community with our apartment fitness programs</p>
+            <h2>Apartment Wellness in Bangalore</h2>
+            <p class="tagline">Transform your community with our holistic fitness programs for all residents</p>
             <div class="hero-btns">
-                <a href="Apartment Yoga.html" class="btn btn-yoga">Explore Yoga</a>
-                <a href="Apartment Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                <a href="#services" class="btn btn-wellness">Explore Wellness</a>
             </div>
         </div>
     </section>
@@ -1158,24 +1369,36 @@
     <!-- Service Categories -->
     <section class="service-categories" id="services">
         <div class="section-header">
-            <h2>Apartment Wellness Services</h2>
-            <p>Transform your community with our specialized programs designed for Bangalore apartments</p>
+            <h2>Our Wellness Services</h2>
+            <p>Four pillars of holistic fitness designed for apartment communities</p>
         </div>
         
         <div class="categories-grid">
             <div class="category-card category-yoga">
                 <div class="category-content">
-                    <h3>Apartment Yoga Classes</h3>
-                    <p>Professional yoga sessions tailored for apartment communities to promote harmony and wellness.</p>
-                    <a href="Apartment Yoga.html" class="btn btn-yoga">Explore Yoga</a>
+                    <h3>Community Yoga</h3>
+                    <p>Promote harmony and mindfulness with tailored sessions for all skill levels.</p>
                 </div>
             </div>
             
             <div class="category-card category-zumba">
                 <div class="category-content">
-                    <h3>Apartment Zumba Classes</h3>
-                    <p>Energetic Zumba sessions that bring neighbors together and create joyful communities.</p>
-                    <a href="Apartment Zumba.html" class="btn btn-zumba">Discover Zumba</a>
+                    <h3>Group Zumba</h3>
+                    <p>Energetic dance sessions that bring neighbors together in joyful movement.</p>
+                </div>
+            </div>
+            
+            <div class="category-card category-fitness">
+                <div class="category-content">
+                    <h3>Functional Fitness</h3>
+                    <p>Strength and conditioning classes designed for apartment environments.</p>
+                </div>
+            </div>
+            
+            <div class="category-card category-pilates">
+                <div class="category-content">
+                    <h3>Pilates & Core</h3>
+                    <p>Low-impact workouts focusing on strength, flexibility, and posture.</p>
                 </div>
             </div>
         </div>
@@ -1184,8 +1407,8 @@
     <!-- Benefits Section -->
     <section class="benefits-section" id="benefits">
         <div class="section-header">
-            <h2>Community Benefits</h2>
-            <p>How our Yoga and Zumba programs enhance apartment living in Bangalore</p>
+            <h2>Community Wellness Benefits</h2>
+            <p>How our programs enhance apartment living in Bangalore</p>
         </div>
         
         <div class="benefits-container">
@@ -1193,41 +1416,48 @@
                 <div class="benefit-icon yoga-icon">
                     <i class="fas fa-heartbeat"></i>
                 </div>
-                <h4>Community Bonding</h4>
-                <p>Shared wellness activities help neighbors connect and build meaningful relationships.</p>
+                <h4>Stress Reduction</h4>
+                <p>Regular sessions help residents unwind and find balance in urban life.</p>
             </div>
             
             <div class="benefit-card zumba-card">
                 <div class="benefit-icon zumba-icon">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <h4>Stress Relief</h4>
-                <p>Fun, engaging sessions help residents unwind after busy days in Bangalore.</p>
-            </div>
-            
-            <div class="benefit-card yoga-card">
-                <div class="benefit-icon yoga-icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <h4>Family Wellness</h4>
-                <p>Programs suitable for all ages, helping families stay active together.</p>
+                <h4>Social Connection</h4>
+                <p>Shared activities build meaningful relationships among neighbors.</p>
             </div>
             
-            <div class="benefit-card zumba-card">
-                <div class="benefit-icon zumba-icon">
-                    <i class="fas fa-laugh"></i>
+            <div class="benefit-card fitness-card">
+                <div class="benefit-icon fitness-icon">
+                    <i class="fas fa-dumbbell"></i>
                 </div>
-                <h4>Joyful Atmosphere</h4>
-                <p>Regular sessions create positive energy throughout the community.</p>
+                <h4>Improved Fitness</h4>
+                <p>Accessible programs that help residents achieve their health goals.</p>
             </div>
+            
+            <div class="benefit-card pilates-card">
+                <div class="benefit-icon pilates-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h4>Holistic Wellness</h4>
+                <p>A balanced approach addressing physical, mental, and social health.</p>
+            </div>
+        </div>
+        
+        <!-- New CTA -->
+        <div class="section-cta">
+            <h3>Ready to Transform Your Community?</h3>
+            <p>Join over 50 apartment communities in Bangalore that have enhanced resident wellness with our programs</p>
+            <a href="#contact" class="btn btn-wellness">Get Started Today</a>
         </div>
     </section>
 
     <!-- Apartment Services -->
     <section class="services-section">
         <div class="section-header">
-            <h2>Apartment Wellness Solutions</h2>
-            <p>Tailored programs for Bangalore apartment communities</p>
+            <h2>Tailored Wellness Programs</h2>
+            <p>Comprehensive solutions for Bangalore apartment communities</p>
         </div>
         
         <div class="services-container">
@@ -1236,35 +1466,33 @@
                     <div class="service-icon">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Apartment Yoga</h3>
+                    <h3>Community Yoga</h3>
                 </div>
-                <p>Our apartment yoga sessions in Bangalore are designed to create harmony in your community, helping residents find balance in the city's fast-paced environment.</p>
+                <p>Transform your clubhouse or terrace into a peaceful yoga studio with sessions for all ages and skill levels.</p>
                 
                 <div class="service-features">
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Community Spaces</h4>
-                            <p>We transform clubhouses and terraces into peaceful yoga studios</p>
+                            <h4>All-Levels Classes</h4>
+                            <p>Beginner to advanced sessions tailored to residents' needs</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>All Ages Welcome</h4>
-                            <p>Programs for kids, adults, and seniors in your community</p>
+                            <h4>Themed Sessions</h4>
+                            <p>Sunrise yoga, full moon meditation, and wellness workshops</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Special Events</h4>
-                            <p>Sunrise sessions, full moon yoga, and wellness workshops</p>
+                            <h4>Family Programs</h4>
+                            <p>Parent-child yoga and sessions for seniors</p>
                         </div>
                     </div>
                 </div>
-                
-                <a href="Apartment Yoga.html" class="btn btn-yoga">Request Yoga Program</a>
             </div>
             
             <div class="service-card service-zumba">
@@ -1272,9 +1500,9 @@
                     <div class="service-icon">
                         <i class="fas fa-music"></i>
                     </div>
-                    <h3>Apartment Zumba</h3>
+                    <h3>Group Zumba</h3>
                 </div>
-                <p>Bring energy and excitement to your community with our high-energy Zumba sessions designed specifically for apartment living.</p>
+                <p>Bring energy and excitement to your community with our high-energy dance fitness sessions.</p>
                 
                 <div class="service-features">
                     <div class="service-feature">
@@ -1287,20 +1515,86 @@
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Family Fun</h4>
-                            <p>Kid-friendly sessions and parent-child dance classes</p>
+                            <h4>Multi-Generational</h4>
+                            <p>Programs suitable for teens, adults, and seniors</p>
                         </div>
                     </div>
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h4>Social Connections</h4>
+                            <h4>Social Engagement</h4>
                             <p>Meet neighbors while dancing to energetic beats</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="service-card service-fitness">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Functional Fitness</h3>
+                </div>
+                <p>Build strength and endurance with our apartment-friendly fitness programs.</p>
                 
-                <a href="Apartment Zumba.html" class="btn btn-zumba">Request Zumba Program</a>
+                <div class="service-features">
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Equipment-Free</h4>
+                            <p>Bodyweight exercises suitable for any apartment space</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Strength Training</h4>
+                            <p>Programs to build muscle and improve metabolism</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Cardio Conditioning</h4>
+                            <p>High-intensity interval training for all fitness levels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card service-pilates">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Pilates & Core</h3>
+                </div>
+                <p>Improve posture, flexibility, and core strength with our specialized Pilates programs.</p>
+                
+                <div class="service-features">
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Posture Correction</h4>
+                            <p>Address desk-related posture issues common in urban life</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Low-Impact</h4>
+                            <p>Gentle on joints while building core strength</p>
+                        </div>
+                    </div>
+                    <div class="service-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Mind-Body Connection</h4>
+                            <p>Focus on breathing and precise movement</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1308,73 +1602,78 @@
     <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="section-header">
-            <h2>Apartment Wellness Gallery</h2>
-            <p>Moments of mindfulness, energy, and community in Bangalore apartments</p>
+            <h2>Community Wellness Moments</h2>
+            <p>Capturing the joy of fitness in Bangalore apartments</p>
         </div>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Yoga Class in Koramangala">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Yoga Class">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Zumba in Whitefield">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Zumba Session">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Wellness in Electronic City">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Fitness Class">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
 
-             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Yoga Session">
-                <div class="gallery-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            
-             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Apartment Rooftop Yoga">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pilates Session">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Zumba Party">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Fitness Session">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Wellness Event">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New CTA -->
+        <div class="text-center" style="margin: 50px auto 20px;">
+            <a href="#contact" class="btn btn-wellness">Plan Your Community Program</a>
         </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials-section" id="testimonials">
         <div class="section-header">
-            <h2>What Residents Say</h2>
-            <p>Success stories from Bangalore apartment communities</p>
+            <h2>Community Voices</h2>
+            <p>What residents say about our wellness programs</p>
         </div>
         
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"The yoga classes transformed our apartment community. Neighbors who never spoke before now greet each other. We've created real friendships through these sessions."</p>
+                    <p class="testimonial-text">"The wellness programs transformed our community. Neighbors who never spoke before now greet each other. We've created real friendships through these sessions."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Divya">
                         </div>
                         <div class="author-info">
                             <h4>Divya</h4>
-                            <p>Resident, Sunshine Apartments, Koramangala</p>
+                            <p>Resident, Sunshine Apartments</p>
                         </div>
                     </div>
                 </div>
@@ -1382,14 +1681,14 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"Our Friday Zumba sessions are the highlight of our week! The energy is incredible and it's brought our entire community closer together. Kids, parents, grandparents - everyone joins!"</p>
+                    <p class="testimonial-text">"Our Friday Zumba sessions are the highlight of our week! The energy is incredible and it's brought our entire community closer together."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Rajesh">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Soumya">
                         </div>
                         <div class="author-info">
-                            <h4>Rajesh</h4>
-                            <p>RWA President, Harmony Residency, Whitefield</p>
+                            <h4>Soumya</h4>
+                            <p>RWA President, Harmony Residency</p>
                         </div>
                     </div>
                 </div>
@@ -1397,30 +1696,32 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-content">
-                    <p class="testimonial-text">"As seniors, we appreciate the gentle yoga sessions. They've helped with mobility and created a wonderful social circle. It's more than exercise - it's community."</p>
+                    <p class="testimonial-text">"The variety of programs means there's something for everyone. I love the yoga, my husband does the fitness classes, and our teenager enjoys Zumba!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gareema Patel">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Priya">
                         </div>
                         <div class="author-info">
-                            <h4>Gareema Patel</h4>
-                            <p>Resident, Silver Oaks, Electronic City</p>
+                            <h4>Priya</h4>
+                            <p>Resident, Green Valley Apartments</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- New CTA -->
+           </section>
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-content">
-            <h2>Ready to Transform Your Community?</h2>
+            <h2>Bring Wellness to Your Community</h2>
             <p>Contact us today to schedule a consultation and discover how our apartment wellness programs can benefit your Bangalore community.</p>
             
             <div class="cta-buttons">
-                <a href="tel:+917676379909" class="btn btn-cta btn-yoga">Call Now</a>
-                <a href="mailto:zugafiness24@gmail.com" class="btn btn-cta btn-zumba">Email Us</a>
+                <a href="tel:+917676379909" class="btn btn-cta">Call Now</a>
+                <a href="mailto:zugafiness24@gmail.com" class="btn btn-cta secondary">Email Us</a>
             </div>
         </div>
     </section>
@@ -1431,12 +1732,12 @@
             <div class="footer-about">
                 <div class="footer-logo">
                     <i class="fas fa-heartbeat"></i>
-                    <h3>Zuga Fitness Bangalore</h3>
+                    <h3>Zuga Wellness Bangalore</h3>
                 </div>
-                <p>Bringing wellness to Bangalore apartments with specialized Yoga and Zumba programs. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and throughout Bangalore.</p>
+                <p>Bringing comprehensive wellness to Bangalore apartments with specialized programs in yoga, zumba, fitness, and pilates.</p>
                 
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Zuga Fitness, Sarjapur Road, Bangalore</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sarjapur Road, Bangalore</p>
                     <p><i class="fas fa-phone"></i> +91 76763 79909</p>
                     <p><i class="fas fa-envelope"></i> zugafiness24@gmail.com</p>
                 </div>
@@ -1464,10 +1765,10 @@
                 <h4 class="footer-heading">Our Services</h4>
                 <ul class="footer-links">
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Apartment Yoga</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Apartment Zumba</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Family Wellness</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Senior Fitness</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Community Events</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Group Zumba</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Functional Fitness</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pilates & Core</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Wellness Workshops</a></li>
                 </ul>
             </div>
             
@@ -1477,15 +1778,15 @@
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Koramangala</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Whitefield</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Electronic City</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> MG Road</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Indiranagar</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Sarjapur Road</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> HSR Layout</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> All Bangalore</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="copyright">
-            <p>&copy; 2023 Zuga Fitness - Bangalore. All rights reserved.</p>
+            <p>&copy; 2023 Zuga Wellness - Bangalore. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1549,6 +1850,15 @@
         document.querySelectorAll('section, .category-card, .benefit-card, .service-card, .gallery-item, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
+        
+        // Floating CTA animation
+        const floatingCta = document.querySelector('.floating-cta');
+        if (floatingCta) {
+            setTimeout(() => {
+                floatingCta.style.transition = 'all 0.5s ease';
+                floatingCta.style.transform = 'translateY(-50%)';
+            }, 1000);
+        }
     </script>
 </body>
 </html>
