@@ -2,22 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://zugafftness.in/</loc>
-    <lastmod>2024-07-25</lastmod> <!-- Update with current date -->
+    <loc>https://zugafitness.in/</loc>
+    <lastmod>2025-08-04</lastmod>
     <priority>1.0</priority>
   </url>
   
-  <!-- Add all your HTML pages -->
+  <!-- Existing pages -->
   <url>
-    <loc>https://zugafftness.in/Blog6.html</loc>
-    <lastmod>2024-07-18</lastmod> <!-- Your "last week" date -->
-  </url>
-  <url>
-    <loc>https://zugafftness.in/Yoga-Classes-In-Bangalore.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafftness.in/apartment.html</loc>
+    <loc>https://zugafitness.in/Blog6.html</loc>
     <lastmod>2024-07-18</lastmod>
   </url>
-  <!-- Add other pages similarly -->
-</urlset>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/apartment.html</loc>
+    <lastmod>2024-07-18</lastmod>
+  </url>
+  
+  <!-- New pages from index.html -->
+  <url>
+    <loc>https://zugafitness.in/index.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Yoga-Classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Personal-Training-classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Postpartum-Yoga-Classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Pranayama-Classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Hatha-Vinyasa-Classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-kids-Yoga-Classes.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Virtual-Yoga-Classes-For-senior.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Online-Yoga-Classes-For-PCOD.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Mallinath-Portfolio.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Anusha-Portfolio.html</loc>
+  </url>
+   <url>
+    <loc>https://zugafitness.in/Apartment-Yoga.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Apartment-Zumba.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Corporate-Yoga.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Corporate-Zumba.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Corporate.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Wellness-Program-Form.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog1.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog2.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog3.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog4.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog5.html</loc>
+  </url>
+  </urlset>
