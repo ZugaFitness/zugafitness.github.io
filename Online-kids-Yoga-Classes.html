@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
@@ -284,7 +284,7 @@
         }
 
         .thank-you i {
-            font-size: 5rem;
+            font-size: clamp(3.5rem, 10vw, 4.25rem);
             color: #4CAF50;
             margin-bottom: 20px;
             animation: celebrate 1s ease infinite alternate;
@@ -401,7 +401,7 @@
         .floating.yoga-mat {
             top: 20%;
             left: 5%;
-            font-size: 10rem;
+            font-size: clamp(6rem, 20vw, 8.5rem);
             transform: rotate(20deg);
             animation: float 15s infinite ease-in-out;
         }
@@ -409,7 +409,7 @@
         .floating.lotus {
             bottom: 20%;
             right: 5%;
-            font-size: 8rem;
+            font-size: clamp(5rem, 15vw, 6.8rem);
             transform: rotate(-15deg);
             animation: float 18s infinite ease-in-out;
         }
@@ -425,16 +425,16 @@
                 flex-direction: column;
                 gap: 20px;
             }
-            
+
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .form-container {
                 padding: 25px;
             }
-            
+
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -444,15 +444,15 @@
             .logo-text {
                 font-size: 1.8rem;
             }
-            
+
             .hero h1 {
                 font-size: 1.8rem;
             }
-            
+
             .yoga-poses {
                 gap: 15px;
             }
-            
+
             .pose {
                 font-size: 2rem;
             }
@@ -499,46 +499,46 @@
 
         <!-- Form Section -->
         <div class="form-container" id="form-container">
-            <form 
-                action="https://docs.google.com/forms/d/e/1FAIpQLSeA2EQef1WdSoyXJxlvnHnzhLA9-sxODokPszkedLlliMn4jA/formResponse" 
-                method="POST" 
+            <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeA2EQef1WdSoyXJxlvnHnzhLA9-sxODokPszkedLlliMn4jA/formResponse"
+                method="POST"
                 id="yoga-form"
                 target="_self"
             >
                 <h2 class="form-header">Register Your Child</h2>
-                
+
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="parent-name">Parent/Guardian Name *</label>
                         <input type="text" id="parent-name" name="entry.2138703679" required placeholder="Your full name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="full-name">Full Name *</label>
                         <input type="text" id="full-name" name="entry.755930631" required placeholder="Child's full name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="country">Country Currently Living In *</label>
                         <input type="text" id="country" name="entry.560033932" required placeholder="Enter country name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="contact">Parent/Guardian Contact No (WhatsApp) *</label>
                         <input type="tel" id="contact" name="entry.1612789451" required placeholder="Include country code (e.g. +1)">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="child-name">Child's Name & Age *</label>
                         <input type="text" id="child-name" name="entry.1085692733" required placeholder="e.g. Emma, 5 years">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="timing">Available Timing for Call *</label>
                         <input type="text" id="timing" name="entry.1228218832" required placeholder="e.g. Weekdays after 5 PM">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label>What goals do you have for your child? (Select all that apply)</label>
                     <div class="checkbox-group">
@@ -566,15 +566,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="allergies">Does your child have any allergies, medical conditions, or sensory sensitivities?</label>
                     <textarea id="allergies" name="entry.565957959" rows="4" placeholder="Example: 'Peanut allergy', 'ADHD', 'Sensitive to loud noises'"></textarea>
                 </div>
-                
+
                 <button type="submit" class="submit-btn">Register Now <i class="fas fa-leaf"></i></button>
             </form>
-            
+
             <!-- Thank You Message -->
             <div class="thank-you" id="thank-you">
                 <i class="fas fa-check-circle"></i>
@@ -583,25 +583,25 @@
                 <a href="#" class="home-btn" id="home-btn"><i class="fas fa-home"></i> Back to Home</a>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <footer>
             <div class="footer-content">
                 <h3>Little Yogi Studio</h3>
                 <p>Helping children grow through yoga and mindfulness</p>
-                
+
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-pinterest"></i></a>
                 </div>
-                
+
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> info@littleyogistudio.com</p>
                     <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                 </div>
-                
+
                 <div class="copyright">
                     <p>&copy; 2023 Little Yogi Studio. All rights reserved.</p>
                     <p>Designed with <i class="fas fa-heart" style="color: #f48fb1;"></i> for happy little yogis</p>
@@ -616,47 +616,47 @@
             const formContainer = document.getElementById('form-container');
             const thankYouMessage = document.getElementById('thank-you');
             const homeBtn = document.getElementById('home-btn');
-            
+
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
+
                 // Show submitting animation
                 const submitBtn = form.querySelector('.submit-btn');
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = 'Submitting <i class="fas fa-spinner fa-spin"></i>';
                 submitBtn.disabled = true;
-                
+
                 // Create a temporary iframe to handle form submission
                 const iframe = document.createElement('iframe');
                 iframe.name = 'form-submission-iframe';
                 iframe.style.display = 'none';
                 document.body.appendChild(iframe);
-                
+
                 form.target = 'form-submission-iframe';
-                
+
                 // Submit the form
                 form.submit();
-                
+
                 // After a short delay, show the thank you message
                 setTimeout(function() {
                     form.style.display = 'none';
                     thankYouMessage.style.display = 'block';
-                    
+
                     // Add celebration effect
                     formContainer.style.transform = 'scale(1.02)';
                     formContainer.style.boxShadow = '0 15px 40px rgba(76, 175, 80, 0.3)';
-                    
+
                     // Reset button
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.disabled = false;
-                    
+
                     // Remove iframe after submission
                     setTimeout(function() {
                         document.body.removeChild(iframe);
                     }, 3000);
                 }, 1500);
             });
-            
+
             // Home button functionality
             homeBtn.addEventListener('click', function(e) {
                 e.preventDefault();

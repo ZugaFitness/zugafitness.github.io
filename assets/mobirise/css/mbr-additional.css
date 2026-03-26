@@ -24,19 +24,19 @@ body {
 }
 .display-1 {
   font-family: 'Source Serif 4', sans-serif;
-  font-size: 5rem;
+  font-size: clamp(3rem, 10vw, 4.25rem);
   line-height: 1;
 }
 .display-1 > .mbr-iconfont {
-  font-size: 6.25rem;
+  font-size: clamp(4rem, 12vw, 5.3rem);
 }
 .display-2 {
   font-family: 'Source Serif 4', sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   line-height: 1;
 }
 .display-2 > .mbr-iconfont {
-  font-size: 5rem;
+  font-size: clamp(3rem, 10vw, 4.25rem);
 }
 .display-4 {
   font-family: 'Source Serif 4', sans-serif;
@@ -69,7 +69,7 @@ body {
 /* 0.65 - min scale variable, may vary */
 @media (max-width: 992px) {
   .display-1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
   }
 }
 @media (max-width: 768px) {
@@ -1451,8 +1451,8 @@ a {
 .cid-uEMp5cL0kQ img,
 .cid-uEMp5cL0kQ .item-img {
   width: 100%;
-  height: 100%;
-  height: 400px;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
 }
 @media (max-width: 767px) {
@@ -1773,7 +1773,8 @@ a {
 }
 .cid-uEEJbxUmPk img,
 .cid-uEEJbxUmPk .image-wrapper {
-  height: 600px;
+  height: auto;
+  max-height: 600px;
   object-fit: cover;
 }
 @media (max-width: 767px) {
@@ -1836,8 +1837,8 @@ a {
 .cid-uEEJbxUzva img,
 .cid-uEEJbxUzva .item-img {
   width: 100%;
-  height: 100%;
-  height: 400px;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
 }
 .cid-uEEJbxUzva .item:focus,
@@ -2257,3 +2258,4 @@ a {
 .cid-uEEJbxW94M .mbr-section-title {
   color: #ffffff;
 }
+@media (min-width: 1400px) { .container { max-width: 1440px !important; } }

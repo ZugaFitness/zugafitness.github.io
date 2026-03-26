@@ -46,12 +46,12 @@
 
         section {
             padding: 5rem 1.5rem;
-            max-width: 1400px;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1440px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -132,7 +132,7 @@
             overflow: hidden;
             border-top: 4px solid var(--primary-orange);
         }
-        
+
         .form-container:before {
             content: '';
             position: absolute;
@@ -145,7 +145,7 @@
             opacity: 0.05;
             z-index: -1;
         }
-        
+
         .form-container:after {
             content: '';
             position: absolute;
@@ -158,11 +158,11 @@
             opacity: 0.05;
             z-index: -1;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         .form-label {
             display: block;
             margin-bottom: 10px;
@@ -170,7 +170,7 @@
             color: var(--text-dark);
             font-size: 1.1rem;
         }
-        
+
         .form-input {
             width: 100%;
             padding: 15px 20px;
@@ -180,20 +180,20 @@
             font-size: 1rem;
             transition: var(--transition);
         }
-        
+
         .form-input:focus {
             outline: none;
             border-color: var(--primary-orange);
             box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.2);
         }
-        
+
         .checkbox-group {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 10px;
         }
-        
+
         .checkbox-label {
             display: flex;
             align-items: center;
@@ -204,16 +204,16 @@
             cursor: pointer;
             transition: var(--transition);
         }
-        
+
         .checkbox-label:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+
         .checkbox-label input {
             display: none;
         }
-        
+
         .checkbox-label .checkmark {
             width: 20px;
             height: 20px;
@@ -224,7 +224,7 @@
             justify-content: center;
             transition: var(--transition);
         }
-        
+
         .checkbox-label .checkmark:after {
             content: '\f00c';
             font-family: 'Font Awesome 5 Free';
@@ -234,16 +234,16 @@
             opacity: 0;
             transition: var(--transition);
         }
-        
+
         .checkbox-label input:checked + .checkmark {
             background: var(--fitness-blue);
             border-color: var(--fitness-blue);
         }
-        
+
         .checkbox-label input:checked + .checkmark:after {
             opacity: 1;
         }
-        
+
         .yoga-label {
             background: rgba(255, 126, 95, 0.1);
         }
@@ -254,7 +254,7 @@
             background: var(--primary-orange);
             border-color: var(--primary-orange);
         }
-        
+
         .zumba-label {
             background: rgba(138, 79, 255, 0.1);
         }
@@ -265,7 +265,7 @@
             background: var(--zumba-purple);
             border-color: var(--zumba-purple);
         }
-        
+
         .fitness-label {
             background: rgba(79, 125, 255, 0.1);
         }
@@ -276,7 +276,7 @@
             background: var(--fitness-blue);
             border-color: var(--fitness-blue);
         }
-        
+
         .pilates-label {
             background: rgba(79, 255, 138, 0.1);
         }
@@ -287,7 +287,7 @@
             background: var(--pilates-green);
             border-color: var(--pilates-green);
         }
-        
+
         .form-textarea {
             width: 100%;
             padding: 15px 20px;
@@ -299,18 +299,18 @@
             resize: vertical;
             transition: var(--transition);
         }
-        
+
         .form-textarea:focus {
             outline: none;
             border-color: var(--primary-orange);
             box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.2);
         }
-        
+
         .form-actions {
             text-align: center;
             margin-top: 30px;
         }
-        
+
         .form-submit {
             background: var(--gradient);
             color: white;
@@ -323,13 +323,13 @@
             font-weight: 600;
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
-        
+
         .form-submit:hover {
             background: var(--four-gradient);
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(138, 79, 255, 0.4);
         }
-        
+
         .form-success {
             display: none;
             text-align: center;
@@ -338,47 +338,47 @@
             border-radius: 15px;
             margin-top: 30px;
         }
-        
+
         .form-success i {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 8vw, 3.4rem);
             color: var(--pilates-green);
             margin-bottom: 20px;
         }
-        
+
         .form-success h3 {
             font-size: 2rem;
             margin-bottom: 15px;
             color: var(--text-dark);
         }
-        
+
         .form-success p {
             font-size: 1.1rem;
             color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .form-container {
                 padding: 30px;
             }
-            
+
             .checkbox-group {
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .checkbox-label {
                 width: 100%;
             }
         }
-        
+
         @media (max-width: 480px) {
             .section-header h2 {
                 font-size: 2rem;
             }
-            
+
             .form-container {
                 padding: 20px;
             }
@@ -391,34 +391,34 @@
             <h2>Wellness Program Inquiry</h2>
             <p>Get in touch to bring fitness to your apartment community in Bangalore</p>
         </div>
-        
+
         <div class="form-container">
             <form id="wellnessForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeRY7D-ZsDgAh4cihKteqCVYC0CI3CMnY0xkSmQ5nN_nt_QqQ/formResponse" method="POST">
                 <div class="form-group">
                     <label class="form-label" for="name">Full Name</label>
                     <input class="form-input" type="text" id="name" name="entry.2064544213" required placeholder="Enter your full name">
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="email">Email Address</label>
                     <input class="form-input" type="email" id="email" name="entry.1469018656" required placeholder="Enter your email address">
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="phone">Phone Number</label>
                     <input class="form-input" type="tel" id="phone" name="entry.556424988" required placeholder="Enter your phone number">
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="community">Apartment Community Name</label>
                     <input class="form-input" type="text" id="community" name="entry.1569208325" required placeholder="Enter your apartment community name">
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="location">Community Location</label>
                     <input class="form-input" type="text" id="location" name="entry.464764102" required placeholder="Enter your community location (e.g., Koramangala, Whitefield)">
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label">Wellness Services You're Interested In</label>
                     <div class="checkbox-group">
@@ -427,19 +427,19 @@
                             <span class="checkmark"></span>
                             Community Yoga
                         </label>
-                        
+
                         <label class="checkbox-label zumba-label">
                             <input type="checkbox" name="entry.1092706391" value="Group Zumba">
                             <span class="checkmark"></span>
                             Group Zumba
                         </label>
-                        
+
                         <label class="checkbox-label fitness-label">
                             <input type="checkbox" name="entry.1092706391" value="Functional Fitness">
                             <span class="checkmark"></span>
                             Functional Fitness
                         </label>
-                        
+
                         <label class="checkbox-label pilates-label">
                             <input type="checkbox" name="entry.1092706391" value="Personal Training">
                             <span class="checkmark"></span>
@@ -447,17 +447,17 @@
                         </label>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="message">Tell us about your community</label>
                     <textarea class="form-textarea" id="message" name="entry.1813076162" placeholder="How many residents? What facilities do you have? What are your wellness goals?"></textarea>
                 </div>
-                
+
                 <div class="form-actions">
                     <button type="submit" class="form-submit">Submit Inquiry</button>
                 </div>
             </form>
-            
+
             <div id="successMessage" class="form-success">
                 <i class="fas fa-check-circle"></i>
                 <h3>Thank You for Your Inquiry!</h3>
@@ -469,23 +469,23 @@
     <script>
         document.getElementById('wellnessForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Create hidden iframe for form submission
             const iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             iframe.name = 'hidden-iframe';
             document.body.appendChild(iframe);
-            
+
             // Set form target to the iframe
             this.target = 'hidden-iframe';
-            
+
             // Submit the form
             this.submit();
-            
+
             // Show success message
             document.getElementById('successMessage').style.display = 'block';
             this.style.display = 'none';
-            
+
             // Reset form after a delay (for UX purposes)
             setTimeout(() => {
                 this.reset();
@@ -497,4 +497,3 @@
     </script>
 </body>
 </html>
-
