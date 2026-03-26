@@ -241,7 +241,7 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 1440px;
             padding: 20px;
             z-index: 2;
             animation: fadeInUp 1s ease-out;
@@ -618,7 +618,7 @@
             position: absolute;
             top: -20px;
             left: 0;
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 8vw, 4.25rem);
             color: rgba(0,0,0,0.05);
             font-family: serif;
         }
@@ -980,31 +980,31 @@
             section {
                 padding: 6rem 3rem;
             }
-            
+
             .section-header h2 {
                 font-size: 3rem;
             }
-            
+
             .hero h2 {
                 font-size: 3.5rem;
             }
-            
+
             .tagline {
                 font-size: 1.8rem;
             }
-            
+
             .categories-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .services-container {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .testimonials-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .footer-container {
                 grid-template-columns: 1.5fr 1fr 1fr;
             }
@@ -1012,21 +1012,21 @@
 
         @media (min-width: 992px) {
             .hero h2 {
-                font-size: 4rem;
+                font-size: clamp(2.5rem, 8vw, 3.4rem);
             }
-            
+
             .tagline {
                 font-size: 2rem;
             }
-            
+
             .section-header h2 {
                 font-size: 3.2rem;
             }
-            
+
             .testimonials-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-            
+
             .footer-container {
                 grid-template-columns: 1.5fr 1fr 1fr 1fr;
             }
@@ -1036,38 +1036,38 @@
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .hero {
                 height: 80vh;
             }
-            
+
             .hero h2 {
                 font-size: 2.2rem;
             }
-            
+
             .tagline {
                 font-size: 1.3rem;
             }
-            
+
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .btn {
                 width: 100%;
                 max-width: 280px;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .service-feature {
                 padding: 10px;
             }
@@ -1077,27 +1077,27 @@
             .hero {
                 height: 75vh;
             }
-            
+
             .hero h2 {
                 font-size: 1.9rem;
             }
-            
+
             .tagline {
                 font-size: 1.1rem;
             }
-            
+
             .section-header h2 {
                 font-size: 2rem;
             }
-            
+
             .benefits-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .service-card {
                 padding: 25px;
             }
@@ -1160,7 +1160,7 @@
             <h2>Our Corporate Wellness Services</h2>
             <p>Transform your workplace with our specialized programs designed for Bangalore companies</p>
         </div>
-        
+
         <div class="categories-grid">
             <div class="category-card category-yoga">
                 <div class="category-content">
@@ -1169,7 +1169,7 @@
                     <a href="Corporate-Yoga.html" class="btn btn-yoga">Explore Yoga</a>
                 </div>
             </div>
-            
+
             <div class="category-card category-zumba">
                 <div class="category-content">
                     <h3>Corporate Zumba Classes in Bangalore</h3>
@@ -1186,7 +1186,7 @@
             <h2>Transformative Benefits</h2>
             <p>How our Yoga and Zumba programs enhance workplace wellness in Bangalore</p>
         </div>
-        
+
         <div class="benefits-container">
             <div class="benefit-card yoga-card">
                 <div class="benefit-icon yoga-icon">
@@ -1195,7 +1195,7 @@
                 <h4>Stress Reduction</h4>
                 <p>Our yoga classes in Bangalore help professionals manage workplace stress through mindfulness techniques.</p>
             </div>
-            
+
             <div class="benefit-card zumba-card">
                 <div class="benefit-icon zumba-icon">
                     <i class="fas fa-fire"></i>
@@ -1203,7 +1203,7 @@
                 <h4>Energy Boost</h4>
                 <p>Zumba classes in Bangalore inject energy and enthusiasm into your team, combating afternoon slumps.</p>
             </div>
-            
+
             <div class="benefit-card yoga-card">
                 <div class="benefit-icon yoga-icon">
                     <i class="fas fa-users"></i>
@@ -1211,7 +1211,7 @@
                 <h4>Team Cohesion</h4>
                 <p>Shared wellness experiences build stronger relationships and improve collaboration among team members.</p>
             </div>
-            
+
             <div class="benefit-card zumba-card">
                 <div class="benefit-icon zumba-icon">
                     <i class="fas fa-laugh"></i>
@@ -1228,7 +1228,7 @@
             <h2>Corporate Wellness Solutions</h2>
             <p>Tailored programs for Bangalore businesses of all sizes</p>
         </div>
-        
+
         <div class="services-container">
             <div class="service-card service-yoga">
                 <div class="service-header">
@@ -1238,7 +1238,7 @@
                     <h3>Yoga Classes in Bangalore</h3>
                 </div>
                 <p>Our corporate yoga sessions in Bangalore are designed to fit seamlessly into the workday, helping employees find balance in the city's fast-paced environment.</p>
-                
+
                 <div class="service-features">
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
@@ -1262,10 +1262,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <a href="Corporate-Yoga.html" class="btn btn-yoga">Request Yoga Program</a>
             </div>
-            
+
             <div class="service-card service-zumba">
                 <div class="service-header">
                     <div class="service-icon">
@@ -1274,7 +1274,7 @@
                     <h3>Zumba Classes in Bangalore</h3>
                 </div>
                 <p>Bring energy and excitement to your workplace with our high-energy Zumba sessions in Bangalore designed specifically for corporate teams.</p>
-                
+
                 <div class="service-features">
                     <div class="service-feature">
                         <i class="fas fa-check-circle"></i>
@@ -1298,7 +1298,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <a href="Corporate-Zumba.html" class="btn btn-zumba">Request Zumba Program</a>
             </div>
         </div>
@@ -1310,7 +1310,7 @@
             <h2>Yoga & Zumba Classes in Bangalore Gallery</h2>
             <p>Moments of mindfulness, energy, and community in corporate Bangalore</p>
         </div>
-        
+
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.05_128fc33c.jpg" alt="Yoga Classes in Koramangala, Bangalore">
@@ -1318,14 +1318,14 @@
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
-            
+
             <div class="gallery-item">
                 <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.07_0d11007f.jpg" alt="Zumba Classes in Whitefield, Bangalore">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
-            
+
             <div class="gallery-item">
                 <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.10_cd7107e6.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
                 <div class="gallery-overlay">
@@ -1339,14 +1339,14 @@
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
-            
+
              <div class="gallery-item">
                 <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.09_6982db20.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
                 <div class="gallery-overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
-            
+
             <div class="gallery-item">
                 <img src="https://zugafitness.in/assets/images/New%20folder/WhatsApp%20Image%202025-07-07%20at%2019.26.08_8d3a86c2.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
                 <div class="gallery-overlay">
@@ -1362,7 +1362,7 @@
             <h2>What Bangalore Companies Say</h2>
             <p>Success stories from our corporate partners</p>
         </div>
-        
+
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-content">
@@ -1378,7 +1378,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-content">
                     <p class="testimonial-text">"We had an amazing experience during our Zumba classes in Bangalore! The energy was incredible and it brought our team closer together in ways I didn't expect."</p>
@@ -1393,7 +1393,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-content">
                     <p class="testimonial-text">"The mindfulness workshops helped our team manage the unique pressures of Bangalore's tech industry. Productivity has increased significantly."</p>
@@ -1416,7 +1416,7 @@
         <div class="cta-content">
             <h2>Ready to Transform Your Workplace?</h2>
             <p>Contact us today to schedule a consultation and discover how our corporate wellness programs can benefit your Bangalore team.</p>
-            
+
             <div class="cta-buttons">
                 <a href="Corporate-Yoga.html" class="btn btn-cta btn-yoga">Book Yoga Classes</a>
                 <a href="Corporate-Zumba.html" class="btn btn-cta btn-zumba">Book Zumba Classes</a>
@@ -1433,13 +1433,13 @@
                     <h3>Zuga Fitness Bangalore</h3>
                 </div>
                 <p>Offering the best Yoga Classes and Zumba Classes in Bangalore for corporate wellness. Serving all areas including Koramangala, Whitefield, MG Road, Electronic City and all over Bangalore.</p>
-                
+
                 <div class="contact-info">
                     <p><i class="fas fa-map-marker-alt"></i> Zuga Fitness, Sarjapur Road, Bangalore</p>
                     <p><i class="fas fa-phone"></i> +91 76763 79909</p>
                     <p><i class="fas fa-envelope"></i> zugafiness24@gmail.com</p>
                 </div>
-                
+
                 <div class="social-links">
                     <a href="https://www.facebook.com/share/1CBk3du3Vh/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/zuga_fitness?igsh=cjgxaXcxOTRpdXhy"><i class="fab fa-instagram"></i></a>
@@ -1447,7 +1447,7 @@
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-links-container">
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
@@ -1458,7 +1458,7 @@
                     <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-container">
                 <h4 class="footer-heading">Our Services</h4>
                 <ul class="footer-links">
@@ -1470,7 +1470,7 @@
                     <li><a href="Corporate-Zumba.html"><i class="fas fa-chevron-right"></i> Online Zumba Classes</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-links-container">
                 <h4 class="footer-heading">Service Areas</h4>
                 <ul class="footer-links">
@@ -1483,7 +1483,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>&copy; 2023 Zuga Fitness - Bangalore. All rights reserved.</p>
         </div>
@@ -1495,25 +1495,25 @@
         const mobileNav = document.querySelector('.mobile-nav');
         const overlay = document.querySelector('.overlay');
         const mobileNavClose = document.querySelector('.mobile-nav-close');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.add('active');
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
-        
+
         mobileNavClose.addEventListener('click', () => {
             mobileNav.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
         });
-        
+
         overlay.addEventListener('click', () => {
             mobileNav.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
         });
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1524,7 +1524,7 @@
                         top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     mobileNav.classList.remove('active');
                     overlay.classList.remove('active');
@@ -1552,4 +1552,3 @@
     </script>
 </body>
 </html>
-
