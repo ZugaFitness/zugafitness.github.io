@@ -717,11 +717,11 @@
             h1 {
                 font-size: 2.4rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
-            
+
             section {
                 padding: 60px 0;
             }
@@ -732,15 +732,15 @@
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .tagline {
                 margin-top: 10px;
             }
-            
+
             .hero {
                 padding: 150px 0 80px;
             }
-            
+
             .form-content {
                 padding: 30px 20px;
             }
@@ -750,24 +750,36 @@
             h1 {
                 font-size: 2rem;
             }
-            
+
             h2 {
                 font-size: 1.8rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .benefit-card, .testimonial-card {
                 padding: 25px 20px;
             }
-            
+
             .modal-content {
                 padding: 30px 20px;
             }
         }
     </style>
+  <link rel="canonical" href="https://zugafitness.in/apartment-wellness-bangalore.html" />
+  <meta property="og:title" content="Zuga Fitness | Apartment Wellness Program">
+  <meta property="og:description" content="Join Zuga Fitness for live online yoga classes.">
+  <meta property="og:image" content="https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg">
+  <meta property="og:url" content="https://zugafitness.in/apartment-wellness-bangalore.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zuga Fitness">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zuga Fitness | Apartment Wellness Program">
+  <meta name="twitter:description" content="Join Zuga Fitness for live online yoga classes.">
+  <meta name="twitter:image" content="https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg">
+
 </head>
 <body>
     <!-- Header -->
@@ -864,22 +876,22 @@
                             <label for="name" class="required">Full Name </label>
                             <input type="text" id="name" name="entry.1067782258" required placeholder="Enter your full name">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="apartment">Apartment Name</label>
                             <input type="text" id="apartment" name="entry.172749836" placeholder="Your apartment community name">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="entry.1329094099" placeholder="your.email@example.com">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="phone" class="required">Phone Number </label>
                             <input type="tel" id="phone" name="entry.1659782347" required placeholder="+91 1234567890">
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="required">Wellness Preferences </label>
                             <div class="checkbox-group">
@@ -901,12 +913,12 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="suggestions">Any suggestions, concerns, or specific requests?</label>
                             <textarea id="suggestions" name="entry.68176095" rows="4" placeholder="Share your thoughts or special requirements..."></textarea>
                         </div>
-                        
+
                         <div class="form-footer">
                             <button type="submit" class="btn">Submit Your Interest</button>
                             <p style="margin-top: 20px; font-size: 0.9rem;">We respect your privacy and will never share your information</p>
@@ -981,7 +993,7 @@
                         <li><i class="fas fa-envelope"></i> <span>zugafitness24@gmail.com</span></li>
                     </ul>
                 </div>
-               
+
             </div>
             <div class="copyright">
                 <p>&copy; 2023 Zuga Fitness. All rights reserved. Crafted with care in Bengaluru.</p>
@@ -1016,25 +1028,25 @@
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const checkboxes = document.querySelectorAll('input[name="entry.367928117"]:checked');
-            
+
             if (name === '') {
                 alert('Please enter your full name');
                 e.preventDefault();
                 return;
             }
-            
+
             if (phone === '') {
                 alert('Please enter your phone number');
                 e.preventDefault();
                 return;
             }
-            
+
             if (checkboxes.length === 0) {
                 alert('Please select at least one wellness preference');
                 e.preventDefault();
                 return;
             }
-            
+
             // Show thank you modal after successful validation
             setTimeout(function() {
                 document.getElementById('thank-you-modal').classList.add('active');
@@ -1045,11 +1057,11 @@
         document.querySelector('.modal-close').addEventListener('click', function() {
             document.getElementById('thank-you-modal').classList.remove('active');
         });
-        
+
         document.querySelector('.modal-close-btn').addEventListener('click', function() {
             document.getElementById('thank-you-modal').classList.remove('active');
         });
-        
+
         // Close modal when clicking outside content
         document.getElementById('thank-you-modal').addEventListener('click', function(e) {
             if (e.target === this) {
