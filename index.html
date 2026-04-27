@@ -1115,30 +1115,44 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="Is1Ixv3aAthc3jy0bstL768/HhVS0bofEvqowcVIouJ5VkHGJVekJkLc+yuiAwYd86YRmK0p5V/GT6KiBaeysLNEtRqZYW/hYevBaEwMx3gU25RzxpHJ47DimsKZvpF7">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
-                        </div>
-                    </div>
+            <div class="col-lg-8 mx-auto mbr-form">
+                <form id="zuga-contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="mbr-form">
+                    <!-- Honeypot spam field -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+                    <!-- Custom redirect -->
+                    <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+                    <!-- Email subject -->
+                    <input type="hidden" name="_subject" value="📩 New Contact Message — Zuga Fitness" />
+
                     <div class="dragArea row">
                         <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-6">
+                            <input type="text" name="name" placeholder="Name" required class="form-control" id="name-contact">
                         </div>
                         <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form02-6">
+                            <input type="email" name="email" placeholder="E-mail" required class="form-control" id="email-contact">
                         </div>
                         <div class="col-12 form-group mb-3" data-for="phone">
-                            <input type="tel" name="phone" placeholder="Phone" data-form-field="phone" class="form-control" value="" id="phone-form02-6">
+                            <input type="tel" name="phone" placeholder="Phone" class="form-control" id="phone-contact">
                         </div>
                         <div class="col-12 form-group mb-3" data-for="textarea">
-                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-6"></textarea>
+                            <textarea name="message" placeholder="Message" required class="form-control" id="message-contact"></textarea>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Send message</button>
+                            <button type="submit" id="contact-submit-btn" class="btn btn-primary display-7">
+                                <span id="contact-btn-text">Send message</span>
+                                <span id="contact-btn-loading" style="display:none">Sending...</span>
+                            </button>
                         </div>
+                    </div>
+
+                    <!-- Inline success message -->
+                    <div id="contact-form-success" style="display:none; background: rgba(11,110,110,0.08); border: 1px solid #0B6E6E; border-radius: 12px; padding: 1.5rem; text-align: center; color: #0B6E6E; margin-top: 1rem;">
+                        <p>🎉 Message sent! We'll get back to you within 24 hours.</p>
+                    </div>
+
+                    <!-- Inline error message -->
+                    <div id="contact-form-error" style="display:none; background: rgba(232,105,10,0.08); border: 1px solid #E8690A; border-radius: 12px; padding: 1.5rem; text-align: center; color: #E8690A; margin-top: 1rem;">
+                        <p>❌ Something went wrong. Please email us directly at zugafitness24@gmail.com</p>
                     </div>
                 </form>
             </div>
@@ -1229,5 +1243,71 @@
 </section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/embla/embla.min.js"></script>  <script src="assets/embla/script.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
   
   
+<script>
+  const contactForm = document.getElementById('zuga-contact-form');
+  const contactBtnText = document.getElementById('contact-btn-text');
+  const contactBtnLoading = document.getElementById('contact-btn-loading');
+  const contactSubmitBtn = document.getElementById('contact-submit-btn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Basic validation
+      let valid = true;
+      const name = document.getElementById('name-contact');
+      const email = document.getElementById('email-contact');
+      const message = document.getElementById('message-contact');
+
+      [name, email, message].forEach(field => {
+        if (!field.value.trim()) {
+          field.style.border = '2px solid #E8690A';
+          valid = false;
+        } else {
+          field.style.border = '';
+        }
+      });
+
+      if (!valid) return;
+
+      // Show loading state
+      contactBtnText.style.display = 'none';
+      contactBtnLoading.style.display = 'inline';
+      contactSubmitBtn.disabled = true;
+
+      const data = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          document.getElementById('contact-form-success').style.display = 'block';
+          document.getElementById('contact-form-error').style.display = 'none';
+          // Redirect to thank you page after 2 seconds
+          setTimeout(() => { window.location.href = '/thank-you.html'; }, 2000);
+        } else {
+          document.getElementById('contact-form-error').style.display = 'block';
+        }
+      } catch (err) {
+        document.getElementById('contact-form-error').style.display = 'block';
+      } finally {
+        contactBtnText.style.display = 'inline';
+        contactBtnLoading.style.display = 'none';
+        contactSubmitBtn.disabled = false;
+      }
+    });
+
+    // Remove error highlight on input
+    contactForm.querySelectorAll('input, textarea').forEach(el => {
+      el.addEventListener('input', () => el.style.border = '');
+    });
+  }
+</script>
+
 </body>
 </html>
