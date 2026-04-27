@@ -1,0 +1,8 @@
+Found 36 HTML files.
+
+SEO AUDIT REPORT
+================
+Robots.txt exists: True
+Sitemap.xml exists: True
+
+File-by-file Issues:
