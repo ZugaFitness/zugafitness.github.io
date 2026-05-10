@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desk work doing damage to your body? This 30-minute yoga sequence for corporate professionals targets back pain, hip tightness, and mental stress.">
+    <meta name="keywords" content="online yoga class, live yoga online, virtual yoga classes, interactive yoga, Zuga Fitness, Hatha Vinyasa, PCOD yoga, corporate yoga">
+    <meta name="author" content="Zuga Fitness">
+
+    <title>Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence | Zuga Fitness</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4a7c59;
+            --secondary: #8d9f87;
+            --accent: #d0b49f;
+            --light: #f4f1e9;
+            --dark: #2d3319;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0 5%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #3a6547;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(74, 124, 89, 0.3);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Content */
+        .blog-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+
+        .blog-category {
+            background: var(--accent);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .blog-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .content-intro {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blog-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .tip-box {
+            background: rgba(212, 237, 218, 0.3);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .author-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 50px 0 30px;
+            padding: 20px;
+            background: rgba(208, 180, 159, 0.1);
+            border-radius: 12px;
+        }
+
+        .author-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .share-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .share-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .facebook { background: #e7f3ff; color: #1877f2; }
+        .twitter { background: #e8f4fd; color: #1da1f2; }
+        .pinterest { background: #fbeceb; color: #bd081c; }
+
+        .related-posts {
+            margin: 60px 0;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .related-image {
+            height: 180px;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 70px 0;
+            text-align: center;
+            color: white;
+            margin: 80px 0;
+        }
+
+        .newsletter h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .subscribe-form button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 0 30px 30px 0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .subscribe-form button:hover {
+            background: #c0a088;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .featured-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .blog-title {
+                font-size: 2.3rem;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+
+            .blog-content {
+                padding: 30px 20px;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 10px;
+            }
+
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .subscribe-form input,
+            .subscribe-form button {
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            .social-share {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+  <link rel="canonical" href="https://zugafitness.in/Blog/yoga-for-corporate-professionals.html" />
+  <meta property="og:title" content="Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence | Zuga Fitness">
+  <meta property="og:description" content="Desk work doing damage to your body? This 30-minute yoga sequence for corporate professionals targets back pain, hip tightness, and mental stress.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:url" content="https://zugafitness.in/Blog/yoga-for-corporate-professionals.html">
+  <meta name="twitter:title" content="Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence">
+  <meta name="twitter:description" content="Desk work doing damage to your body? This 30-minute yoga sequence for corporate professionals targets back pain, hip tightness, and mental stress.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence",
+  "description": "Desk work doing damage to your body? This 30-minute yoga sequence for corporate professionals targets back pain, hip tightness, and mental stress.",
+  "author": {
+    "@type": "Organization",
+    "name": "Zuga Fitness"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zuga Fitness",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zugafitness.in/assets/logo.png"
+    }
+  },
+  "datePublished": "2026-05-08",
+  "dateModified": "2026-05-08",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zugafitness.in/Blog/yoga-for-corporate-professionals.html"
+  }
+}
+</script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <div class="logo">Z</div>
+                <div class="logo-text">Zuga Fitness</div>
+            </div>
+
+             <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../Online-Yoga-Classes.html">Classes</a>
+                <a href="../pricing.html">Pricing</a>
+                <a href="../Blog/">Blog</a>
+                <a href="../index.html#form02-6">Contact</a>
+            </div>
+
+            <a href="../free-trial.html" class="cta-button">Try Free Class</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="index.html">Blog</a> / Corporate Yoga
+    </div>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> May 8, 2026</span>
+                <span><i class="far fa-clock"></i> 6 min read</span>
+                <span class="blog-category">Corporate Wellness</span>
+            </div>
+            <h1 class="blog-title">Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence</h1>
+            <p class="blog-subtitle">You've been staring at a screen since 9am. Your shoulders are somewhere near your ears. Your lower back is sending quiet complaints. And it's only 2pm.</p>
+        </div>
+
+        <div class="featured-image">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga for Corporate Professionals">
+            <div class="image-caption">30 minutes of yoga can undo the damage of a full day at a desk.</div>
+        </div>
+
+        <div class="blog-content">
+            <div class="content-intro">
+                <p>Sound familiar? Desk work is doing serious damage to the modern body — and most corporate professionals don't realise how much until it's too late. The good news: 30 minutes of the right yoga can undo most of what a full workday does to your spine, hips and nervous system. Here's exactly what to do — and why it works.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">What a Day at a Desk Actually Does to Your Body</h2>
+                <p>Eight hours of sitting creates a predictable chain of damage. Hip flexors shorten from holding a 90° seated position all day. The thoracic spine rounds from screen posture. Neck extensors tighten from craning forward at a monitor. Glutes switch off — they literally forget how to fire. Breathing becomes shallow as compressed posture restricts the diaphragm. And cortisol stays elevated because no physical movement means no stress discharge.</p>
+                <p>Yoga addresses every single one of these — not gradually over months, but in a single well-designed session.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">The 30-Minute After-Work Yoga Sequence</h2>
+                <p>You don't need a mat, a studio, or an hour. Just enough floor space to lie down.</p>
+
+                <p><strong>1. Cat-Cow (2 minutes)</strong><br>
+                On all fours, alternate between arching and rounding your spine in sync with your breath. This is the fastest way to restore mobility to a spine that has been static all day.</p>
+
+                <p><strong>2. Thread the Needle (2 minutes each side)</strong><br>
+                From all fours, slide one arm under your body and rest your shoulder on the floor. This releases the thoracic rotation that desk work locks up — especially effective for anyone who types and uses a mouse all day.</p>
+
+                <p><strong>3. Low Lunge / Crescent Pose (90 seconds each side)</strong><br>
+                Step one foot forward into a deep lunge, back knee down. Lift your arms and feel the front of your hip open. This directly counteracts the hip flexor shortening from sitting.</p>
+
+                <p><strong>4. Seated Forward Fold (3 minutes)</strong><br>
+                Sit on the floor, legs straight, fold forward. Hold without forcing. This decompresses the entire posterior chain — hamstrings, lower back, sacrum — and activates the parasympathetic nervous system.</p>
+
+                <p><strong>5. Supine Twist (2 minutes each side)</strong><br>
+                Lie on your back, draw one knee across your body and let it drop to the floor. This releases the lower back and massages the organs — essential after a sedentary day.</p>
+
+                <p><strong>6. Legs Up the Wall (5 minutes)</strong><br>
+                Lie on your back, swing your legs up against a wall. This reverses blood pooling that happens in legs from sitting, reduces lower back pressure, and is deeply calming. Perfect before a call or after one.</p>
+
+                <p><strong>7. Bhramari Pranayama (3 minutes)</strong><br>
+                Close your eyes, hum on every exhale. Three minutes of this and you will feel the cortisol physically leave your body. This is the single most effective stress-discharge technique our instructors teach at Zuga's <strong><a href="/Online-Pranayama-Classes.html">Pranayama classes</a></strong>.</p>
+
+                <p><strong>8. Savasana (5 minutes)</strong><br>
+                Lie flat, do nothing. This is where nervous system integration happens. Don't skip it.</p>
+
+                <p>Total: 28–30 minutes. No special equipment. Immediate results.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">Why Live Classes Beat YouTube for Desk Workers</h2>
+                <p>The problem with following a YouTube video is that no one can see you. Desk workers have deeply ingrained postural compensations — meaning you will do poses in the pattern your body is already stuck in, reinforcing the problem rather than solving it.</p>
+                <p>A live instructor watches your alignment in real time. They will tell you your right shoulder is higher than your left. They will notice you are holding your breath in forward folds. They will give you a modification that works for your specific spine.</p>
+                <p>This is exactly why Zuga's <strong><a href="/Online-Yoga-Classes.html">online group yoga classes</a></strong> cap sessions at 10 students — so every person gets seen, corrected and progressed.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">Three Things You Can Do at Your Desk Right Now</h2>
+                <p>You don't have to wait until evening.</p>
+                <ul>
+                    <li><strong>2-minute shoulder reset:</strong> Roll both shoulders back 10 times. Squeeze your shoulder blades together for 5 seconds. Repeat 3 times.</li>
+                    <li><strong>Box breathing between calls:</strong> Inhale 4, hold 4, exhale 4, hold 4. Two cycles takes under 2 minutes and measurably lowers your heart rate.</li>
+                    <li><strong>Standing hip flexor stretch:</strong> Every hour, stand up and take a split stance. Shift your weight forward until you feel your back hip open. Hold 30 seconds each side.</li>
+                </ul>
+                <p>Our <strong><a href="/Online-Pranayama-Classes.html">Pranayama & Meditation</a></strong> classes are popular with professionals specifically because sessions are 30–45 minutes — perfectly timed for lunch breaks.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">Corporate Wellness at Scale</h2>
+                <p>If you are an HR or L&D lead reading this — Zuga also runs corporate yoga programs for distributed teams. A 30-minute weekly group session costs less than a team lunch, and the return in focus, morale and reduced sick days is measurable. Explore corporate wellness with Zuga.</p>
+                <p>We also offer specialized programs like <strong><a href="/Online-Yoga-Classes-For-PCOD.html">PCOD Yoga</a></strong> and <strong><a href="/Online-Personal-Training-classes.html">Personal Training</a></strong> for those seeking more tailored health solutions. Check our <strong><a href="/pricing.html">pricing</a></strong> for more details.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">Start Your Journey</h2>
+                <p>Pick one pose from the sequence above. Do it for 5 minutes after you close your laptop today. Notice how different your body feels.</p>
+                <p>When you are ready to do this properly — with someone watching your form, building a sequence for your specific body, and holding you accountable — try a <strong><a href="/free-trial.html">free class</a></strong> at Zuga.</p>
+                <p>Your body has been working all day. Give it 30 minutes back.</p>
+            </div>
+
+            <div class="author-section">
+                <div class="author-image">
+                    <img loading="lazy" src="../assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath B Beelur">
+                </div>
+                <div class="author-info">
+                    <h3>Mallinath B Beelur</h3>
+                    <p>Certified Yoga Therapist & Wellness Coach at Zuga Fitness. Dedicated to empowering individuals through personalized yoga therapy and holistic wellness practices.</p>
+                </div>
+            </div>
+
+
+        <div class="related-posts">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yoga for Back Pain Relief">
+                    </div>
+                    <div class="related-content">
+                        <h3 class="related-title"><a href="yoga-for-back-pain-relief.html">Yoga for Back Pain Relief: 7 Poses That Actually Work</a></h3>
+                        <p>Discover effective yoga poses for back pain relief practiced safely at home.</p>
+                    </div>
+                </div>
+
+                <div class="related-card">
+                    <div class="related-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pranayama for Anxiety">
+                    </div>
+                    <div class="related-content">
+                        <h3 class="related-title"><a href="pranayama-for-anxiety.html">Pranayama for Anxiety: 5 Breathing Techniques That Calm Your Mind</a></h3>
+                        <p>Powerful pranayama techniques to reduce stress and anxiety quickly.</p>
+                    </div>
+                </div>
+
+                <div class="related-card">
+                    <div class="related-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yoga for PCOD Management">
+                    </div>
+                    <div class="related-content">
+                        <h3 class="related-title"><a href="yoga-poses-for-pcod-management.html">7 Best Yoga Poses for PCOD Management You Can Do at Home</a></h3>
+                        <p>Expert-guided yoga poses to help manage PCOD symptoms effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h3>Join Our Wellness Community</h3>
+        <p>Subscribe to receive exclusive yoga tips, class updates, and special offers</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+     <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Zuga Fitness</h3>
+                <p>Making yoga accessible and enjoyable for everyone. Join our community today and transform your practice.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/15zQqbzBEd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/zuga_fitness?igsh=cjgxaXcxOTRpdXhy&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://zugafitness.in/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://zugafitness.in/"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="https://zugafitness.in/">Home</a></li>
+                    <li><a href="https://zugafitness.in/Online-Yoga-Classes.html">Online Classes</a></li>
+                    <li><a href="https://zugafitness.in/index.html#team-1-uEEJbxUzva">Instructors</a></li>
+                    <li><a href="https://zugafitness.in/index.html#features015-4">Why us ?</a></li>
+                    <li><a href="https://zugafitness.in/index.html#testimonials-5-uEEJbxVgkG">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Blog Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="Blog1.html">Beginner Tips</a></li>
+                    <li><a href="Blog2.html">Mindfulness</a></li>
+                    <li><a href="Blog3.html">Breathwork</a></li>
+                    <li><a href="Blog4.html">Women's Health</a></li>
+                    <li><a href="Blog5.html">Senior Wellness</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+                    <li><i class="fas fa-phone"></i> +91 76763 79909</li>
+                    <li><i class="fas fa-envelope"></i> zugafitness24@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Zuga Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
