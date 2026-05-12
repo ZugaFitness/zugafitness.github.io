@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
 
-  <title>Online Group Yoga Classes | Live Zoom Sessions | Zuga Fitness</title>
-  <meta name="description" content="Join live online group yoga classes at Zuga Fitness. Real instructors, real-time feedback, across IST, GMT, EST & GST. First class free.">
-  <link rel="canonical" href="https://zugafitness.in/Online-Yoga-Classes.html" />
+  <title>Corporate Yoga Day Session Bangalore | Onsite June 21 | Zuga Fitness</title>
+  <meta name="description" content="Book a certified yoga instructor for your Bangalore office this International Yoga Day. Onsite sessions for teams of any size. Only 4 slots on June 21. Early bird discount available.">
+  <link rel="canonical" href="https://zugafitness.in/corporate-yoga-day-bangalore.html" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,14 +80,6 @@
       padding: 120px 0 80px;
       overflow: hidden;
     }
-    .hero-image {
-      width: 100%;
-      max-width: 500px;
-      height: 650px;
-      background-color: #eee;
-      border-radius: 20px;
-      margin: 0 auto;
-    }
 
     /* Trust Bar */
     .trust-bar {
@@ -116,12 +108,33 @@
       border-bottom: 4px solid var(--teal);
     }
 
-    /* Expect Section */
-    .expect-image {
-      width: 100%;
-      height: 400px;
-      background-color: #eee;
+    /* Pricing Section */
+    .pricing-card {
+      padding: 40px 30px;
       border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      text-align: center;
+      border: 1px solid #eee;
+      position: relative;
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--orange);
+      transform: scale(1.05);
+      z-index: 1;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
 
     /* Instructor Section */
@@ -130,37 +143,18 @@
       margin-bottom: 40px;
     }
     .instructor-photo {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50% !important;
-      background-color: #ddd;
+      background-color: #F8F5F0;
       margin: 0 auto 20px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .instructor-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Pricing Section */
-    .pricing-card {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 50px;
-      border-radius: 30px;
-      border: 2px solid var(--orange);
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(232, 105, 10, 0.1);
-    }
-    .price-value {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--orange);
       font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
     }
 
     /* FAQ Section */
@@ -179,17 +173,16 @@
 
     /* Final CTA */
     .final-cta {
-      background-color: var(--teal);
+      background-color: var(--orange);
       color: #fff;
-      padding: 100px 0;
+      padding: 80px 0;
       text-align: center;
     }
 
     @media (max-width: 767px) {
-      .hero-image { height: 400px; margin-top: 40px; }
-      .price-value { font-size: 2.5rem; }
-      .pricing-card { padding: 30px 20px; }
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+      .pricing-card.popular { transform: none; margin-bottom: 30px; }
+      lottie-player { max-width: 300px !important; margin: 0 auto; }
     }
   </style>
 
@@ -197,26 +190,31 @@
   {
     "@context": "https://schema.org/",
     "@type": "Service",
-    "name": "Online Group Yoga Classes",
-    "description": "Live group yoga classes across all time zones with real-time feedback.",
+    "name": "Corporate Yoga Day Session",
+    "description": "Onsite corporate yoga sessions in Bangalore for International Yoga Day.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Zuga Fitness",
       "image": "https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg",
-      "telephone": "+91-7676379909"
+      "telephone": "+91-7676379909",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "IN"
+      }
     },
-    "areaServed": "Global",
+    "areaServed": "Bangalore",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Yoga Classes",
+      "name": "Corporate Yoga",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Online Group Yoga Class"
+            "name": "Onsite Corporate Yoga Session"
           },
-          "price": "2000",
+          "price": "7000",
           "priceCurrency": "INR"
         }
       ]
@@ -224,6 +222,7 @@
   }
   </script>
   <link rel="stylesheet" href="assets/whatsapp.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
@@ -281,16 +280,20 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1 class="display-3 mb-4">Practice Together. Grow Together.</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">Live group yoga classes across all time zones — with instructors who actually know your name.</p>
+        <h1 class="display-3 mb-4">Bring Yoga to Your Office This June 21</h1>
+        <p class="lead mb-5" style="font-size: 1.25rem;">We send certified yoga instructors directly to your Bangalore workplace — for International Yoga Day team sessions your employees will actually enjoy.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="/free-trial.html">Start Your Free Class</a>
+          <a class="btn btn-orange display-4" href="index.html#form02-6">Check Slot Availability</a>
         </div>
       </div>
       <div class="col-md-6 text-center">
-        <div class="hero-image">
-          <!-- Placeholder for image 500x650 -->
-        </div>
+        <lottie-player
+          src="https://assets5.lottiefiles.com/packages/lf20_hxart9lz.json"
+          background="transparent"
+          speed="1"
+          style="width:100%;max-width:480px;height:480px;"
+          loop autoplay>
+        </lottie-player>
       </div>
     </div>
   </div>
@@ -301,96 +304,138 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">20+ Live Classes Monthly</div>
+        <div class="trust-stat">Certified Instructors</div>
       </div>
       <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">4 Time Zones Covered</div>
+        <div class="trust-stat">All Areas of Bangalore</div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="trust-stat">4.9★ Google Rating</div>
+        <div class="trust-stat">All Fitness Levels Welcome</div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="trust-stat">100% Live — Never Recorded</div>
+        <div class="trust-stat">Only 4 Slots on June 21</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 3: What Is This Class? -->
+<!-- Section 3: Why Yoga for Your Team -->
 <section class="zuga-section">
   <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h2 class="display-4 mb-4">Live Yoga. Real Community.</h2>
-        <p class="display-7" style="line-height: 1.8;">Zuga's online group classes are live Zoom sessions — not recordings. Every class is led by an experienced instructor who knows your name, watches your form, and guides you in real time. Join a global community of practitioners across India, the UAE, the UK and the US.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section 4: Key Benefits -->
-<section class="zuga-section" style="background-color: #fafafa;">
-  <div class="container">
+    <h2 class="display-4 mb-5">More Than a Yoga Class</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">Live Zoom Sessions</h4>
-          <p>Real-time interaction with instructors and classmates.</p>
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4 class="mb-3">Reduces Workplace Stress</h4>
+          <p>One session measurably lowers cortisol. Your team will feel the difference immediately.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">Real-Time Corrections</h4>
-          <p>Expert eyes on your form to ensure safe and effective practice.</p>
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4 class="mb-3">Boosts Team Morale</h4>
+          <p>A shared experience that brings people together — better than any team lunch.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">4 Time Zones Covered</h4>
-          <p>Classes timed for IST, GMT, EST, and GST.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <h4 class="mb-3">All Levels Welcome</h4>
-          <p>Modified poses for beginners and challenges for advanced yogis.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <h4 class="mb-3">20+ Classes Monthly</h4>
-          <p>Consistency is key. We provide plenty of opportunities to practice.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <h4 class="mb-3">Global Community</h4>
-          <p>Practice with people from all over the world.</p>
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          </div>
+          <h4 class="mb-3">Improves Focus & Energy</h4>
+          <p>Employees return to their desks calmer, more focused and more productive.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 5: What to Expect -->
-<section class="zuga-section">
+<!-- Section 4: What's Included -->
+<section class="zuga-section" style="background-color: #fafafa;">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-5 mb-md-0">
-        <h2 class="display-4 mb-4">What to Expect</h2>
+        <h2 class="display-4 mb-4">What Your Team Gets</h2>
         <ul class="display-7" style="list-style: none; padding: 0; line-height: 2.2;">
-          <li><span style="color: var(--orange);">✔</span> 45–60 minute live Zoom session</li>
-          <li><span style="color: var(--orange);">✔</span> Just a mat and comfortable clothing</li>
-          <li><span style="color: var(--orange);">✔</span> Zoom link sent after booking</li>
-          <li><span style="color: var(--orange);">✔</span> New batches start every month</li>
-          <li><span style="color: var(--orange);">✔</span> Max 10 students per session</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">1.</span> 60-minute onsite yoga session at your office premises</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">2.</span> Certified instructor travels to you — anywhere in Bangalore</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">3.</span> Suitable for all fitness levels — no experience needed</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">4.</span> Includes breathwork and a guided cooldown</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">5.</span> Session can be customised for your team size and space</li>
         </ul>
       </div>
-      <div class="col-md-6">
-        <div class="expect-image">
-          <!-- Placeholder for image -->
+      <div class="col-md-6 text-center">
+        <lottie-player
+          src="https://assets3.lottiefiles.com/packages/lf20_tutvdkg0.json"
+          background="transparent"
+          speed="0.8"
+          style="width:100%;max-width:400px;height:400px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Pricing Section -->
+<section class="zuga-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 mb-3">Simple, Transparent Pricing</h2>
+      <p class="display-7 text-muted">₹5,000 base + ₹100 per head. The more people, the better the value.</p>
+    </div>
+
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-10">
+            <div class="alert alert-warning text-center" style="background-color: var(--orange); color: #fff; border: none; border-radius: 10px; padding: 15px; font-weight: 600;">
+                🎉 Early Bird: Book before June 7 and save ₹1,000
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="pricing-card">
+          <h4 class="mb-3">Up to 20 people</h4>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹7,000</div>
+          <p class="text-muted">Best for: Small teams and startups</p>
         </div>
       </div>
+      <div class="col-md-3 mb-4">
+        <div class="pricing-card popular">
+          <span class="popular-badge">⭐ Most Popular</span>
+          <h4 class="mb-3">Up to 30 people</h4>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹8,000</div>
+          <p class="text-muted">Best for: Mid-sized teams</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="pricing-card">
+          <h4 class="mb-3">Up to 50 people</h4>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹10,000</div>
+          <p class="text-muted">Best for: Department-level sessions</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="pricing-card">
+          <h4 class="mb-3">Up to 100 people</h4>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹15,000</div>
+          <p class="text-muted">Best for: All-hands or large office events</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <p class="display-4" style="font-size: 0.9rem; color: #777;">Prefer online? Zoom sessions available at ₹5,000 flat for up to 50 people.</p>
+        <div class="mbr-section-btn mt-4">
+          <a class="btn btn-orange display-4" href="index.html#form02-6">Book Your Slot Now</a>
+        </div>
+        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Only 4 onsite slots available on June 21</p>
     </div>
   </div>
 </section>
@@ -399,23 +444,19 @@
 <section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
         <div class="instructor-card">
-          <div class="instructor-photo">
-             <img src="assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
-          </div>
+          <div class="instructor-photo" style="color: var(--orange);">M</div>
           <h3>Mallinath</h3>
-          <p class="display-7">1500+ hours taught, 8+ specializations, expert in Hatha & Vinyasa.</p>
+          <p class="display-7">Lead corporate instructor with 1500+ hours taught. Expert in Hatha & Vinyasa.</p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div class="instructor-card">
-          <div class="instructor-photo">
-            <img src="assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
-          </div>
+          <div class="instructor-photo" style="color: var(--teal);">A</div>
           <h3>Anusha</h3>
-          <p class="display-7">500+ hours taught, specialist in women's wellness, warm encouraging style.</p>
+          <p class="display-7">Women's wellness and PCOD specialist. 500+ hours taught with an encouraging style.</p>
         </div>
       </div>
     </div>
@@ -424,65 +465,47 @@
 
 <!-- Section 7: Testimonial -->
 <section class="zuga-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 text-center">
-        <div style="font-size: 3rem; color: var(--teal); margin-bottom: 20px;">“</div>
-        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">Finally found consistency after 3 failed gym attempts — the community keeps me accountable.</h3>
-        <p class="display-7"><strong>— Ravi M., Dubai</strong></p>
+  <div class="container-fluid" style="background-color: var(--light-bg); padding: 80px 0;">
+    <div class="container text-center">
+      <div style="font-size: 5rem; color: var(--orange); line-height: 1; margin-bottom: -20px;">“</div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h3 class="display-5 mb-4" style="font-style: italic; line-height: 1.4;">"The Zuga session was the highlight of our team offsite. Every level from first-timer to regular practitioner felt completely included and comfortable."</h3>
+          <p class="display-7"><strong>— HR Manager, Bangalore Tech Company</strong></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 8: Pricing -->
-<section class="zuga-section" style="background-color: #fafafa;">
-  <div class="container">
-    <div class="pricing-card">
-      <h3 class="display-4 mb-3">Group Plan</h3>
-      <div class="price-value">₹2,000<span style="font-size: 1.2rem; color: #777;">/month</span></div>
-      <ul class="display-7 my-5" style="list-style: none; padding: 0; line-height: 2;">
-        <li>20 live classes/month</li>
-        <li>All styles & levels</li>
-        <li>Real-time instructor feedback</li>
-        <li>Zoom link + monthly schedule</li>
-      </ul>
-      <div class="mbr-section-btn">
-        <a class="btn btn-orange display-4 w-100" href="/free-trial.html">Start Your Free Class</a>
-      </div>
-      <p class="mt-3 text-muted">No credit card required.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Section 9: FAQ -->
+<!-- Section 8: FAQ -->
 <section class="zuga-section">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Common Questions</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do I need prior yoga experience? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do you travel to all areas of Bangalore? <span>+</span></div>
           <div id="faq1" class="collapse mt-3">
-            <p>Not at all! Our group classes are designed for all levels. Our instructors provide modifications for beginners and challenges for more advanced practitioners.</p>
+            <p>Yes — we cover all areas of Bangalore. No travel surcharge within city limits.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What if I miss a class? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What space do we need at our office? <span>+</span></div>
           <div id="faq2" class="collapse mt-3">
-            <p>Since these are live sessions, we encourage consistency. However, if you miss a session, you can join any other scheduled group class within the same week.</p>
+            <p>Any open area works — a conference room, terrace, lawn, or cleared office floor. We just need enough space for participants to lie down.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">Which time zones are classes held in? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">What do employees need to bring? <span>+</span></div>
           <div id="faq3" class="collapse mt-3">
-            <p>We currently offer slots across IST (India), GMT (UK), EST (US/Canada), and GST (UAE/Dubai) to ensure you can practice at a convenient time wherever you are.</p>
+            <p>Nothing — just comfortable clothing. We bring any props needed.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">What do I need to join? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Can the session be customised for our team? <span>+</span></div>
           <div id="faq4" class="collapse mt-3">
-            <p>A yoga mat, comfortable clothing, a stable internet connection, and the Zoom app installed on your laptop, tablet, or phone.</p>
+            <p>Yes. Share your team size, any specific health considerations, and your goals — we'll tailor the session accordingly.</p>
           </div>
         </div>
       </div>
@@ -490,12 +513,13 @@
   </div>
 </section>
 
-<!-- Section 10: Final CTA -->
+<!-- Section 9: Final CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="display-3 mb-4">Ready to practice with us?</h2>
-    <div class="mbr-section-btn mt-5">
-      <a class="btn btn-white-outline display-4" href="/free-trial.html">Book Your Free Class</a>
+    <h2 class="display-3 mb-4 text-white">Only 4 onsite slots available on June 21.</h2>
+    <p class="lead mb-5 text-white">Bangalore companies are booking fast — don't miss out.</p>
+    <div class="mbr-section-btn">
+      <a class="btn btn-white-outline display-4" href="index.html#form02-6">Check Availability Now</a>
     </div>
   </div>
 </section>
