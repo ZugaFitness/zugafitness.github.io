@@ -7,23 +7,11 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Existing pages -->
-  <url>
-    <loc>https://zugafitness.in/Blog6.html</loc>
-    <lastmod>2024-07-18</lastmod>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/apartment.html</loc>
-    <lastmod>2024-07-18</lastmod>
-  </url>
-  
-  <!-- New pages from index.html -->
   <url>
     <loc>https://zugafitness.in/index.html</loc>
   </url>
+
+  <!-- Service Pages -->
   <url>
     <loc>https://zugafitness.in/Online-Yoga-Classes.html</loc>
   </url>
@@ -49,49 +37,87 @@
     <loc>https://zugafitness.in/Online-Yoga-Classes-For-PCOD.html</loc>
   </url>
   <url>
+    <loc>https://zugafitness.in/Virtual-Yoga-Classes.html</loc>
+  </url>
+  <url>
     <loc>https://zugafitness.in/corporate-yoga-day-bangalore.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
+
+  <!-- Regional Pages -->
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/index.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Corporate.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/apartment.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Yoga-Classes-In-HSR-Layout.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Yoga-Classes-In-Koramangala.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Corporate-Yoga.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Corporate-Zumba.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Apartment-Yoga.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Apartment-Zumba.html</loc>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Yoga-Classes-In-Bangalore/Wellness-Program-Form.html</loc>
+  </url>
+
+  <!-- Portfolios -->
   <url>
     <loc>https://zugafitness.in/Mallinath-Portfolio.html</loc>
   </url>
   <url>
     <loc>https://zugafitness.in/Anusha-Portfolio.html</loc>
   </url>
-   <url>
-    <loc>https://zugafitness.in/Apartment-Yoga.html</loc>
+
+  <!-- Pricing and Trial -->
+  <url>
+    <loc>https://zugafitness.in/pricing.html</loc>
   </url>
   <url>
-    <loc>https://zugafitness.in/Apartment-Zumba.html</loc>
+    <loc>https://zugafitness.in/free-trial.html</loc>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://zugafitness.in/Blog/index.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://zugafitness.in/Blog/yoga-for-stress-relief.html</loc>
+    <lastmod>2025-06-22</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zugafitness.in/Corporate-Yoga.html</loc>
+    <loc>https://zugafitness.in/Blog/Blog1.html</loc>
   </url>
   <url>
-    <loc>https://zugafitness.in/Corporate-Zumba.html</loc>
+    <loc>https://zugafitness.in/Blog/Blog3.html</loc>
   </url>
   <url>
-    <loc>https://zugafitness.in/Corporate.html</loc>
+    <loc>https://zugafitness.in/Blog/Blog4.html</loc>
   </url>
   <url>
-    <loc>https://zugafitness.in/Wellness-Program-Form.html</loc>
+    <loc>https://zugafitness.in/Blog/Blog5.html</loc>
   </url>
   <url>
-    <loc>https://zugafitness.in/Blog1.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Blog2.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Blog3.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Blog4.html</loc>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Blog5.html</loc>
+    <loc>https://zugafitness.in/Blog/Blog6.html</loc>
   </url>
   <url>
     <loc>https://zugafitness.in/Blog/live-vs-recorded-online-yoga-classes.html</loc>
@@ -99,64 +125,80 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-<url>
-  <loc>https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html</loc>
-  <lastmod>2026-04-29</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/yoga-poses-for-pcod-management.html</loc>
-  <lastmod>2026-04-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html</loc>
-  <lastmod>2026-05-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html</loc>
-  <lastmod>2026-05-02</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/yoga-poses-for-better-sleep.html</loc>
-  <lastmod>2026-05-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/yoga-poses-for-pcod-management.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/yoga-poses-for-better-sleep.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://zugafitness.in/Blog/online-yoga-classes-singapore-indian-community.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-<url>
-  <loc>https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html</loc>
-  <lastmod>2026-05-05</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/yoga-for-back-pain-relief.html</loc>
-  <lastmod>2026-05-05</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/online-yoga-classes-malaysia-kuala-lumpur-penang.html</loc>
-  <lastmod>2026-05-06</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://zugafitness.in/Blog/pranayama-for-anxiety.html</loc>
-  <lastmod>2026-05-07</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/yoga-for-back-pain-relief.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/online-yoga-classes-malaysia-kuala-lumpur-penang.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/pranayama-for-anxiety.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/hatha-vs-vinyasa-yoga.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/online-yoga-for-back-pain.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/Blog/yoga-for-corporate-professionals.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
