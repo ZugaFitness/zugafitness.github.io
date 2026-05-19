@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
 
-  <title>Corporate Yoga Day Session Bangalore | Onsite June 21 | Zuga Fitness</title>
-  <meta name="description" content="Book a certified yoga instructor for your Bangalore office this International Yoga Day. Onsite sessions for teams of any size. Only 4 slots on June 21. Early bird discount available.">
+  <title>Corporate Yoga Week Bangalore | June 16–25 | Zuga Fitness</title>
+  <meta name="description" content="Book a premium onsite yoga session for your Bangalore office during Corporate Yoga Week (June 16–25). Skip the Sunday event and book a weekday slot. Strictly 2 slots per day.">
   <link rel="canonical" href="https://zugafitness.in/corporate-yoga-day-bangalore.html" />
 
   <!-- Fonts -->
@@ -173,6 +173,85 @@
       align-items: center;
     }
 
+    /* ── Form Base Styles ── */
+    .form-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; text-align: left; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #1A1A1A; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #E8E0D5;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #FFFDF9;
+      color: #1A1A1A;
+      min-height: 48px;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+    .field-invalid {
+      border-color: var(--orange) !important;
+      background: rgba(232,105,10,0.04) !important;
+    }
+    .field-error {
+      display: none;
+      color: var(--orange);
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+    }
+    .field-invalid ~ .field-error { display: block; }
+
+    .form-success {
+      background: rgba(11,110,110,0.08);
+      border: 1px solid var(--teal);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 1rem;
+    }
+    .form-error {
+      background: rgba(232,105,10,0.06);
+      border: 1px solid var(--orange);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      color: var(--orange);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    #booking-submit-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      margin-top: 1.5rem;
+      background: var(--orange);
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #booking-submit-btn:hover {
+      background: #bf5608;
+    }
+    #booking-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
     /* Final CTA */
     .final-cta {
       background-color: var(--orange);
@@ -192,8 +271,8 @@
   {
     "@context": "https://schema.org/",
     "@type": "Service",
-    "name": "Corporate Yoga Day Session",
-    "description": "Onsite corporate yoga sessions in Bangalore for International Yoga Day.",
+    "name": "Corporate Yoga Week Sessions",
+    "description": "Onsite corporate yoga and breathwork sessions in Bangalore for Corporate Yoga Week (June 16–25).",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Zuga Fitness",
@@ -282,10 +361,10 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1 class="display-3 mb-4">Bring Yoga to Your Office This June 21</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">We send certified yoga instructors directly to your Bangalore workplace — for International Yoga Day team sessions your employees will actually enjoy.</p>
+        <h1 class="display-3 mb-4">Celebrate International Yoga Day on Your Terms</h1>
+        <p class="lead mb-5" style="font-size: 1.25rem;">Don't ask employees to log in on a weekend. Book a premium, 60-minute onsite yoga and breathwork session directly on your office floor during work hours, anytime between <strong>June 16 and June 25</strong>.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="/index.html#form02-6">Check Slot Availability</a>
+          <a class="btn btn-orange display-4" href="#booking-form">Book Your Weekday Slot</a>
         </div>
       </div>
       <div class="col-md-6 text-center">
@@ -315,7 +394,7 @@
         <div class="trust-stat">All Fitness Levels Welcome</div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="trust-stat">Only 4 Slots on June 21</div>
+        <div class="trust-stat">Strictly 2 Slots Per Day</div>
       </div>
     </div>
   </div>
@@ -369,6 +448,7 @@
           <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">3.</span> Suitable for all fitness levels — no experience needed</li>
           <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">4.</span> Includes breathwork and a guided cooldown</li>
           <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">5.</span> Session can be customised for your team size and space</li>
+          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">6.</span> <strong>Hybrid-friendly:</strong> If your team is partially remote, we can live-stream your onsite session simultaneously via Zoom/Teams.</li>
         </ul>
       </div>
       <div class="col-md-6 text-center">
@@ -435,9 +515,9 @@
     <div class="text-center mt-4">
         <p class="display-4" style="font-size: 0.9rem; color: #777;">Prefer online? Zoom sessions available at ₹5,000 flat for up to 50 people.</p>
         <div class="mbr-section-btn mt-4">
-          <a class="btn btn-orange display-4" href="/index.html#form02-6">Book Your Slot Now</a>
+          <a class="btn btn-orange display-4" href="#booking-form">Book Your Weekday Slot Now</a>
         </div>
-        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Only 4 onsite slots available on June 21</p>
+        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Strictly 2 corporate onsite slots per day</p>
     </div>
   </div>
 </section>
@@ -484,7 +564,106 @@
   </div>
 </section>
 
-<!-- Section 8: FAQ -->
+<!-- Section 8: Booking Form -->
+<section class="zuga-section" id="booking-form">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="pricing-card" style="padding: 50px; border-top: 5px solid var(--orange);">
+          <h2 class="display-4 mb-4">Book Your Weekday Slot</h2>
+          <p class="mb-5">Fill out the form below and our team will get back to you within 24 hours to confirm your Corporate Yoga Week session.</p>
+
+          <form id="yoga-day-booking-form" action="https://formspree.io/f/mnjlyoqr" method="POST" novalidate>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="🧘 NEW: Corporate Yoga Week Booking Request" />
+            <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Your Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Full Name" required />
+                  <span class="field-error">Please enter your name</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="company">Company Name *</label>
+                  <input type="text" id="company" name="company" placeholder="Organization Name" required />
+                  <span class="field-error">Please enter company name</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Work Email *</label>
+                  <input type="email" id="email" name="email" placeholder="email@company.com" required />
+                  <span class="field-error">Please enter a valid email</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone">Phone / WhatsApp *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required />
+                  <span class="field-error">Please enter phone number</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-date">Preferred Celebration Date *</label>
+              <select id="preferred-date" name="preferred_date" required>
+                <option value="" disabled selected>Select a Weekday (June 16–25)</option>
+                <option value="June 16 (Tuesday)">June 16 (Tuesday)</option>
+                <option value="June 17 (Wednesday)">June 17 (Wednesday)</option>
+                <option value="June 18 (Thursday)">June 18 (Thursday)</option>
+                <option value="June 19 (Friday)">June 19 (Friday)</option>
+                <option value="June 22 (Monday)">June 22 (Monday)</option>
+                <option value="June 23 (Tuesday)">June 23 (Tuesday)</option>
+                <option value="June 24 (Wednesday)">June 24 (Wednesday)</option>
+                <option value="June 25 (Thursday)">June 25 (Thursday)</option>
+                <option value="Weekend / Special Request">Weekend / Special Request (June 20-21)</option>
+              </select>
+              <span class="field-error">Please select a preferred date</span>
+            </div>
+
+            <div class="form-group">
+              <label for="team-size">Estimated Team Size</label>
+              <select id="team-size" name="team_size">
+                <option value="Under 20">Under 20 people</option>
+                <option value="20-50">20-50 people</option>
+                <option value="50-100">50-100 people</option>
+                <option value="100+">100+ people</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Specific Requirements or Questions</label>
+              <textarea id="message" name="message" rows="3" placeholder="Tell us about your space or any specific needs..."></textarea>
+            </div>
+
+            <button type="submit" id="booking-submit-btn">
+              <span class="btn-text">Check Availability for My Date</span>
+              <span class="btn-loading" style="display:none">Sending... ⏳</span>
+            </button>
+
+            <div class="form-success" style="display:none">
+              ✅ Booking request sent! We'll call you shortly to confirm your slot.
+            </div>
+            <div class="form-error" style="display:none">
+              ❌ Something went wrong. Please email us at <a href="mailto:zugafitness24@gmail.com">zugafitness24@gmail.com</a>
+            </div>
+          </form>
+          <p class="text-muted mt-3" style="font-size: 0.8rem;">Note: Early bird discount (₹1,000 OFF) applies for all bookings confirmed before June 7th.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: FAQ -->
 <section class="zuga-section">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Common Questions</h2>
@@ -514,6 +693,12 @@
             <p>Yes. Share your team size, any specific health considerations, and your goals — we'll tailor the session accordingly.</p>
           </div>
         </div>
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">Why is it "Corporate Yoga Week"? <span>+</span></div>
+          <div id="faq5" class="collapse mt-3">
+            <p>Since International Yoga Day (June 21) falls on a Sunday this year, we've extended our onsite availability from June 16 to June 25. This allows your team to participate during regular work hours on a weekday that suits your schedule best.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -522,10 +707,10 @@
 <!-- Section 9: Final CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="display-3 mb-4 text-white">Only 4 onsite slots available on June 21.</h2>
-    <p class="lead mb-5 text-white">Bangalore companies are booking fast — don't miss out.</p>
+    <h2 class="display-3 mb-4 text-white">Strictly 2 corporate onsite slots per day.</h2>
+    <p class="lead mb-5 text-white">Bangalore companies are booking fast for Corporate Yoga Week (June 16–25) — don't miss out.</p>
     <div class="mbr-section-btn">
-      <a class="btn btn-white-outline display-4" href="/index.html#form02-6">Check Availability Now</a>
+      <a class="btn btn-white-outline display-4" href="#booking-form">Check Availability Now</a>
     </div>
   </div>
 </section>
@@ -596,6 +781,71 @@
 <script src="/assets/dropdown/js/navbar-dropdown.js"></script>
 <script src="/assets/theme/js/script.js"></script>
 
+<script>
+(function() {
+  const form = document.getElementById('yoga-day-booking-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Validate
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(function(field) {
+      if (!field.value.trim()) {
+        field.classList.add('field-invalid');
+        valid = false;
+      } else {
+        field.classList.remove('field-invalid');
+      }
+    });
+    if (!valid) return;
+
+    // Loading state
+    const btn = form.querySelector('button[type="submit"]');
+    const btnText = btn.querySelector('.btn-text');
+    const btnLoading = btn.querySelector('.btn-loading');
+    const successBox = form.querySelector('.form-success');
+    const errorBox = form.querySelector('.form-error');
+
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.querySelectorAll('.form-group, button, .row, h2, p').forEach(el => {
+            if(!el.classList.contains('form-success')) el.style.display = 'none';
+        });
+        if (successBox) successBox.style.display = 'block';
+        setTimeout(function() {
+          window.location.href = '/thank-you.html';
+        }, 3000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch(err) {
+      if (errorBox) errorBox.style.display = 'block';
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+      btn.disabled = false;
+    }
+  });
+
+  // Clear error highlight on input
+  form.querySelectorAll('input, select, textarea').forEach(function(el) {
+    el.addEventListener('input', function() {
+      el.classList.remove('field-invalid');
+    });
+  });
+})();
+</script>
 
 <a href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes"
    class="whatsapp-float"
