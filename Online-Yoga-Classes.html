@@ -39,26 +39,26 @@
 
     .zuga-carousel-track {
       display: flex;
-      width: calc(350px * 20);
-      animation: scroll 40s linear infinite; } .zuga-carousel-track:hover { animation-play-state: paused;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-350px * 10)); }
+      100% { transform: translateX(calc(-250px * 5)); }
     }
 
     .zuga-carousel-item {
-      width: 350px;
+      width: 250px;
       flex-shrink: 0;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: center;
     }
 
     .carousel-card {
       background: #FFFFFF;
-      padding: 40px 30px;
-      border-radius: 16px;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border-top: 3px solid #0B6E6E;
       height: 100%;
@@ -74,95 +74,112 @@
 
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem; font-weight: 700;
+      font-size: 1.1rem;
       color: #333333;
       margin-bottom: 0;
     }
 
     :root {
-      --brand-orange: #E8690A;
-      --brand-teal: #0B6E6E;
-      --brand-bg: #F8F5F0;
-      --brand-text: #333333;
-      --white: #FFFFFF;
+      --orange: #E8690A;
+      --teal: #0B6E6E;
+      --bg: #FFFFFF;
+      --text: #333333;
+      --light-bg: #F8F5F0;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--brand-text);
-      background-color: var(--brand-bg);
+      color: #333333;
+      background-color: #F8F5F0;
     }
 
     h1, h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
-    h3, h4, .brand-sans {
-      font-family: 'Poppins', sans-serif;
+    h3, h4, .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
     }
 
-    .btn-brand-cta {
-      background-color: var(--brand-orange) !important;
-      border-color: var(--brand-orange) !important;
+    .btn-orange {
+      background-color: var(--orange) !important;
+      border-color: var(--orange) !important;
       color: #fff !important;
-      border-radius: 8px !important;
-      padding: 12px 32px !important;
-      font-weight: 700 !important;
-      font-family: 'Poppins', sans-serif;
-      text-transform: none;
-      display: inline-block;
-      text-decoration: none;
-      border: none;
-      transition: all 0.3s ease;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    .btn-brand-cta:hover {
+    .btn-orange:hover {
       background-color: #bf5608 !important;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(232, 105, 10, 0.3);
+      border-color: #bf5608 !important;
     }
 
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
+    .btn-white-outline {
+      background-color: transparent !important;
+      border: 2px solid #fff !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    /* Brand Card Component */
-    .brand-card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      border-top: 4px solid var(--brand-teal);
-      padding: 30px;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-    .brand-card:hover {
-      transform: translateY(-5px);
+    .btn-white-outline:hover {
+      background-color: #fff !important;
+      color: var(--teal) !important;
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 100px 0 80px;
+      padding: 120px 0 80px;
       overflow: hidden;
     }
-
-    .hero-accent-tag {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--brand-teal);
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      display: block;
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      height: 650px;
+      background-color: #eee;
+      border-radius: 20px;
+      margin: 0 auto;
     }
 
-    .hero-visual-container {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* Trust Bar */
+    .trust-bar {
+      background-color: var(--light-bg);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .trust-stat {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Generic Section */
+    .zuga-section {
+      padding: 80px 0;
+    }
+
+    /* Benefits Grid */
+    .benefit-card {
+      padding: 30px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      text-align: center;
+      border-bottom: 4px solid var(--teal);
+    }
+
+    /* Expect Section */
+    .expect-image {
+      width: 100%;
+      height: 400px;
+      background-color: #eee;
+      border-radius: 20px;
     }
 
     /* Instructor Section */
@@ -174,7 +191,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50% !important;
-      background-color: #F8F5F0;
+      background-color: #ddd;
       margin: 0 auto 20px;
       overflow: hidden;
       display: flex;
@@ -185,6 +202,23 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    /* Pricing Section */
+    .pricing-card {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 50px;
+      border-radius: 30px;
+      border: 2px solid var(--orange);
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(232, 105, 10, 0.1);
+    }
+    .price-value {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--orange);
+      font-family: 'Playfair Display', serif;
     }
 
     /* FAQ Section */
@@ -199,44 +233,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
     }
 
     /* Final CTA */
     .final-cta {
-      background-color: var(--brand-orange);
+      background-color: var(--teal);
       color: #fff;
-      padding: 80px 0;
+      padding: 100px 0;
       text-align: center;
     }
 
     @media (max-width: 767px) {
+      .hero-image { height: 400px; margin-top: 40px; }
+      .price-value { font-size: 2.5rem; }
+      .pricing-card { padding: 30px 20px; }
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
     }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+  </style>
 
   <script type="application/ld+json">
   {
@@ -326,19 +339,16 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <span class="hero-accent-tag">LIVE GROUP YOGA SESSIONS</span>
         <h1 class="display-3 mb-4">Practice Together. Grow Together.</h1>
-        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Live group yoga classes across all time zones — with instructors who actually know your name.</p>
+        <p class="lead mb-5" style="font-size: 1.25rem;">Live group yoga classes across all time zones — with instructors who actually know your name.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-brand-cta display-4" href="/free-trial.html">Start Your Free Class</a>
+          <a class="btn btn-orange display-4" href="/free-trial.html">Start Your Free Class</a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="hero-visual-container">
-          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-               alt="Live online group yoga class on Zoom"
-               style="width:100%;height:auto;display:block;">
-        </div>
+      <div class="col-md-6 text-center">
+        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             alt="Live online group yoga class on Zoom"
+             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
       </div>
     </div>
   </div>
@@ -347,78 +357,90 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
-<!-- Section 3: Value Grid -->
-<section class="zuga-section">
+<!-- Section 2: Trust Bar -->
+<section class="trust-bar">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4">Live Yoga. Real Community.</h2>
-      <p class="lead" style="font-family: 'Poppins', sans-serif;">Zuga's online group classes are live Zoom sessions — not recordings.</p>
-    </div>
     <div class="row">
-      <!-- Card 1 -->
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">20+ Live Classes Monthly</div>
+      </div>
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">4 Time Zones Covered</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">4.9★ Google Rating</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">100% Live — Never Recorded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: What Is This Class? -->
+<section class="zuga-section">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="display-4 mb-4">Live Yoga. Real Community.</h2>
+        <p class="display-7" style="line-height: 1.8;">Zuga's online group classes are live Zoom sessions — not recordings. Every class is led by an experienced instructor who knows your name, watches your form, and guides you in real time. Join a global community of practitioners across India, the UAE, the UK and the US.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Key Benefits -->
+<section class="zuga-section" style="background-color: #fafafa;">
+  <div class="container">
+    <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Live Zoom Sessions</h3>
-          <p class="mb-0">Real-time interaction with instructors and classmates. Join a global community of practitioners.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">Live Zoom Sessions</h4>
+          <p>Real-time interaction with instructors and classmates.</p>
         </div>
       </div>
-      <!-- Card 2 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Real-Time Corrections</h3>
-          <p class="mb-0">Expert eyes on your form to ensure safe and effective practice. We watch your form so you don't have to.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">Real-Time Corrections</h4>
+          <p>Expert eyes on your form to ensure safe and effective practice.</p>
         </div>
       </div>
-      <!-- Card 3 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">4 Time Zones Covered</h3>
-          <p class="mb-0">Classes timed for IST, GMT, EST, and GST. Practice at a time that works for your schedule.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">4 Time Zones Covered</h4>
+          <p>Classes timed for IST, GMT, EST, and GST.</p>
         </div>
       </div>
-      <!-- Card 4 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">All Levels Welcome</h3>
-          <p class="mb-0">Modified poses for beginners and challenges for advanced yogis. Every body is welcome here.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">All Levels Welcome</h4>
+          <p>Modified poses for beginners and challenges for advanced yogis.</p>
         </div>
       </div>
-      <!-- Card 5 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">20+ Classes Monthly</h3>
-          <p class="mb-0">Consistency is key. We provide plenty of opportunities to practice and grow your skills.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">20+ Classes Monthly</h4>
+          <p>Consistency is key. We provide plenty of opportunities to practice.</p>
         </div>
       </div>
-      <!-- Card 6 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Global Community</h3>
-          <p class="mb-0">Practice with people from all over the world. Feel connected and supported every step of the way.</p>
+        <div class="benefit-card">
+          <h4 class="mb-3">Global Community</h4>
+          <p>Practice with people from all over the world.</p>
         </div>
       </div>
     </div>
@@ -449,26 +471,26 @@
 </section>
 
 <!-- Section 6: Instructors -->
-<section class="zuga-section" style="background-color: var(--brand-bg);">
+<section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="instructor-card">
           <div class="instructor-photo">
-             <img src="/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
+             <img src="assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
           </div>
-          <h3 class="mb-2">Mallinath</h3>
-          <p class="mb-0">1,500+ teaching and clinical corporate wellness hours taught, 8+ specializations, expert in Hatha & Vinyasa.</p>
+          <h3>Mallinath</h3>
+          <p class="display-7">1500+ hours taught, 8+ specializations, expert in Hatha & Vinyasa.</p>
         </div>
       </div>
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
+      <div class="col-md-6">
+        <div class="instructor-card">
           <div class="instructor-photo">
-            <img src="/assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
+            <img src="assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
           </div>
-          <h3 class="mb-2">Anusha</h3>
-          <p class="mb-0">Women's wellness and PCOD specialist. 1,500+ teaching and clinical corporate wellness hours taught with an encouraging style.</p>
+          <h3>Anusha</h3>
+          <p class="display-7">500+ hours taught, specialist in women's wellness, warm encouraging style.</p>
         </div>
       </div>
     </div>
@@ -477,39 +499,33 @@
 
 <!-- Section 7: Testimonial -->
 <section class="zuga-section">
-  <div class="container text-center">
-    <div style="font-size: 5rem; color: var(--brand-orange); line-height: 1; margin-bottom: -20px; font-family: serif;">“</div>
+  <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h3 class="display-5 mb-4" style="font-style: italic; line-height: 1.4;">"Finally found consistency after 3 failed gym attempts — the community keeps me accountable."</h3>
-        <p class="brand-sans"><strong>— Ravi M., Dubai</strong></p>
+      <div class="col-lg-10 text-center">
+        <div style="font-size: 3rem; color: var(--teal); margin-bottom: 20px;">“</div>
+        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">Finally found consistency after 3 failed gym attempts — the community keeps me accountable.</h3>
+        <p class="display-7"><strong>— Ravi M., Dubai</strong></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Section 8: Pricing -->
-<section class="zuga-section">
+<section class="zuga-section" style="background-color: #fafafa;">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="brand-card text-center">
-          <h3 class="display-4 mb-3">Group Plan</h3>
-          <div style="margin-bottom: 2rem;">
-            <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3.5rem; color: var(--brand-orange);">₹2,000<span style="font-size: 1.2rem; color: #777;">/month</span></div>
-          </div>
-          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
-            <li>• 20 live classes/month</li>
-            <li>• All styles & levels</li>
-            <li>• Real-time instructor feedback</li>
-            <li>• Zoom link + monthly schedule</li>
-          </ul>
-          <div class="mbr-section-btn">
-            <a class="btn btn-brand-cta display-4 w-100" href="/free-trial.html">Start Your Free Class</a>
-          </div>
-          <p class="mt-3 text-muted brand-sans">No credit card required.</p>
-        </div>
+    <div class="pricing-card">
+      <h3 class="display-4 mb-3">Group Plan</h3>
+      <div class="price-value">₹2,000<span style="font-size: 1.2rem; color: #777;">/month</span></div>
+      <ul class="display-7 my-5" style="list-style: none; padding: 0; line-height: 2;">
+        <li>20 live classes/month</li>
+        <li>All styles & levels</li>
+        <li>Real-time instructor feedback</li>
+        <li>Zoom link + monthly schedule</li>
+      </ul>
+      <div class="mbr-section-btn">
+        <a class="btn btn-orange display-4 w-100" href="/free-trial.html">Start Your Free Class</a>
       </div>
+      <p class="mt-3 text-muted">No credit card required.</p>
     </div>
   </div>
 </section>
@@ -552,10 +568,9 @@
 <!-- Section 10: Final CTA -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="display-3 mb-4 text-white">Ready to practice with us?</h2>
-    <p class="lead mb-5 text-white brand-sans">Join our global community and start your journey today.</p>
-    <div class="mbr-section-btn">
-      <a class="btn btn-brand-cta display-4" style="background-color: white !important; color: var(--brand-orange) !important;" href="/free-trial.html">Book Your Free Class</a>
+    <h2 class="display-3 mb-4">Ready to practice with us?</h2>
+    <div class="mbr-section-btn mt-5">
+      <a class="btn btn-white-outline display-4" href="/free-trial.html">Book Your Free Class</a>
     </div>
   </div>
 </section>

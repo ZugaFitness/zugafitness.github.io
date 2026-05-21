@@ -14,57 +14,49 @@
     .zuga-carousel-container {
       overflow: hidden;
       background: #F8F5F0;
-      padding: 60px 0;
+      padding: 40px 0;
       border-top: 1px solid rgba(11, 110, 110, 0.1);
       border-bottom: 1px solid rgba(11, 110, 110, 0.1);
     }
 
     .zuga-carousel-track {
       display: flex;
-      width: calc(350px * 20);
-      animation: scroll 40s linear infinite;
-    }
-
-    .zuga-carousel-track:hover {
-      animation-play-state: paused;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-350px * 10)); }
+      100% { transform: translateX(calc(-250px * 5)); }
     }
 
     .zuga-carousel-item {
-      width: 350px;
+      width: 250px;
       flex-shrink: 0;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: center;
     }
 
     .carousel-card {
       background: #FFFFFF;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-      border-top: 4px solid #0B6E6E;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 3px solid #0B6E6E;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      transition: all 0.3s ease;
-      text-decoration: none !important;
+      transition: transform 0.3s ease;
     }
 
     .carousel-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-      border-top-color: #E8690A;
+      transform: translateY(-5px);
     }
 
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.1rem;
       color: #333333;
       margin-bottom: 0;
     }
@@ -217,30 +209,7 @@
       cursor: not-allowed;
       transform: none;
     }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+  </style>
   <meta name="description" content="Join Zuga Fitness for live online yoga classes in EST, GMT and GST timezones. Group classes, personal training, kids yoga, PCOD, postpartum and more. First class free.">
   <link rel="canonical" href="https://zugafitness.in/">
 
@@ -498,27 +467,17 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
@@ -578,36 +537,199 @@
     </div>
 </section>
 
+<section data-bs-version="5.1" class="features017 cid-uEMp5cL0kQ" id="features017-1" style="background-color: #fff; padding: 5rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5 text-center">
+                    <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 2.4rem; font-weight: 700;">
+                        <strong>What We Offer</strong>
+                    </h2>
+                    <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7" style="font-size: 1rem; color: #666;">
+                        From your first sun salutation to your deepest practice — there's a class built for you
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Card 1: Live Group Classes -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/picsart-25-02-09-19-11-42-693.jpg-600x600.jpg" alt="Live Group Classes" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <span style="background: #E8690A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 8px;">20+ Classes Monthly</span>
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-Yoga-Classes.html">Live Group Classes</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.8rem; color: #E8690A; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Most Popular</p>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Vinyasa, Hatha, Yin or Power — pick your flow, show up, feel the difference.</p>
+                        <div style="margin-top: auto;">
+                            <a href="/Online-Yoga-Classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Corporate Yoga Day -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/corporate1.jpg" alt="Corporate Yoga Week" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <span style="background: #E8690A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 8px;">4 Slots/Day Left</span>
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/corporate-yoga-day-bangalore.html">Corporate Yoga Week</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.8rem; color: #E8690A; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">In-Person Bangalore</p>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">We bring certified yoga instructors to your Bangalore office. Perfect for Corporate Yoga Week — June 16-25. Strictly limited slots.</p>
+                        <div style="margin-top: auto;">
+                            <a href="/corporate-yoga-day-bangalore.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Check Availability →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Personal Yoga Training -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/whatsapp-image-2025-02-02-at-17.11.52-fb08203c.jpg-600x597.jpg" alt="Personal Yoga Training" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <span style="background: #0B6E6E; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 8px;">Free Consultation</span>
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-Personal-Training-classes.html">Personal Yoga Training</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.8rem; color: #0B6E6E; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Most Personalised</p>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">One-on-one sessions built around your body, your goals, your schedule. Nothing generic.</p>
+                        <div style="margin-top: auto;">
+                            <a href="/Online-Personal-Training-classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4: Pranayama & Meditation -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/mbr-2-600x400.jpg" alt="Pranayama & Meditation" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <span style="background: #E8690A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 8px;">No Experience Needed</span>
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-Pranayama-Classes.html">Pranayama</a> & Meditation</h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.8rem; color: #E8690A; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Best for Stress & Sleep</p>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Breathe better, stress less. Guided techniques for clarity, calm and lung capacity.</p>
+                        <div style="margin-top: auto;">
+                            <a href="/Online-Pranayama-Classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explore More Services Toggle -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-auto">
+                <button onclick="toggleServices()" id="toggle-btn"
+                  style="background:none;border:1.5px solid #E8690A;color:#E8690A;
+                  padding:12px 32px;border-radius:30px;font-family:'Poppins',sans-serif;
+                  cursor:pointer;margin-top:2rem;">
+                  Explore All Services ↓
+                </button>
+            </div>
+        </div>
+
+        <div id="hidden-services" style="display:none" class="row mt-4">
+            <!-- Card 5: Postpartum Yoga -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #0B6E6E; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/Screenshot2025-06-10153239.jpeg" alt="Postpartum Yoga" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-Postpartum-Yoga-Classes.html">Postpartum Yoga</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Designed for new moms — rebuild strength, restore energy, and feel like yourself again.</p>
+                        <div style="margin-top: auto;">
+                            <a href="Online-Postpartum-Yoga-Classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6: Corporate & Apartment Wellness -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #0B6E6E; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="https://zugafitness.in/assets/images/whatsapp-image-2025-07-07-at-10.30.05-dc55370c.jpg" alt="Corporate & Apartment Wellness" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;">Corporate & Apartment Wellness</h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Bring energy back to your workplace or community. On-site sessions across Bangalore.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://zugafitness.in/Yoga-Classes-In-Bangalore/" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7: Hatha Vinyasa -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #0B6E6E; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/mbr-1200x800.jpg" alt="Hatha Vinyasa" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-Hatha-Vinyasa-Classes.html">Hatha Vinyasa</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Breath meets movement. Dynamic flows that energize your body from the inside out.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://zugafitness.in/Online-Hatha-Vinyasa-Classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8: Kids Yoga & Mindfulness -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/632575617de6105d51fcf02b-imagesaug-1520490427.yogaclassesforkidskidsstoppress.png-840x560.png" alt="Kids Yoga & Mindfulness" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Online-kids-Yoga-Classes.html">Kids Yoga</a> & Mindfulness</h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Games, stories and movement — building focus and confidence in children aged 5–15.</p>
+                        <div style="margin-top: auto;">
+                            <a href="Online-kids-Yoga-Classes.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 9: Senior Yoga -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #0B6E6E; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/gettyimages-872026678-640x640.jpg-768x432.jpg" alt="Senior Yoga" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="/Virtual-Yoga-Classes-For-senior.html">Senior Yoga</a></h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Gentle, low-impact sessions for better mobility, balance and joint health at any age.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://zugafitness.in/Virtual-Yoga-Classes-For-senior.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10: Yoga for PCOD -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mx-md-auto">
+                <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <img loading="lazy" src="assets/images/download-2.jpeg-225x225.jpg" alt="Yoga for PCOD" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;">Yoga for PCOD</h3>
+                        <p class="mbr-fonts-style" style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">Targeted sequences, diet guidance and stress tools to restore hormonal balance naturally.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://zugafitness.in/Online-Yoga-Classes-For-PCOD.html" style="color: #E8690A; text-decoration: none; font-weight: 600;">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleServices() {
+          const hidden = document.getElementById('hidden-services');
+          const btn = document.getElementById('toggle-btn');
+          if (hidden.style.display === 'none') {
+            hidden.style.display = 'grid';
+            btn.textContent = 'Show Less ↑';
+          } else {
+            hidden.style.display = 'none';
+            btn.textContent = 'Explore All Services ↓';
+          }
+        }
+    </script>
 
     <style>
         .service-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
         }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+    </style>
 </section>
 
 <section data-bs-version="5.1" class="list1 cid-uEEJbxUaMr" id="faq-1-uEEJbxUaMr">
@@ -1066,30 +1188,7 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
         }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+    </style>
 </section>
 
 
