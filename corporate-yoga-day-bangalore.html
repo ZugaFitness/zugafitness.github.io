@@ -29,112 +29,112 @@
 
   <style>
     :root {
-      --orange: #E8690A;
-      --teal: #0B6E6E;
-      --bg: #FFFFFF;
-      --text: #333333;
-      --light-bg: #F8F5F0;
+      --brand-orange: #E8690A;
+      --brand-teal: #0B6E6E;
+      --brand-bg: #F8F5F0;
+      --brand-text: #333333;
+      --white: #FFFFFF;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--text);
-      background-color: var(--bg);
+      color: var(--brand-text);
+      background-color: var(--brand-bg);
     }
 
-    h1, h2, h3, h4, .section-title {
+    h1, h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
     }
 
-    .btn-orange {
-      background-color: var(--orange) !important;
-      border-color: var(--orange) !important;
-      color: #fff !important;
-      border-radius: 50px !important;
-      padding: 1rem 2.5rem !important;
-      font-weight: 600 !important;
+    h3, h4, h5, h6, .brand-sans {
+      font-family: 'Poppins', sans-serif;
     }
 
-    .btn-orange:hover {
+    .btn-brand-cta {
+      background-color: var(--brand-orange) !important;
+      border-color: var(--brand-orange) !important;
+      color: #fff !important;
+      border-radius: 8px !important;
+      padding: 12px 32px !important;
+      font-weight: 700 !important;
+      font-family: 'Poppins', sans-serif;
+      text-transform: none;
+      display: inline-block;
+      text-decoration: none;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-brand-cta:hover {
       background-color: #bf5608 !important;
-      border-color: #bf5608 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(232, 105, 10, 0.3);
     }
 
-    .btn-white-outline {
-      background-color: transparent !important;
-      border: 2px solid #fff !important;
-      color: #fff !important;
-      border-radius: 50px !important;
-      padding: 1rem 2.5rem !important;
-      font-weight: 600 !important;
-    }
-
-    .btn-white-outline:hover {
-      background-color: #fff !important;
-      color: var(--teal) !important;
-    }
-
-    /* Hero Section */
-    .hero-section {
-      padding: 120px 0 80px;
-      overflow: hidden;
-    }
-
-    /* Trust Bar */
-    .trust-bar {
-      background-color: var(--light-bg);
-      padding: 40px 0;
-      text-align: center;
-    }
-    .trust-stat {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    /* Generic Section */
+    /* Layout Spacing */
     .zuga-section {
       padding: 80px 0;
     }
 
-    /* Benefits Grid */
-    .benefit-card {
+    /* Brand Card Component */
+    .brand-card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--brand-teal);
       padding: 30px;
-      border-radius: 15px;
-      background: #fff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       height: 100%;
-      text-align: center;
-      border-bottom: 4px solid var(--teal);
+      transition: transform 0.3s ease;
+    }
+    .brand-card:hover {
+      transform: translateY(-5px);
     }
 
-    /* Pricing Section */
-    .pricing-card {
-      padding: 40px 30px;
-      border-radius: 20px;
-      background: #fff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      height: 100%;
+    /* Hero Section */
+    .hero-section {
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero-accent-tag {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--brand-teal);
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .hero-visual-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Scarcity Ticker */
+    .scarcity-ticker {
+      background-color: var(--white);
+      border: 1px solid var(--brand-orange);
+      padding: 15px 0;
       text-align: center;
-      border: 1px solid #eee;
+      margin-top: -20px;
       position: relative;
+      z-index: 10;
     }
-    .pricing-card.popular {
-      border: 2px solid var(--orange);
-      transform: scale(1.05);
-      z-index: 1;
-    }
-    .popular-badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--orange);
-      color: #fff;
-      padding: 5px 15px;
-      border-radius: 20px;
+
+    /* Pricing Architecture */
+    .pricing-ribbon {
+      background: var(--brand-orange);
+      color: white;
+      padding: 4px 12px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 1rem;
     }
 
     /* Instructor Section */
@@ -171,6 +171,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-family: 'Poppins', sans-serif;
     }
 
     /* ── Form Base Styles ── */
@@ -184,7 +185,7 @@
       border-radius: 8px;
       font-size: 0.95rem;
       font-family: inherit;
-      background: #FFFDF9;
+      background: var(--white);
       color: #1A1A1A;
       min-height: 48px;
       transition: border-color 0.2s;
@@ -194,15 +195,15 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--teal);
+      border-color: var(--brand-teal);
     }
     .field-invalid {
-      border-color: var(--orange) !important;
+      border-color: var(--brand-orange) !important;
       background: rgba(232,105,10,0.04) !important;
     }
     .field-error {
       display: none;
-      color: var(--orange);
+      color: var(--brand-orange);
       font-size: 0.75rem;
       margin-top: 0.3rem;
     }
@@ -210,22 +211,22 @@
 
     .form-success {
       background: rgba(11,110,110,0.08);
-      border: 1px solid var(--teal);
+      border: 1px solid var(--brand-teal);
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
-      color: var(--teal);
+      color: var(--brand-teal);
       font-weight: 600;
       font-size: 1.05rem;
       margin-top: 1rem;
     }
     .form-error {
       background: rgba(232,105,10,0.06);
-      border: 1px solid var(--orange);
+      border: 1px solid var(--brand-orange);
       border-radius: 12px;
       padding: 1.2rem;
       text-align: center;
-      color: var(--orange);
+      color: var(--brand-orange);
       font-size: 0.9rem;
       margin-top: 1rem;
     }
@@ -235,12 +236,12 @@
       width: 100%;
       padding: 1rem 2rem;
       margin-top: 1.5rem;
-      background: var(--orange);
+      background: var(--brand-orange);
       color: #ffffff;
       font-size: 1.1rem;
       font-weight: 700;
       border: none;
-      border-radius: 50px;
+      border-radius: 8px;
       cursor: pointer;
       transition: background 0.2s;
     }
@@ -254,7 +255,7 @@
 
     /* Final CTA */
     .final-cta {
-      background-color: var(--orange);
+      background-color: var(--brand-orange);
       color: #fff;
       padding: 80px 0;
       text-align: center;
@@ -262,7 +263,6 @@
 
     @media (max-width: 767px) {
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
-      .pricing-card.popular { transform: none; margin-bottom: 30px; }
       lottie-player { max-width: 300px !important; margin: 0 auto; }
     }
   </style>
@@ -361,188 +361,120 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1 class="display-3 mb-4">Celebrate International Yoga Day on Your Terms</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">Don't ask employees to log in on a weekend. Book a premium, 60-minute onsite yoga and breathwork session directly on your office floor during work hours, anytime between <strong>June 16 and June 25</strong>.</p>
+        <span class="hero-accent-tag">B2B CORPORATE YOGA WEEK | JUNE 16–25</span>
+        <h1 class="display-3 mb-4">Celebrate International Yoga Day on Your Terms.</h1>
+        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Don't ask your team to log in on a weekend. Bring Bangalore's premier, lineage-trained yoga instructors straight to your physical office floor during Corporate Yoga Week.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="#booking-form">Book Your Weekday Slot</a>
+          <a class="btn btn-brand-cta display-4" href="#onsite">Secure an Onsite Slot</a>
         </div>
       </div>
-      <div class="col-md-6 text-center">
-        <lottie-player
-          src="https://assets5.lottiefiles.com/packages/lf20_hxart9lz.json"
-          background="transparent"
-          speed="1"
-          style="width:100%;max-width:480px;height:480px;"
-          loop autoplay>
-        </lottie-player>
+      <div class="col-md-6">
+        <div class="hero-visual-container">
+          <img src="assets/images/corporate1.jpg" alt="Corporate Yoga Session" style="width: 100%; height: auto; display: block;">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 2: Trust Bar -->
-<section class="trust-bar">
+<!-- Section 2: Scarcity Ticker Panel -->
+<div class="scarcity-ticker">
   <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">Certified Instructors</div>
-      </div>
-      <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">All Areas of Bangalore</div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-stat">All Fitness Levels Welcome</div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-stat">Strictly 4 Slots Per Day</div>
-      </div>
-    </div>
+    <p class="mb-0" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: var(--brand-text);">
+      ⏳ SCARCITY WARNING: We limit our schedule to strictly 4 office slots per day across Bangalore to maintain elite instruction quality. Peak hours (11 AM & 4 PM) are filling fast.
+    </p>
   </div>
-</section>
+</div>
 
-<!-- Section 3: Why Yoga for Your Team -->
+<!-- Section 3: B2B Value Grid -->
 <section class="zuga-section">
-  <div class="container text-center">
-    <h2 class="display-4 mb-5">More Than a Yoga Class</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <div class="mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h4 class="mb-3">Reduces Workplace Stress</h4>
-          <p>One session measurably lowers cortisol. Your team will feel the difference immediately.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <div class="mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h4 class="mb-3">Boosts Team Morale</h4>
-          <p>A shared experience that brings people together — better than any team lunch.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
-          <div class="mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-          </div>
-          <h4 class="mb-3">Improves Focus & Energy</h4>
-          <p>Employees return to their desks calmer, more focused and more productive.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section 4: What's Included -->
-<section class="zuga-section" style="background-color: #fafafa;">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-5 mb-md-0">
-        <h2 class="display-4 mb-4">What Your Team Gets</h2>
-        <ul class="display-7" style="list-style: none; padding: 0; line-height: 2.2;">
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">1.</span> 60-minute onsite yoga session at your office premises</li>
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">2.</span> Certified instructor travels to you — anywhere in Bangalore</li>
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">3.</span> Suitable for all fitness levels — no experience needed</li>
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">4.</span> Includes breathwork and a guided cooldown</li>
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">5.</span> Session can be customised for your team size and space</li>
-          <li><span style="color: var(--orange); font-weight: bold; margin-right: 10px;">6.</span> <strong>Hybrid-friendly:</strong> If your team is partially remote, we can live-stream your onsite session simultaneously via Zoom/Teams.</li>
-        </ul>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="brand-card text-center">
+          <h3 class="mb-3">Logistical Relief</h3>
+          <p class="mb-0">June 21 lands on a Sunday this year. We bring the pop-up to your office on weekdays so employee personal time stays fully respected.</p>
+        </div>
       </div>
-      <div class="col-md-6 text-center">
-        <lottie-player
-          src="https://assets3.lottiefiles.com/packages/lf20_tutvdkg0.json"
-          background="transparent"
-          speed="0.8"
-          style="width:100%;max-width:400px;height:400px;"
-          loop autoplay>
-        </lottie-player>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="brand-card text-center">
+          <h3 class="mb-3">Zero Operational Weight</h3>
+          <p class="mb-0">Trainer-Only execution layer. Your team simply provides the clear floor space or conference room; Zuga Fitness supplies the elite talent layer to completely manage the room's energy. No hardware required—employees can bring mats, or we execute highly engaging standing or desk-chair protocols.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="brand-card text-center">
+          <h3 class="mb-3">Hybrid-Friendly Setup</h3>
+          <p class="mb-0">Your onsite floor session can be seamlessly live-streamed via Zoom or Microsoft Teams for your remote workforce, completely removing remote team roadblocks.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 5: Pricing Section -->
+<!-- Section 4: Transparent Pricing Architecture -->
 <section class="zuga-section">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="display-4 mb-3">Simple, Transparent Pricing</h2>
-      <p class="display-7 text-muted">₹5,000 base + ₹100 per head. The more people, the better the value.</p>
+      <h2 class="display-4 mb-3">Transparent Pricing Architecture</h2>
     </div>
 
-    <div class="row justify-content-center mb-4">
-        <div class="col-lg-10">
-            <div class="alert alert-warning text-center" style="background-color: var(--orange); color: #fff; border: none; border-radius: 10px; padding: 15px; font-weight: 600;">
-                🎉 Early Bird: Book before June 7 and save ₹1,000
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3 mb-4">
-        <div class="pricing-card">
-          <h4 class="mb-3">Up to 20 people</h4>
-          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹7,000</div>
-          <p class="text-muted">Best for: Small teams and startups</p>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="pricing-card popular">
-          <span class="popular-badge">⭐ Most Popular</span>
-          <h4 class="mb-3">Up to 30 people</h4>
-          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹8,000</div>
-          <p class="text-muted">Best for: Mid-sized teams</p>
+    <div class="row justify-content-center">
+      <!-- Onsite Card -->
+      <div class="col-md-5 mb-4">
+        <div class="brand-card text-center">
+          <span class="pricing-ribbon">Early Bird Special: Save ₹1,000 on your base fee if booked before June 7!</span>
+          <h3 class="mb-4">Onsite Bangalore Corporate Session</h3>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--brand-orange); margin-bottom: 10px;">
+            ₹4,000 base + ₹100 per head
+          </div>
+          <p style="text-decoration: line-through; color: #888; font-weight: 600;">Standard rate: ₹5,000 base</p>
+          <div class="mbr-section-btn mt-4">
+            <a class="btn btn-brand-cta display-4" href="#onsite">Book Onsite Slot</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-3 mb-4">
-        <div class="pricing-card">
-          <h4 class="mb-3">Up to 50 people</h4>
-          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹10,000</div>
-          <p class="text-muted">Best for: Department-level sessions</p>
+      <!-- Virtual Card -->
+      <div class="col-md-5 mb-4">
+        <div class="brand-card text-center">
+          <h3 class="mb-4 mt-5">Virtual Execution Fallback</h3>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--brand-orange); margin-bottom: 10px;">
+            ₹5,000 flat rate
+          </div>
+          <p class="mb-0" style="color: #666; font-weight: 600;">Up to 50 employees globally.</p>
+          <div class="mbr-section-btn mt-4">
+            <a class="btn btn-brand-cta display-4" href="#onsite">Book Virtual Session</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-3 mb-4">
-        <div class="pricing-card">
-          <h4 class="mb-3">Up to 100 people</h4>
-          <div style="font-size: 2.5rem; font-weight: 700; color: var(--orange); margin-bottom: 20px;">₹15,000</div>
-          <p class="text-muted">Best for: All-hands or large office events</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-        <p class="display-4" style="font-size: 0.9rem; color: #777;">Prefer online? Zoom sessions available at ₹5,000 flat for up to 50 people.</p>
-        <div class="mbr-section-btn mt-4">
-          <a class="btn btn-orange display-4" href="#booking-form">Book Your Weekday Slot Now</a>
-        </div>
-        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Strictly 4 corporate onsite slots per day</p>
     </div>
   </div>
 </section>
 
 <!-- Section 6: Instructors -->
-<section class="zuga-section" style="background-color: var(--light-bg);">
+<section class="zuga-section" style="background-color: var(--brand-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
     <div class="row justify-content-center">
       <div class="col-md-5">
-        <div class="instructor-card">
+        <div class="brand-card text-center mb-4">
           <div class="instructor-photo">
              <img src="/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
           </div>
-          <h3>Mallinath</h3>
-          <p class="display-7">Lead corporate instructor with 1500+ hours taught. Expert in Hatha & Vinyasa.</p>
+          <h3 class="mb-2">Mallinath</h3>
+          <p class="mb-0">Lead corporate instructor with 1500+ hours taught. Expert in Hatha & Vinyasa.</p>
         </div>
       </div>
       <div class="col-md-5">
-        <div class="instructor-card">
+        <div class="brand-card text-center mb-4">
           <div class="instructor-photo">
             <img src="/assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
           </div>
-          <h3>Anusha</h3>
-          <p class="display-7">Women's wellness and PCOD specialist. 500+ hours taught with an encouraging style.</p>
+          <h3 class="mb-2">Anusha</h3>
+          <p class="mb-0">Women's wellness and PCOD specialist. 500+ hours taught with an encouraging style.</p>
         </div>
       </div>
     </div>
@@ -551,27 +483,25 @@
 
 <!-- Section 7: Testimonial -->
 <section class="zuga-section">
-  <div class="container-fluid" style="background-color: var(--light-bg); padding: 80px 0;">
-    <div class="container text-center">
-      <div style="font-size: 5rem; color: var(--orange); line-height: 1; margin-bottom: -20px;">“</div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <h3 class="display-5 mb-4" style="font-style: italic; line-height: 1.4;">"The Zuga session was the highlight of our team offsite. Every level from first-timer to regular practitioner felt completely included and comfortable."</h3>
-          <p class="display-7"><strong>— HR Manager, Bangalore Tech Company</strong></p>
-        </div>
+  <div class="container text-center">
+    <div style="font-size: 5rem; color: var(--brand-orange); line-height: 1; margin-bottom: -20px; font-family: serif;">“</div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h3 class="display-5 mb-4" style="font-style: italic; line-height: 1.4;">"The Zuga session was the highlight of our team offsite. Every level from first-timer to regular practitioner felt completely included and comfortable."</h3>
+        <p class="brand-sans"><strong>— HR Manager, Bangalore Tech Company</strong></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Section 8: Booking Form -->
-<section class="zuga-section" id="booking-form">
+<section class="zuga-section" id="onsite">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div class="pricing-card" style="padding: 50px; border-top: 5px solid var(--orange);">
+        <div class="brand-card" style="padding: 50px; border-top: 5px solid var(--brand-orange);">
           <h2 class="display-4 mb-4">Book Your Weekday Slot</h2>
-          <p class="mb-5">Fill out the form below and our team will get back to you within 24 hours to confirm your Corporate Yoga Week session.</p>
+          <p class="mb-5 brand-sans">Fill out the form below and our team will get back to you within 24 hours to confirm your Corporate Yoga Week session.</p>
 
           <form id="yoga-day-booking-form" action="https://formspree.io/f/mnjlyoqr" method="POST" novalidate>
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
@@ -656,7 +586,7 @@
               ❌ Something went wrong. Please email us at <a href="mailto:zugafitness24@gmail.com">zugafitness24@gmail.com</a>
             </div>
           </form>
-          <p class="text-muted mt-3" style="font-size: 0.8rem;">Note: Early bird discount (₹1,000 OFF) applies for all bookings confirmed before June 7th.</p>
+          <p class="text-muted mt-3 brand-sans" style="font-size: 0.8rem;">Note: Early bird discount (₹1,000 OFF) applies for all bookings confirmed before June 7th.</p>
         </div>
       </div>
     </div>
@@ -669,34 +599,36 @@
     <h2 class="display-4 text-center mb-5">Common Questions</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do you travel to all areas of Bangalore? <span>+</span></div>
-          <div id="faq1" class="collapse mt-3">
-            <p>Yes — we cover all areas of Bangalore. No travel surcharge within city limits.</p>
+        <div class="brand-card mb-4" style="border-top: none; border-bottom: 2px solid var(--brand-teal);">
+          <div class="faq-item">
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do you travel to all areas of Bangalore? <span style="color: var(--brand-orange);">+</span></div>
+            <div id="faq1" class="collapse mt-3">
+              <p>Yes — we cover all areas of Bangalore. No travel surcharge within city limits.</p>
+            </div>
           </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What space do we need at our office? <span>+</span></div>
-          <div id="faq2" class="collapse mt-3">
-            <p>Any open area works — a conference room, terrace, lawn, or cleared office floor. We just need enough space for participants to lie down.</p>
+          <div class="faq-item">
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What space do we need at our office? <span style="color: var(--brand-orange);">+</span></div>
+            <div id="faq2" class="collapse mt-3">
+              <p>Any open area works — a conference room, terrace, lawn, or cleared office floor. We just need enough space for participants to lie down.</p>
+            </div>
           </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">What do employees need to bring? <span>+</span></div>
-          <div id="faq3" class="collapse mt-3">
-            <p>Nothing — just comfortable clothing. We bring any props needed.</p>
+          <div class="faq-item">
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">What do employees need to bring? <span style="color: var(--brand-orange);">+</span></div>
+            <div id="faq3" class="collapse mt-3">
+              <p>Nothing — just comfortable clothing. We bring any props needed.</p>
+            </div>
           </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Can the session be customised for our team? <span>+</span></div>
-          <div id="faq4" class="collapse mt-3">
-            <p>Yes. Share your team size, any specific health considerations, and your goals — we'll tailor the session accordingly.</p>
+          <div class="faq-item">
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Can the session be customised for our team? <span style="color: var(--brand-orange);">+</span></div>
+            <div id="faq4" class="collapse mt-3">
+              <p>Yes. Share your team size, any specific health considerations, and your goals — we'll tailor the session accordingly.</p>
+            </div>
           </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">Why is it "Corporate Yoga Week"? <span>+</span></div>
-          <div id="faq5" class="collapse mt-3">
-            <p>Since International Yoga Day (June 21) falls on a Sunday this year, we've extended our onsite availability from June 16 to June 25. This allows your team to participate during regular work hours on a weekday that suits your schedule best.</p>
+          <div class="faq-item" style="border-bottom: none;">
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">Why is it "Corporate Yoga Week"? <span style="color: var(--brand-orange);">+</span></div>
+            <div id="faq5" class="collapse mt-3">
+              <p>Since International Yoga Day (June 21) falls on a Sunday this year, we've extended our onsite availability from June 16 to June 25. This allows your team to participate during regular work hours on a weekday that suits your schedule best.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -708,9 +640,9 @@
 <section class="final-cta">
   <div class="container">
     <h2 class="display-3 mb-4 text-white">We host strictly 4 onsite office slots per day across Bangalore to ensure our premium senior instructors can manage the energy of each floor. Slots for peak corporate hours (11 AM and 4 PM) are filling up fast.</h2>
-    <p class="lead mb-5 text-white">Bangalore companies are booking fast for Corporate Yoga Week (June 16–25) — don't miss out.</p>
+    <p class="lead mb-5 text-white brand-sans">Bangalore companies are booking fast for Corporate Yoga Week (June 16–25) — don't miss out.</p>
     <div class="mbr-section-btn">
-      <a class="btn btn-white-outline display-4" href="#booking-form">Check Availability Now</a>
+      <a class="btn btn-brand-cta display-4" style="background-color: white !important; color: var(--brand-orange) !important;" href="#onsite">Check Availability Now</a>
     </div>
   </div>
 </section>
