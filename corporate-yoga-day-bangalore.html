@@ -265,6 +265,53 @@
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
       lottie-player { max-width: 300px !important; margin: 0 auto; }
     }
+
+    /* Gallery Section Styles */
+    .gallery-section {
+      background-color: #F8F5F0;
+      padding-bottom: 80px;
+    }
+    .gallery-header {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: #333333;
+      text-align: center;
+      padding: 40px 0;
+      margin-bottom: 0;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 15px;
+    }
+    .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      aspect-ratio: 1/1;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 991px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 575px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-header {
+        font-size: 28px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -410,6 +457,33 @@
           <h3 class="mb-3">Hybrid-Friendly Setup</h3>
           <p class="mb-0">Your onsite floor session can be seamlessly live-streamed via Zoom or Microsoft Teams for your remote workforce, completely removing remote team roadblocks.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Gallery -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="gallery-header">Our Onsite Sessions in Action</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.05_128fc33c.jpg" alt="Yoga Classes in Koramangala, Bangalore">
+      </div>
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.07_0d11007f.jpg" alt="Zumba Classes in Whitefield, Bangalore">
+      </div>
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.10_cd7107e6.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
+      </div>
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.07_de6efe5e.jpg" alt="Corporate Fitness Workshop in Bangalore">
+      </div>
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.09_6982db20.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
+      </div>
+      <div class="gallery-item">
+        <img loading="lazy" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-19.26.08_8d3a86c2.jpg" alt="Corporate Meditation in Electronic City, Bangalore">
       </div>
     </div>
   </div>
