@@ -216,14 +216,18 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             display: flex;
             height: 280px;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            position: relative;
         }
         
         .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(51,51,51,0.06);
         }
         
         .blog-image {
@@ -272,6 +276,11 @@
             font-size: 1.8rem;
             margin-bottom: 15px;
             color: var(--dark);
+            transition: color 0.3s ease;
+        }
+
+        .blog-card:hover .blog-title {
+            color: #0B6E6E;
         }
         
         .blog-excerpt {
@@ -281,30 +290,24 @@
             line-height: 1.7;
         }
         
-        .read-more {
+        .read-article-cue {
             display: inline-block;
             color: var(--primary);
             font-weight: 500;
-            text-decoration: none;
-            position: relative;
-            padding-bottom: 3px;
-            align-self: flex-start;
-            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            align-self: flex-end;
+            margin-top: auto;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
         }
-        
-        .read-more::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-        
-        .read-more:hover::after {
-            width: 100%;
+
+        .blog-card:hover .read-article-cue {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
         }
         
         /* Newsletter */
@@ -562,7 +565,7 @@
         
         <div class="blog-container">
             <!-- New Blog: Best Bedtime Yoga Poses for Deep, Restful Sleep -->
-            <div class="blog-card">
+            <a href="/Blog/sleep-yoga-poses.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1511295742364-92b9345f6853?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Best Bedtime Yoga Poses for Deep, Restful Sleep">
                 </div>
@@ -575,12 +578,12 @@
                         <h3 class="blog-title">Best Bedtime Yoga Poses for Deep, Restful Sleep</h3>
                         <p class="blog-excerpt">Struggling with insomnia or night-time anxiety? Discover gentle, restorative sleep yoga poses designed to calm your nervous system and help you fall asleep fast.</p>
                     </div>
-                    <a href="/Blog/sleep-yoga-poses.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Best Online Yoga Classes for Seniors -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-for-seniors-online.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Best Online Yoga Classes for Seniors">
                 </div>
@@ -593,12 +596,12 @@
                         <h3 class="blog-title">Best Online Yoga Classes for Seniors: Safe & Accessible At-Home Practice</h3>
                         <p class="blog-excerpt">Discover safe, accessible online yoga classes for seniors. Learn gentle poses to improve mobility, balance, and flexibility from the comfort of home.</p>
                     </div>
-                    <a href="/Blog/yoga-for-seniors-online.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga for Night Shift Workers -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-for-night-shift-workers-us-uk.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga for Night Shift Workers">
                 </div>
@@ -611,12 +614,12 @@
                         <h3 class="blog-title">Best Time to Do Yoga If You Work Night Shifts in the US or UK</h3>
                         <p class="blog-excerpt">Working nights across timezones? Here's how to build a yoga routine that actually fits your schedule — and why morning yoga might not be right for you.</p>
                     </div>
-                    <a href="/Blog/yoga-for-night-shift-workers-us-uk.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga for PCOD Member Story -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-for-pcod-member-story.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga for PCOD Member Story">
                 </div>
@@ -629,12 +632,12 @@
                         <h3 class="blog-title">How Yoga Helped Me Manage PCOD — One Member's Story</h3>
                         <p class="blog-excerpt">A personal account of managing PCOD symptoms through consistent yoga practice. Real experience, real results from a Zuga Fitness member.</p>
                     </div>
-                    <a href="/Blog/yoga-for-pcod-member-story.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga for Corporate Professionals -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-for-corporate-professionals.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga for Corporate Professionals">
                 </div>
@@ -647,12 +650,12 @@
                         <h3 class="blog-title">Yoga for Corporate Professionals: 30-Minute Desk-to-Mat Sequence</h3>
                         <p class="blog-excerpt">Staring at a screen all day? Try this 30-minute yoga sequence for corporate professionals to relieve back pain, neck tension, and stress.</p>
                     </div>
-                    <a href="/Blog/yoga-for-corporate-professionals.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga for Beginners at Home -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-for-beginners-at-home.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Beginner doing yoga at home on a mat in a bright living room">
                 </div>
@@ -665,12 +668,12 @@
                         <h3 class="blog-title">Yoga for Beginners at Home: How to Start (And Actually Stick With It)</h3>
                         <p class="blog-excerpt">Starting yoga at home as a complete beginner? Here's an honest, practical guide — what to do first, what to avoid, and why live classes beat YouTube.</p>
                     </div>
-                    <a href="/Blog/yoga-for-beginners-at-home.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Postpartum Yoga -->
-            <div class="blog-card">
+            <a href="/Blog/postpartum-yoga-when-to-start.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="New mother doing gentle postpartum yoga at home">
                 </div>
@@ -683,12 +686,12 @@
                         <h3 class="blog-title">Postpartum Yoga: When to Start and What's Safe for New Mothers</h3>
                         <p class="blog-excerpt">Wondering when to start yoga after delivery? Here's a safe, expert-backed guide to postpartum yoga — what to do, what to avoid, and when to begin.</p>
                     </div>
-                    <a href="/Blog/postpartum-yoga-when-to-start.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: How to Hire a Yoga Trainer for International Yoga Day in Bangalore (2026) -->
-            <div class="blog-card">
+            <a href="/Blog/hire-yoga-trainer-yoga-day-bangalore.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Certified yoga trainer conducting a corporate session in Bangalore">
                 </div>
@@ -701,12 +704,12 @@
                         <h3 class="blog-title">How to Hire a Yoga Trainer for International Yoga Day in Bangalore (2026)</h3>
                         <p class="blog-excerpt">Looking to hire a yoga trainer for International Yoga Day in Bangalore? Here's exactly what to check before booking — and why early booking matters.</p>
                     </div>
-                    <a href="/Blog/hire-yoga-trainer-yoga-day-bangalore.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: 5 Yoga Day Activities Your Bangalore Office Will Actually Enjoy (2026) -->
-            <div class="blog-card">
+            <a href="/Blog/yoga-day-activities-office-bangalore.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Team doing yoga together in a Bangalore office on International Yoga Day">
                 </div>
@@ -719,12 +722,12 @@
                         <h3 class="blog-title">5 Yoga Day Activities Your Bangalore Office Will Actually Enjoy (2026)</h3>
                         <p class="blog-excerpt">Planning International Yoga Day activities for your Bangalore office? Here are 5 ideas that work for all fitness levels — including live onsite sessions.</p>
                     </div>
-                    <a href="/Blog/yoga-day-activities-office-bangalore.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga for Indians in UK -->
-            <div class="blog-card">
+            <a href="online-yoga-for-indians-in-uk.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Indian woman doing yoga online from her home in the UK">
                 </div>
@@ -737,12 +740,12 @@
                         <h3 class="blog-title">Online Yoga Classes for Indians in the UK — Live, Not Recorded</h3>
                         <p class="blog-excerpt">Missing your yoga practice in the UK? Zuga Fitness runs live online yoga classes in GMT timezone — taught by Indian instructors.</p>
                     </div>
-                    <a href="online-yoga-for-indians-in-uk.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Corporate Yoga Day Bangalore -->
-            <div class="blog-card">
+            <a href="corporate-yoga-day-bangalore.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Corporate yoga session in a Bangalore office">
                 </div>
@@ -752,15 +755,15 @@
                             <span><i class="far fa-calendar"></i> May 12, 2026</span>
                             <span class="blog-category">Corporate Wellness</span>
                         </div>
-                        <h2 class="blog-card-title"><a href="corporate-yoga-day-bangalore.html">Planning a Corporate Yoga Week for Your Bangalore Office? Read This First</a></h2>
+                        <h3 class="blog-title">Planning a Corporate Yoga Week for Your Bangalore Office? Read This First</h3>
                         <p class="blog-excerpt">International Yoga Day falls on a Sunday this year. Here's why Bangalore HR teams are booking 'Corporate Yoga Week' (June 16–25) for their office sessions.</p>
                     </div>
-                    <a href="corporate-yoga-day-bangalore.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga for Back Pain -->
-            <div class="blog-card">
+            <a href="online-yoga-for-back-pain.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Person doing yoga for back pain relief at home">
                 </div>
@@ -773,12 +776,12 @@
                         <h3 class="blog-title">Online Yoga for Back Pain: 6 Poses Your Spine Needs Right Now</h3>
                         <p class="blog-excerpt">Chronic back pain from sitting all day? These 6 yoga poses target the exact muscles desk work damages — and you can do them in 20 minutes at home.</p>
                     </div>
-                    <a href="online-yoga-for-back-pain.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Hatha vs Vinyasa Yoga -->
-            <div class="blog-card">
+            <a href="hatha-vs-vinyasa-yoga.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Hatha vs Vinyasa Yoga">
                 </div>
@@ -791,12 +794,12 @@
                         <h3 class="blog-title">Hatha vs Vinyasa Yoga: Which Style Is Right for You?</h3>
                         <p class="blog-excerpt">Not sure whether to choose Hatha or Vinyasa yoga? We break down the key differences so you can pick the right style for your body and goals.</p>
                     </div>
-                    <a href="hatha-vs-vinyasa-yoga.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Pranayama for Anxiety -->
-            <div class="blog-card">
+            <a href="pranayama-for-anxiety.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Pranayama for Anxiety">
                 </div>
@@ -809,12 +812,12 @@
                         <h3 class="blog-title">Pranayama for Anxiety: 5 Breathing Techniques That Calm Your Mind in Minutes</h3>
                         <p class="blog-excerpt">Discover 5 powerful pranayama breathing techniques that reduce anxiety and calm your mind in minutes — with live expert guidance from Zuga Fitness.</p>
                     </div>
-                    <a href="pranayama-for-anxiety.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga Classes in Malaysia -->
-            <div class="blog-card">
+            <a href="online-yoga-classes-malaysia-kuala-lumpur-penang.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Online Yoga Classes Malaysia Kuala Lumpur Penang">
                 </div>
@@ -827,12 +830,12 @@
                         <h3 class="blog-title">Online Yoga Classes in Malaysia: Why the Indian Community in Kuala Lumpur & Penang is Choosing Live Instruction</h3>
                         <p class="blog-excerpt">Discover why 2 million Indians in Malaysia are choosing live Zuga Fitness classes over pre-recorded apps — with MYT-friendly timing and authentic Indian instructors.</p>
                     </div>
-                    <a href="online-yoga-classes-malaysia-kuala-lumpur-penang.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga for Back Pain Relief -->
-            <div class="blog-card">
+            <a href="yoga-for-back-pain-relief.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga for Back Pain Relief">
                 </div>
@@ -845,12 +848,12 @@
                         <h3 class="blog-title">Yoga for Back Pain Relief: 7 Poses That Actually Work (From Home)</h3>
                         <p class="blog-excerpt">Discover 7 effective yoga poses for back pain relief you can practice safely at home with live expert guidance.</p>
                     </div>
-                    <a href="yoga-for-back-pain-relief.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga Classes in Germany -->
-            <div class="blog-card">
+            <a href="online-yoga-classes-germany-berlin-munich.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Online Yoga Classes Germany Berlin Munich Indian Expats">
                 </div>
@@ -863,12 +866,12 @@
                         <h3 class="blog-title">Online Yoga Classes in Germany: Why Indian Expats in Berlin & Munich Are Practicing from Home</h3>
                         <p class="blog-excerpt">Germany is Europe's fastest growing yoga market. Discover why Indian expats in Berlin & Munich choose Zuga Fitness for live online yoga classes in the CET timezone with authentic Indian instructors.</p>
                     </div>
-                    <a href="online-yoga-classes-germany-berlin-munich.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga Classes in Singapore -->
-            <div class="blog-card">
+            <a href="online-yoga-classes-singapore-indian-community.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Online Yoga Classes Singapore Indian Community">
                 </div>
@@ -881,12 +884,12 @@
                         <h3 class="blog-title">Online Yoga Classes in Singapore: Why the Indian Community is Choosing Live Instruction from Home</h3>
                         <p class="blog-excerpt">Singapore ranks #2 globally for yoga interest. Discover why 350,000 Indian expats in Singapore choose Zuga Fitness for live online yoga classes in the SGT timezone with authentic Indian instructors.</p>
                     </div>
-                    <a href="online-yoga-classes-singapore-indian-community.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga Poses for Better Sleep -->
-            <div class="blog-card">
+            <a href="yoga-poses-for-better-sleep.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga Poses for Better Sleep Zuga Fitness">
                 </div>
@@ -899,12 +902,12 @@
                         <h3 class="blog-title">5 Yoga Poses for Better Sleep: A Science-Backed Bedtime Routine</h3>
                         <p class="blog-excerpt">Struggling to sleep? Discover 5 science-backed yoga poses for better sleep. A simple 20-minute bedtime yoga routine that reduces cortisol and improves sleep quality.</p>
                     </div>
-                    <a href="yoga-poses-for-better-sleep.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga Classes in Dubai -->
-            <div class="blog-card">
+            <a href="online-yoga-classes-dubai-uae-indian-expats.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Online Yoga Classes Dubai UAE Indian Expats">
                 </div>
@@ -917,12 +920,12 @@
                         <h3 class="blog-title">Online Yoga Classes in Dubai & UAE: Why Indian Expats Are Returning to Their Roots with Live Yoga</h3>
                         <p class="blog-excerpt">Over 3.5 million Indians call the UAE home. Discover why Dubai & Abu Dhabi expats choose Zuga Fitness for authentic live online yoga classes in the GST timezone.</p>
                     </div>
-                    <a href="online-yoga-classes-dubai-uae-indian-expats.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Online Yoga Classes in Canada -->
-            <div class="blog-card">
+            <a href="online-yoga-classes-canada-vancouver-toronto.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Online Yoga Classes Canada Vancouver Toronto">
                 </div>
@@ -935,12 +938,12 @@
                         <h3 class="blog-title">Online Yoga Classes in Canada: Why Vancouver & Toronto Professionals Are Choosing Live Indian Instructors</h3>
                         <p class="blog-excerpt">Canada is the world's #1 yoga nation. Discover why Toronto & Vancouver professionals choose Zuga Fitness for live online yoga classes.</p>
                     </div>
-                    <a href="online-yoga-classes-canada-vancouver-toronto.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Yoga Poses for PCOD -->
-            <div class="blog-card">
+            <a href="yoga-poses-for-pcod-management.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Yoga for PCOD management">
                 </div>
@@ -953,12 +956,12 @@
                         <h3 class="blog-title">7 Best Yoga Poses for PCOD Management You Can Do at Home</h3>
                         <p class="blog-excerpt">Discover the 7 most effective yoga poses for PCOD management. Expert-guided online PCOD yoga classes at Zuga Fitness helped Anjali K. reduce symptoms in just 8 weeks.</p>
                     </div>
-                    <a href="yoga-poses-for-pcod-management.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: London Timezone -->
-            <div class="blog-card">
+            <a href="live-online-yoga-class-london-timezone.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1545208393-596371ba4a33?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Live Online Yoga London GMT">
                 </div>
@@ -968,15 +971,15 @@
                             <span><i class="far fa-calendar"></i> April 29, 2026</span>
                             <span class="blog-category">Interactive Yoga</span>
                         </div>
-                        <h3 class="blog-title">Finding a <a href="/Virtual-Yoga-Classes.html">Live Online Yoga Class</a> in London: Why Timezone Matters</h3>
-                        <p class="blog-excerpt">London professionals — discover why timezone-compatible live <a href="/Online-Yoga-Classes.html">online yoga classes</a> beat pre-recorded videos. Zuga Fitness offers GMT-friendly live sessions.</p>
+                        <h3 class="blog-title">Finding a Live Online Yoga Class in London: Why Timezone Matters</h3>
+                        <p class="blog-excerpt">London professionals — discover why timezone-compatible live online yoga classes beat pre-recorded videos. Zuga Fitness offers GMT-friendly live sessions.</p>
                     </div>
-                    <a href="live-online-yoga-class-london-timezone.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- New Blog: Live vs Recorded -->
-            <div class="blog-card">
+            <a href="live-vs-recorded-online-yoga-classes.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Live vs. Recorded Online Yoga">
                 </div>
@@ -986,15 +989,15 @@
                             <span><i class="far fa-calendar"></i> April 28, 2026</span>
                             <span class="blog-category">Interactive Yoga</span>
                         </div>
-                        <h3 class="blog-title">Live vs. Recorded: Why Interactive <a href="/Online-Yoga-Classes.html">Online Yoga Classes</a> Drive Better Results</h3>
+                        <h3 class="blog-title">Live vs. Recorded: Why Interactive Online Yoga Classes Drive Better Results</h3>
                         <p class="blog-excerpt">Tried YouTube yoga but can't stay consistent? Discover why a live interactive online yoga class with Zuga Fitness delivers faster, safer, and more motivated results.</p>
                     </div>
-                    <a href="live-vs-recorded-online-yoga-classes.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Blog 1 -->
-            <div class="blog-card">
+            <a href="Blog1.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Morning Yoga Routine">
                 </div>
@@ -1007,12 +1010,12 @@
                         <h3 class="blog-title">5 Morning Yoga Poses to Energize Your Day</h3>
                         <p class="blog-excerpt">Start your day with these simple yet powerful yoga poses that boost energy, improve focus, and set a positive tone for your entire day. Perfect for beginners and busy professionals alike.</p>
                     </div>
-                    <a href="Blog1.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
             
             <!-- Blog 2 -->
-            <div class="blog-card">
+            <a href="yoga-for-stress-relief.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meditation Benefits">
                 </div>
@@ -1025,12 +1028,12 @@
                         <h3 class="blog-title">The Science Behind Yoga and Stress Reduction</h3>
                         <p class="blog-excerpt">Discover how yoga physically changes your body's stress response and promotes relaxation at a cellular level. Learn techniques to incorporate into your daily routine.</p>
                     </div>
-                    <a href="yoga-for-stress-relief.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
             
             <!-- Blog 3 -->
-            <div class="blog-card">
+            <a href="Blog3.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pranayama Techniques">
                 </div>
@@ -1040,15 +1043,15 @@
                             <span><i class="far fa-calendar"></i> June 2, 2025</span>
                             <span class="blog-category">Breathwork</span>
                         </div>
-                        <h3 class="blog-title">Mastering <a href="/Online-Pranayama-Classes.html">Pranayama</a>: Breathing Techniques for Energy and Calm</h3>
+                        <h3 class="blog-title">Mastering Pranayama: Breathing Techniques for Energy and Calm</h3>
                         <p class="blog-excerpt">Learn four essential breathing techniques that can transform your yoga practice and daily life. Improve focus, reduce anxiety, and boost energy.</p>
                     </div>
-                    <a href="Blog3.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
             
             <!-- Blog 4 -->
-            <div class="blog-card">
+            <a href="Blog4.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yoga for PCOS">
                 </div>
@@ -1058,15 +1061,15 @@
                             <span><i class="far fa-calendar"></i> May 25, 2025</span>
                             <span class="blog-category">Women's Health</span>
                         </div>
-                        <h3 class="blog-title">Managing <a href="/Online-Yoga-Classes-For-PCOD.html">PCOS</a> with Yoga</h3>
+                        <h3 class="blog-title">Managing PCOS with Yoga</h3>
                         <p class="blog-excerpt">Specific yoga practices that can help regulate hormones and alleviate PCOS symptoms. A natural approach to improving your reproductive health.</p>
                     </div>
-                    <a href="Blog4.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
             
             <!-- Blog 5 -->
-            <div class="blog-card">
+            <a href="Blog5.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senior Yoga">
                 </div>
@@ -1076,15 +1079,15 @@
                             <span><i class="far fa-calendar"></i> May 18, 2025</span>
                             <span class="blog-category">Senior Wellness</span>
                         </div>
-                        <h3 class="blog-title">Gentle <a href="/Virtual-Yoga-Classes-For-senior.html">Yoga for Seniors</a>: Improving Mobility and Balance</h3>
+                        <h3 class="blog-title">Gentle Yoga for Seniors: Improving Mobility and Balance</h3>
                         <p class="blog-excerpt">Safe and effective yoga modifications for older adults to maintain flexibility and stability. Improve your quality of life with these gentle practices.</p>
                     </div>
-                    <a href="Blog5.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
             
             <!-- Blog 6 -->
-            <div class="blog-card">
+            <a href="Blog6.html" class="blog-card">
                 <div class="blog-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yoga Props">
                 </div>
@@ -1097,9 +1100,9 @@
                         <h3 class="blog-title">Essential Yoga Props and How to Use Them</h3>
                         <p class="blog-excerpt">Transform your practice with these prop techniques that enhance alignment and deepen stretches. From blocks to straps, learn to maximize your equipment.</p>
                     </div>
-                    <a href="Blog6.html" class="read-more">Read Full Article</a>
+                    <span class="read-article-cue">Read Article →</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
