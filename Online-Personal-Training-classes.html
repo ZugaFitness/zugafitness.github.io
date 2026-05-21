@@ -28,6 +28,57 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=veL3gy" type="text/css">
 
   <style>
+    /* Infinite Carousel Styles */
+    .zuga-carousel-container {
+      overflow: hidden;
+      background: #F8F5F0;
+      padding: 40px 0;
+      border-top: 1px solid rgba(11, 110, 110, 0.1);
+      border-bottom: 1px solid rgba(11, 110, 110, 0.1);
+    }
+
+    .zuga-carousel-track {
+      display: flex;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-250px * 5)); }
+    }
+
+    .zuga-carousel-item {
+      width: 250px;
+      flex-shrink: 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .carousel-card {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 3px solid #0B6E6E;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .carousel-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #333333;
+      margin-bottom: 0;
+    }
+
     :root {
       --orange: #E8690A;
       --teal: #0B6E6E;
@@ -38,11 +89,18 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--text);
-      background-color: var(--bg);
+      color: #333333;
+      background-color: #F8F5F0;
     }
 
-    h1, h2, h3, h4, .section-title {
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    h3, h4, .section-title {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
     }
@@ -266,6 +324,23 @@
     </div>
   </div>
 </section>
+
+<div class="zuga-carousel-container">
+  <div class="zuga-carousel-track">
+    <!-- Group 1 -->
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
+    <!-- Duplicated for seamless loop -->
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
+  </div>
+</div>
 
 <!-- TRUST BAR -->
 <section class="trust-bar">
