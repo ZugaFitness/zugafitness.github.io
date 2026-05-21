@@ -32,57 +32,49 @@
     .zuga-carousel-container {
       overflow: hidden;
       background: #F8F5F0;
-      padding: 60px 0;
+      padding: 40px 0;
       border-top: 1px solid rgba(11, 110, 110, 0.1);
       border-bottom: 1px solid rgba(11, 110, 110, 0.1);
     }
 
     .zuga-carousel-track {
       display: flex;
-      width: calc(350px * 20);
-      animation: scroll 40s linear infinite;
-    }
-
-    .zuga-carousel-track:hover {
-      animation-play-state: paused;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-350px * 10)); }
+      100% { transform: translateX(calc(-250px * 5)); }
     }
 
     .zuga-carousel-item {
-      width: 350px;
+      width: 250px;
       flex-shrink: 0;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: center;
     }
 
     .carousel-card {
       background: #FFFFFF;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-      border-top: 4px solid #0B6E6E;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 3px solid #0B6E6E;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      transition: all 0.3s ease;
-      text-decoration: none !important;
+      transition: transform 0.3s ease;
     }
 
     .carousel-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-      border-top-color: #E8690A;
+      transform: translateY(-5px);
     }
 
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.1rem;
       color: #333333;
       margin-bottom: 0;
     }
@@ -371,30 +363,7 @@
         font-size: 28px;
       }
     }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+  </style>
 
   <script type="application/ld+json">
   {
@@ -509,27 +478,17 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
@@ -676,7 +635,7 @@
              <img src="/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
           </div>
           <h3 class="mb-2">Mallinath</h3>
-          <p class="mb-0">Lead corporate instructor with 1,500+ teaching and clinical corporate wellness hours taught. Expert in Hatha & Vinyasa.</p>
+          <p class="mb-0">Lead corporate instructor with 1500+ hours taught. Expert in Hatha & Vinyasa.</p>
         </div>
       </div>
       <div class="col-md-5">
@@ -685,7 +644,7 @@
             <img src="/assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
           </div>
           <h3 class="mb-2">Anusha</h3>
-          <p class="mb-0">Women's wellness and PCOD specialist. 1,500+ teaching and clinical corporate wellness hours taught with an encouraging style.</p>
+          <p class="mb-0">Women's wellness and PCOD specialist. 1500+ hours taught with an encouraging style.</p>
         </div>
       </div>
     </div>

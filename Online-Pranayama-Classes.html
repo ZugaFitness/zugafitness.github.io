@@ -39,26 +39,26 @@
 
     .zuga-carousel-track {
       display: flex;
-      width: calc(350px * 20);
-      animation: scroll 40s linear infinite; } .zuga-carousel-track:hover { animation-play-state: paused;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-350px * 10)); }
+      100% { transform: translateX(calc(-250px * 5)); }
     }
 
     .zuga-carousel-item {
-      width: 350px;
+      width: 250px;
       flex-shrink: 0;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: center;
     }
 
     .carousel-card {
       background: #FFFFFF;
-      padding: 40px 30px;
-      border-radius: 16px;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border-top: 3px solid #0B6E6E;
       height: 100%;
@@ -74,95 +74,100 @@
 
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem; font-weight: 700;
+      font-size: 1.1rem;
       color: #333333;
       margin-bottom: 0;
     }
 
     :root {
-      --brand-orange: #E8690A;
-      --brand-teal: #0B6E6E;
-      --brand-bg: #F8F5F0;
-      --brand-text: #333333;
-      --white: #FFFFFF;
+      --orange: #E8690A;
+      --teal: #0B6E6E;
+      --bg: #FFFFFF;
+      --text: #333333;
+      --light-bg: #F8F5F0;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--brand-text);
-      background-color: var(--brand-bg);
+      color: #333333;
+      background-color: #F8F5F0;
     }
 
     h1, h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
-    h3, h4, .brand-sans {
-      font-family: 'Poppins', sans-serif;
+    h3, h4, .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
     }
 
-    .btn-brand-cta {
-      background-color: var(--brand-orange) !important;
-      border-color: var(--brand-orange) !important;
+    .btn-orange {
+      background-color: var(--orange) !important;
+      border-color: var(--orange) !important;
       color: #fff !important;
-      border-radius: 8px !important;
-      padding: 12px 32px !important;
-      font-weight: 700 !important;
-      font-family: 'Poppins', sans-serif;
-      text-transform: none;
-      display: inline-block;
-      text-decoration: none;
-      border: none;
-      transition: all 0.3s ease;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    .btn-brand-cta:hover {
+    .btn-orange:hover {
       background-color: #bf5608 !important;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(232, 105, 10, 0.3);
+      border-color: #bf5608 !important;
     }
 
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
+    .btn-white-outline {
+      background-color: transparent !important;
+      border: 2px solid #fff !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    /* Brand Card Component */
-    .brand-card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      border-top: 4px solid var(--brand-teal);
-      padding: 30px;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-    .brand-card:hover {
-      transform: translateY(-5px);
+    .btn-white-outline:hover {
+      background-color: #fff !important;
+      color: var(--teal) !important;
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 100px 0 80px;
+      padding: 120px 0 80px;
       overflow: hidden;
     }
 
-    .hero-accent-tag {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--brand-teal);
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      display: block;
+    /* Trust Bar */
+    .trust-bar {
+      background-color: var(--light-bg);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .trust-stat {
+      font-weight: 600;
+      font-size: 1.1rem;
     }
 
-    .hero-visual-container {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* Generic Section */
+    .zuga-section {
+      padding: 80px 0;
+    }
+
+    /* Benefits Grid */
+    .benefit-card {
+      padding: 30px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      text-align: center;
+      border-bottom: 4px solid var(--teal);
+    }
+    .benefit-icon {
+        margin-bottom: 20px;
+        font-size: 2rem;
     }
 
     /* Techniques Covered */
@@ -175,29 +180,65 @@
       color: #0B6E6E;
       font-family: 'Poppins', sans-serif;
       font-size: 0.9rem;
-      background: white;
     }
 
     /* Instructor Section */
-    .instructor-card {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .instructor-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50% !important;
-      background-color: #F8F5F0;
-      margin: 0 auto 20px;
-      overflow: hidden;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #F8F5F0;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #E8690A;
+      margin: 0 auto 1rem;
     }
-    .instructor-photo img {
-      width: 100%;
+    .avatar.teal {
+        color: var(--teal);
+    }
+    .instructor-card {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    /* Pricing Section */
+    .pricing-card {
+      padding: 40px 30px;
+      border-radius: 2rem;
+      border: 1px solid #eee;
       height: 100%;
-      object-fit: cover;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--orange);
+      position: relative;
+      box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .price-amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 1rem 0;
     }
 
     /* FAQ Section */
@@ -212,45 +253,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
     }
 
     /* Final CTA */
     .final-cta {
-      background-color: var(--brand-orange);
+      background-color: var(--teal);
       color: #fff;
-      padding: 80px 0;
+      padding: 100px 0;
       text-align: center;
     }
 
     @media (max-width: 767px) {
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
-      lottie-player { max-width: 300px !important; margin: 0 auto; }
+      .hero-section { padding: 80px 0 40px; }
+      .lottie-container { margin-top: 40px; }
+      lottie-player { max-width: 300px !important; height: 300px !important; margin: 0 auto; }
+      .pricing-card { margin-bottom: 30px; }
     }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+  </style>
 
   <script type="application/ld+json">
   {
@@ -326,19 +346,16 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <span class="hero-accent-tag">PRANAYAMA & MEDITATION</span>
         <h1 class="display-3 mb-4">Breathe Better. Think Clearer. Sleep Deeper.</h1>
-        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Ancient breathing techniques taught live — for modern stress, anxiety and sleeplessness.</p>
+        <p class="lead mb-5" style="font-size: 1.25rem;">Ancient breathing techniques taught live — for modern stress, anxiety and sleeplessness.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-brand-cta display-4" href="free-trial.html">Try Free Class</a>
+          <a class="btn btn-orange display-4" href="free-trial.html">Try Free Class</a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="hero-visual-container">
-          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-               alt="Pranayama and meditation breathing practice"
-               style="width:100%;height:auto;display:block;">
-        </div>
+      <div class="col-md-6 text-center lottie-container">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             alt="Pranayama and meditation breathing practice"
+             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
       </div>
     </div>
   </div>
@@ -347,78 +364,128 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">Reduces Stress in Minutes</div>
+      </div>
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">No Prior Yoga Needed</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">4.9★ Google Rating</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">100% Live Sessions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT IS THIS CLASS? -->
 <section class="zuga-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4">The Most Underrated Yoga Practice</h2>
-      <p class="lead" style="font-family: 'Poppins', sans-serif;">Pranayama — the ancient science of breath — is more powerful than most people realise.</p>
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="display-4 mb-4">The Most Underrated Yoga Practice</h2>
+        <p class="display-7" style="line-height: 1.8;">Pranayama — the ancient science of breath — is more powerful than most people realise. In just 30 minutes, the right breathing techniques can lower your cortisol, calm your nervous system, and prepare your body for deep sleep. Zuga's live Pranayama classes bring these techniques to you in real time, with an instructor guiding every inhale and exhale.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- KEY BENEFITS -->
+<section class="zuga-section" style="background-color: #fafafa;">
+  <div class="container">
     <div class="row">
-      <!-- Card 1 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Reduces Stress Fast</h3>
-          <p class="mb-0">Lowers cortisol within a single session. Calm your nervous system and find immediate relief.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Reduces Stress Fast</h4>
+          <p>Lowers cortisol within a single session</p>
         </div>
       </div>
-      <!-- Card 2 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Improves Lung Capacity</h3>
-          <p class="mb-0">Better oxygen flow, stronger breathing muscles. Feel the difference in your daily energy levels.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="8.5" cy="12" rx="5.5" ry="8" stroke="#E8690A" stroke-width="2"/>
+              <ellipse cx="15.5" cy="12" rx="5.5" ry="8" stroke="#E8690A" stroke-width="2"/>
+              <path d="M12 20V22" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Improves Lung Capacity</h4>
+          <p>Better oxygen flow, stronger breathing muscles</p>
         </div>
       </div>
-      <!-- Card 3 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Deeper Sleep</h3>
-          <p class="mb-0">Natural sleep aid without medication. Prepare your body for a restful night's sleep.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Deeper Sleep</h4>
+          <p>Natural sleep aid without medication</p>
         </div>
       </div>
-      <!-- Card 4 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Builds Focus</h3>
-          <p class="mb-0">Mental clarity for work, study and creativity. Sharpen your mind with targeted breathing.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#E8690A" stroke-width="2"/>
+              <circle cx="12" cy="12" r="6" stroke="#E8690A" stroke-width="2"/>
+              <circle cx="12" cy="12" r="2" fill="#E8690A"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Builds Focus</h4>
+          <p>Mental clarity for work, study and creativity</p>
         </div>
       </div>
-      <!-- Card 5 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">Calms Anxiety</h3>
-          <p class="mb-0">Activates the parasympathetic nervous system. Regulate your body's stress response naturally.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#E8690A" stroke-width="2"/>
+              <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="9" y1="9" x2="9.01" y2="9" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="15" y1="9" x2="15.01" y2="9" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Calms Anxiety</h4>
+          <p>Activates the parasympathetic nervous system</p>
         </div>
       </div>
-      <!-- Card 6 -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
-          <h3 class="mb-3">No Experience Needed</h3>
-          <p class="mb-0">Seated practice, beginners fully welcome. Start where you are, no mat required.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="7" r="4" stroke="#E8690A" stroke-width="2"/>
+              <path d="M4 19C4 16.2386 7.58172 14 12 14C16.4183 14 20 16.2386 20 19" stroke="#E8690A" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">No Experience Needed</h4>
+          <p>Seated practice, beginners fully welcome</p>
         </div>
       </div>
     </div>
@@ -471,106 +538,102 @@
   </div>
 </section>
 
-<!-- Section 6: Instructors -->
-<section class="zuga-section" style="background-color: var(--brand-bg);">
+<!-- MEET YOUR INSTRUCTORS -->
+<section class="zuga-section">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
-          <div class="instructor-photo">
-             <img src="/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
-          </div>
-          <h3 class="mb-2">Mallinath</h3>
-          <p class="mb-0">1,500+ teaching and clinical corporate wellness hours taught, 8+ specializations, expert in Hatha & Vinyasa.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="instructor-card">
+          <div class="avatar">M</div>
+          <h3>Mallinath</h3>
+          <p class="display-7">1500+ hours taught | 8+ yoga specializations</p>
+          <p class="text-muted">Expert in Hatha & Vinyasa | Authentic Indian yoga tradition</p>
         </div>
       </div>
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
-          <div class="instructor-photo">
-            <img src="/assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
-          </div>
-          <h3 class="mb-2">Anusha</h3>
-          <p class="mb-0">Women's wellness and PCOD specialist. 1,500+ teaching and clinical corporate wellness hours taught with an encouraging style.</p>
+      <div class="col-md-6">
+        <div class="instructor-card">
+          <div class="avatar teal">A</div>
+          <h3>Anusha</h3>
+          <p class="display-7">500+ hours taught | Specialist in women's wellness</p>
+          <p class="text-muted">Expert in PCOD & Postpartum yoga | Warm, encouraging teaching style</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 7: Testimonial -->
-<section class="zuga-section">
-  <div class="container text-center">
-    <div style="font-size: 5rem; color: var(--brand-orange); line-height: 1; margin-bottom: -20px; font-family: serif;">“</div>
+<!-- STUDENT TESTIMONIAL -->
+<section class="zuga-section" style="background-color: #F8F5F0;">
+  <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h3 class="display-5 mb-4" style="font-style: italic; line-height: 1.4;">"I used to wake up at 3am with anxiety every night. After 3 weeks of Zuga's Pranayama sessions, I sleep through. I didn't expect breathing exercises to change this much."</h3>
-        <p class="brand-sans"><strong>— Priya S., UK</strong></p>
+      <div class="col-lg-10 text-center">
+        <div style="font-size: 5rem; color: var(--orange); line-height: 1; font-family: serif;">“</div>
+        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">I used to wake up at 3am with anxiety every night. After 3 weeks of Zuga's Pranayama sessions, I sleep through. I didn't expect breathing exercises to change this much.</h3>
+        <p class="display-7"><strong>— Priya S., UK</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 8: Pricing -->
+<!-- PRICING -->
 <section class="zuga-section">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Simple Pricing</h2>
     <div class="row">
       <!-- Starter Plan -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
+        <div class="pricing-card">
           <h3 class="display-5">Starter</h3>
-          <div style="margin-bottom: 2rem;">
-            <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.5rem; color: var(--brand-orange);">₹2,000<span style="font-size: 1rem; color: #777;">/month</span></div>
-          </div>
+          <div class="price-amount">₹2,000<small class="text-muted" style="font-size: 1rem;">/month</small></div>
           <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
-            <li>• 20 live group classes</li>
-            <li>• 1 timezone slot</li>
-            <li>• Community WhatsApp group</li>
+            <li>✅ 20 live group classes (incl. Pranayama)</li>
+            <li>✅ 1 timezone slot</li>
+            <li>✅ Community WhatsApp group</li>
           </ul>
-          <div class="mbr-section-btn">
-            <a class="btn btn-brand-cta display-4 w-100" href="/free-trial.html">Get Started</a>
+          <div class="mt-auto">
+            <a href="free-trial.html" class="btn btn-orange display-4 w-100">Get Started</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
           </div>
-          <p class="mt-3 text-muted brand-sans">No credit card required.</p>
         </div>
       </div>
       <!-- Growth Plan -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center" style="border-top: 6px solid var(--brand-orange);">
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
           <h3 class="display-5">Growth</h3>
-          <div style="margin-bottom: 2rem;">
-            <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.5rem; color: var(--brand-orange);">₹3,500<span style="font-size: 1rem; color: #777;">/month</span></div>
-          </div>
+          <div class="price-amount">₹3,500<small class="text-muted" style="font-size: 1rem;">/month</small></div>
           <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
-            <li>• Unlimited live classes</li>
-            <li>• All 3 timezones</li>
-            <li>• All 8 yoga styles</li>
-            <li>• 4 personal sessions/month</li>
+            <li>✅ Unlimited live classes</li>
+            <li>✅ All 3 timezones</li>
+            <li>✅ All 8 yoga styles incl. Pranayama</li>
+            <li>✅ 4 personal sessions/month</li>
           </ul>
-          <div class="mbr-section-btn">
-            <a class="btn btn-brand-cta display-4 w-100" href="/free-trial.html">Get Started</a>
+          <div class="mt-auto">
+            <a href="free-trial.html" class="btn btn-orange display-4 w-100">Get Started</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
           </div>
-          <p class="mt-3 text-muted brand-sans">Most Popular</p>
         </div>
       </div>
       <!-- Personal Training -->
       <div class="col-md-4 mb-4">
-        <div class="brand-card text-center">
+        <div class="pricing-card" style="border-color: var(--teal);">
           <h3 class="display-5">Personal Training</h3>
-          <div style="margin-bottom: 2rem;">
-            <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.5rem; color: var(--brand-orange);">₹12,000<span style="font-size: 1rem; color: #777;">/month</span></div>
-          </div>
+          <div class="price-amount">₹12,000<small class="text-muted" style="font-size: 1rem;">/month</small></div>
           <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
-            <li>• 20 x 1-on-1 sessions</li>
-            <li>• Fully personalised program</li>
-            <li>• Direct WhatsApp access</li>
+            <li>✅ 20 x 1-on-1 sessions</li>
+            <li>✅ Fully personalised program</li>
+            <li>✅ Direct WhatsApp access</li>
           </ul>
-          <div class="mbr-section-btn">
-            <a class="btn btn-brand-cta display-4 w-100" href="/Online-Personal-Training-classes.html">Explore PT</a>
+          <div class="mt-auto">
+            <a href="Online-Personal-Training-classes.html" class="btn display-4 w-100" style="background-color: var(--teal); color: #fff; border-radius: 50px; font-weight: 600; padding: 1rem;">Explore Personal Training</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
           </div>
-          <p class="mt-3 text-muted brand-sans">Direct Attention</p>
         </div>
       </div>
+    </div>
+    <div class="text-center mt-5">
+        <a href="free-trial.html" class="display-7" style="color: var(--teal);">Not sure? → Try your first Pranayama class free</a>
     </div>
   </div>
 </section>
@@ -610,13 +673,13 @@
   </div>
 </section>
 
-<!-- Section 10: Final CTA -->
+<!-- FINAL CTA BANNER -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="display-3 mb-4 text-white">Your breath is the most powerful tool you have.</h2>
-    <p class="lead mb-5 text-white brand-sans">Learn to use it — live, with an expert.</p>
-    <div class="mbr-section-btn">
-      <a class="btn btn-brand-cta display-4" style="background-color: white !important; color: var(--brand-orange) !important;" href="/free-trial.html">Try a Free Pranayama Class</a>
+    <h2 class="display-3 mb-4">Your breath is the most powerful tool you have.</h2>
+    <p class="display-7 mb-5" style="opacity: 0.9;">Learn to use it — live, with an expert.</p>
+    <div class="mbr-section-btn mt-5">
+      <a class="btn btn-white-outline display-4" href="free-trial.html">Try a Free Pranayama Class</a>
     </div>
   </div>
 </section>

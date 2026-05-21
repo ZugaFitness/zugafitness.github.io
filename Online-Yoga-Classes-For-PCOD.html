@@ -39,26 +39,26 @@
 
     .zuga-carousel-track {
       display: flex;
-      width: calc(350px * 20);
-      animation: scroll 40s linear infinite; } .zuga-carousel-track:hover { animation-play-state: paused;
+      width: calc(250px * 10);
+      animation: scroll 25s linear infinite;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-350px * 10)); }
+      100% { transform: translateX(calc(-250px * 5)); }
     }
 
     .zuga-carousel-item {
-      width: 350px;
+      width: 250px;
       flex-shrink: 0;
-      padding: 0 15px;
+      padding: 0 20px;
       text-align: center;
     }
 
     .carousel-card {
       background: #FFFFFF;
-      padding: 40px 30px;
-      border-radius: 16px;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border-top: 3px solid #0B6E6E;
       height: 100%;
@@ -74,95 +74,100 @@
 
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem; font-weight: 700;
+      font-size: 1.1rem;
       color: #333333;
       margin-bottom: 0;
     }
 
     :root {
-      --brand-orange: #E8690A;
-      --brand-teal: #0B6E6E;
-      --brand-bg: #F8F5F0;
-      --brand-text: #333333;
-      --white: #FFFFFF;
+      --orange: #E8690A;
+      --teal: #0B6E6E;
+      --bg: #FFFFFF;
+      --text: #333333;
+      --light-bg: #F8F5F0;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: var(--brand-text);
-      background-color: var(--brand-bg);
+      color: #333333;
+      background-color: #F8F5F0;
     }
 
     h1, h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
-    h3, h4, .brand-sans {
-      font-family: 'Poppins', sans-serif;
+    h3, h4, .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
     }
 
-    .btn-brand-cta {
-      background-color: var(--brand-orange) !important;
-      border-color: var(--brand-orange) !important;
+    .btn-orange {
+      background-color: var(--orange) !important;
+      border-color: var(--orange) !important;
       color: #fff !important;
-      border-radius: 8px !important;
-      padding: 12px 32px !important;
-      font-weight: 700 !important;
-      font-family: 'Poppins', sans-serif;
-      text-transform: none;
-      display: inline-block;
-      text-decoration: none;
-      border: none;
-      transition: all 0.3s ease;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    .btn-brand-cta:hover {
+    .btn-orange:hover {
       background-color: #bf5608 !important;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(232, 105, 10, 0.3);
+      border-color: #bf5608 !important;
     }
 
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
+    .btn-white-outline {
+      background-color: transparent !important;
+      border: 2px solid #fff !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
     }
 
-    /* Brand Card Component */
-    .brand-card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      border-top: 4px solid var(--brand-teal);
-      padding: 30px;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-    .brand-card:hover {
-      transform: translateY(-5px);
+    .btn-white-outline:hover {
+      background-color: #fff !important;
+      color: var(--teal) !important;
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 100px 0 80px;
+      padding: 120px 0 80px;
       overflow: hidden;
     }
 
-    .hero-accent-tag {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--brand-teal);
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      display: block;
+    /* Trust Bar */
+    .trust-bar {
+      background-color: var(--light-bg);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .trust-stat {
+      font-weight: 600;
+      font-size: 1.1rem;
     }
 
-    .hero-visual-container {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* Generic Section */
+    .zuga-section {
+      padding: 80px 0;
+    }
+
+    /* Benefits Grid */
+    .benefit-card {
+      padding: 30px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      text-align: center;
+      border-bottom: 4px solid var(--teal);
+    }
+    .benefit-icon {
+        margin-bottom: 20px;
+        font-size: 2rem;
     }
 
     /* Techniques Covered */
@@ -175,29 +180,77 @@
       color: #0B6E6E;
       font-family: 'Poppins', sans-serif;
       font-size: 0.9rem;
-      background: white;
     }
 
     /* Instructor Section */
-    .instructor-card {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .instructor-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50% !important;
-      background-color: #F8F5F0;
-      margin: 0 auto 20px;
-      overflow: hidden;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #F8F5F0;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #E8690A;
+      margin: 0 auto 1rem;
+      position: relative;
     }
-    .instructor-photo img {
-      width: 100%;
+    .avatar.teal {
+        color: var(--teal);
+    }
+    .instructor-card {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    .specialist-badge {
+      background: var(--teal);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* Pricing Section */
+    .pricing-card {
+      padding: 40px 30px;
+      border-radius: 2rem;
+      border: 1px solid #eee;
       height: 100%;
-      object-fit: cover;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--orange);
+      position: relative;
+      box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .price-amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 1rem 0;
     }
 
     /* FAQ Section */
@@ -212,45 +265,28 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
     }
 
     /* Final CTA */
     .final-cta {
-      background-color: var(--brand-orange);
+      background-color: var(--teal);
       color: #fff;
-      padding: 80px 0;
+      padding: 100px 0;
       text-align: center;
+    }
+
+    .italic {
+        font-style: italic;
     }
 
     @media (max-width: 767px) {
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
-      lottie-player { max-width: 300px !important; margin: 0 auto; }
+      .hero-section { padding: 80px 0 40px; }
+      .lottie-container { margin-top: 40px; }
+      lottie-player { max-width: 300px !important; height: 300px !important; margin: 0 auto; }
+      .pricing-card { margin-bottom: 30px; }
     }
-
-    /* Layout Spacing */
-    .zuga-section {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      .zuga-section {
-        padding: 50px 0;
-      }
-      .carousel-card h4 {
-        white-space: nowrap;
-        font-size: 1.1rem;
-      }
-      .carousel-card {
-        padding: 30px 20px;
-      }
-    }
-
-    /* Prevent global horizontal scroll */
-    body {
-      overflow-x: hidden;
-    }
-</style>
+  </style>
 
   <script type="application/ld+json">
   {
@@ -326,19 +362,16 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <span class="hero-accent-tag">YOGA FOR PCOD & PCOS</span>
         <h1 class="display-3 mb-4">Restore Balance. Reclaim Your Body.</h1>
-        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Yoga designed specifically for PCOD — reduce symptoms, regulate hormones, and rebuild energy. Led live by specialists.</p>
+        <p class="lead mb-5" style="font-size: 1.25rem;">Yoga designed specifically for PCOD — reduce symptoms, regulate hormones, and rebuild energy. Led live by specialists.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-brand-cta display-4" href="#contact-form">Book Free Consultation</a>
+          <a class="btn btn-orange display-4" href="free-trial.html">Book Free Consultation</a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="hero-visual-container">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-               alt="Yoga for PCOD and women's wellness"
-               style="width:100%;height:auto;display:block;">
-        </div>
+      <div class="col-md-6 text-center lottie-container">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             alt="Yoga for PCOD and women's wellness"
+             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
       </div>
     </div>
   </div>
@@ -347,112 +380,380 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><a href="/corporate-yoga-day-bangalore.html" class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes.html" class="carousel-card"><h4>Live Virtual Studio</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Pranayama-Classes.html" class="carousel-card"><h4>Breathwork & Meditation</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Personal-Training-classes.html" class="carousel-card"><h4>Back Pain Relief</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes-For-PCOD.html" class="carousel-card"><h4>Women's Wellness & PCOD</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Yoga-Classes.html" class="carousel-card"><h4>Live Group Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-kids-Yoga-Classes.html" class="carousel-card"><h4>Kids Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Virtual-Yoga-Classes-For-senior.html" class="carousel-card"><h4>Senior Yoga</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Postpartum-Yoga-Classes.html" class="carousel-card"><h4>Postpartum Recovery</h4></a></div>
-    <div class="zuga-carousel-item"><a href="/Online-Hatha-Vinyasa-Classes.html" class="carousel-card"><h4>Hatha & Vinyasa</h4></a></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
-<!-- BOOKING FORM -->
-<section class="zuga-section" id="contact-form">
+<!-- TRUST BAR -->
+<section class="trust-bar">
   <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">Specialist Instructors</div>
+      </div>
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="trust-stat">Safe for All PCOD Stages</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">4.9★ Google Rating</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">Results in 8 Weeks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS THIS CLASS? -->
+<section class="zuga-section">
+  <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div class="brand-card" style="padding: 50px; border-top: 5px solid var(--brand-orange);">
-          <h2 class="display-4 mb-4">Book Your Free Consultation</h2>
-          <p class="mb-5 brand-sans">Tell us about your symptoms and goals, and we'll help you start your healing journey safely.</p>
+        <h2 class="display-4 mb-4">Yoga That Understands PCOD</h2>
+        <p class="display-7" style="line-height: 1.8;">PCOD affects 1 in 5 women in India — yet most fitness programs aren't designed for it. At Zuga, our PCOD yoga sessions are built around the hormonal, metabolic and emotional reality of living with PCOD. Our specialist instructors combine targeted asanas, breathwork and stress reduction techniques that work with your body — not against it. No generic fitness advice. No pressure. Just a practice that's been designed, session by session, for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <form id="pcod-booking-form" action="https://formspree.io/f/mnjlyoqr" method="POST" novalidate>
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <input type="hidden" name="_subject" value="🧘 NEW: PCOD Yoga Inquiry" />
-            <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="name">Your Name *</label>
-                  <input type="text" id="name" name="name" placeholder="Full Name" required />
-                  <span class="field-error">Please enter your name</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="email">Email Address *</label>
-                  <input type="email" id="email" name="email" placeholder="email@example.com" required />
-                  <span class="field-error">Please enter a valid email</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="phone">Phone / WhatsApp *</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required />
-                  <span class="field-error">Please enter phone number</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="goal">Primary Goal</label>
-                  <select id="goal" name="goal">
-                    <option value="Hormonal Balance">Hormonal Balance</option>
-                    <option value="Weight Management">Weight Management</option>
-                    <option value="Regular Cycles">Regular Cycles</option>
-                    <option value="Stress Reduction">Stress Reduction</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Specific Symptoms or Concerns</label>
-              <textarea id="message" name="message" rows="3" placeholder="Irregular cycles, acne, hair growth, fatigue, etc..."></textarea>
-            </div>
-
-            <button type="submit" id="booking-submit-btn">
-              <span class="btn-text">Request Free Consultation</span>
-              <span class="btn-loading" style="display:none">Sending... ⏳</span>
-            </button>
-
-            <div class="form-success" style="display:none">
-              ✅ Inquiry sent! We'll be in touch within 24 hours.
-            </div>
-            <div class="form-error" style="display:none">
-              ❌ Something went wrong. Please email us at <a href="mailto:zugafitness24@gmail.com">zugafitness24@gmail.com</a>
-            </div>
-          </form>
+<!-- KEY BENEFITS -->
+<section class="zuga-section" style="background-color: #fafafa;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Regulates Hormones</h4>
+          <p>Targeted sequences that support insulin sensitivity and hormonal balance</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#E8690A" stroke-width="2"/>
+              <path d="M12 8V12L14 14" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Reduces Cortisol</h4>
+          <p>Stress is a major PCOD trigger — our classes actively address it</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#E8690A" stroke-width="2"/>
+              <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Improves Cycle Regularity</h4>
+          <p>Consistent practice supports menstrual health naturally</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.42 4.58a5 5 0 0 0-7.07 0l-1.35 1.35-1.35-1.35a5 5 0 0 0-7.07 7.07l1.35 1.35L12 20.07l7.07-7.07 1.35-1.35a5 5 0 0 0 0-7.07z" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Builds Safe Strength</h4>
+          <p>Low-impact movement that doesn't spike cortisol further</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="7" r="4" stroke="#E8690A" stroke-width="2"/>
+              <path d="M4 19C4 16.2386 7.58172 14 12 14C16.4183 14 20 16.2386 20 19" stroke="#E8690A" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Specialist Instructor</h4>
+          <p>Anusha specialises in women's wellness and PCOD specifically</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#E8690A" stroke-width="2"/>
+              <circle cx="9" cy="7" r="4" stroke="#E8690A" stroke-width="2"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#E8690A" stroke-width="2"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#E8690A" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Community Support</h4>
+          <p>Practice alongside other women on the same journey</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 10: Final CTA -->
+<!-- WHAT TO EXPECT -->
+<section class="zuga-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-5 mb-md-0">
+        <h2 class="display-4 mb-4">What to Expect</h2>
+        <ol class="display-7" style="padding-left: 1.5rem; line-height: 2.2;">
+          <li>Free consultation — discuss your symptoms and goals</li>
+          <li>Personalised session plan designed for your PCOD stage</li>
+          <li>Live Zoom sessions — flexible timing across timezones</li>
+          <li>Combination of asana, pranayama and relaxation</li>
+          <li>Monthly check-in and plan update</li>
+        </ol>
+      </div>
+      <div class="col-md-6 text-center">
+        <lottie-player
+          src="https://assets4.lottiefiles.com/packages/lf20_zyzuulsx.json"
+          background="transparent"
+          speed="0.7"
+          style="width:100%;max-width:400px;height:400px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNIQUES COVERED -->
+<section class="zuga-section" style="background-color: var(--light-bg);">
+  <div class="container text-center">
+    <h2 class="display-4 mb-5">What We Work On</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <span class="technique-tag">Supta Baddha Konasana</span>
+        <span class="technique-tag">Viparita Karani</span>
+        <span class="technique-tag">Bhramari Pranayama</span>
+        <span class="technique-tag">Setu Bandha</span>
+        <span class="technique-tag">Nadi Shodhana</span>
+        <span class="technique-tag">Malasana</span>
+        <span class="technique-tag">Supta Matsyendrasana</span>
+        <span class="technique-tag">Yoga Nidra</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR INSTRUCTORS -->
+<section class="zuga-section">
+  <div class="container">
+    <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="instructor-card">
+          <div class="avatar teal">A</div>
+          <div class="specialist-badge">PCOD Specialist</div>
+          <h3>Anusha</h3>
+          <p class="display-7">500+ hours taught | Specialist in women's wellness</p>
+          <p class="text-muted">Expert in PCOD & Postpartum | Warm, encouraging teaching style</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="instructor-card">
+          <div class="avatar">M</div>
+          <h3>Mallinath</h3>
+          <p class="display-7">1500+ hours taught | 8+ specializations</p>
+          <p class="text-muted">Expert in Hatha & Vinyasa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDENT TESTIMONIAL -->
+<section class="zuga-section" style="background-color: #F8F5F0;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <div style="font-size: 5rem; color: var(--orange); line-height: 1; font-family: serif;">“</div>
+        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">I came to Zuga with PCOD and a lot of skepticism. Eight weeks later, my symptoms have reduced and I actually look forward to my sessions. Anusha understood exactly what my body needed.</h3>
+        <p class="display-7"><strong>— Anjali K., New York</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="zuga-section">
+  <div class="container text-center">
+    <h2 class="display-4 mb-5">This Programme Is For You If...</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#E8690A" stroke-width="2"/>
+            <path d="M12 6V12L16 14" stroke="#E8690A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="display-7">You've been diagnosed with PCOD or PCOS</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="display-7">You're dealing with irregular cycles, weight fluctuation or fatigue</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="display-7">You want a natural, movement-based approach alongside medical treatment</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#E8690A" stroke-width="2"/>
+            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" stroke="#E8690A" stroke-width="2"/>
+          </svg>
+        </div>
+        <p class="display-7">You've tried generic fitness but it made things worse</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6L5 21H19L21 6H3Z" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6" stroke="#E8690A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="display-7">You're postpartum and managing PCOD symptoms returning</p>
+      </div>
+    </div>
+    <p class="mt-5 mbr-text mbr-fonts-style display-7">
+      Learn more about <a href="/Blog/yoga-poses-for-pcod-management.html" class="text-primary">managing PCOD symptoms with yoga</a> or read a <a href="/Blog/yoga-for-pcod-member-story.html" class="text-primary">personal member story on overcoming PCOD</a>.
+    </p>
+    <p class="text-muted" style="font-size: 0.9rem;">Always consult your doctor before beginning any new exercise programme. Our instructors are yoga specialists, not medical professionals.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="zuga-section">
+  <div class="container">
+    <h2 class="display-4 text-center mb-5">Simple Pricing</h2>
+    <div class="row">
+      <!-- Starter Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card">
+          <h3 class="display-5">Starter</h3>
+          <div class="price-amount">₹2,000<small class="text-muted" style="font-size: 1rem;">/month</small></div>
+          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
+            <li>✅ 20 live group classes</li>
+            <li>✅ 1 timezone slot</li>
+            <li>✅ Community WhatsApp group</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="free-trial.html" class="btn btn-orange display-4 w-100">Get Started</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Growth Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3 class="display-5">Growth</h3>
+          <div class="price-amount">₹3,500<small class="text-muted" style="font-size: 1rem;">/month</small></div>
+          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
+            <li>✅ Unlimited live classes</li>
+            <li>✅ All 3 timezones</li>
+            <li>✅ All 8 yoga styles</li>
+            <li>✅ 4 personal sessions/month</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="free-trial.html" class="btn btn-orange display-4 w-100">Get Started</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Personal Training -->
+      <div class="col-md-4 mb-4">
+        <div class="pricing-card" style="border-color: var(--teal);">
+          <h3 class="display-5">Personal Training</h3>
+          <div class="price-amount">₹12,000<small class="text-muted" style="font-size: 1rem;">/month</small></div>
+          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
+            <li>✅ 20 x 1-on-1 sessions</li>
+            <li>✅ Fully personalised program</li>
+            <li>✅ Direct WhatsApp access</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="Online-Personal-Training-classes.html" class="btn display-4 w-100" style="background-color: var(--teal); color: #fff; border-radius: 50px; font-weight: 600; padding: 1rem;">Explore Personal Training</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+        <p class="display-7">PCOD programme is available in Personal Training and Growth plans. Book a free consultation to discuss which is right for you.</p>
+        <a href="free-trial.html" class="display-7" style="color: var(--teal);">Not sure? → Try your first class free</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="zuga-section" style="background-color: #fafafa;">
+  <div class="container">
+    <h2 class="display-4 text-center mb-5">Common Questions</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Is yoga safe for PCOD — won't intense exercise make it worse? <span>+</span></div>
+          <div id="faq1" class="collapse mt-3">
+            <p>Yes, yoga is very safe for PCOD. Unlike high-intensity interval training (HIIT) which can sometimes spike cortisol levels and worsen PCOD symptoms, our yoga sequences are low-impact and specifically designed to manage stress and regulate hormones.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">How soon will I see results? <span>+</span></div>
+          <div id="faq2" class="collapse mt-3">
+            <p>While every body is different, most of our students report improved energy levels and reduced stress within 3-4 weeks. Visible changes in cycle regularity or weight management typically take 8-12 weeks of consistent practice.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">Can I join if I'm also on medication for PCOD? <span>+</span></div>
+          <div id="faq3" class="collapse mt-3">
+            <p>Absolutely. Our yoga program is designed to complement medical treatment. We focus on lifestyle and movement that supports what your doctor is already working on with you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Is this the same as a regular yoga class? <span>+</span></div>
+          <div id="faq4" class="collapse mt-3">
+            <p>No. While we use standard yoga asanas, the sequences, pace, and focus are entirely different. We avoid poses that might be counterproductive and focus heavily on those that support the endocrine system and pelvic health.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA BANNER -->
 <section class="final-cta">
   <div class="container">
-    <h2 class="display-3 mb-4 text-white">Your body is not broken. It just needs the right practice.</h2>
-    <p class="lead mb-5 text-white brand-sans">Start with a free consultation. No pressure, no commitment.</p>
-    <div class="mbr-section-btn">
-      <a class="btn btn-brand-cta display-4" style="background-color: white !important; color: var(--brand-orange) !important;" href="#contact-form">Book Free Consultation</a>
+    <h2 class="display-3 mb-4">Your body is not broken. It just needs the right practice.</h2>
+    <p class="display-7 mb-5" style="opacity: 0.9;">Start with a free consultation. No pressure, no commitment.</p>
+    <div class="mbr-section-btn mt-5">
+      <a class="btn btn-white-outline display-4" href="free-trial.html">Book Free Consultation</a>
     </div>
   </div>
 </section>
