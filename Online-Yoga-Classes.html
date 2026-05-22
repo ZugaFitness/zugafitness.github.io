@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
 
-  <title>Online Group Yoga Classes | Live Zoom Sessions | Zuga Fitness</title>
-  <meta name="description" content="Join live online group yoga classes at Zuga Fitness. Real instructors, real-time feedback, across IST, GMT, EST & GST. First class free.">
+  <title>Online Yoga Classes | Live Group Sessions Across All Timezones | Zuga Fitness</title>
+  <meta name="description" content="Join Zuga Fitness for live online group yoga classes in EST, GMT and GST timezones. Vinyasa, Hatha, Yin and more. Max 10 students per session. First class free.">
   <link rel="canonical" href="https://zugafitness.in/Online-Yoga-Classes.html" />
 
   <!-- Fonts -->
@@ -138,14 +138,6 @@
       padding: 120px 0 80px;
       overflow: hidden;
     }
-    .hero-image {
-      width: 100%;
-      max-width: 500px;
-      height: 650px;
-      background-color: #eee;
-      border-radius: 20px;
-      margin: 0 auto;
-    }
 
     /* Trust Bar */
     .trust-bar {
@@ -173,52 +165,70 @@
       text-align: center;
       border-bottom: 4px solid var(--teal);
     }
-
-    /* Expect Section */
-    .expect-image {
-      width: 100%;
-      height: 400px;
-      background-color: #eee;
-      border-radius: 20px;
+    .benefit-icon {
+        margin-bottom: 20px;
     }
 
     /* Instructor Section */
-    .instructor-card {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .instructor-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50% !important;
-      background-color: #ddd;
-      margin: 0 auto 20px;
-      overflow: hidden;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #F8F5F0;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #E8690A;
+      margin: 0 auto 1rem;
     }
-    .instructor-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .avatar.teal {
+        color: var(--teal);
+    }
+    .instructor-card {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
     /* Pricing Section */
     .pricing-card {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 50px;
+      padding: 40px;
       border-radius: 30px;
+      border: 1px solid #eee;
+      background: #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .pricing-card.popular {
       border: 2px solid var(--orange);
-      text-align: center;
+      position: relative;
       box-shadow: 0 20px 40px rgba(232, 105, 10, 0.1);
     }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
     .price-value {
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 700;
       color: var(--orange);
       font-family: 'Playfair Display', serif;
+      margin: 1.5rem 0;
     }
 
     /* FAQ Section */
@@ -243,11 +253,92 @@
       text-align: center;
     }
 
+    /* Registration Form Styles */
+    .registration-section {
+      background-color: #fffaf2;
+      padding: 80px 0;
+    }
+    .registration-form-box {
+      background: white;
+      padding: 40px;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .form-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #1A1A1A; }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #E8E0D5;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #FFFDF9;
+      color: #1A1A1A;
+      min-height: 48px;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #0B6E6E;
+    }
+    .field-invalid {
+      border-color: #E8690A !important;
+      background: rgba(232,105,10,0.04) !important;
+    }
+    .field-error {
+      display: none;
+      color: #E8690A;
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+    }
+    .field-invalid ~ .field-error { display: block; }
+    #free-trial-submit-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, #E8690A 0%, #F5882A 100%);
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(232,105,10,0.40);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #free-trial-submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(232,105,10,0.55);
+    }
+    .form-success {
+      background: rgba(11,110,110,0.08);
+      border: 1px solid #0B6E6E;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      color: #0B6E6E;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .form-error {
+      background: rgba(232,105,10,0.06);
+      border: 1px solid #E8690A;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      color: #E8690A;
+      margin-top: 1rem;
+    }
+
     @media (max-width: 767px) {
-      .hero-image { height: 400px; margin-top: 40px; }
-      .price-value { font-size: 2.5rem; }
-      .pricing-card { padding: 30px 20px; }
+      .hero-section { padding: 80px 0 40px; }
       .mbr-section-btn .btn { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+      .price-value { font-size: 2.5rem; }
+      .pricing-card { padding: 30px 20px; margin-bottom: 30px; }
     }
   </style>
 
@@ -256,29 +347,14 @@
     "@context": "https://schema.org/",
     "@type": "Service",
     "name": "Online Group Yoga Classes",
-    "description": "Live group yoga classes across all time zones with real-time feedback.",
+    "description": "Live online group yoga classes in EST, GMT and GST timezones. Max 10 students per session.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Zuga Fitness",
       "image": "https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg",
       "telephone": "+91-7676379909"
     },
-    "areaServed": "Global",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Yoga Classes",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Online Group Yoga Class"
-          },
-          "price": "2000",
-          "priceCurrency": "INR"
-        }
-      ]
-    }
+    "areaServed": "Global"
   }
   </script>
   <link rel="stylesheet" href="assets/whatsapp.css">
@@ -334,20 +410,21 @@
 	</nav>
 </section>
 
-<!-- Section 1: Hero -->
+<!-- SECTION 1 — HERO -->
 <section class="hero-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
         <h1 class="display-3 mb-4">Practice Together. Grow Together.</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">Live group yoga classes across all time zones — with instructors who actually know your name.</p>
+        <p class="lead mb-5" style="font-size: 1.25rem;">Live online yoga classes across EST, GMT and GST — with real instructors who know your name.</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="/free-trial.html">Start Your Free Class</a>
+          <a class="btn btn-orange display-4" href="/free-trial.html">Try Your First Class Free →</a>
         </div>
+        <p class="mt-3 text-muted">No credit card required.</p>
       </div>
       <div class="col-md-6 text-center">
         <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-             alt="Live online group yoga class on Zoom"
+             alt="Live online group yoga class"
              style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
       </div>
     </div>
@@ -371,193 +448,255 @@
   </div>
 </div>
 
-<!-- Section 2: Trust Bar -->
+<!-- SECTION 2 — TRUST BAR -->
 <section class="trust-bar">
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">20+ Live Classes Monthly</div>
+        <div class="trust-stat">2,000+ Students Worldwide</div>
       </div>
       <div class="col-6 col-md-3 mb-3 mb-md-0">
-        <div class="trust-stat">4 Time Zones Covered</div>
-      </div>
-      <div class="col-6 col-md-3">
         <div class="trust-stat">4.9★ Google Rating</div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="trust-stat">100% Live — Never Recorded</div>
+        <div class="trust-stat">Max 10 Students Per Session</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="trust-stat">20+ Classes Every Month</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 3: What Is This Class? -->
+<!-- SECTION 3 — WHAT ARE GROUP CLASSES -->
 <section class="zuga-section">
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h2 class="display-4 mb-4">Live Yoga. Real Community.</h2>
-        <p class="display-7" style="line-height: 1.8;">Zuga's online group classes are live Zoom sessions — not recordings. Every class is led by an experienced instructor who knows your name, watches your form, and guides you in real time. Join a global community of practitioners across India, the UAE, the UK and the US.</p>
+        <h2 class="display-4 mb-4">Live Classes. Real Community. Real Results.</h2>
+        <p class="display-7" style="line-height: 1.8;">Our group classes run live on Zoom — never pre-recorded. Every session is capped at 10 students so your instructor can see you, correct your form in real time, and track your progress week by week. Choose from Vinyasa, Hatha, Yin or Power yoga across morning, afternoon and evening slots in your timezone.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 4: Key Benefits -->
+<!-- SECTION 4 — 6 BENEFITS -->
 <section class="zuga-section" style="background-color: #fafafa;">
   <div class="container">
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">Live Zoom Sessions</h4>
-          <p>Real-time interaction with instructors and classmates.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#0B6E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h4 class="mb-3">Real-Time Corrections</h4>
-          <p>Expert eyes on your form to ensure safe and effective practice.</p>
+          <p>Your instructor adjusts your form live every session</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">4 Time Zones Covered</h4>
-          <p>Classes timed for IST, GMT, EST, and GST.</p>
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M12 8V12L14 14" stroke="#0B6E6E" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">3 Timezones Daily</h4>
+          <p>EST, GMT and GST so you never miss a class</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#0B6E6E" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <h4 class="mb-3">All Levels Welcome</h4>
-          <p>Modified poses for beginners and challenges for advanced yogis.</p>
+          <p>From complete beginners to advanced practitioners</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">20+ Classes Monthly</h4>
-          <p>Consistency is key. We provide plenty of opportunities to practice.</p>
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M3 9H21" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M9 21V9" stroke="#0B6E6E" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">8 Yoga Styles</h4>
+          <p>Vinyasa, Hatha, Yin, Power and more</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="benefit-card">
-          <h4 class="mb-3">Global Community</h4>
-          <p>Practice with people from all over the world.</p>
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#0B6E6E" stroke-width="2"/>
+              <circle cx="9" cy="7" r="4" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#0B6E6E" stroke-width="2"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#0B6E6E" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Small Batches</h4>
+          <p>Max 10 students means you’re never just a face in the crowd</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 11.5C21 16.1944 16.9706 20 12 20C10.5181 20 9.12461 19.6591 7.9 19.05L3 21L4.5 16.5C3.5594 15.1162 3 13.4074 3 11.5C3 6.80558 7.02944 3 12 3C16.9706 3 21 6.80558 21 11.5Z" stroke="#0B6E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="mb-3">Community WhatsApp Group</h4>
+          <p>Stay connected and motivated between sessions</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 5: What to Expect -->
+<!-- SECTION 5 — WHAT TO EXPECT -->
 <section class="zuga-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-5 mb-md-0">
         <h2 class="display-4 mb-4">What to Expect</h2>
-        <ul class="display-7" style="list-style: none; padding: 0; line-height: 2.2;">
-          <li><span style="color: var(--orange);">✔</span> 45–60 minute live Zoom session</li>
-          <li><span style="color: var(--orange);">✔</span> Just a mat and comfortable clothing</li>
-          <li><span style="color: var(--orange);">✔</span> Zoom link sent after booking</li>
-          <li><span style="color: var(--orange);">✔</span> New batches start every month</li>
-          <li><span style="color: var(--orange);">✔</span> Max 10 students per session</li>
-        </ul>
+        <ol class="display-7" style="padding-left: 1.5rem; line-height: 2.2;">
+          <li>Sign up and choose your timezone slot</li>
+          <li>Receive your Zoom link and monthly class schedule</li>
+          <li>Join live — your instructor greets you by name</li>
+          <li>Get real-time corrections and feedback throughout</li>
+          <li>Track your progress week by week with the same instructor</li>
+        </ol>
       </div>
-      <div class="col-md-6">
-        <div class="expect-image">
-          <!-- Placeholder for image -->
-        </div>
+      <div class="col-md-6 text-center">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+             alt="Interactive online yoga class"
+             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 6: Instructors -->
+<!-- SECTION 6 — MEET YOUR INSTRUCTORS -->
 <section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
     <div class="row">
       <div class="col-md-6">
         <div class="instructor-card">
-          <div class="instructor-photo">
-             <img src="assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath">
-          </div>
+          <div class="avatar">M</div>
           <h3>Mallinath</h3>
-          <p class="display-7">1500+ hours taught, 8+ specializations, expert in Hatha & Vinyasa.</p>
+          <p class="display-7">1,500+ hours taught | Expert in Hatha & Vinyasa</p>
+          <p class="text-muted">Authentic Indian yoga tradition</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="instructor-card">
-          <div class="instructor-photo">
-            <img src="assets/images/Anusha-7b37cda6.jpeg" alt="Anusha">
-          </div>
+          <div class="avatar teal">A</div>
           <h3>Anusha</h3>
-          <p class="display-7">500+ hours taught, specialist in women's wellness, warm encouraging style.</p>
+          <p class="display-7">500+ hours taught | Specialist in women’s wellness</p>
+          <p class="text-muted">PCOD & Postpartum expert</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 7: Testimonial -->
+<!-- SECTION 7 — TESTIMONIAL -->
 <section class="zuga-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
-        <div style="font-size: 3rem; color: var(--teal); margin-bottom: 20px;">“</div>
-        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">Finally found consistency after 3 failed gym attempts — the community keeps me accountable.</h3>
-        <p class="display-7"><strong>— Ravi M., Dubai</strong></p>
+        <div style="font-size: 5rem; color: var(--orange); line-height: 1; font-family: serif;">“</div>
+        <h3 class="display-5 italic mb-4" style="font-style: italic; line-height: 1.4;">“As a global community in London, finding live yoga in my timezone was tough until Zuga. The instructors are amazing!”</h3>
+        <p class="display-7"><strong>— Priya Sharma, UK</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 8: Pricing -->
+<!-- SECTION 8 — PRICING -->
 <section class="zuga-section" style="background-color: #fafafa;">
   <div class="container">
-    <div class="pricing-card">
-      <h3 class="display-4 mb-3">Group Plan</h3>
-      <div class="price-value">₹2,000<span style="font-size: 1.2rem; color: #777;">/month</span></div>
-      <ul class="display-7 my-5" style="list-style: none; padding: 0; line-height: 2;">
-        <li>20 live classes/month</li>
-        <li>All styles & levels</li>
-        <li>Real-time instructor feedback</li>
-        <li>Zoom link + monthly schedule</li>
-      </ul>
-      <div class="mbr-section-btn">
-        <a class="btn btn-orange display-4 w-100" href="/free-trial.html">Start Your Free Class</a>
+    <h2 class="display-4 text-center mb-5">Simple, Honest Pricing</h2>
+    <div class="row justify-content-center">
+      <!-- Starter Plan -->
+      <div class="col-md-5 mb-4">
+        <div class="pricing-card">
+          <h3 class="display-5">Starter</h3>
+          <div class="price-value">₹2,000<small class="text-muted" style="font-size: 1rem;">/month</small></div>
+          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
+            <li>✅ 20 live group classes</li>
+            <li>✅ 1 timezone slot</li>
+            <li>✅ Hatha, Vinyasa or Meditation</li>
+            <li>✅ Community WhatsApp group</li>
+            <li>✅ Annual plan: ₹1,600/month (save 20%)</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="/free-trial.html" class="btn btn-orange display-4 w-100">Try Your First Class Free →</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
+          </div>
+        </div>
       </div>
-      <p class="mt-3 text-muted">No credit card required.</p>
+      <!-- Growth Plan -->
+      <div class="col-md-5 mb-4">
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3 class="display-5">Growth</h3>
+          <div class="price-value">₹3,500<small class="text-muted" style="font-size: 1rem;">/month</small></div>
+          <ul class="display-7 mb-5" style="list-style: none; padding: 0; line-height: 2;">
+            <li>✅ Unlimited live group classes</li>
+            <li>✅ All 3 timezones (EST, GMT, GST)</li>
+            <li>✅ All 8 yoga styles</li>
+            <li>✅ 4 personal sessions/month</li>
+            <li>✅ Priority booking and support</li>
+            <li>✅ Annual plan: ₹2,800/month (save 20%)</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="/free-trial.html" class="btn btn-orange display-4 w-100">Try Your First Class Free →</a>
+            <p class="mt-3 text-muted text-center" style="font-size: 0.8rem;">No credit card required.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Section 9: FAQ -->
+<!-- SECTION 9 — FAQ -->
 <section class="zuga-section">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Common Questions</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do I need prior yoga experience? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">How do the live classes work? <span>+</span></div>
           <div id="faq1" class="collapse mt-3">
-            <p>Not at all! Our group classes are designed for all levels. Our instructors provide modifications for beginners and challenges for more advanced practitioners.</p>
+            <p>All sessions run on Zoom. After signing up you receive a link and your monthly schedule. Classes are capped at 10 students so every person gets real-time attention from the instructor.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What if I miss a class? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">Do I need any experience? <span>+</span></div>
           <div id="faq2" class="collapse mt-3">
-            <p>Since these are live sessions, we encourage consistency. However, if you miss a session, you can join any other scheduled group class within the same week.</p>
+            <p>No. Several of our 20+ monthly classes are designed specifically for beginners. Just show up with a mat and comfortable clothing.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">Which time zones are classes held in? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">Which timezones do you cover? <span>+</span></div>
           <div id="faq3" class="collapse mt-3">
-            <p>We currently offer slots across IST (India), GMT (UK), EST (US/Canada), and GST (UAE/Dubai) to ensure you can practice at a convenient time wherever you are.</p>
+            <p>We run classes daily across IST, GMT, EST and GST. You’ll receive the full schedule after signing up.</p>
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">What do I need to join? <span>+</span></div>
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Can I switch between yoga styles? <span>+</span></div>
           <div id="faq4" class="collapse mt-3">
-            <p>A yoga mat, comfortable clothing, a stable internet connection, and the Zoom app installed on your laptop, tablet, or phone.</p>
+            <p>Yes — Growth plan members get access to all 8 styles across all 3 timezone slots. Starter plan members choose one style per month.</p>
           </div>
         </div>
       </div>
@@ -565,12 +704,83 @@
   </div>
 </section>
 
-<!-- Section 10: Final CTA -->
-<section class="final-cta">
+<!-- REGISTRATION SECTION -->
+<section class="registration-section">
   <div class="container">
-    <h2 class="display-3 mb-4">Ready to practice with us?</h2>
-    <div class="mbr-section-btn mt-5">
-      <a class="btn btn-white-outline display-4" href="/free-trial.html">Book Your Free Class</a>
+    <div class="registration-form-box">
+      <h2 class="display-4 text-center mb-4">Book Your Free Class</h2>
+      <form
+        id="zuga-group-class-form"
+        action="https://formspree.io/f/mnjlyoqr"
+        method="POST"
+        novalidate
+      >
+        <!-- Spam protection -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_subject" value="🧘 New Group Class Booking — Zuga Fitness" />
+        <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+          <span class="field-error">Please enter your name</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <span class="field-error">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country *</label>
+          <input type="text" id="country" name="country" placeholder="Your country" required />
+          <span class="field-error">Please enter your country</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">WhatsApp Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 or international" required />
+          <span class="field-error">Please enter your phone number</span>
+        </div>
+
+        <div class="form-group">
+          <label for="class_preference">Class Preference *</label>
+          <select id="class_preference" name="class_preference" required>
+            <option value="" disabled selected>Select a style</option>
+            <option value="Vinyasa">Vinyasa</option>
+            <option value="Hatha">Hatha</option>
+            <option value="Yin">Yin</option>
+            <option value="Power">Power</option>
+            <option value="Meditation">Meditation</option>
+          </select>
+          <span class="field-error">Please select a preference</span>
+        </div>
+
+        <div class="form-group">
+          <label for="timezone">Preferred Timezone *</label>
+          <select id="timezone" name="timezone" required>
+            <option value="" disabled selected>Select your timezone</option>
+            <option value="IST">IST (India)</option>
+            <option value="GMT">GMT (UK)</option>
+            <option value="EST">EST (US/Canada)</option>
+            <option value="GST">GST (UAE/Dubai)</option>
+          </select>
+          <span class="field-error">Please select a timezone</span>
+        </div>
+
+        <button type="submit" id="free-trial-submit-btn">
+          <span class="btn-text">Book My Free Class</span>
+          <span class="btn-loading" style="display:none">Sending... ⏳</span>
+        </button>
+
+        <div class="form-success" style="display:none">
+          ✅ Request received! We'll WhatsApp or email you within 24 hours.
+        </div>
+        <div class="form-error" style="display:none">
+          ❌ Something went wrong. Please email <a href="mailto:zugafitness24@gmail.com">zugafitness24@gmail.com</a>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -640,6 +850,74 @@
 <script src="assets/ytplayer/index.js"></script>
 <script src="assets/dropdown/js/navbar-dropdown.js"></script>
 <script src="assets/theme/js/script.js"></script>
+
+<script>
+(function() {
+  const forms = document.querySelectorAll('form[action*="formspree.io"]');
+
+  forms.forEach(function(form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Validate required fields
+      let valid = true;
+      form.querySelectorAll('[required]').forEach(function(field) {
+        if (!field.value.trim()) {
+          field.classList.add('field-invalid');
+          valid = false;
+        } else {
+          field.classList.remove('field-invalid');
+        }
+      });
+      if (!valid) return;
+
+      // Loading state
+      const btn = form.querySelector('button[type="submit"]');
+      const btnText = btn.querySelector('.btn-text');
+      const btnLoading = btn.querySelector('.btn-loading');
+      const successBox = form.querySelector('.form-success');
+      const errorBox = form.querySelector('.form-error');
+
+      if (btnText) btnText.style.display = 'none';
+      if (btnLoading) btnLoading.style.display = 'inline';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.querySelectorAll('.form-group, button, h2').forEach(el => el.style.display = 'none');
+          if (successBox) successBox.style.display = 'block';
+          setTimeout(function() {
+            window.location.href = '/thank-you.html';
+          }, 2500);
+        } else {
+          if (errorBox) errorBox.style.display = 'block';
+          if (btnText) btnText.style.display = 'inline';
+          if (btnLoading) btnLoading.style.display = 'none';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        if (errorBox) errorBox.style.display = 'block';
+        if (btnText) btnText.style.display = 'inline';
+        if (btnLoading) btnLoading.style.display = 'none';
+        btn.disabled = false;
+      }
+    });
+
+    // Clear error highlight on input
+    form.querySelectorAll('input, select, textarea').forEach(function(el) {
+      el.addEventListener('input', function() {
+        el.classList.remove('field-invalid');
+      });
+    });
+  });
+})();
+</script>
 
 
 <a href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes"
