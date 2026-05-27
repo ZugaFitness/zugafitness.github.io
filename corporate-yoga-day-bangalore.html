@@ -80,29 +80,38 @@
     }
 
     :root {
-      --brand-orange: #E8690A;
-      --brand-orange-glow: rgba(232, 105, 10, 0.3);
       --brand-teal: #0B6E6E;
-      --brand-teal-glow: rgba(11, 110, 110, 0.2);
+      --brand-orange: #E8690A;
       --brand-bg: #F8F5F0;
+      --brand-white: #FFFFFF;
       --brand-text: #333333;
-      --white: #FFFFFF;
-      --perspective: 1200px;
+      --brand-orange-shadow: rgba(232, 105, 10, 0.25);
+      --brand-teal-shadow: rgba(11, 110, 110, 0.12);
     }
 
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--brand-text);
       background-color: var(--brand-bg);
+      line-height: 1.6;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
+      color: var(--brand-text);
     }
 
-    h3, h4, h5, h6, .brand-sans {
+    h4, h5, h6, p, .brand-sans, .pricing-display {
       font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      max-width: 1440px !important;
+    }
+
+    .zuga-section {
+      padding: 100px 0;
     }
 
     .btn-brand-cta {
@@ -186,6 +195,33 @@
     /* Layout Spacing */
     .zuga-section {
       padding: 100px 0;
+    }
+
+    /* Value Carousel Grid */
+    .value-carousel-container {
+      overflow: visible;
+    }
+    .value-carousel-grid {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding: 20px 5px 40px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .value-carousel-grid::-webkit-scrollbar {
+      display: none;
+    }
+    .value-card-item {
+      flex: 0 0 calc(33.333% - 16px);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+    @media (max-width: 991px) {
+      .value-card-item {
+        flex: 0 0 85%;
+      }
     }
 
     /* Isometric Card Enhancements */
@@ -377,24 +413,25 @@
 
     .pricing-card-new {
       position: relative;
-      background: #FFFFFF;
+      background: var(--brand-white);
       border-radius: 20px;
-      padding: 2px; /* For the gradient border effect */
+      padding: 0;
       transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
       transform-style: preserve-3d;
       overflow: hidden;
       height: 100%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(11, 110, 110, 0.08);
     }
 
     .pricing-card-new:hover {
-      transform: rotateX(4deg) rotateY(-4deg) translateY(-5px);
-      box-shadow: 0 30px 60px rgba(11, 110, 110, 0.15);
+      transform: rotateX(4deg) rotateY(-4deg) translateY(-6px);
+      box-shadow: 0 30px 60px var(--brand-teal-shadow);
     }
 
     .pricing-card-content {
-      background: #FFFFFF;
-      border-radius: 18px;
+      background: var(--brand-white);
+      border-radius: 20px;
       padding: 50px 40px;
       height: 100%;
       display: flex;
@@ -933,38 +970,22 @@
 	</nav>
 </section>
 
-<!-- Section 1: Hero -->
-<section class="hero-section depth-container">
-  <div class="hero-parallax-bg">
-    <div class="parallax-layer layer-1">ॐ</div>
-    <div class="parallax-layer layer-2">✨</div>
-  </div>
+<!-- Section 1: Hero Header Interface -->
+<section class="hero-section zuga-section" style="background: var(--brand-bg);">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6" style="z-index: 2;">
-        <div class="early-bird-badge pulse-anim">Early Bird: Save ₹1,000 before June 7</div>
-        <span class="hero-accent-tag">B2B CORPORATE YOGA WEEK | JUNE 16–25</span>
-        <h1 class="hero-title display-3 mb-4 float-anim" style="font-family: 'Playfair Display', serif;">Celebrate International Yoga Day on Your Terms.</h1>
-        <p class="lead mb-5" style="color: #333333; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Don't ask your team to log in on a weekend. Bring Bangalore's premier, lineage-trained yoga instructors straight to your physical office floor during Corporate Yoga Week (June 16–25).</p>
+      <!-- Left Grid Content -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="display-3 mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700;">Celebrate International Yoga Day on Your Terms.</h1>
+        <p class="mb-5" style="font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 1.25rem; color: var(--brand-text);">Don't force your employees to log in on a weekend. Bring Bangalore’s premier, lineage-trained instructors directly to your physical office floor during Corporate Yoga Week (June 16–25).</p>
         <div class="mbr-section-btn">
-          <a class="btn btn-brand-cta display-4" href="#onsite">Secure an Onsite Slot</a>
-          <a class="btn btn-outline-primary display-4 ms-md-3" href="#pricing" style="border-radius: 8px !important; padding: 14px 36px !important;">View Virtual Plans</a>
+          <a class="btn btn-brand-cta display-4" href="#pricing" style="border-radius: 50px !important; box-shadow: 0 8px 20px var(--brand-orange-shadow);">Explore Corporate Plans</a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="floating-3d-scene">
-          <div class="yoga-mat-3d"></div>
-          <div class="lotus-3d">
-            <svg viewBox="0 0 100 100" fill="var(--brand-orange)">
-              <path d="M50 20C50 20 30 50 50 80C70 50 50 20 50 20Z" opacity="0.8"/>
-              <path d="M50 30C50 30 10 50 50 70C90 50 50 30 50 30Z" opacity="0.6"/>
-              <path d="M50 40C50 40 20 60 50 60C80 60 50 40 50 40Z" opacity="0.9"/>
-            </svg>
-          </div>
-          <div class="hero-visual-container lift-3d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/corporate1.jpg') center/cover; opacity: 0.15; border-radius: 24px;"></div>
-          <div class="hero-visual-container lift-3d" style="position: absolute; top: 10%; right: 0; width: 80%; z-index: 1;">
-            <img src="assets/images/corporate1.jpg" alt="Live Online Yoga Class" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
+      <!-- Right Grid Content -->
+      <div class="col-lg-6">
+        <div class="hero-visual-container" style="background: var(--brand-white); padding: 20px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.06);">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="Modern Corporate Workspace" style="width: 100%; border-radius: 16px; display: block;" loading="lazy">
         </div>
       </div>
     </div>
@@ -988,55 +1009,49 @@
   </div>
 </div>
 
-<!-- Section 2: Scarcity Ticker Panel -->
-<div class="scarcity-ticker" style="background-color: #FFFFFF; border-top: 1px solid #E8690A; border-bottom: 1px solid #E8690A; padding: 20px 0;">
+<!-- Section 2: High-Scarcity Accent Banner -->
+<section class="scarcity-banner" style="background: var(--brand-white); border-top: 1px solid var(--brand-orange); border-bottom: 1px solid var(--brand-orange); padding: 25px 0;">
   <div class="container">
-    <p class="mb-0 text-center" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #333333; font-size: 1.1rem;">
-      ⚠️ CAPACITY NOTICE: We limit our city-wide city schedule to strictly 4 office slots per day across Bangalore to preserve elite instruction quality. Peak windows (11 AM and 4 PM) are filling up rapidly.
+    <p class="mb-0 text-center" style="font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--brand-text); font-size: 1.1rem; letter-spacing: 0.5px;">
+      ⚠️ CAPACITY ALERT: To preserve absolute, elite instruction quality, we limit our schedule to strictly 4 office slots per day across Bangalore. Peak workspace windows (11 AM and 4 PM) are filling rapidly.
     </p>
   </div>
-</div>
+</section>
 
-<!-- Section 3: B2B Value Grid -->
-<section class="zuga-section isometric-container">
+<!-- Section 3: The Value Carousel Grid -->
+<section class="zuga-section" style="background: var(--brand-bg);">
   <div class="container">
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="iso-card text-center">
-          <div class="iso-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
+    <div class="value-carousel-container">
+      <div class="value-carousel-grid">
+        <!-- Column 1 Card -->
+        <div class="value-card-item">
+          <div class="iso-card text-center" style="background: var(--brand-white); border-radius: 20px; padding: 40px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); height: 100%;">
+            <div class="iso-icon mb-4" style="width: 70px; height: 70px; background: var(--brand-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="mb-3" style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Logistical Relief</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--brand-text); font-size: 0.95rem;">June 21 lands on a Sunday this year. We bring the corporate pop-up directly to your office on weekdays so employee personal time is fully respected.</p>
           </div>
-          <h3 class="mb-3">Logistical Relief</h3>
-          <p class="mb-0">June 21 lands on a Sunday this year. We bring the pop-up to your office on weekdays during <a href="/corporate-yoga-day.html" style="color: var(--brand-teal);">Corporate Yoga Week</a> so employee personal time stays fully respected.</p>
         </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="iso-card text-center">
-          <div class="iso-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
+        <!-- Column 2 Card -->
+        <div class="value-card-item">
+          <div class="iso-card text-center" style="background: var(--brand-white); border-radius: 20px; padding: 40px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); height: 100%;">
+            <div class="iso-icon mb-4" style="width: 70px; height: 70px; background: var(--brand-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="mb-3" style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Zero Operational Weight</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--brand-text); font-size: 0.95rem;">Your team provides the clear space. Zuga Fitness supplies the elite trainer talent layer to manage the room energy. No hardware needed (standing/chair protocols available).</p>
           </div>
-          <h3 class="mb-3">Zero Operational Weight</h3>
-          <p class="mb-0">Trainer-Only execution layer. Your team provides the space; Zuga provides the elite talent to manage the room's energy. No hardware required—standing or desk-chair protocols available.</p>
         </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="iso-card text-center">
-          <div class="iso-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
-              <path d="M23 7l-7 5 7 5V7z"></path>
-              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-            </svg>
+        <!-- Column 3 Card -->
+        <div class="value-card-item">
+          <div class="iso-card text-center" style="background: var(--brand-white); border-radius: 20px; padding: 40px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); height: 100%;">
+            <div class="iso-icon mb-4" style="width: 70px; height: 70px; background: var(--brand-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><path d="M15.6 11.6L22 7v10l-6.4-4.5v-1z"></path><rect x="2" y="5" width="14" height="14" rx="2" ry="2"></rect></svg>
+            </div>
+            <h3 class="mb-3" style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Hybrid-Friendly Setup</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; color: var(--brand-text); font-size: 0.95rem;">Onsite floor pop-ups can be seamlessly live-streamed via your Zoom/Teams infrastructure to engage remote team members concurrently.</p>
           </div>
-          <h3 class="mb-3">Hybrid-Friendly Setup</h3>
-          <p class="mb-0">Your onsite floor session can be seamlessly live-streamed via Zoom or Teams for your remote workforce, completely removing remote team roadblocks.</p>
         </div>
       </div>
     </div>
@@ -1103,39 +1118,39 @@
   </div>
 </section>
 
-<!-- Section 4: Simplified Corporate Pricing -->
-<section class="zuga-section" id="pricing">
+<!-- Section 4: 3D Interactive Pricing Tiers -->
+<section class="zuga-section" id="pricing" style="background: var(--brand-bg);">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="display-4 mb-3">Simplified Corporate Pricing</h2>
-      <p class="brand-sans" style="color: #666;">Hover over a card to see full inclusions.</p>
+      <h2 class="display-4 mb-3" style="font-family: 'Playfair Display', serif;">Simplified Corporate Pricing</h2>
+      <p style="font-family: 'Poppins', sans-serif; color: #666; font-weight: 400;">Hover over a card to experience the premium depth and inclusions.</p>
     </div>
 
     <div class="row justify-content-center pricing-container-3d">
-      <!-- Card A: Onsite B2B Pop-Up (Bangalore) -->
+      <!-- Card A: Onsite Corporate Session -->
       <div class="col-lg-5 col-md-6 mb-5">
         <div class="pricing-card-new">
-          <div class="dynamic-border"></div>
           <div class="pricing-card-content">
-            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; color: #0B6E6E; font-size: 1.8rem; font-weight: 700;">ONSITE CORPORATE POP-UP</h2>
-            <p class="mb-4" style="font-family: 'Poppins', sans-serif; color: #333333; line-height: 1.6;">Led by premium, lineage-trained senior instructors right on your office floor. Trainer-Only talent layer: your team provides the clear space, we handle the execution energy.</p>
-            <div class="price-display mb-2" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.5rem; color: #333333;">₹5,000 Flat Rate</div>
-            <p class="mb-5" style="font-family: 'Poppins', sans-serif; color: #666; font-size: 0.9rem;">Zero per-head fees. Perfect for teams of any size up to 50 employees.</p>
-            <a class="btn-brand-cta" href="#onsite" style="display: block; text-align: center; background-color: #E8690A !important; border: none; color: #FFFFFF !important; padding: 16px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: background 0.3s ease;">Secure Onsite Slot</a>
+            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; color: var(--brand-teal); font-size: 1.8rem;">ONSITE WORKSPACE POP-UP</h2>
+            <div class="price-display mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2.8rem; color: var(--brand-text);">₹5,000 Flat Rate</div>
+            <p class="mb-5" style="font-family: 'Poppins', sans-serif; color: var(--brand-text); font-size: 1rem; line-height: 1.6;">Zero per-head variables. Flat rate valid for teams of any size up to 50 employees. Premium instruction directly on your office floor.</p>
+            <div class="mt-auto">
+              <a class="btn-brand-cta w-100" href="#onsite" style="background: var(--brand-orange) !important; padding: 18px !important; border-radius: 12px !important; text-align: center;">Secure Onsite Slot</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Card B: Virtual Fallback Session -->
+      <!-- Card B: Purely Virtual Streaming -->
       <div class="col-lg-5 col-md-6 mb-5">
         <div class="pricing-card-new">
-          <div class="dynamic-border"></div>
           <div class="pricing-card-content">
-            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; color: #0B6E6E; font-size: 1.8rem; font-weight: 700;">PURELY VIRTUAL STREAMING</h2>
-            <p class="mb-4" style="font-family: 'Poppins', sans-serif; color: #333333; line-height: 1.6;">Seamlessly hosted live via interactive Zoom or Microsoft Teams protocols for fully remote or hybrid distributed workforces.</p>
-            <div class="price-display mb-2" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.5rem; color: #333333;">₹3,500 Flat Rate</div>
-            <p class="mb-5" style="font-family: 'Poppins', sans-serif; color: #666; font-size: 0.9rem;">Flat corporate rate. Secure, high-fidelity real-time streaming.</p>
-            <a href="#onsite" style="display: block; text-align: center; background: transparent; border: 2px solid #0B6E6E; color: #0B6E6E; padding: 14px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: all 0.3s ease;">Book Virtual Session</a>
+            <h2 class="mb-4" style="font-family: 'Playfair Display', serif; color: var(--brand-teal); font-size: 1.8rem;">HYBRID VIRTUAL SESSION</h2>
+            <div class="price-display mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2.8rem; color: var(--brand-text);">₹3,500 Flat Rate</div>
+            <p class="mb-5" style="font-family: 'Poppins', sans-serif; color: var(--brand-text); font-size: 1rem; line-height: 1.6;">Flat corporate session rate. Interactive real-time streaming for up to 50 remote participants via Zoom/Teams.</p>
+            <div class="mt-auto">
+              <a class="btn w-100" href="#onsite" style="border: 2.5px solid var(--brand-teal); color: var(--brand-teal); padding: 16px; border-radius: 12px; font-weight: 700; font-family: 'Poppins', sans-serif; transition: all 0.3s ease;">Book Virtual Session</a>
+            </div>
           </div>
         </div>
       </div>
