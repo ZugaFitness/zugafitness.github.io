@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg" type="image/x-icon">
 
-  <title>Corporate Yoga Day | Live Online Yoga Class for Teams | Zuga Fitness</title>
-  <meta name="description" content="Book a premium corporate yoga day session from just ₹5,000. Live online yoga class for global teams. Boost wellness, focus & team connection with Zuga Fitness.">
-  <link rel="canonical" href="https://zugafitness.in/corporate-yoga-day.html" />
+  <title>Corporate Yoga Day | Live Online Yoga Class for Teams | zuga Fitness</title>
+  <meta name="description" content="Book corporate yoga from ₹3,500 (virtual) or ₹5,000 (Bangalore onsite). Live online yoga class for global teams. Boost wellness, focus & connection. Early bird: Save ₹1,000 before June 7.">
+  <link rel="canonical" href="https://zugafitness.in/corporate-yoga-day-bangalore.html" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,14 +228,64 @@
     .iso-card:hover .iso-icon {
       transform: translateZ(50px) rotateY(360deg);
       background: var(--brand-teal-glow);
+      box-shadow: 0 0 30px var(--brand-teal-glow);
+    }
+
+    /* Card Particle Hover Effect */
+    .card-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .pricing-3d-wrap:hover .pricing-card-inner::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, var(--brand-orange-glow) 0%, transparent 70%);
+      transform: translate(-50%, -50%) translateZ(-1px);
+      filter: blur(20px);
+      opacity: 0.8;
+      animation: particle-pulse 2s infinite;
+    }
+
+    @keyframes particle-pulse {
+      0%, 100% { transform: translate(-50%, -50%) translateZ(-1px) scale(1); opacity: 0.5; }
+      50% { transform: translate(-50%, -50%) translateZ(-1px) scale(1.2); opacity: 0.8; }
     }
 
     .iso-card h3 {
-      transform: translateZ(20px);
+      transform: translateZ(30px);
     }
 
     .iso-card p {
-      transform: translateZ(10px);
+      transform: translateZ(15px);
+    }
+
+    /* Holographic Glow Effect */
+    .holographic-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(232, 105, 10, 0.1), rgba(11, 110, 110, 0.1));
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      border-radius: 16px;
+      z-index: -1;
+    }
+
+    .iso-card:hover .holographic-glow {
+      opacity: 1;
     }
 
     @media (max-width: 991px) {
@@ -272,6 +322,22 @@
       height: 100%;
       pointer-events: none;
       z-index: 0;
+    }
+
+    .trust-stack {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 3rem;
+    }
+
+    .trust-stack-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
     }
 
     .parallax-layer {
@@ -359,6 +425,119 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
+    /* Dual Mode Toggle Styles */
+    .hero-toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      gap: 1.5rem;
+    }
+
+    .hero-toggle-label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--brand-text);
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .hero-toggle-label.active {
+      color: var(--brand-orange);
+    }
+
+    .hero-toggle-switch {
+      position: relative;
+      width: 60px;
+      height: 32px;
+      background: #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero-toggle-switch::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .hero-toggle-switch.virtual::after {
+      transform: translateX(28px);
+    }
+
+    .hero-toggle-switch.virtual {
+      background: var(--brand-teal);
+    }
+
+    /* 3D Map/Globe Styles */
+    .scene-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .bangalore-map-3d, .global-globe-3d {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .global-globe-3d {
+      transform: rotateY(180deg);
+      background: radial-gradient(circle at center, #0B6E6E, #053a3a);
+    }
+
+    .scene-container.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .map-pin {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--brand-orange);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--brand-orange-glow);
+      animation: pin-pulse 1.5s infinite;
+    }
+
+    @keyframes pin-pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 105, 10, 0.6); }
+      70% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(232, 105, 10, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 105, 10, 0); }
+    }
+
+    .trust-badge-hero {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 2rem;
+      border: 1px solid rgba(11, 110, 110, 0.1);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
     /* Scarcity Ticker */
     .scarcity-ticker {
       background-color: var(--white);
@@ -408,6 +587,10 @@
       transform: rotateY(180deg);
       background: var(--brand-teal);
       color: white;
+    }
+
+    .pricing-card-inner.flipped {
+      transform: rotateY(180deg);
     }
 
     .price-glow-ring {
@@ -478,6 +661,31 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    /* Logo Wall Styles */
+    .logo-wall {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px 0;
+      background: white;
+    }
+
+    .logo-item {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.4s ease;
+      max-width: 150px;
+      cursor: pointer;
+    }
+
+    .logo-item:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
     }
 
     /* FAQ Section */
@@ -633,6 +841,33 @@
       background: var(--brand-orange);
       transform: scale(1.3);
       box-shadow: 0 0 10px var(--brand-orange-glow);
+    }
+
+    /* Scroll Progress Bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: var(--brand-teal);
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+
+    /* Custom Cursor (Desktop Only) */
+    @media (min-width: 992px) {
+      .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--brand-orange);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 10000;
+        transition: transform 0.1s ease;
+        mix-blend-mode: difference;
+      }
     }
 
     .carousel-3d-scene {
@@ -830,20 +1065,30 @@
       "@context": "https://schema.org/",
       "@type": "Service",
       "name": "Corporate Yoga Day",
-      "description": "Live online yoga classes and onsite sessions for corporate teams globally. Boost employee wellness and focus.",
+      "description": "Book corporate yoga from ₹3,500 (virtual) or ₹5,000 (Bangalore onsite). Live online yoga class for global teams. Boost wellness, focus & connection.",
       "provider": {
         "@type": "Organization",
-        "name": "Zuga Fitness",
+        "name": "zuga Fitness",
         "url": "https://zugafitness.in",
         "logo": "https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg"
       },
       "areaServed": "Global",
-      "offers": {
-        "@type": "Offer",
-        "price": "5000",
-        "priceCurrency": "INR",
-        "description": "Starting from ₹5,000 per session"
-      }
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Virtual Corporate Yoga Session",
+          "price": "3500",
+          "priceCurrency": "INR",
+          "description": "Live interactive session for up to 30 participants globally."
+        },
+        {
+          "@type": "Offer",
+          "name": "Onsite Corporate Yoga Session (Bangalore)",
+          "price": "5000",
+          "priceCurrency": "INR",
+          "description": "Flat rate for up to 50 participants in Bangalore."
+        }
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -851,18 +1096,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do you travel to all areas of Bangalore?",
+          "name": "What's included in the ₹3,500 virtual session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — we cover all areas of Bangalore. No travel surcharge within city limits."
+            "text": "The virtual session includes a 60-minute live interactive session via Zoom/Teams for up to 30 participants, time-zone smart scheduling (IST, GMT, EST, GST), and a post-session wellness report."
           }
         },
         {
           "@type": "Question",
-          "name": "What space do we need at our office?",
+          "name": "Do you travel outside Bangalore for onsite?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Any open area works — a conference room, terrace, lawn, or cleared office floor."
+            "text": "Currently, our onsite sessions are exclusively available in Bangalore, covering areas like Whitefield, Koramangala, HSR, Indiranagar, Bellandur, and Sarjapur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we mix onsite + virtual participants?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer a hybrid option where your onsite Bangalore session can be live-streamed for your remote global team members."
           }
         }
       ]
@@ -871,8 +1124,11 @@
   </script>
   <link rel="stylesheet" href="/assets/whatsapp.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+<div class="scroll-progress" id="scroll-bar"></div>
+<div class="custom-cursor" id="cursor"></div>
 
 <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
 	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -923,6 +1179,20 @@
 	</nav>
 </section>
 
+<!-- Preview Modal -->
+<div class="modal fade" id="preview-modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content glass-morphism" style="border-radius: 20px; border: none;">
+      <div class="modal-body p-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right: 20px; top: 20px; z-index: 10; filter: invert(1);"></button>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/6BK_ZPSqVew" title="Zuga Corporate Yoga Preview" allowfullscreen style="border-radius: 20px;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Section 1: Hero -->
 <section class="hero-section depth-container">
   <div class="hero-parallax-bg">
@@ -932,28 +1202,48 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6" style="z-index: 2;">
-        <div class="early-bird-badge pulse-anim">Early Bird: Save ₹1,000 before June 7</div>
-        <span class="hero-accent-tag">B2B CORPORATE YOGA WEEK | JUNE 16–25</span>
-        <h1 class="hero-title display-3 mb-4 float-anim">Live Online Yoga Class for Teams.</h1>
-        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">Don't ask your team to log in on a weekend. Bring Bangalore's premier, lineage-trained yoga instructors straight to your physical office floor or virtual screen during Corporate Yoga Week. Looking for group sessions? Explore our <a href="/Online-Yoga-Classes.html" style="color: var(--brand-teal); font-weight: 600;">Online Yoga Classes</a>.</p>
+        <div class="hero-toggle-container">
+          <span class="hero-toggle-label active" id="label-onsite">📍 Onsite Bangalore</span>
+          <div class="hero-toggle-switch" id="hero-mode-toggle"></div>
+          <span class="hero-toggle-label" id="label-virtual">🌍 Virtual Global</span>
+        </div>
+
+        <div class="early-bird-badge pulse-anim" id="countdown">Early Bird: Save ₹1,000 before June 7</div>
+        <span class="hero-accent-tag">ENERGIZING TEAMS SINCE 2020</span>
+        <h1 class="hero-title display-3 mb-4 float-anim" id="hero-headline">Energize Your Team. Anywhere.</h1>
+        <p class="lead mb-5" style="color: #555555; font-size: 1.25rem; font-family: 'Poppins', sans-serif;" id="hero-subheadline">Live corporate yoga sessions from just ₹3,500 — virtual or onsite.</p>
+
         <div class="mbr-section-btn">
-          <a class="btn btn-brand-cta display-4" href="#onsite">Secure an Onsite Slot</a>
-          <a class="btn btn-outline-primary display-4 ms-md-3" href="#pricing" style="border-radius: 8px !important; padding: 14px 36px !important;">View Virtual Plans</a>
+          <a class="btn btn-brand-cta display-4 lift-3d" href="#onsite?utm_source=corporate_yoga&utm_medium=3d_landing" id="primary-cta">Book Your Session →</a>
+          <a class="btn btn-outline-primary display-4 ms-md-3" href="#preview-modal" data-bs-toggle="modal" style="border-radius: 8px !important; padding: 14px 36px !important;">Watch 60-Second Preview</a>
+        </div>
+
+        <div class="trust-badge-hero">
+          <span>4.9★ Google</span>
+          <span>|</span>
+          <span>2,000+ Students</span>
+          <span>|</span>
+          <span>GST-Compliant</span>
         </div>
       </div>
       <div class="col-md-6">
         <div class="floating-3d-scene">
-          <div class="yoga-mat-3d"></div>
-          <div class="lotus-3d">
-            <svg viewBox="0 0 100 100" fill="var(--brand-orange)">
-              <path d="M50 20C50 20 30 50 50 80C70 50 50 20 50 20Z" opacity="0.8"/>
-              <path d="M50 30C50 30 10 50 50 70C90 50 50 30 50 30Z" opacity="0.6"/>
-              <path d="M50 40C50 40 20 60 50 60C80 60 50 40 50 40Z" opacity="0.9"/>
-            </svg>
-          </div>
-          <div class="hero-visual-container lift-3d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/corporate1.jpg') center/cover; opacity: 0.15; border-radius: 24px;"></div>
-          <div class="hero-visual-container lift-3d" style="position: absolute; top: 10%; right: 0; width: 80%; z-index: 1;">
-            <img src="assets/images/corporate1.jpg" alt="Live Online Yoga Class" style="width: 100%; height: auto; display: block;" loading="lazy">
+          <div class="scene-container" id="hero-3d-scene">
+            <div class="bangalore-map-3d">
+              <div class="hero-visual-container lift-3d" style="width: 100%; height: 100%; position: relative; background: #eee;">
+                <img src="assets/images/corporate1.jpg" alt="Bangalore Onsite Yoga" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                <div class="map-pin" style="top: 30%; left: 40%;"></div>
+                <div class="map-pin" style="top: 50%; left: 60%;"></div>
+                <div class="map-pin" style="top: 70%; left: 30%;"></div>
+                <div class="map-pin" style="top: 40%; left: 75%;"></div>
+              </div>
+            </div>
+            <div class="global-globe-3d">
+              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; text-align: center; padding: 20px;">
+                 <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_6n9mpxov.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                 <h4 class="mt-3">Serving IST, GMT, EST, GST</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -989,45 +1279,90 @@
 
 <!-- Section 3: B2B Value Grid -->
 <section class="zuga-section isometric-container">
+  <div class="container text-center mb-5">
+    <h2 class="display-4">Built for Enterprise Wellness</h2>
+  </div>
   <div class="container">
     <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
+      <!-- Card 1: Zero Logistics -->
+      <div class="col-md-3 col-sm-6 mb-4">
         <div class="iso-card text-center">
+          <div class="holographic-glow"></div>
+          <div class="iso-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-orange)" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3 class="mb-3" style="font-size: 1.25rem;">Zero Logistics</h3>
+          <p class="mb-0 small">We handle instructor, tech, and scheduling. No effort for HR.</p>
+        </div>
+      </div>
+      <!-- Card 2: Measurable Impact -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="iso-card text-center">
+          <div class="holographic-glow"></div>
           <div class="iso-icon">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
+              <path d="M18 20V10M12 20V4M6 20v-6"></path>
+            </svg>
+          </div>
+          <h3 class="mb-3" style="font-size: 1.25rem;">Measurable Impact</h3>
+          <p class="mb-0 small">Post-session wellness report included for data-driven results.</p>
+        </div>
+      </div>
+      <!-- Card 3: Global-Ready -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="iso-card text-center">
+          <div class="holographic-glow"></div>
+          <div class="iso-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-orange)" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </div>
-          <h3 class="mb-3">Logistical Relief</h3>
-          <p class="mb-0">June 21 lands on a Sunday this year. We bring the pop-up to your office on weekdays during <a href="/corporate-yoga-day.html" style="color: var(--brand-teal);">Corporate Yoga Week</a> so employee personal time stays fully respected.</p>
+          <h3 class="mb-3" style="font-size: 1.25rem;">Global-Ready</h3>
+          <p class="mb-0 small">Virtual sessions across 4 timezones for your global team.</p>
         </div>
       </div>
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
+      <!-- Card 4: Inclusive Design -->
+      <div class="col-md-3 col-sm-6 mb-4">
         <div class="iso-card text-center">
+          <div class="holographic-glow"></div>
           <div class="iso-icon">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
-          <h3 class="mb-3">Zero Operational Weight</h3>
-          <p class="mb-0">Trainer-Only execution layer. Your team provides the space; Zuga provides the elite talent to manage the room's energy. No hardware required—standing or desk-chair protocols available.</p>
+          <h3 class="mb-3" style="font-size: 1.25rem;">Inclusive Design</h3>
+          <p class="mb-0 small">Beginner-friendly and chair yoga options for everyone.</p>
         </div>
       </div>
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="iso-card text-center">
-          <div class="iso-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2">
-              <path d="M23 7l-7 5 7 5V7z"></path>
-              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-            </svg>
-          </div>
-          <h3 class="mb-3">Hybrid-Friendly Setup</h3>
-          <p class="mb-0">Your onsite floor session can be seamlessly live-streamed via Zoom or Teams for your remote workforce, completely removing remote team roadblocks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Calendly Scheduler -->
+<section class="zuga-section bg-white" id="schedule">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h2 class="display-4 mb-4">Schedule a 15-Min Wellness Consult</h2>
+        <p class="lead mb-4">Not sure which session fits your team? Let's hop on a quick discovery call to customize your Corporate Yoga Day.</p>
+        <div class="trust-stack d-block">
+          <div class="trust-stack-item mb-3">✓ Live demo of our virtual studio</div>
+          <div class="trust-stack-item mb-3">✓ Custom quote for hybrid sessions</div>
+          <div class="trust-stack-item mb-3">✓ Priority slot reservation</div>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget lift-3d" data-url="https://calendly.com/zugafitness/15min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </div>
@@ -1097,8 +1432,8 @@
 <section class="zuga-section" id="pricing">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="display-4 mb-3">Simplified Corporate Pricing</h2>
-      <p class="brand-sans" style="color: #666;">Hover over a card to see full inclusions.</p>
+      <h2 class="display-4 mb-3">🧘 CORPORATE YOGA DAY SESSIONS</h2>
+      <p class="brand-sans" style="color: #666;">Click or hover to reveal full inclusions. Save ₹1,000 before June 7!</p>
     </div>
 
     <div class="row justify-content-center">
@@ -1106,25 +1441,29 @@
       <div class="col-lg-5 col-md-6 pricing-3d-wrap">
         <div class="pricing-card-inner">
           <div class="pricing-front">
-            <div class="early-bird-badge mb-3">Save ₹1,000 before June 7</div>
-            <h3 style="color: var(--brand-teal);">Onsite Pop-Up</h3>
+            <div class="early-bird-badge mb-3 pulse-anim">EARLY BIRD: Save ₹1,000</div>
+            <h3 style="color: var(--brand-teal);">📍 ONSITE (Bangalore)</h3>
             <div class="price-glow-ring">
               <div style="font-weight: 700; font-size: 2.5rem;">₹5,000</div>
-              <div style="color: var(--brand-orange); font-weight: 700;">+ ₹100 Per Head</div>
+              <div style="color: var(--brand-orange); font-weight: 700;">Flat Rate per Session</div>
             </div>
-            <p>Onsite Weekday Pop-Up led by premium instructors. Logistics managed by Zuga.</p>
+            <ul class="text-start mb-4" style="list-style: none; padding: 0;">
+              <li>📍 Whitefield, Koramangala, HSR, Indiranagar</li>
+              <li>👥 Up to 50 participants</li>
+              <li>🚗 Certified instructor travels to your office</li>
+            </ul>
             <div class="slot-counter mt-auto pulse-anim">Only 4 slots available for June 21</div>
           </div>
           <div class="pricing-back">
             <h3>Full Inclusions</h3>
-            <ul style="list-style: none; padding: 0; margin-top: 20px;">
+            <ul style="list-style: none; padding: 0; margin-top: 20px;" class="text-start">
               <li class="mb-2">✓ 60-Min Senior-Led Session</li>
-              <li class="mb-2">✓ Tailored Yoga/Breathwork</li>
-              <li class="mb-2">✓ Physical Corrections & Adjustments</li>
-              <li class="mb-2">✓ Desk-Chair or Mat-Based</li>
+              <li class="mb-2">✓ Tailored Yoga/Breathwork Protocols</li>
+              <li class="mb-2">✓ Physical Form Corrections</li>
+              <li class="mb-2">✓ Desk-Chair or Mat-Based Options</li>
               <li class="mb-2">✓ All Travel Included (Bangalore)</li>
             </ul>
-            <a class="btn btn-brand-cta mt-auto w-100 particle-btn" href="#onsite">Request Onsite</a>
+            <a class="btn btn-brand-cta mt-auto w-100 particle-btn" href="#onsite?utm_source=corporate_yoga&utm_medium=3d_landing">Reserve Onsite Slot</a>
           </div>
         </div>
       </div>
@@ -1133,25 +1472,29 @@
       <div class="col-lg-5 col-md-6 pricing-3d-wrap">
         <div class="pricing-card-inner">
           <div class="pricing-front">
-            <div class="early-bird-badge mb-3" style="visibility: hidden;">Spacer</div>
-            <h3 style="color: var(--brand-teal);">Virtual Studio</h3>
+            <div class="pricing-ribbon">🌍 MOST POPULAR (Global)</div>
+            <h3 style="color: var(--brand-teal);">🌍 VIRTUAL (Global)</h3>
             <div class="price-glow-ring">
-              <div style="font-weight: 700; font-size: 2.5rem;">₹5,000</div>
-              <div style="color: var(--brand-orange); font-weight: 700;">Flat Rate</div>
+              <div style="font-weight: 700; font-size: 2.5rem;">₹3,500</div>
+              <div style="color: var(--brand-orange); font-weight: 700;">Flat Rate per Session</div>
             </div>
-            <p>Live interactive session via Zoom/Teams for up to 50 remote participants.</p>
-            <div class="slot-counter mt-auto">Global billing available</div>
+            <ul class="text-start mb-4" style="list-style: none; padding: 0;">
+              <li>🎥 Live interactive via Zoom/Teams</li>
+              <li>👥 Up to 30 participants</li>
+              <li>⏰ Time-zone smart (IST, GMT, EST, GST)</li>
+            </ul>
+            <div class="slot-counter mt-auto">Save ₹1,000 if booked before June 7</div>
           </div>
           <div class="pricing-back">
             <h3>Full Inclusions</h3>
-            <ul style="list-style: none; padding: 0; margin-top: 20px;">
-              <li class="mb-2">✓ 60-Min Live Stream</li>
-              <li class="mb-2">✓ Zoom / Teams / Meet</li>
-              <li class="mb-2">✓ Global Remote Access</li>
+            <ul style="list-style: none; padding: 0; margin-top: 20px;" class="text-start">
+              <li class="mb-2">✓ 60-Min High-Definition Live Stream</li>
+              <li class="mb-2">✓ Global Remote Access for Teams</li>
               <li class="mb-2">✓ Interactive Q&A Support</li>
-              <li class="mb-2">✓ High-Definition AV Quality</li>
+              <li class="mb-2">✓ Digital Post-Session Wellness Report</li>
+              <li class="mb-2">✓ GST Invoice & Corporate Billing</li>
             </ul>
-            <a class="btn btn-brand-cta mt-auto w-100 particle-btn" href="#onsite">Book Virtual</a>
+            <a class="btn btn-brand-cta mt-auto w-100 particle-btn" href="#onsite?utm_source=corporate_yoga&utm_medium=3d_landing">Book Virtual Session</a>
           </div>
         </div>
       </div>
@@ -1162,24 +1505,18 @@
 <!-- Section 6: Instructors -->
 <section class="zuga-section" style="background-color: var(--brand-bg);">
   <div class="container">
-    <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
+    <h2 class="display-4 text-center mb-5">Meet Your Lead Instructors</h2>
     <div class="row justify-content-center">
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
-          <div class="instructor-photo">
+      <div class="col-md-6 mb-4">
+        <div class="brand-card lift-3d text-center" style="border-top: 5px solid var(--brand-orange); padding: 50px;">
+          <div class="instructor-photo shadow-lg mb-4" style="border: 4px solid white;">
              <img src="/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath" loading="lazy">
           </div>
           <h3 class="mb-2">Mallinath</h3>
-          <p class="mb-0">Lead corporate instructor with 1500+ hours taught. Expert in Hatha & Vinyasa.</p>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div class="brand-card text-center mb-4">
-          <div class="instructor-photo">
-            <img src="/assets/images/Anusha-7b37cda6.jpeg" alt="Anusha" loading="lazy">
-          </div>
-          <h3 class="mb-2">Anusha</h3>
-          <p class="mb-0">Women's wellness and PCOD specialist. 1500+ hours taught with an encouraging style.</p>
+          <span class="badge bg-primary mb-3" style="background-color: var(--brand-orange) !important;">Lead Corporate Instructor</span>
+          <p class="mb-4 brand-sans" style="font-weight: 600;">1500+ hours taught | MA Yoga, Karnataka University | National Gymnastics Blue</p>
+          <p class="mb-5">A Yoga Alliance 500hr TTC expert, Mallinath combines precision lineage-based yoga with high-energy corporate engagement. His sessions are designed for deep physical relief and mental sharpness.</p>
+          <a href="/Mallinath-Portfolio.html" class="btn btn-outline-primary display-4">Meet All Instructors →</a>
         </div>
       </div>
     </div>
@@ -1188,30 +1525,32 @@
 
 <!-- Section 7: 3D Testimonial Carousel -->
 <section class="testimonial-3d-section depth-container">
+  <div class="container text-center mb-5">
+    <h2 class="display-4">Trusted by Forward-Thinking HR Leaders</h2>
+  </div>
   <div class="container">
-    <h2 class="display-4 text-center mb-5">Trusted by Forward-Thinking HR Leaders</h2>
     <div class="carousel-3d-scene">
       <div class="carousel-3d" id="testimonial-carousel">
-        <!-- Testimonial 1 -->
+        <!-- Testimonial 1: Priya UK -->
         <div class="carousel-item-3d item-1">
-          <p style="font-style: italic; font-size: 1.1rem;">"The highlight of our team offsite. Every level felt completely included and comfortable."</p>
+          <p style="font-style: italic; font-size: 1.1rem;">"The Zuga session was the highlight of our team offsite. Every level felt completely included and comfortable."</p>
           <div class="client-photo-3d" style="background: url('/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg') center/cover;"></div>
-          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">HR Manager</p>
-          <p style="font-size: 0.8rem; color: #666;">Bangalore Tech Co</p>
+          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">Priya Sharma</p>
+          <p style="font-size: 0.8rem; color: #666;">HR Manager, London UK</p>
         </div>
-        <!-- Testimonial 2 -->
+        <!-- Testimonial 2: Anjali USA -->
         <div class="carousel-item-3d item-2">
-          <p style="font-style: italic; font-size: 1.1rem;">"Zero logistical weight. Zuga managed everything, and the team energy was incredible."</p>
+          <p style="font-style: italic; font-size: 1.1rem;">"Zero logistical weight. Zuga managed everything perfectly across our global timezones."</p>
           <div class="client-photo-3d" style="background: url('/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg') center/cover;"></div>
-          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">Wellness Coordinator</p>
-          <p style="font-size: 0.8rem; color: #666;">Global SaaS Firm</p>
+          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">Anjali K.</p>
+          <p style="font-size: 0.8rem; color: #666;">Wellness Coordinator, USA</p>
         </div>
-        <!-- Testimonial 3 -->
+        <!-- Testimonial 3: Ravi Dubai -->
         <div class="carousel-item-3d item-3">
-          <p style="font-style: italic; font-size: 1.1rem;">"Mallinath's expert instruction brought a new level of focus to our leadership team."</p>
+          <p style="font-style: italic; font-size: 1.1rem;">"Mallinath's expert instruction brought a new level of focus and energy to our leadership team."</p>
           <div class="client-photo-3d" style="background: url('/assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg') center/cover;"></div>
-          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">VP Operations</p>
-          <p style="font-size: 0.8rem; color: #666;">E-commerce Leader</p>
+          <p class="mt-3 mb-0" style="font-weight: 700; font-size: 0.9rem;">Ravi S.</p>
+          <p style="font-size: 0.8rem; color: #666;">VP Operations, Dubai GST</p>
         </div>
       </div>
     </div>
@@ -1219,6 +1558,28 @@
       <div class="nav-dot active" data-index="0"></div>
       <div class="nav-dot" data-index="1"></div>
       <div class="nav-dot" data-index="2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Cross-Promotion -->
+<section class="blog-promo-section" style="background: #fdfdfd; padding: 40px 0; border-top: 1px solid #eee;">
+  <div class="container text-center">
+    <p class="mb-0 brand-sans" style="font-weight: 600;">
+      🚀 Remote team? <a href="/Blog/yoga-for-corporate-professionals.html" style="color: var(--brand-teal); text-decoration: underline;">Read: How Online Yoga Boosts Remote Team Productivity →</a>
+    </p>
+  </div>
+</section>
+
+<!-- Logo Wall -->
+<section class="logo-wall-section bg-white">
+  <div class="container">
+    <div class="logo-wall">
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" height="30"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS Logo" height="40"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys Logo" height="30"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn Logo" height="30"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" height="30"></div>
     </div>
   </div>
 </section>
@@ -1330,33 +1691,33 @@
       <div class="col-lg-8">
         <div class="brand-card mb-4" style="border-top: none; border-bottom: 2px solid var(--brand-teal);">
           <div class="faq-item">
-            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">Do you travel to all areas of Bangalore? <span class="faq-icon-3d">+</span></div>
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">What's included in the ₹3,500 virtual session? <span class="faq-icon-3d">+</span></div>
             <div id="faq1" class="collapse faq-answer-3d">
-              <p class="py-3">Yes — we cover all areas of Bangalore. No travel surcharge within city limits.</p>
+              <p class="py-3">The virtual session includes a 60-minute live interactive session via Zoom/Teams for up to 30 participants, time-zone smart scheduling (IST, GMT, EST, GST), and a post-session wellness report.</p>
             </div>
           </div>
           <div class="faq-item">
-            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">What space do we need at our office? <span class="faq-icon-3d">+</span></div>
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">Do you travel outside Bangalore for onsite? <span class="faq-icon-3d">+</span></div>
             <div id="faq2" class="collapse faq-answer-3d">
-              <p class="py-3">Any open area works — a conference room, terrace, lawn, or cleared office floor. We just need enough space for participants to lie down.</p>
+              <p class="py-3">Currently, our onsite sessions are exclusively available in Bangalore, covering areas like Whitefield, Koramangala, HSR, Indiranagar, Bellandur, and Sarjapur. No travel surcharge within city limits.</p>
             </div>
           </div>
           <div class="faq-item">
-            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">What do employees need to bring? <span class="faq-icon-3d">+</span></div>
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">Can we mix onsite + virtual participants? <span class="faq-icon-3d">+</span></div>
             <div id="faq3" class="collapse faq-answer-3d">
-              <p class="py-3">Nothing — just comfortable clothing. We bring any props needed.</p>
+              <p class="py-3">Yes, we offer a hybrid option where your onsite Bangalore floor session can be live-streamed for your remote global team members simultaneously.</p>
             </div>
           </div>
           <div class="faq-item">
-            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Can the session be customised for our team? <span class="faq-icon-3d">+</span></div>
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">Is there a group size limit? <span class="faq-icon-3d">+</span></div>
             <div id="faq4" class="collapse faq-answer-3d">
-              <p class="py-3">Yes. Share your team size, any specific health considerations, and your goals — we'll tailor the session accordingly.</p>
+              <p class="py-3">Onsite sessions accommodate up to 50 participants. Virtual sessions are optimized for up to 30 participants to ensure high interaction quality. Larger groups can be accommodated with a custom quote.</p>
             </div>
           </div>
           <div class="faq-item" style="border-bottom: none;">
-            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">Why is it "Corporate Yoga Week"? <span class="faq-icon-3d">+</span></div>
+            <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">Why book for International Yoga Day? <span class="faq-icon-3d">+</span></div>
             <div id="faq5" class="collapse faq-answer-3d">
-              <p class="py-3">Since International Yoga Day (June 21) falls on a Sunday this year, we've extended our onsite availability from June 16 to June 25. This allows your team to participate during regular work hours on a weekday that suits your schedule best.</p>
+              <p class="py-3">International Yoga Day (June 21) is the global peak for team wellness. We've extended our onsite availability from June 16 to June 25 so your team can participate during regular work hours on a weekday.</p>
             </div>
           </div>
         </div>
@@ -1374,10 +1735,17 @@
     <svg viewBox="0 0 100 100" fill="white"><path d="M50 10 L90 90 L10 90 Z" opacity="0.2"></path></svg>
   </div>
   <div class="container" style="position: relative; z-index: 1;">
-    <h2 class="display-3 mb-4 text-white">We host strictly 4 onsite office slots per day across Bangalore to ensure our premium senior instructors can manage the energy of each floor.</h2>
-    <p class="lead mb-5 text-white brand-sans">Bangalore companies are booking fast for Corporate Yoga Week (June 16–25). Slots for peak corporate hours (11 AM and 4 PM) are filling up fast — don't miss out.</p>
+    <h2 class="display-3 mb-4 text-white">Only 4 Slots Left for June 21 International Yoga Day</h2>
+    <p class="lead mb-5 text-white brand-sans">Book before June 7 to save ₹1,000 + get a free wellness report for your team. Don't miss peak corporate hours.</p>
     <div class="mbr-section-btn">
-      <a class="btn btn-brand-cta display-4 lift-3d" style="background-color: white !important; color: var(--brand-orange) !important;" href="#onsite">Check Availability Now</a>
+      <a class="btn btn-brand-cta display-4 lift-3d particle-btn" style="background-color: white !important; color: var(--brand-orange) !important;" href="#onsite?utm_source=corporate_yoga&utm_medium=3d_landing">Reserve Your Corporate Session Now</a>
+    </div>
+
+    <div class="trust-stack text-white">
+      <div class="trust-stack-item">✓ Certified Yoga Alliance Instructors</div>
+      <div class="trust-stack-item">✓ GST Invoice + Corporate Billing</div>
+      <div class="trust-stack-item">✓ 7-Day Money-Back Guarantee</div>
+      <div class="trust-stack-item">✓ No Lock-ins | Reschedule 24hr Notice</div>
     </div>
   </div>
 </section>
@@ -1449,6 +1817,38 @@
 <script src="/assets/theme/js/script.js"></script>
 
 <script>
+/* Hero Mode Toggle Logic */
+(function() {
+  const toggle = document.getElementById('hero-mode-toggle');
+  const scene = document.getElementById('hero-3d-scene');
+  const labelOnsite = document.getElementById('label-onsite');
+  const labelVirtual = document.getElementById('label-virtual');
+  const headline = document.getElementById('hero-headline');
+  const subheadline = document.getElementById('hero-subheadline');
+  const primaryCTA = document.getElementById('primary-cta');
+
+  if (!toggle || !scene) return;
+
+  toggle.addEventListener('click', () => {
+    const isVirtual = toggle.classList.toggle('virtual');
+    scene.classList.toggle('flipped', isVirtual);
+    labelOnsite.classList.toggle('active', !isVirtual);
+    labelVirtual.classList.toggle('active', isVirtual);
+
+    if (isVirtual) {
+      headline.textContent = "Global Teams, One Breath.";
+      subheadline.textContent = "Interactive virtual sessions across 4 timezones from just ₹3,500.";
+      primaryCTA.textContent = "Book Virtual Session →";
+      primaryCTA.href = "#pricing?utm_source=corporate_yoga&utm_medium=3d_landing";
+    } else {
+      headline.textContent = "Energize Your Team. Anywhere.";
+      subheadline.textContent = "Live corporate yoga sessions from just ₹3,500 — virtual or onsite.";
+      primaryCTA.textContent = "Book Your Session →";
+      primaryCTA.href = "#onsite?utm_source=corporate_yoga&utm_medium=3d_landing";
+    }
+  });
+})();
+
 /* 3D Carousel Logic */
 (function() {
   const carousel = document.getElementById('testimonial-carousel');
@@ -1589,6 +1989,66 @@ document.querySelectorAll('.particle-btn').forEach(btn => {
     });
   });
 })();
+
+/* Scroll Progress */
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("scroll-bar").style.width = scrolled + "%";
+});
+
+/* Custom Cursor */
+(function() {
+  const cursor = document.getElementById('cursor');
+  if (!cursor) return;
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  document.addEventListener('mousedown', () => cursor.style.transform = 'scale(1.5)');
+  document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
+})();
+
+/* 3D Pricing Flip Logic */
+document.querySelectorAll('.pricing-3d-wrap').forEach(card => {
+  card.addEventListener('click', () => {
+    card.querySelector('.pricing-card-inner').classList.toggle('flipped');
+  });
+});
+
+/* Confetti Burst */
+document.querySelectorAll('.particle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#E8690A', '#0B6E6E', '#ffffff']
+    });
+  });
+});
+
+/* Countdown Timer */
+function updateCountdown() {
+  const deadline = new Date("June 7, 2025 23:59:59").getTime();
+  const now = new Date().getTime();
+  const t = deadline - now;
+  const countdownEl = document.getElementById("countdown");
+  if (!countdownEl) return;
+
+  if (t >= 0) {
+    const days = Math.floor(t / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((t % (1000 * 60)) / 1000);
+    countdownEl.innerHTML = `Early Bird ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  } else {
+    countdownEl.innerHTML = "Early Bird Offer Expired";
+  }
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
 </script>
 
 <a href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes"
