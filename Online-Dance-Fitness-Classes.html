@@ -28,6 +28,20 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
+        :root {
+            --dark-bg: #0a0a0c;
+            --neon-purple: #a855f7;
+            --neon-pink: #ec4899;
+            --neon-cyan: #06b6d4;
+            --glass-white: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--dark-bg) !important;
+            color: #ffffff !important;
+        }
+
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -36,9 +50,9 @@
         .animate-float { animation: float 6s ease-in-out infinite; }
 
         @keyframes subtle-pulse {
-            0% { box-shadow: 0 0 10px rgba(11, 110, 110, 0.4); }
-            50% { box-shadow: 0 0 50px rgba(11, 110, 110, 0.6), 0 0 20px rgba(11, 110, 110, 0.4); }
-            100% { box-shadow: 0 0 10px rgba(11, 110, 110, 0.4); }
+            0% { box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(168, 85, 247, 0.6), 0 0 20px rgba(168, 85, 247, 0.4); }
+            100% { box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
         }
         .animate-pulse-glow { animation: subtle-pulse 2.5s infinite ease-in-out; }
 
@@ -47,7 +61,7 @@
             100% { transform: translateY(100%); }
         }
         .scanline {
-            background: linear-gradient(to bottom, transparent, rgba(11, 110, 110, 0.1), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(168, 85, 247, 0.1), transparent);
             animation: scanline 3s linear infinite;
         }
 
@@ -59,32 +73,28 @@
         .animate-live { animation: live-dot 1.5s infinite ease-in-out; }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
+            background: var(--glass-white);
             backdrop-filter: blur(30px);
-            border: 1px solid rgba(11, 110, 110, 0.15);
+            border: 1px solid var(--glass-border);
             transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
             transform-style: preserve-3d;
         }
 
-        .neon-glow-teal {
-            box-shadow: 0 0 40px rgba(11, 110, 110, 0.3), 0 0 15px rgba(11, 110, 110, 0.2);
+        .neon-glow-purple {
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.3), 0 0 15px rgba(168, 85, 247, 0.2);
         }
 
-        .neon-glow-orange {
-            box-shadow: 0 0 40px rgba(232, 105, 10, 0.3), 0 0 15px rgba(232, 105, 10, 0.2);
+        .neon-glow-pink {
+            box-shadow: 0 0 40px rgba(236, 72, 153, 0.3), 0 0 15px rgba(236, 72, 153, 0.2);
+        }
+
+        .neon-glow-cyan {
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.3), 0 0 15px rgba(6, 182, 212, 0.2);
         }
 
         .parallax-container {
             perspective: 1200px;
             overflow: hidden;
-        }
-
-        .parallax-bg-wrapper {
-            transition: transform 0.15s ease-out;
-            width: 115%;
-            height: 115%;
-            left: -7.5%;
-            top: -7.5%;
         }
 
         .reveal {
@@ -103,94 +113,181 @@
             transform-style: preserve-3d;
         }
 
-        .neon-text-teal {
-            text-shadow: 0 0 10px rgba(11, 110, 110, 0.3);
+        .neon-text-purple {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
         }
 
-        .neon-text-orange {
-            text-shadow: 0 0 10px rgba(232, 105, 10, 0.3);
+        .neon-text-pink {
+            text-shadow: 0 0 10px rgba(236, 72, 153, 0.6);
         }
 
         .digital-grid {
-            background-image: radial-gradient(circle at 2px 2px, rgba(11, 110, 110, 0.05) 1px, transparent 0);
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
             background-size: 40px 40px;
+        }
+
+        /* 3D Frame Effect */
+        .frame-3d-wrapper {
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .frame-3d {
+            position: absolute;
+            inset: 20px;
+            border: 4px solid;
+            border-image: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple)) 1;
+            transform: translateZ(-20px) rotateX(10deg) rotateY(-10deg);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .frame-image {
+            position: relative;
+            z-index: 1;
+            transform: translateZ(20px);
+            transition: transform 0.5s ease;
+        }
+
+        .frame-3d-wrapper:hover .frame-image {
+            transform: translateZ(40px) scale(1.05);
+        }
+
+        /* Avatar Cluster */
+        .avatar-cluster {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 120px;
+        }
+
+        .avatar-item {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--dark-bg);
+            overflow: hidden;
+            position: absolute;
+            background: #333;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar-item:nth-child(1) { transform: translateX(-60px) scale(0.8); z-index: 1; }
+        .avatar-item:nth-child(2) { transform: translateX(-30px) scale(0.9); z-index: 2; }
+        .avatar-item:nth-child(3) { transform: scale(1.1); z-index: 3; box-shadow: 0 0 20px var(--neon-purple); }
+        .avatar-item:nth-child(4) { transform: translateX(30px) scale(0.9); z-index: 2; }
+        .avatar-item:nth-child(5) { transform: translateX(60px) scale(0.8); z-index: 1; }
+
+        /* Mobile Mockup */
+        .mobile-mockup {
+            width: 280px;
+            height: 560px;
+            background: #1a1a1a;
+            border: 12px solid #333;
+            border-radius: 36px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+        }
+
+        .mobile-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #2b2b2b 0%, #1a1a1a 100%);
+            padding: 20px;
         }
 
         /* Conflict resolution with Mobirise Header */
         .navbar-fixed-top {
             position: fixed !important;
+            background: rgba(10, 10, 12, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-caption, .nav-link {
+            color: #ffffff !important;
         }
 
         .section-padding {
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .animate-float, .animate-pulse-glow, .animate-bounce, .reveal, .tilt-card, .parallax-bg-wrapper, .animate-live, .scanline {
-                animation: none !important;
-                transition: none !important;
-                transform: none !important;
-                opacity: 1 !important;
-            }
-        }
-
-        /* Form Styles from index.html */
+        /* Form Styles updated for Dark Theme */
         .form-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; }
-        .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #1A1A1A; text-align: left; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #ffffff; text-align: left; }
         .form-group input,
         .form-group select,
         .form-group textarea {
             padding: 0.75rem 1rem;
-            border: 1.5px solid #E8E0D5;
+            border: 1.5px solid rgba(255,255,255,0.1);
             border-radius: 8px;
             font-size: 0.95rem;
             font-family: inherit;
-            background: #FFFDF9;
-            color: #1A1A1A;
+            background: rgba(255,255,255,0.05);
+            color: #ffffff;
             min-height: 48px;
-            transition: border-color 0.2s;
+            transition: all 0.2s;
             width: 100%;
         }
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #0B6E6E;
+            border-color: var(--neon-purple);
+            background: rgba(255,255,255,0.1);
+        }
+
+        #free-trial-submit-btn {
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        #free-trial-submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .field-error {
+            color: #ff4444;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            display: none;
         }
         .field-invalid {
-            border-color: #E8690A !important;
-            background: rgba(232,105,10,0.04) !important;
+            border-color: #ff4444 !important;
         }
-        .field-error {
-            display: none;
-            color: #E8690A;
-            font-size: 0.75rem;
-            margin-top: 0.3rem;
-            text-align: left;
+        .field-invalid + .field-error {
+            display: block;
         }
-        .field-invalid ~ .field-error { display: block; }
+
         .form-success {
-            background: rgba(11,110,110,0.08);
-            border: 1px solid #0B6E6E;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            color: #0B6E6E;
-            font-weight: 600;
-            font-size: 1.05rem;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid #22c55e;
+            color: #4ade80;
+            padding: 1rem;
+            border-radius: 8px;
             margin-top: 1rem;
+            text-align: center;
         }
         .form-error {
-            background: rgba(232,105,10,0.06);
-            border: 1px solid #E8690A;
-            border-radius: 12px;
-            padding: 1.2rem;
-            text-align: center;
-            color: #E8690A;
-            font-size: 0.9rem;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid #ef4444;
+            color: #f87171;
+            padding: 1rem;
+            border-radius: 8px;
             margin-top: 1rem;
+            text-align: center;
         }
+
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -200,18 +297,35 @@
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
+            box-shadow: 2px 2px 3px #000;
+            z-index: 1000;
             display: flex;
             align-items: center;
             padding: 10px 20px;
             text-decoration: none !important;
+            width: auto;
+            height: auto;
+        }
+        .whatsapp-float img {
+            width: 28px !important;
+            height: 28px !important;
+            min-width: 28px;
+            flex-shrink: 0;
         }
         .whatsapp-label {
             font-size: 14px;
             margin-left: 10px;
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-float, .animate-pulse-glow, .animate-bounce, .reveal, .tilt-card, .parallax-bg-wrapper, .animate-live, .scanline {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
         }
     </style>
     <script id="tailwind-config">
@@ -304,11 +418,11 @@
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-x-hidden digital-grid">
+<body class="bg-[#0a0a0c] text-white selection:bg-neon-purple/30 selection:text-white font-body-md overflow-x-hidden digital-grid" style="background-color: #0a0a0c !important;">
 
 <!-- Top Navigation (Zuga Style) -->
 <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg" style="background: rgba(10, 10, 12, 0.95) !important;">
 		<div class="container">
 			<div class="navbar-brand">
 				<span class="navbar-logo">
@@ -357,225 +471,176 @@
 	</nav>
 </section>
 
-<!-- Hero Section -->
-<section class="relative h-[90vh] flex items-center justify-center overflow-hidden parallax-container" id="hero">
-<div class="absolute inset-0 z-0 parallax-bg-wrapper">
-<div class="w-full h-full relative" style="background-image: url('https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-gradient-to-b from-white/30 via-white/50 to-surface"></div>
-<div class="absolute inset-0 opacity-10 digital-grid"></div>
-</div>
-</div>
-<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
-<div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-1 rounded-full border border-primary/30 mb-8 animate-float">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Global Digital Stage</span>
-</div>
-<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 animate-float neon-text-teal">
-            MOVE. SWEAT. <span class="text-tertiary italic neon-text-orange">TRANSFORM.</span>
-        </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
-            Live Elite Dance Fitness — Broadcast to Your Home in Real Time. High-energy cardio, rhythm-driven movement and real-time coaching.
-        </p>
-<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-<a href="#registration" class="bg-primary text-white font-label-caps text-label-caps px-10 py-4 rounded-full text-lg hover:scale-110 transition-all animate-pulse-glow shadow-lg no-underline">
-                Start Free Online Trial
-            </a>
-<a href="pricing.html" class="border-2 border-primary text-primary font-label-caps text-label-caps px-10 py-4 rounded-full text-lg hover:bg-primary/5 transition-all no-underline">
-                View Pricing
-            </a>
-</div>
-<p class="font-body-md text-on-surface-variant mt-6">
-    Plans from ₹2,000/month — same great value as our yoga classes. View full pricing at
-    <a href='/pricing.html' class="text-primary hover:underline font-bold">zugafitness.in/pricing.html</a>
-</p>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer">
-<span class="material-symbols-outlined text-primary text-4xl">expand_more</span>
-</div>
-</section>
+<!-- Hero & Top Benefits Section -->
+<section class="relative pt-32 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden digital-grid bg-[#0a0a0c]" id="hero">
+    <div class="max-w-container-max mx-auto">
+        <!-- Numbered Cards (Top) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 reveal">
+            <!-- Card 01 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group tilt-card hover:neon-glow-purple border-neon-purple/20">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-neon-purple/20 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-neon-purple">psychology</span>
+                    </div>
+                    <span class="text-5xl font-black opacity-20 group-hover:opacity-40 transition-opacity text-neon-purple">01</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-neon-purple">Personalized Learning</h3>
+                <p class="text-gray-400 text-sm">Adaptive coaching that syncs with your fitness level and goals for maximum results.</p>
+                <a href="#registration" class="inline-block mt-6 text-xs font-bold uppercase tracking-widest text-white hover:text-neon-purple transition-colors">Read More →</a>
+            </div>
 
-<!-- Live Now Section -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop bg-white relative overflow-hidden" id="live-stream">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
-<div>
-<div class="flex items-center gap-3 mb-2">
-<div class="w-3 h-3 bg-red-600 rounded-full animate-live"></div>
-<span class="font-label-caps text-label-caps text-red-600 tracking-widest">LIVE CLASSES DAILY</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase">One Global Stage</h2>
-</div>
-<p class="text-on-surface-variant max-w-md md:text-right mt-4 md:mt-0">
-                Join our supportive global community daily. Live across India, UK, UAE, Canada and the Philippines.
+            <!-- Card 02 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group tilt-card hover:neon-glow-pink border-neon-pink/20" style="transition-delay: 100ms;">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-neon-pink/20 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-neon-pink">rocket_launch</span>
+                    </div>
+                    <span class="text-5xl font-black opacity-20 group-hover:opacity-40 transition-opacity text-neon-pink">02</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-neon-pink">Convenient Dancing</h3>
+                <p class="text-gray-400 text-sm">Live elite sessions broadcast directly to your home, wherever you are in the world.</p>
+                <a href="#registration" class="inline-block mt-6 text-xs font-bold uppercase tracking-widest text-white hover:text-neon-pink transition-colors">Read More →</a>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group tilt-card hover:neon-glow-cyan border-neon-cyan/20" style="transition-delay: 200ms;">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-neon-cyan/20 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-neon-cyan">theaters</span>
+                    </div>
+                    <span class="text-5xl font-black opacity-20 group-hover:opacity-40 transition-opacity text-neon-cyan">03</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-neon-cyan">Dance Theater</h3>
+                <p class="text-gray-400 text-sm">Experience the energy of a packed studio with immersive sound and real-time coaching.</p>
+                <a href="#registration" class="inline-block mt-6 text-xs font-bold uppercase tracking-widest text-white hover:text-neon-cyan transition-colors">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Main Hero Content -->
+        <div class="text-center max-w-4xl mx-auto reveal" style="transition-delay: 400ms;">
+            <span class="text-neon-pink font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Our Dance Classes</span>
+            <h1 class="font-display-lg text-5xl md:text-7xl font-black mb-8 leading-tight">
+                MOVE. SWEAT. <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan italic">TRANSFORM.</span>
+            </h1>
+            <p class="text-gray-400 text-lg mb-4 max-w-2xl mx-auto">
+                Live Elite Online Dance Fitness — Real-time coaching across India, UK, UAE, Canada and Philippines.
             </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-<!-- Streaming Preview Card -->
-<div class="lg:col-span-8 relative rounded-3xl overflow-hidden glass-panel tilt-card border-primary/20 group hover:neon-glow-teal">
-<div class="aspect-video w-full relative">
-<img alt="Live streaming preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"/>
-<div class="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
-<div class="absolute inset-0 scanline opacity-30 pointer-events-none"></div>
-<!-- Overlays -->
-<div class="absolute top-6 left-6 flex gap-2">
-<span class="bg-red-600 text-white font-label-caps text-[10px] px-3 py-1 rounded-md">LIVE</span>
-<span class="bg-white/80 backdrop-blur-md text-on-surface font-label-caps text-[10px] px-3 py-1 rounded-md border border-black/10">HD CRYSTAL</span>
-</div>
-<div class="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-<div class="max-w-xs">
-<h3 class="font-headline-md text-on-surface mb-1">Rhythmic HIIT Fusion</h3>
-<p class="text-on-surface-variant text-sm font-semibold">Instructors: Soumya & Parshuram</p>
-</div>
-<a href="#registration" class="bg-primary text-white font-label-caps text-label-caps px-8 py-3 rounded-full flex items-center gap-2 hover:scale-105 active:scale-95 transition-all animate-pulse-glow no-underline">
-                            JOIN LIVE <span class="material-symbols-outlined text-lg">play_arrow</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Community Preview -->
-<div class="lg:col-span-4 glass-panel p-8 rounded-3xl border-black/10 flex flex-col justify-between">
-<div>
-<h4 class="font-label-caps text-primary text-sm mb-6 uppercase tracking-wider">Zuga Global Hub</h4>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex-shrink-0 border border-primary/30 flex items-center justify-center">
-    <span class="text-primary font-bold">P</span>
-</div>
-<div class="text-xs text-left">
-<p class="text-primary font-bold mb-1">Priya Sharma <span class="text-on-surface-variant font-normal">• 2m ago</span></p>
-<p class="text-on-surface">This drop is insane! Loving the Bollywood tempo change.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-10 h-10 rounded-full bg-tertiary/20 flex-shrink-0 border border-tertiary/30 flex items-center justify-center">
-    <span class="text-tertiary font-bold">A</span>
-</div>
-<div class="text-xs text-left">
-<p class="text-tertiary font-bold mb-1">Anjali K. <span class="text-on-surface-variant font-normal">• 5m ago</span></p>
-<p class="text-on-surface">Just hit my 30-day streak! The energy is unmatched.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-8 pt-8 border-t border-black/10 text-left">
-<p class="text-[10px] text-on-surface-variant font-label-caps uppercase tracking-widest mb-4">Upcoming Session</p>
-<div class="bg-surface-container p-4 rounded-xl flex justify-between items-center border border-black/5">
-<span class="text-sm font-semibold">Bollywood Flow & HIIT</span>
-<span class="text-primary text-xs font-bold uppercase">In 14:05</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+            <p class="text-gray-500 text-sm mb-12">Plans from ₹2,000/month — same great value as our yoga classes.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#registration" class="bg-gradient-to-r from-neon-purple to-neon-pink text-white font-bold py-4 px-12 rounded-full shadow-lg hover:scale-105 transition-transform no-underline">
+                    Start Free Trial
+                </a>
+                <a href="pricing.html" class="border border-white/20 text-white font-bold py-4 px-12 rounded-full hover:bg-white/5 transition-colors no-underline">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Experience Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface relative overflow-hidden" id="online-experience">
-<div class="max-w-container-max mx-auto">
-<div class="mb-16 reveal text-center">
-<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-2">ENGINEERED FOR HOME</span>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase">Built for Performance</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="glass-panel tilt-card p-10 rounded-2xl hover:border-primary/50 group reveal hover:neon-glow-teal">
-<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-<span class="material-symbols-outlined text-primary text-3xl">smart_display</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Live & Interactive</h3>
-<p class="text-on-surface-variant">Every session is a live broadcast. Your instructor sees you, pushes you and adapts the energy to the room. Real-time coaching that pushes you further.</p>
-</div>
-<!-- Card 2 -->
-<div class="glass-panel tilt-card p-10 rounded-2xl hover:border-tertiary/50 group reveal hover:neon-glow-orange" style="transition-delay: 200ms;">
-<div class="w-16 h-16 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-<span class="material-symbols-outlined text-tertiary text-3xl">fitness_center</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The Zuga Fusion</h3>
-<p class="text-on-surface-variant">Our program fuses Bollywood, Latin, Hip-Hop and HIIT into a heart-pumping experience. Burn 500+ calories per session without ever feeling like a chore.</p>
-</div>
-<!-- Card 3 -->
-<div class="glass-panel tilt-card p-10 rounded-2xl hover:border-primary/50 group reveal hover:neon-glow-teal" style="transition-delay: 400ms;">
-<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-<span class="material-symbols-outlined text-primary text-3xl">public</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Global Community</h3>
-<p class="text-on-surface-variant">Join 500+ students from India, US, UK and beyond. Stay connected via our supportive WhatsApp groups and virtual challenges.</p>
-</div>
-</div>
-</div>
+<!-- Choose Your Dance Style Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-dark-bg relative overflow-hidden" id="dance-styles" style="background-color: #0a0a0c !important;">
+    <div class="max-w-container-max mx-auto">
+        <div class="mb-24 reveal text-center">
+            <span class="text-neon-purple font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Our Dance Styles</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-0">Choose Your <span class="text-neon-pink">Dance Style</span></h2>
+        </div>
+
+        <div class="space-y-40">
+            <!-- Style 1: Bollywood HIIT -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center reveal">
+                <div class="order-2 lg:order-1">
+                    <span class="text-neon-cyan font-bold uppercase tracking-widest text-xs mb-4 block">Cardio & Energy</span>
+                    <h3 class="text-3xl md:text-5xl font-black mb-6 neon-text-purple">Bollywood HIIT Fusion</h3>
+                    <p class="text-gray-400 text-lg mb-8">
+                        High-energy movements set to the latest Bollywood beats. We fuse traditional Indian dance with high-intensity interval training for a calorie-torching experience.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#registration" class="bg-neon-purple text-white font-bold py-3 px-8 rounded-full hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all no-underline">FOR VIEW DETAILS</a>
+                        <a href="#registration" class="border border-white/20 text-white font-bold py-3 px-8 rounded-full hover:bg-white/5 transition-all no-underline">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 frame-3d-wrapper">
+                    <div class="frame-3d"></div>
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bollywood HIIT" class="rounded-2xl frame-image w-full h-[400px] object-cover shadow-2xl">
+                </div>
+            </div>
+
+            <!-- Style 2: Latin Rhythm -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center reveal">
+                <div class="frame-3d-wrapper">
+                    <div class="frame-3d" style="border-image: linear-gradient(45deg, var(--neon-pink), var(--neon-purple)) 1; transform: translateZ(-20px) rotateX(10deg) rotateY(10deg);"></div>
+                    <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Latin Rhythm" class="rounded-2xl frame-image w-full h-[400px] object-cover shadow-2xl">
+                </div>
+                <div>
+                    <span class="text-neon-pink font-bold uppercase tracking-widest text-xs mb-4 block">Rhythm & Flow</span>
+                    <h3 class="text-3xl md:text-5xl font-black mb-6 neon-text-pink">Latin & Hip-Hop Rhythm</h3>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Master the flow with Latin rhythms and Hip-Hop vibes. Improve coordination, build confidence, and have fun while getting fit.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#registration" class="bg-neon-pink text-white font-bold py-3 px-8 rounded-full hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] transition-all no-underline">FOR VIEW DETAILS</a>
+                        <a href="#registration" class="border border-white/20 text-white font-bold py-3 px-8 rounded-full hover:bg-white/5 transition-all no-underline">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32 text-center">
+            <a href="pricing.html" class="text-gray-500 font-bold uppercase tracking-[0.4em] text-xs hover:text-white transition-colors no-underline">View All Classes</a>
+        </div>
+    </div>
 </section>
 
-<!-- Instructor Feature Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop bg-white relative">
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full opacity-5 pointer-events-none digital-grid rotate-12"></div>
-<div class="max-w-container-max mx-auto relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="reveal text-left">
-<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4 uppercase">Expert Guidance</span>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 uppercase leading-tight">Your Digital<br/><span class="text-tertiary neon-text-orange">Squad Leaders</span></h2>
-<div class="space-y-8">
-<div class="flex gap-6 group">
-<div class="w-12 h-12 flex-shrink-0 bg-primary/5 border border-primary/10 rounded-xl flex items-center justify-center group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary">person</span>
-</div>
-<div>
-<h4 class="font-headline-md text-lg text-on-surface mb-2">Instructors Soumya & Parshuram</h4>
-<p class="text-on-surface-variant text-sm">Specialists in high-energy rhythm flows and wellness coaching. They bring the energy of a packed studio directly to your home.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<div class="w-12 h-12 flex-shrink-0 bg-primary/5 border border-primary/10 rounded-xl flex items-center justify-center group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary">schedule</span>
-</div>
-<div>
-<h4 class="font-headline-md text-lg text-on-surface mb-2">Smart Scheduling</h4>
-<p class="text-on-surface-variant text-sm">20 live sessions per month specifically timed for IST, GMT, GST, EST and PHT slots.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<div class="w-12 h-12 flex-shrink-0 bg-primary/5 border border-primary/10 rounded-xl flex items-center justify-center group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-primary">group</span>
-</div>
-<div>
-<h4 class="font-headline-md text-lg text-on-surface mb-2">Real-Time Interaction</h4>
-<p class="text-on-surface-variant text-sm">Not a workout video. Real-time motivation and form corrections to keep you safe and consistent.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative reveal" style="transition-delay: 200ms;">
-<div class="glass-panel p-4 rounded-[2rem] border-primary/20 relative z-10 neon-glow-teal tilt-card overflow-hidden">
-<img alt="Zuga Dance Session" class="rounded-2xl w-full" src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"/>
-<div class="absolute inset-0 scanline opacity-10 pointer-events-none"></div>
-</div>
-<!-- Decorative Elements -->
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[60px] rounded-full animate-float"></div>
-<div class="absolute -bottom-10 -left-10 w-60 h-60 bg-tertiary/10 blur-[80px] rounded-full animate-float [animation-delay:2s]"></div>
-</div>
-</div>
-</div>
+<!-- Testimonials Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-dark-bg relative overflow-hidden" id="testimonials" style="background-color: #0a0a0c !important;">
+    <div class="max-w-container-max mx-auto text-center">
+        <div class="mb-16 reveal">
+            <span class="text-neon-pink font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Testimonials</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-8">What Our <span class="text-neon-cyan">Students Say?</span></h2>
+        </div>
+
+        <!-- Avatar Cluster -->
+        <div class="avatar-cluster mb-12 reveal">
+            <div class="avatar-item"><img src="assets/images/download-5.jpeg-160x200.jpg" alt="Student" class="w-full h-full object-cover"></div>
+            <div class="avatar-item"><img src="assets/images/images-3.jpeg-160x106.jpg" alt="Student" class="w-full h-full object-cover"></div>
+            <div class="avatar-item"><img src="assets/images/photo-1676385901160-a86dc9ccdfe1.jpeg" alt="Student" class="w-full h-full object-cover"></div>
+            <div class="avatar-item"><img src="assets/images/images.jpeg-160x106.jpg" alt="Student" class="w-full h-full object-cover"></div>
+            <div class="avatar-item"><img src="assets/images/download-4.jpeg-160x200.jpg" alt="Student" class="w-full h-full object-cover"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto relative reveal">
+            <p id="testimonial-text" class="text-gray-300 text-xl md:text-2xl italic leading-relaxed mb-8">
+                "Finding live dance fitness in my timezone was tough until Zuga. The energy is unmatched, and I feel so supported by instructors even from miles away!"
+            </p>
+            <h4 id="testimonial-name" class="text-neon-purple font-bold text-lg mb-1">Priya Sharma</h4>
+            <span id="testimonial-location" class="text-gray-500 text-sm uppercase tracking-widest">London, UK</span>
+
+            <!-- Navigation -->
+            <div class="flex justify-center gap-4 mt-12">
+                <button id="prev-testimonial" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-neon-purple transition-colors">
+                    <span class="material-symbols-outlined text-white">chevron_left</span>
+                </button>
+                <button id="next-testimonial" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-neon-purple transition-colors">
+                    <span class="material-symbols-outlined text-white">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Registration Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop relative" id="registration">
-<div class="max-w-4xl mx-auto">
-<div class="glass-panel p-12 md:p-20 rounded-3xl text-center relative overflow-hidden reveal shadow-xl">
-<div class="absolute inset-0 z-0 flex items-center justify-center opacity-10">
-<div class="w-[500px] h-[500px] rounded-full border border-primary animate-ping"></div>
-</div>
-<div class="relative z-10">
-<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6 uppercase">Book Your Free Class</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
-                    Try Zuga Dance Fitness risk-free. No commute. No gym. Just results. Join our global community today.
-                </p>
+<!-- Registration & App Mockup Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden" id="registration" style="background-color: #0a0a0c !important;">
+    <div class="max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">Sign Up For <span class="text-neon-purple">Modern</span> Dance Classes</h2>
+                <p class="text-gray-400 text-lg mb-12">Join our global community today. Try Zuga Dance Fitness risk-free. No commute, just results.</p>
 
-<!-- FORM START -->
-<form
-  id="zuga-dance-form"
-  action="https://formspree.io/f/mnjlyoqr"
-  method="POST"
-  novalidate
->
+                <div class="glass-panel p-8 rounded-3xl border-white/10">
+                    <!-- FORM START -->
+                    <form id="zuga-dance-form" action="https://formspree.io/f/mnjlyoqr" method="POST" novalidate>
   <!-- Spam protection -->
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
   <input type="hidden" name="_subject" value="💃 New Dance Fitness Booking — Zuga Fitness" />
@@ -638,24 +703,77 @@
   </div>
 </form>
 <!-- FORM END -->
-<p class="mt-4 text-xs text-on-surface-variant italic">No credit card required. Cancel anytime.</p>
-</div>
-</div>
-</div>
+                    <p class="mt-4 text-xs text-gray-500 italic">No credit card required. Cancel anytime.</p>
+                </div>
+            </div>
+            <!-- App Mockup -->
+            <div class="reveal lg:flex justify-center hidden" style="transition-delay: 200ms;">
+                <div class="mobile-mockup">
+                    <div class="mobile-screen flex flex-col justify-center items-center text-center p-6">
+                        <div class="w-16 h-16 bg-neon-purple rounded-2xl mb-8 flex items-center justify-center animate-float">
+                            <span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+                        </div>
+                        <h4 class="text-xl font-black mb-4">Ready to <span class="text-neon-pink">Dance?</span></h4>
+                        <div class="space-y-4 w-full">
+                            <div class="h-12 bg-white/5 rounded-lg border border-white/10"></div>
+                            <div class="h-12 bg-white/5 rounded-lg border border-white/10"></div>
+                            <div class="h-12 bg-neon-purple rounded-full flex items-center justify-center font-bold text-xs">JOIN SESSION</div>
+                        </div>
+                        <div class="mt-12 grid grid-cols-2 gap-4 w-full">
+                            <div class="aspect-square bg-white/5 rounded-xl border border-white/10"></div>
+                            <div class="aspect-square bg-white/5 rounded-xl border border-white/10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instructor Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-dark-bg relative overflow-hidden" id="instructors" style="background-color: #0a0a0c !important;">
+    <div class="max-w-container-max mx-auto text-center">
+        <div class="mb-24 reveal">
+            <span class="text-neon-cyan font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Meet Our Squad</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-0">Our Professional <span class="text-neon-purple">Instructors</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <!-- Instructor 1: Soumya -->
+            <div class="glass-panel p-6 rounded-[2rem] reveal group tilt-card hover:neon-glow-purple">
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-8">
+                    <img src="assets/images/whatsapp-image-2025-03-08-at-19.11.56-47f1bd4e.jpg-518x686.jpeg" alt="Soumya" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h4 class="text-2xl font-bold mb-1">Soumya</h4>
+                <p class="text-neon-purple font-bold text-sm uppercase tracking-widest mb-4">Nutrition & Energy Coach</p>
+                <p class="text-gray-400 text-sm">Expert in high-energy rhythm flows and holistic wellness coaching.</p>
+            </div>
+
+            <!-- Instructor 2: Parshuram -->
+            <div class="glass-panel p-6 rounded-[2rem] reveal group tilt-card hover:neon-glow-pink" style="transition-delay: 200ms;">
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-8">
+                    <img src="assets/images/whatsapp-image-2025-03-08-at-19.06.04-72ef3d06.jpg-518x603.jpg" alt="Parshuram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h4 class="text-2xl font-bold mb-1">Parshuram</h4>
+                <p class="text-neon-pink font-bold text-sm uppercase tracking-widest mb-4">Wellness Coach</p>
+                <p class="text-gray-400 text-sm">Specialist in rhythmic dance fitness and real-time form correction.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Footer (Zuga Style) -->
-<section data-bs-version="5.1" class="footer3 cid-uEEJbxW94M" once="footers" id="footer-3-uEEJbxW94M">
+<section data-bs-version="5.1" class="footer3 cid-uEEJbxW94M" once="footers" id="footer-3-uEEJbxW94M" style="background-color: #0a0a0c !important;">
     <div class="container">
         <div class="row">
             <div class="row-links">
                 <ul class="header-menu">
                 <li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="/index.html" class="text-white text-primary">Home</a>
+                    <a href="index.html" class="text-white text-primary">Home</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="/Online-Yoga-Classes.html" class="text-white text-primary">Group Classes</a>
+                    <a href="Online-Yoga-Classes.html" class="text-white text-primary">Group Classes</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="/Online-Personal-Training-classes.html" class="text-white text-primary">Personal Training</a>
+                    <a href="Online-Personal-Training-classes.html" class="text-white text-primary">Personal Training</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
                     <a href="/Online-Pranayama-Classes.html" class="text-white text-primary">Pranayama</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
@@ -740,7 +858,7 @@
         const mouseX = (e.clientX / width - 0.5) * -40;
         const mouseY = (e.clientY / height - 0.5) * -40;
 
-        parallaxBg.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.15)`;
+        if (parallaxBg) parallaxBg.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.15)`;
     });
 
     document.querySelectorAll('.tilt-card').forEach(card => {
@@ -763,6 +881,51 @@
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
         });
+    });
+
+    // Testimonial Carousel Logic
+    const testimonials = [
+        {
+            text: '"Finding live dance fitness in my timezone was tough until Zuga. The energy is unmatched, and I feel so supported by instructors even from miles away!"',
+            name: "Priya Sharma",
+            location: "London, UK"
+        },
+        {
+            text: '"The PCOD dance program is life-changing. Even from New York, I feel connected and supported by the instructors during every session."',
+            name: "Anjali K.",
+            location: "New York, USA"
+        },
+        {
+            text: '"Finally consistent after 3 failed gym attempts. The rhythmic HIIT fusion is addictive and the community keeps me coming back!"',
+            name: "Ravi M.",
+            location: "Dubai, UAE"
+        }
+    ];
+
+    let currentTestimonial = 0;
+    const textEl = document.getElementById('testimonial-text');
+    const nameEl = document.getElementById('testimonial-name');
+    const locEl = document.getElementById('testimonial-location');
+
+    function updateTestimonial(index) {
+        if (!textEl) return;
+        textEl.style.opacity = 0;
+        setTimeout(() => {
+            textEl.innerText = testimonials[index].text;
+            nameEl.innerText = testimonials[index].name;
+            locEl.innerText = testimonials[index].location;
+            textEl.style.opacity = 1;
+        }, 300);
+    }
+
+    document.getElementById('prev-testimonial')?.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        updateTestimonial(currentTestimonial);
+    });
+
+    document.getElementById('next-testimonial')?.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        updateTestimonial(currentTestimonial);
     });
 
     // Form Logic
@@ -791,8 +954,8 @@
             const successBox = form.querySelector('.form-success');
             const errorBox = form.querySelector('.form-error');
 
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline';
+            if (btnText) btnText.style.display = 'none';
+            if (btnLoading) btnLoading.style.display = 'inline';
             btn.disabled = true;
 
             try {
@@ -810,14 +973,14 @@
                     }, 2500);
                 } else {
                     if (errorBox) errorBox.style.display = 'block';
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
+                    if (btnText) btnText.style.display = 'inline';
+                    if (btnLoading) btnLoading.style.display = 'none';
                     btn.disabled = false;
                 }
             } catch(err) {
                 if (errorBox) errorBox.style.display = 'block';
-                btnText.style.display = 'inline';
-                btnLoading.style.display = 'none';
+                if (btnText) btnText.style.display = 'inline';
+                if (btnLoading) btnLoading.style.display = 'none';
                 btn.disabled = false;
             }
         });
