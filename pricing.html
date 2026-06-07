@@ -122,6 +122,86 @@
     #billing-switch:checked ~ .container .price-box strong {
       transform: scale(1.1);
     }
+
+    /* Selection Buttons Upgrade */
+    .pricing-toggle-btn {
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 4px 12px rgba(232, 105, 10, 0.1);
+    }
+
+    .pricing-toggle-btn i,
+    .pricing-toggle-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-toggle-yoga.active {
+      background: var(--brand-orange) !important;
+      color: #fff !important;
+      border-color: var(--brand-orange) !important;
+      box-shadow: 0 8px 20px rgba(232, 105, 10, 0.3);
+    }
+
+    .btn-toggle-yoga.inactive {
+      background: #fff !important;
+      color: var(--brand-orange) !important;
+      border: 2px solid var(--brand-orange) !important;
+    }
+
+    .btn-toggle-dance.active {
+      background: var(--neon-purple) !important;
+      color: #fff !important;
+      border-color: var(--neon-purple) !important;
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    }
+
+    .btn-toggle-dance.inactive {
+      background: #fff !important;
+      color: var(--neon-purple) !important;
+      border: 2px solid var(--neon-purple) !important;
+    }
+
+    .pricing-toggle-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 767px) {
+      #pricing-dance {
+        padding: 30px 15px !important;
+        border-radius: 1.5rem !important;
+        margin-top: 0 !important;
+      }
+      .price-box .display-2 {
+        font-size: 2.8rem !important;
+      }
+      .card.p-4 {
+        padding: 1.5rem !important;
+        height: auto !important; /* Fix excessive height on mobile */
+      }
+      .pricing-header {
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+      }
+      .pricing-header .mb-5 {
+        margin-bottom: 1.5rem !important;
+      }
+      .pricing-cards {
+        padding-top: 0 !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important; /* Disable reveal on mobile if it causes gaps */
+      }
+    }
   </style>
 
   <!-- Structured Data: Local Business, Service & FAQ -->
@@ -334,41 +414,20 @@
         <div class="text-center mb-5">
             <h1 class="mbr-section-title mbr-fonts-style display-1"><strong>Simple, Honest Pricing</strong></h1>
 
-<div style="display:flex;
-justify-content:center;
-gap:12px;
-margin: 2rem 0 2.5rem 0;">
-
+<div class="d-flex justify-content-center gap-3 mt-4 mb-5">
   <button
     id="btn-yoga"
     onclick="showPricing('yoga')"
-    style="padding:12px 36px;
-    border-radius:6px;
-    font-weight:700;
-    font-size:1rem;
-    cursor:pointer;
-    border:2px solid #E8690A;
-    background:#E8690A;
-    color:#ffffff;
-    transition:all 0.2s ease;">
-    🧘 Yoga Classes
+    class="pricing-toggle-btn btn-toggle-yoga active">
+    <i data-lucide="flower"></i> Yoga Classes
   </button>
 
   <button
     id="btn-dance"
     onclick="showPricing('dance')"
-    style="padding:12px 36px;
-    border-radius:6px;
-    font-weight:700;
-    font-size:1rem;
-    cursor:pointer;
-    border:2px solid #E8690A;
-    background:#ffffff;
-    color:#E8690A;
-    transition:all 0.2s ease;">
-    💃 Dance Fitness
+    class="pricing-toggle-btn btn-toggle-dance inactive">
+    <i data-lucide="music"></i> Dance Fitness
   </button>
-
 </div>
 
             <p class="mbr-text mbr-fonts-style display-7 mt-3">No hidden fees. No lock-ins. Just yoga that works around your life.</p>
@@ -479,18 +538,18 @@ margin: 2rem 0 2.5rem 0;">
         </div>
         </div>
 
-<div id="pricing-dance" style="display:none; background: #0D0D1A; padding: 40px; border-radius: 3rem; margin-top: 20px;">
+<div id="pricing-dance" style="display:none; background: #0D0D1A; padding: 40px; border-radius: 3rem; margin-top: 20px;" class="pricing-dance-container">
         <div class="row justify-content-center">
 
   <!-- Dance Fitness Starter -->
   <div class="col-12 col-md-4 mb-4 reveal">
                 <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                     <div class="card-header bg-transparent border-0 text-center">
-
-    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Starter</h3>
-    <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-starter-dance">₹2,000</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
-    </div>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Starter</h3>
+                        <div class="price-box my-3">
+                            <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-starter-dance">₹2,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
+                        </div>
     <div id="annual-starter-dance" style="display:none;" class="mbr-fonts-style display-7">
         <span style="color: var(--neon-cyan); font-weight: 600;"><i data-lucide="zap" style="width:16px; vertical-align:middle;"></i> ₹1,600/mo billed annually</span>
     </div>
@@ -505,23 +564,23 @@ margin: 2rem 0 2.5rem 0;">
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important;">
-    Get Started</a>
-    </div>
-  </div>
+                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important;">Get Started</a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Dance Fitness Growth -->
+            <!-- Dance Fitness Growth -->
   <div class="col-12 col-md-4 mb-4 reveal">
                 <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 2px solid var(--neon-pink); box-shadow: 0 0 40px rgba(236, 72, 153, 0.2); position: relative;">
                     <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--neon-pink); color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; display: flex; align-items: center; gap: 6px;">
                         <i data-lucide="flame" style="width:14px; fill: currentColor;"></i> Most Popular
                     </div>
                     <div class="card-header bg-transparent border-0 text-center">
-
-    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Growth</h3>
-    <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-growth-dance">₹3,500</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
-    </div>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Growth</h3>
+                        <div class="price-box my-3">
+                            <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-growth-dance">₹3,500</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
+                        </div>
     <div id="annual-growth-dance" style="display:none;" class="mbr-fonts-style display-7">
         <span style="color: var(--neon-pink); font-weight: 600;"><i data-lucide="zap" style="width:16px; vertical-align:middle;"></i> ₹2,800/mo billed annually</span>
     </div>
@@ -536,20 +595,20 @@ margin: 2rem 0 2.5rem 0;">
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important; box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);">
-    Get Started</a>
-    </div>
-  </div>
+                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important; box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);">Get Started</a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Dance Fitness Personal -->
+            <!-- Dance Fitness Personal -->
   <div class="col-12 col-md-4 mb-4 reveal">
                 <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                     <div class="card-header bg-transparent border-0 text-center">
-
-    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Personal Training</h3>
-    <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-personal-dance">₹8,000</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
-    </div>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Personal Training</h3>
+                        <div class="price-box my-3">
+                            <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-personal-dance">₹8,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
+                        </div>
     <div id="annual-personal-dance" style="display:none;" class="mbr-fonts-style display-7">
         <span style="color: var(--neon-cyan); font-weight: 600;"><i data-lucide="sparkles" style="width:16px; vertical-align:middle;"></i> Save 20% on Annual Billing</span>
     </div>
@@ -564,13 +623,12 @@ margin: 2rem 0 2.5rem 0;">
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.2) !important; color: #fff !important;">
-    Get Started</a>
+                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.2) !important; color: #fff !important;">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-</div>
-</div>
 
         <div class="text-center mt-5">
             <a href="/free-trial.html" class="mbr-fonts-style display-7 text-primary">Not sure which plan fits you? → Try a free class first</a>
@@ -886,24 +944,20 @@ function showPricing(type) {
     yogaSection.style.display = 'none';
     danceSection.style.display = 'none';
 
-    // Reset buttons
-    btnYoga.style.background = '#ffffff';
-    btnYoga.style.color = '#E8690A';
-    btnYoga.style.borderColor = '#E8690A';
-    btnDance.style.background = '#ffffff';
-    btnDance.style.color = '#E8690A';
-    btnDance.style.borderColor = '#E8690A';
+    // Reset buttons using classes
+    btnYoga.classList.remove('active', 'inactive');
+    btnDance.classList.remove('active', 'inactive');
 
     if (type === 'yoga') {
       yogaSection.style.display = 'block';
       setTimeout(() => { yogaSection.style.opacity = '1'; }, 50);
-      btnYoga.style.background = '#E8690A';
-      btnYoga.style.color = '#ffffff';
+      btnYoga.classList.add('active');
+      btnDance.classList.add('inactive');
     } else {
       danceSection.style.display = 'block';
       setTimeout(() => { danceSection.style.opacity = '1'; }, 50);
-      btnDance.style.background = '#E8690A';
-      btnDance.style.color = '#ffffff';
+      btnYoga.classList.add('inactive');
+      btnDance.classList.add('active');
     }
 
     // Re-trigger reveal observer for the new section
