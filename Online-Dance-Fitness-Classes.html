@@ -4,12 +4,15 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Join live online dance fitness classes with Zuga Fitness — Bollywood, Hip-Hop, Latin & HIIT Fusion. Real instructors. Real energy. Free trial available.">
-    <meta name="keywords" content="online dance fitness, live dance classes, cardio dance, Zuga Fitness, aerobic dance">
+<meta name="description" content="Join live online dance fitness classes with Zuga Fitness — Bollywood & Hip-Hop Cardio Fusion. Real instructors. Real energy. Free trial available.">
+    <meta name="keywords" content="online dance fitness, live dance classes, cardio dance, Zuga Fitness, aerobic dance, bollywood fitness, hip hop cardio">
     <meta name="author" content="Zuga Fitness">
 
-<title>Live Online Dance Fitness Classes — Bollywood, Hip-Hop & HIIT | Zuga Fitness</title>
+<title>Live Online Dance Fitness Classes — Bollywood & Hip-Hop Fusion | Zuga Fitness</title>
     <link rel="canonical" href="https://zugafitness.in/Online-Dance-Fitness-Classes.html" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,6 +127,9 @@
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             transform-style: preserve-3d;
         }
+        .tilt-card * {
+            transform-style: preserve-3d;
+        }
 
         .neon-text-purple {
             text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
@@ -164,51 +170,6 @@
 
         .frame-3d-wrapper:hover .frame-image {
             transform: translateZ(40px) scale(1.05);
-        }
-
-        /* Avatar Cluster */
-        .avatar-cluster {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 120px;
-        }
-
-        .avatar-item {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 3px solid var(--dark-bg);
-            overflow: hidden;
-            position: absolute;
-            background: #333;
-            transition: transform 0.3s ease;
-        }
-
-        .avatar-item:nth-child(1) { transform: translateX(-60px) scale(0.8); z-index: 1; }
-        .avatar-item:nth-child(2) { transform: translateX(-30px) scale(0.9); z-index: 2; }
-        .avatar-item:nth-child(3) { transform: scale(1.1); z-index: 3; box-shadow: 0 0 20px var(--neon-purple); }
-        .avatar-item:nth-child(4) { transform: translateX(30px) scale(0.9); z-index: 2; }
-        .avatar-item:nth-child(5) { transform: translateX(60px) scale(0.8); z-index: 1; }
-
-        /* Mobile Mockup */
-        .mobile-mockup {
-            width: 280px;
-            height: 560px;
-            background: #1a1a1a;
-            border: 12px solid #333;
-            border-radius: 36px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
-        }
-
-        .mobile-screen {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, #2b2b2b 0%, #1a1a1a 100%);
-            padding: 20px;
         }
 
         /* Conflict resolution with Mobirise Header */
@@ -538,89 +499,136 @@
     margin:0 auto;
     width:100%;">
 
-    <div style="
-      display:inline-block;
-      background:rgba(236,72,153,0.15);
-      border:1px solid rgba(236,72,153,0.4);
-      color:#F9A8D4;
-      padding:6px 18px;
-      border-radius:999px;
-      font-size:0.8rem;
-      font-weight:700;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      margin-bottom:20px;">
-      ⚡ Live Online Classes Daily
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div style="
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          background:rgba(236,72,153,0.15);
+          border:1px solid rgba(236,72,153,0.4);
+          color:#F9A8D4;
+          padding:6px 18px;
+          border-radius:999px;
+          font-size:0.8rem;
+          font-weight:700;
+          letter-spacing:0.12em;
+          text-transform:uppercase;
+          margin-bottom:24px;">
+          <i data-lucide="zap" style="width:16px; height:16px;"></i> Live Online Classes Daily
+        </div>
+
+        <h1 style="
+          font-family:'Playfair Display',serif;
+          font-size:clamp(2.8rem,7vw,5rem);
+          font-weight:900;
+          line-height:1.1;
+          color:#FFFFFF;
+          margin:0 0 24px 0;
+          text-shadow: 0 0 40px rgba(168, 85, 247, 0.4);">
+          Move. Sweat.<br/>
+          <span style="
+            background: linear-gradient(90deg,#EC4899,#7C3AED,#06B6D4);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));">
+            Transform.
+          </span>
+        </h1>
+
+        <p style="
+          font-size:clamp(1.1rem,2vw,1.4rem);
+          color:rgba(255,255,255,0.8);
+          max-width:560px;
+          line-height:1.7;
+          margin:0 0 40px 0;">
+          Premium Live Bollywood & Hip-Hop Cardio
+          fusion — broadcast to your
+          home every day. Real instructors.
+          Real energy. Real results.
+        </p>
+
+        <div style="
+          display:flex;
+          flex-wrap:wrap;
+          gap:16px;
+          align-items:center;">
+
+          <a href="#zuga-dance-fitness-form" style="
+            background: linear-gradient(135deg,#EC4899,#7C3AED);
+            color:#fff;
+            padding:18px 40px;
+            border-radius:50px;
+            font-weight:700;
+            font-size:1.1rem;
+            text-decoration:none;
+            box-shadow: 0 10px 30px rgba(236,72,153,0.4);
+            transition:all 0.3s ease;">
+            Try Free Class →
+          </a>
+
+          <a href="#pricing-dance-fitness" style="
+            background:rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border:1px solid rgba(255,255,255,0.2);
+            color:#fff;
+            padding:16px 36px;
+            border-radius:50px;
+            font-weight:600;
+            font-size:1.1rem;
+            text-decoration:none;
+            transition:all 0.3s ease;">
+            View Pricing
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal hidden lg:block" style="perspective: 1500px;">
+        <div class="animate-float" style="transform-style: preserve-3d; transition: transform 0.1s ease-out;" id="hero-3d-element">
+          <div style="
+            position:relative;
+            width:100%;
+            padding-bottom:100%;
+            background: linear-gradient(45deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+            border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: inset 0 0 50px rgba(168, 85, 247, 0.2);
+            animation: morph 8s ease-in-out infinite;
+            overflow:hidden;
+            border: 1px solid rgba(255,255,255,0.1);">
+
+            <img src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                 alt="Dance Fitness Online"
+                 style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; mix-blend-mode: overlay; opacity:0.6;">
+
+            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+              <i data-lucide="play" style="width:120px; height:120px; color:white; filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.8)); opacity:0.8;"></i>
+            </div>
+          </div>
+
+          <!-- Floating UI Elements -->
+          <div class="glass-panel" style="position:absolute; top:10%; right:0; padding:16px 24px; border-radius:16px; transform:translateZ(50px);">
+            <div style="font-size:1.5rem; font-weight:800; color:#EC4899;">500+</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.6); text-transform:uppercase;">Students</div>
+          </div>
+
+          <div class="glass-panel" style="position:absolute; bottom:20%; left:-20px; padding:16px 24px; border-radius:16px; transform:translateZ(80px);">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div style="width:10px; height:10px; background:#22c55e; border-radius:50%;" class="animate-live"></div>
+              <div style="font-size:0.9rem; font-weight:700;">Live Now</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <h1 style="
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2.4rem,6vw,4.2rem);
-      font-weight:900;
-      line-height:1.1;
-      color:#FFFFFF;
-      margin:0 0 20px 0;
-      max-width:700px;
-      text-shadow: 0 0 40px
-        rgba(124,58,237,0.5);">
-      Move. Sweat.<br/>
-      <span style="
-        background: linear-gradient(
-          90deg,#EC4899,#7C3AED);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
-        background-clip:text;">
-        Transform.
-      </span>
-    </h1>
-
-    <p style="
-      font-size:clamp(1rem,2.5vw,1.25rem);
-      color:rgba(255,255,255,0.75);
-      max-width:560px;
-      line-height:1.7;
-      margin:0 0 36px 0;">
-      Live Bollywood, Hip-Hop, Latin & HIIT
-      fusion classes — broadcast to your
-      home every day. Real instructors.
-      Real energy. Real results.
-    </p>
-
-    <div style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      align-items:center;">
-
-      <a href="/free-trial.html" style="
-        background: linear-gradient(
-          135deg,#EC4899,#7C3AED);
-        color:#fff;
-        padding:15px 36px;
-        border-radius:8px;
-        font-weight:700;
-        font-size:1.05rem;
-        text-decoration:none;
-        box-shadow: 0 0 30px
-          rgba(236,72,153,0.5);
-        transition:transform 0.2s;">
-        Try Free Class →
-      </a>
-
-      <a href="/pricing.html" style="
-        background:transparent;
-        border:2px solid
-          rgba(255,255,255,0.25);
-        color:#fff;
-        padding:13px 32px;
-        border-radius:8px;
-        font-weight:600;
-        font-size:1.05rem;
-        text-decoration:none;">
-        View Pricing
-      </a>
-
-    </div>
+    <style>
+      @keyframes morph {
+        0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+        100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+      }
+    </style>
 
     <!-- Stats bar -->
     <div style="
@@ -648,11 +656,11 @@
         <div style="
           font-size:1.8rem;
           font-weight:800;
-          color:#7C3AED;">4</div>
+          color:#7C3AED;">2</div>
         <div style="
           font-size:0.85rem;
           color:rgba(255,255,255,0.55);">
-          Dance Styles
+          Signature Styles
         </div>
       </div>
 
@@ -722,16 +730,14 @@
       gap:24px;">
 
       <!-- Card 1 -->
-      <div style="
-        background:rgba(255,255,255,0.04);
+      <div class="tilt-card glass-panel" style="
         border:1px solid
           rgba(124,58,237,0.3);
         border-radius:16px;
-        padding:32px 28px;
-        transition:transform 0.3s;">
+        padding:32px 28px;">
         <div style="
-          font-size:2.2rem;
-          margin-bottom:16px;">🎵</div>
+          color:var(--neon-purple);
+          margin-bottom:16px;"><i data-lucide="radio" style="width:40px; height:40px; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));"></i></div>
         <h3 style="
           color:#FFFFFF;
           font-size:1.2rem;
@@ -753,45 +759,42 @@
       </div>
 
       <!-- Card 2 -->
-      <div style="
-        background:rgba(255,255,255,0.04);
+      <div class="tilt-card glass-panel" style="
         border:1px solid
           rgba(236,72,153,0.3);
         border-radius:16px;
         padding:32px 28px;">
         <div style="
-          font-size:2.2rem;
-          margin-bottom:16px;">💃</div>
+          color:var(--neon-pink);
+          margin-bottom:16px;"><i data-lucide="layers" style="width:40px; height:40px; filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.6));"></i></div>
         <h3 style="
           color:#FFFFFF;
           font-size:1.2rem;
           font-weight:700;
           margin:0 0 12px 0;">
-          4 Styles, One Platform
+          Signature Hybrid Styles
         </h3>
         <p style="
           color:rgba(255,255,255,0.6);
           line-height:1.7;
           margin:0;
           font-size:0.95rem;">
-          Bollywood, Hip-Hop, Latin
-          and HIIT Fusion — all in
-          one subscription. Explore
-          different styles or master
-          your favourite.
+          Bollywood and Hip-Hop Cardio
+          fusion — expertly designed
+          for maximum burn and
+          infectious energy.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div style="
-        background:rgba(255,255,255,0.04);
+      <div class="tilt-card glass-panel" style="
         border:1px solid
           rgba(6,182,212,0.3);
         border-radius:16px;
         padding:32px 28px;">
         <div style="
-          font-size:2.2rem;
-          margin-bottom:16px;">🌍</div>
+          color:var(--neon-cyan);
+          margin-bottom:16px;"><i data-lucide="globe" style="width:40px; height:40px; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));"></i></div>
         <h3 style="
           color:#FFFFFF;
           font-size:1.2rem;
@@ -879,9 +882,12 @@
           border-radius:999px;
           font-size:0.78rem;
           font-weight:700;
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
           letter-spacing:0.1em;
           text-transform:uppercase;">
-          🎬 Most Popular
+          <i data-lucide="film" style="width:14px; height:14px;"></i> Most Popular
         </span>
         <h3 style="
           font-family:'Playfair Display',serif;
@@ -902,7 +908,7 @@
           Burn up to 500 calories per session
           while dancing to your favourite songs.
         </p>
-        <a href="/free-trial.html" style="
+        <a href="#zuga-dance-fitness-form" style="
           display:inline-block;
           background: linear-gradient(
             135deg,#EC4899,#7C3AED);
@@ -939,9 +945,12 @@
           border-radius:999px;
           font-size:0.78rem;
           font-weight:700;
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
           letter-spacing:0.1em;
           text-transform:uppercase;">
-          🎤 Street Energy
+          <i data-lucide="mic" style="width:14px; height:14px;"></i> Street Energy
         </span>
         <h3 style="
           font-family:'Playfair Display',serif;
@@ -962,7 +971,7 @@
           Hip-Hop routines designed
           for online classes.
         </p>
-        <a href="/free-trial.html" style="
+        <a href="#zuga-dance-fitness-form" style="
           display:inline-block;
           background: linear-gradient(
             135deg,#06B6D4,#7C3AED);
@@ -991,99 +1000,6 @@
 
     </div>
 
-    <!-- Styles 3 & 4 — Latin + HIIT -->
-    <div style="
-      display:grid;
-      grid-template-columns:
-        repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;">
-
-      <!-- Latin -->
-      <div style="
-        background:rgba(255,255,255,0.04);
-        border:1px solid
-          rgba(232,105,10,0.3);
-        border-radius:16px;
-        overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="Latin Dance Online
-          Class — Zuga Fitness"
-          style="
-            width:100%;
-            height:200px;
-            object-fit:cover;">
-        <div style="padding:24px;">
-          <h3 style="
-            color:#FFFFFF;
-            font-size:1.2rem;
-            font-weight:700;
-            margin:0 0 10px 0;">
-            💃 Latin Groove
-          </h3>
-          <p style="
-            color:rgba(255,255,255,0.6);
-            font-size:0.9rem;
-            line-height:1.7;
-            margin:0 0 16px 0;">
-            Salsa, Reggaeton and
-            Latin aerobics —
-            infectious rhythm,
-            total body workout.
-          </p>
-          <a href="/free-trial.html" style="
-            color:#E8690A;
-            font-weight:700;
-            text-decoration:none;
-            font-size:0.9rem;">
-            Try Free →
-          </a>
-        </div>
-      </div>
-
-      <!-- HIIT Fusion -->
-      <div style="
-        background:rgba(255,255,255,0.04);
-        border:1px solid
-          rgba(124,58,237,0.3);
-          border-radius:16px;
-        overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="HIIT Dance Fusion
-          Online Class — Zuga Fitness"
-          style="
-            width:100%;
-            height:200px;
-            object-fit:cover;">
-        <div style="padding:24px;">
-          <h3 style="
-            color:#FFFFFF;
-            font-size:1.2rem;
-            font-weight:700;
-            margin:0 0 10px 0;">
-            ⚡ Bollywood HIIT Fusion
-          </h3>
-          <p style="
-            color:rgba(255,255,255,0.6);
-            font-size:0.9rem;
-            line-height:1.7;
-            margin:0 0 16px 0;">
-            Bollywood choreo meets
-            HIIT intervals. Maximum
-            calorie burn, maximum
-            fun. 45 mins of non-stop
-            energy.
-          </p>
-          <a href="/free-trial.html" style="
-            color:#7C3AED;
-            font-weight:700;
-            text-decoration:none;
-            font-size:0.9rem;">
-            Try Free →
-          </a>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
@@ -1117,92 +1033,66 @@
     </h2>
 
     <div style="
-      display:grid;
-      grid-template-columns:
-        repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
+      display:flex;
+      justify-content:center;
       text-align:left;">
 
-      <!-- Soumya -->
-      <div style="
+      <!-- Anusha -->
+      <div class="tilt-card glass-panel reveal" style="
         background: linear-gradient(
           135deg,
           rgba(236,72,153,0.1),
           rgba(124,58,237,0.1));
         border:1px solid
-          rgba(236,72,153,0.2);
-        border-radius:16px;
-        padding:32px;">
-        <div style="
-          font-size:3rem;
-          margin-bottom:16px;">🎵</div>
-        <h3 style="
-          color:#FFFFFF;
-          font-size:1.2rem;
-          margin:0 0 8px 0;">
-          Soumya
-        </h3>
-        <p style="
-          color:#EC4899;
-          font-size:0.85rem;
-          font-weight:700;
-          margin:0 0 14px 0;">
-          Bollywood & Latin Specialist
-        </p>
-        <p style="
-          color:rgba(255,255,255,0.6);
-          font-size:0.9rem;
-          line-height:1.7;
-          margin:0;">
-          Certified dance fitness
-          instructor with expertise
-          in high-energy Bollywood
-          choreography and Latin
-          aerobics. Known for making
-          every student feel like
-          a performer.
-        </p>
-      </div>
+          rgba(236,72,153,0.3);
+        border-radius:24px;
+        padding:48px;
+        max-width:800px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:32px;
+        align-items:center;">
 
-      <!-- Parshuram -->
-      <div style="
-        background: linear-gradient(
-          135deg,
-          rgba(6,182,212,0.1),
-          rgba(124,58,237,0.1));
-        border:1px solid
-          rgba(6,182,212,0.2);
-        border-radius:16px;
-        padding:32px;">
-        <div style="
-          font-size:3rem;
-          margin-bottom:16px;">⚡</div>
-        <h3 style="
-          color:#FFFFFF;
-          font-size:1.2rem;
-          margin:0 0 8px 0;">
-          Parshuram
-        </h3>
-        <p style="
-          color:#06B6D4;
-          font-size:0.85rem;
-          font-weight:700;
-          margin:0 0 14px 0;">
-          Hip-Hop & HIIT Fusion Expert
-        </p>
-        <p style="
-          color:rgba(255,255,255,0.6);
-          font-size:0.9rem;
-          line-height:1.7;
-          margin:0;">
-          Combines street-style
-          Hip-Hop with cutting-edge
-          HIIT science. His sessions
-          are intense, fun and
-          deliver real results —
-          students report visible
-          changes in 4 weeks.
-        </p>
+        <div style="flex: 1; min-width: 280px;">
+          <img src="assets/images/Anusha-7b37cda6.jpeg" alt="Anusha - Certified Dance Fitness Trainer" style="width:100%; border-radius:16px; border:3px solid var(--neon-purple); box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);">
+        </div>
+
+        <div style="flex: 1.5; min-width: 280px;">
+          <h3 style="
+            color:#FFFFFF;
+            font-size:2rem;
+            font-family:'Playfair Display', serif;
+            margin:0 0 8px 0;">
+            Anusha
+          </h3>
+          <p style="
+            color:#EC4899;
+            font-size:1rem;
+            font-weight:700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin:0 0 20px 0;">
+            Certified Yoga & Dance Fitness Trainer
+          </p>
+          <p style="
+            color:rgba(255,255,255,0.8);
+            font-size:1rem;
+            line-height:1.8;
+            margin:0;">
+            With over 1,500+ hours taught, Anusha is an expert in fusing mindful movement with high-octane dance energy. Her sessions are famous for their seamless flow, calorie-torching choreography, and an encouraging spirit that makes every student feel unstoppable.
+          </p>
+          <div style="margin-top:24px; display:flex; gap:16px;">
+            <div style="text-align:center;">
+              <div style="color:var(--neon-purple); font-weight:800; font-size:1.5rem;">1.5k+</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.75rem; text-transform:uppercase;">Hours Taught</div>
+            </div>
+            <div style="border-left:1px solid rgba(255,255,255,0.1);"></div>
+            <div style="text-align:center; padding-left:16px;">
+              <div style="color:var(--neon-pink); font-weight:800; font-size:1.5rem;">5.0</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.75rem; text-transform:uppercase;">Rating</div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1231,106 +1121,337 @@
       What Students Say
     </p>
 
-    <div style="
-      background:rgba(255,255,255,0.04);
-      border:1px solid
-        rgba(124,58,237,0.3);
-      border-radius:20px;
-      padding:40px 36px;">
+    <div id="testimonial-card" class="tilt-card glass-panel" style="
+      border-radius:24px;
+      border:1px solid rgba(168, 85, 247, 0.3);
+      padding:60px 48px;
+      position: relative;">
 
-      <p style="
-        font-size:clamp(1.05rem,2.5vw,1.3rem);
-        color:rgba(255,255,255,0.85);
-        line-height:1.8;
+      <div style="position:absolute; top:20px; left:20px; opacity:0.1;">
+        <i data-lucide="quote" style="width:60px; height:60px;"></i>
+      </div>
+
+      <p id="testimonial-text" style="
+        font-size:clamp(1.2rem, 3vw, 1.6rem);
+        color:#FFFFFF;
+        line-height:1.6;
+        font-family: 'Playfair Display', serif;
         font-style:italic;
-        margin:0 0 28px 0;">
-        "I tried gym classes, YouTube
-        workouts, everything. Nothing
-        stuck. Zuga's Bollywood sessions
-        are the first thing I've done
-        consistently for 3 months.
-        It doesn't feel like exercise
-        — it feels like a celebration."
+        margin:0 0 40px 0;
+        transition: opacity 0.5s ease;">
+        "I tried gym classes, YouTube workouts, everything. Nothing stuck. Zuga's Bollywood sessions are the first thing I've done consistently for 3 months. It doesn't feel like exercise — it feels like a celebration."
       </p>
 
       <div style="
         display:flex;
         align-items:center;
         justify-content:center;
-        gap:14px;">
-        <div style="
-          width:48px; height:48px;
+        gap:16px;">
+        <div id="testimonial-avatar" style="
+          width:60px; height:60px;
           border-radius:50%;
+          border: 2px solid var(--neon-purple);
           background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80');
           background-size:cover;">
         </div>
         <div style="text-align:left;">
-          <div style="color:#FFFFFF; font-weight:700; font-size:0.95rem;">Ravi M.</div>
-          <div style="color:rgba(255,255,255,0.5); font-size:0.8rem;">Dubai — Bollywood Fusion Student</div>
+          <div id="testimonial-name" style="color:#FFFFFF; font-weight:700; font-size:1.1rem;">Ravi M.</div>
+          <div id="testimonial-location" style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Dubai — Bollywood Fusion Student</div>
         </div>
+      </div>
+
+      <!-- Carousel dots -->
+      <div style="display:flex; gap:8px; justify-content:center; margin-top:32px;">
+        <div class="testimonial-dot" style="width:8px; height:8px; border-radius:50%; background:var(--neon-purple); cursor:pointer;"></div>
+        <div class="testimonial-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.2); cursor:pointer;"></div>
+        <div class="testimonial-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.2); cursor:pointer;"></div>
       </div>
     </div>
   </div>
 </section>
 
-<section style="
-  background:#0D0D1A;
-  padding:80px 24px;
-  text-align:center;">
+<!-- ===== PRICING SECTION ===== -->
+<section id="pricing-dance-fitness" style="
+  background: #0D0D1A;
+  padding: 100px 24px;">
 
-  <div style="max-width:800px; margin:0 auto;">
-
-    <h2 style="
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2rem,5vw,3rem);
-      color:#FFFFFF;
-      margin-bottom:24px;">
-      Ready to Dance?
-    </h2>
-
-    <div style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      justify-content:center;">
-
-      <a href="/free-trial.html" style="
-        background: linear-gradient(
-          135deg,#EC4899,#7C3AED);
-        color:#fff;
-        padding:16px 40px;
-        border-radius:8px;
-        font-weight:700;
-        font-size:1.1rem;
-        text-decoration:none;
-        box-shadow: 0 0 40px
-          rgba(236,72,153,0.4);">
-        Book Free Class →
-      </a>
-
-      <a href="/pricing.html" style="
-        background:transparent;
-        border:2px solid
-          rgba(255,255,255,0.2);
-        color:#fff;
-        padding:14px 36px;
-        border-radius:8px;
-        font-weight:600;
-        font-size:1.05rem;
-        text-decoration:none;">
-        See Pricing
-      </a>
-
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <p style="
+        color: #06B6D4;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 12px;">
+        Pricing Plans
+      </p>
+      <h2 style="
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.2rem, 5vw, 3rem);
+        color: #FFFFFF;
+        margin: 0;">
+        Investment in Yourself
+      </h2>
     </div>
 
-    <p style="
-      margin-top:20px;
-      color:rgba(255,255,255,0.4);
-      font-size:0.85rem;">
-      No credit card required.
-      Cancel anytime.
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="tilt-card glass-panel" style="
+        padding: 48px 32px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;">
+        <div style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Starter</div>
+        <div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 24px;">
+          <span style="font-size: 2.5rem; font-weight: 900; color: #FFFFFF;">₹2,000</span>
+          <span style="color: rgba(255, 255, 255, 0.5);">/mo</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0 0 40px 0; flex-grow: 1;">
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            20 Live sessions / month
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            1 Timezone slot access
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            Real-time corrections
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            Community WhatsApp group
+          </li>
+        </ul>
+        <a href="#zuga-dance-fitness-form" style="
+          text-align: center;
+          padding: 16px;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #FFFFFF;
+          font-weight: 700;
+          text-decoration: none;
+          transition: background 0.3s;">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Growth Plan (Featured) -->
+      <div class="tilt-card glass-panel" style="
+        padding: 48px 32px;
+        border-radius: 24px;
+        border: 2px solid #EC4899;
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(124, 58, 237, 0.1));
+        box-shadow: 0 0 40px rgba(236, 72, 153, 0.2);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: scale(1.05);">
+        <div style="
+          position: absolute;
+          top: -16px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #EC4899;
+          color: white;
+          padding: 4px 16px;
+          border-radius: 99px;
+          font-size: 0.75rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 1px;">
+          Most Popular
+        </div>
+        <div style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Growth</div>
+        <div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 24px;">
+          <span style="font-size: 2.5rem; font-weight: 900; color: #FFFFFF;">₹3,500</span>
+          <span style="color: rgba(255, 255, 255, 0.5);">/mo</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0 0 40px 0; flex-grow: 1;">
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: #FFFFFF;">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #EC4899; flex-shrink: 0;"></i>
+            <strong>Unlimited</strong> live sessions
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: #FFFFFF;">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #EC4899; flex-shrink: 0;"></i>
+            Access to <strong>all timezones</strong>
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: #FFFFFF;">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #EC4899; flex-shrink: 0;"></i>
+            4 Coaching sessions / month
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; color: #FFFFFF;">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #EC4899; flex-shrink: 0;"></i>
+            Priority WhatsApp support
+          </li>
+        </ul>
+        <a href="#zuga-dance-fitness-form" style="
+          text-align: center;
+          padding: 16px;
+          border-radius: 12px;
+          background: #EC4899;
+          color: #FFFFFF;
+          font-weight: 700;
+          text-decoration: none;
+          box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Personal Training -->
+      <div class="tilt-card glass-panel" style="
+        padding: 48px 32px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;">
+        <div style="font-size: 1.2rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Personal Training</div>
+        <div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 24px;">
+          <span style="font-size: 2.5rem; font-weight: 900; color: #FFFFFF;">₹12,000</span>
+          <span style="color: rgba(255, 255, 255, 0.5);">/mo</span>
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0 0 40px 0; flex-grow: 1;">
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            20 Live 1-on-1 sessions
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            Customized fitness program
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            Flexible global scheduling
+          </li>
+          <li style="display: flex; align-items: start; gap: 12px; color: rgba(255, 255, 255, 0.7);">
+            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #22c55e; flex-shrink: 0;"></i>
+            Direct access to Anusha
+          </li>
+        </ul>
+        <a href="#zuga-dance-fitness-form" style="
+          text-align: center;
+          padding: 16px;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #FFFFFF;
+          font-weight: 700;
+          text-decoration: none;">
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM SECTION ===== -->
+<section style="
+  background: linear-gradient(180deg, #0D0D1A 0%, #1A0533 100%);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;">
+
+  <!-- Decorative background elements -->
+  <div style="position:absolute; top:10%; left:-5%; width:300px; height:300px; background:radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%); pointer-events:none;"></div>
+  <div style="position:absolute; bottom:10%; right:-5%; width:300px; height:300px; background:radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%); pointer-events:none;"></div>
+
+  <div class="reveal" style="max-width: 700px; margin: 0 auto; position: relative; z-index: 2;">
+    <h2 style="
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);">
+      Join the Dance Revolution
+    </h2>
+    <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 48px;">
+      Experience the energy of Zuga live. Book your free trial class today!
     </p>
 
+    <div class="glass-panel" style="
+      padding: 48px;
+      border-radius: 24px;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+      text-align: left;">
+
+      <form
+        id="zuga-dance-fitness-form"
+        action="https://formspree.io/f/mnjlyoqr"
+        method="POST"
+        novalidate
+      >
+        <!-- Spam protection -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_subject" value="💃 New Dance Fitness Booking — Zuga Fitness" />
+        <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <span class="field-error">Name is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <span class="field-error">Valid email is required</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+          <div class="form-group">
+            <label for="phone">WhatsApp Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 or international" required />
+            <span class="field-error">WhatsApp number is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="timezone">Preferred Timezone *</label>
+            <select id="timezone" name="timezone" required>
+              <option value="" disabled selected>Select your timezone</option>
+              <option value="IST">IST (India)</option>
+              <option value="GMT">GMT (UK/Europe)</option>
+              <option value="EST">EST (US/Canada)</option>
+              <option value="GST">GST (UAE/Middle East)</option>
+              <option value="PHT">PHT (Philippines/Asia)</option>
+            </select>
+            <span class="field-error">Please select a timezone</span>
+          </div>
+        </div>
+
+        <div class="form-group mt-4">
+          <label for="class_preference">Dance Style Preference *</label>
+          <select id="class_preference" name="class_preference" required>
+            <option value="" disabled selected>Select a style</option>
+            <option value="Bollywood Fusion">Bollywood Fusion (High Energy)</option>
+            <option value="Hip-Hop Cardio">Hip-Hop Cardio (Street Energy)</option>
+            <option value="I want to try both!">I want to try both!</option>
+          </select>
+          <span class="field-error">Please select a preference</span>
+        </div>
+
+        <button type="submit" id="free-trial-submit-btn" style="width: 100%; margin-top: 24px;">
+          <span class="btn-text">Book My Free Class →</span>
+          <span class="btn-loading" style="display:none">Sending... ⏳</span>
+        </button>
+
+        <div class="form-success" style="display:none">
+          ✅ <strong>Request received!</strong> We'll WhatsApp or email you within 24 hours to confirm your slot.
+        </div>
+        <div class="form-error" style="display:none">
+          ❌ <strong>Something went wrong.</strong> Please email us directly at <a href="mailto:zugafitness24@gmail.com" style="color:var(--neon-pink);">zugafitness24@gmail.com</a>
+        </div>
+      </form>
+    </div>
+
+    <p style="margin-top: 32px; color: rgba(255,255,255,0.4); font-size: 0.9rem;">
+      No credit card required. Free trial available for all new students.
+    </p>
   </div>
 </section>
 
@@ -1418,19 +1539,24 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
     // Improved Parallax and 3D Tilt
-    const hero = document.getElementById('hero');
-    const parallaxBg = hero.querySelector('.parallax-bg-wrapper');
-
-    hero.addEventListener('mousemove', (e) => {
+    const heroSection = document.querySelector('section');
+    const hero3D = document.getElementById('hero-3d-element');
+    if (heroSection && hero3D) {
+      heroSection.addEventListener('mousemove', (e) => {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-        const { width, height } = hero.getBoundingClientRect();
-        const mouseX = (e.clientX / width - 0.5) * -40;
-        const mouseY = (e.clientY / height - 0.5) * -40;
-
-        if (parallaxBg) parallaxBg.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.15)`;
-    });
+        const { width, height } = heroSection.getBoundingClientRect();
+        const x = (e.clientX / width - 0.5) * 20;
+        const y = (e.clientY / height - 0.5) * -20;
+        hero3D.style.transform = `perspective(1500px) rotateY(${x}deg) rotateX(${y}deg)`;
+      });
+      heroSection.addEventListener('mouseleave', () => {
+        hero3D.style.transform = `perspective(1500px) rotateY(0deg) rotateX(0deg)`;
+      });
+    }
 
     document.querySelectorAll('.tilt-card').forEach(card => {
         card.addEventListener('mousemove', e => {
@@ -1443,33 +1569,49 @@
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = (y - centerY) / 8;
-            const rotateY = (centerX - x) / 8;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
 
-            card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+            // Apply subtle tilt to children for extra 3D depth
+            const innerElements = card.querySelectorAll('h3, p, i, img, .btn, span, li, div');
+            innerElements.forEach(el => {
+              if (el.tagName !== 'DIV' || el.classList.contains('glass-panel')) {
+                el.style.transform = `translateZ(30px)`;
+                el.style.transition = `transform 0.1s ease-out`;
+              }
+            });
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            const innerElements = card.querySelectorAll('h3, p, i, img, .btn, span, li, div');
+            innerElements.forEach(el => {
+              el.style.transform = `translateZ(0px)`;
+            });
         });
     });
 
     // Testimonial Carousel Logic
     const testimonials = [
         {
+            text: '"I tried gym classes, YouTube workouts, everything. Nothing stuck. Zuga\'s Bollywood sessions are the first thing I\'ve done consistently for 3 months. It doesn\'t feel like exercise — it feels like a celebration."',
+            name: "Ravi M.",
+            location: "Dubai — Bollywood Fusion Student",
+            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+        },
+        {
             text: '"Finding live dance fitness in my timezone was tough until Zuga. The energy is unmatched, and I feel so supported by instructors even from miles away!"',
             name: "Priya Sharma",
-            location: "London, UK"
+            location: "London, UK",
+            avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         },
         {
             text: '"The PCOD dance program is life-changing. Even from New York, I feel connected and supported by the instructors during every session."',
             name: "Anjali K.",
-            location: "New York, USA"
-        },
-        {
-            text: '"Finally consistent after 3 failed gym attempts. The rhythmic HIIT fusion is addictive and the community keeps me coming back!"',
-            name: "Ravi M.",
-            location: "Dubai, UAE"
+            location: "New York, USA",
+            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         }
     ];
 
@@ -1477,31 +1619,57 @@
     const textEl = document.getElementById('testimonial-text');
     const nameEl = document.getElementById('testimonial-name');
     const locEl = document.getElementById('testimonial-location');
+    const avatarEl = document.getElementById('testimonial-avatar');
+    const dots = document.querySelectorAll('.testimonial-dot');
 
     function updateTestimonial(index) {
         if (!textEl) return;
         textEl.style.opacity = 0;
+        if (avatarEl) avatarEl.style.opacity = 0;
+
         setTimeout(() => {
             textEl.innerText = testimonials[index].text;
             nameEl.innerText = testimonials[index].name;
             locEl.innerText = testimonials[index].location;
+            if (avatarEl) avatarEl.style.backgroundImage = `url('${testimonials[index].avatar}')`;
+
+            dots.forEach((dot, i) => {
+              dot.style.background = i === index ? 'var(--neon-purple)' : 'rgba(255,255,255,0.2)';
+            });
+
             textEl.style.opacity = 1;
-        }, 300);
+            if (avatarEl) avatarEl.style.opacity = 1;
+        }, 500);
     }
 
-    document.getElementById('prev-testimonial')?.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-        updateTestimonial(currentTestimonial);
-    });
-
-    document.getElementById('next-testimonial')?.addEventListener('click', () => {
+    // Auto-slide
+    let testimonialInterval = setInterval(() => {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         updateTestimonial(currentTestimonial);
+    }, 5000);
+
+    // Pause on hover
+    const testimonialContainer = document.getElementById('testimonial-card');
+    if (testimonialContainer) {
+      testimonialContainer.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
+      testimonialContainer.addEventListener('mouseleave', () => {
+        testimonialInterval = setInterval(() => {
+          currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+          updateTestimonial(currentTestimonial);
+        }, 5000);
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentTestimonial = index;
+        updateTestimonial(currentTestimonial);
+      });
     });
 
     // Form Logic
     (function() {
-        const form = document.getElementById('zuga-dance-form');
+        const form = document.getElementById('zuga-dance-fitness-form');
         if (!form) return;
 
         form.addEventListener('submit', async function(e) {
