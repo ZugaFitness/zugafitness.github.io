@@ -37,9 +37,92 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=veL3gy"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=veL3gy" type="text/css">
 
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    :root {
+      --deep-teal: #0B6E6E;
+      --brand-orange: #E8690A;
+      --neon-purple: #a855f7;
+      --neon-pink: #ec4899;
+      --neon-cyan: #06b6d4;
+      --glass-white: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
 
+    .glass-panel {
+      background: var(--glass-white);
+      backdrop-filter: blur(30px);
+      border: 1px solid var(--glass-border);
+      transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tilt-card {
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      transform-style: preserve-3d;
+    }
+    .tilt-card * {
+      transform-style: preserve-3d;
+    }
+
+    /* Custom Transitions for Toggles */
+    #btn-yoga, #btn-dance {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .slider {
+      transition: .4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .slider:before {
+      transition: .4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    /* FAQ Refinement */
+    .accordion .card {
+      border-radius: 12px !important;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border: 1px solid #eee !important;
+      transition: all 0.3s ease;
+    }
+    .accordion .card:hover {
+      border-color: var(--deep-teal) !important;
+      box-shadow: 0 4px 12px rgba(11, 110, 110, 0.05);
+    }
+    .btn-link {
+      transition: background 0.3s ease;
+    }
+    .btn-link:hover {
+      background: rgba(11, 110, 110, 0.02);
+    }
+
+    /* Price Box Animation */
+    .price-box strong {
+      display: inline-block;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    #billing-switch:checked ~ .container .price-box strong {
+      transform: scale(1.1);
+    }
+  </style>
 
   <!-- Structured Data: Local Business, Service & FAQ -->
   <script type="application/ld+json">
@@ -307,194 +390,182 @@ margin: 2rem 0 2.5rem 0;">
         <div id="pricing-yoga">
         <div class="row justify-content-center">
             <!-- Starter Yoga Plan -->
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: #ffffff;">
                     <div class="card-header bg-transparent border-0 text-center">
-                        <h3 class="mbr-fonts-style display-5">Starter Yoga</h3>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--deep-teal);">Starter Yoga</h3>
                         <div class="price-box my-3">
-                            <span class="mbr-fonts-style display-2"><strong id="price-starter-yoga">₹2,000</strong></span>
-                            <span class="mbr-fonts-style display-7">/month</span>
+                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong id="price-starter-yoga">₹2,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">/month</span>
                         </div>
                         <div id="annual-starter-yoga" style="display:none;" class="mbr-fonts-style display-7">
-                            <del>₹2,000</del> ₹1,600/mo billed annually
+                            <span style="color: #20ac6b; font-weight: 600;"><i data-lucide="sparkles" style="width:16px; vertical-align:middle;"></i> ₹1,600/mo billed annually</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-                            <li class="mb-2">✅ 20 live yoga classes per month</li>
-                            <li class="mb-2">✅ Access to 1 timezone slot</li>
-                            <li class="mb-2">✅ Hatha, Vinyasa or Meditation</li>
-                            <li class="mb-2">✅ Community WhatsApp group</li>
+                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #444;">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="check-circle-2" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> 20 live yoga classes per month</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="calendar" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Weekly 5 classes schedule</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="clock" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Access to 1 timezone slot</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="heart" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Hatha, Vinyasa or Meditation</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="users" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Community WhatsApp group</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100">Get Started</a>
+                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: var(--brand-orange) !important; border-color: var(--brand-orange) !important;">Get Started</a>
                     </div>
                 </div>
             </div>
 
             <!-- Growth Plan -->
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: 2px solid #b1740f; box-shadow: 0 15px 40px rgba(177, 116, 15, 0.1); position: relative;">
-                    <span class="badge bg-primary" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem;">⭐ All-Access</span>
+            <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid var(--brand-orange); box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1); position: relative; background: #ffffff;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--brand-orange); color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; display: flex; align-items: center; gap: 6px;">
+                        <i data-lucide="star" style="width:14px; fill: currentColor;"></i> Most Popular
+                    </div>
                     <div class="card-header bg-transparent border-0 text-center">
-                        <h3 class="mbr-fonts-style display-5">Growth Bundle</h3>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brand-orange);">Growth Bundle</h3>
                         <div class="price-box my-3">
-                            <span class="mbr-fonts-style display-2"><strong id="price-growth-yoga">₹3,500</strong></span>
-                            <span class="mbr-fonts-style display-7">/month</span>
+                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong id="price-growth-yoga">₹3,500</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">/month</span>
                         </div>
                         <div id="annual-growth-yoga" style="display:none;" class="mbr-fonts-style display-7">
-                            <del>₹3,500</del> ₹2,800/mo billed annually
+                            <span style="color: #20ac6b; font-weight: 600;"><i data-lucide="sparkles" style="width:16px; vertical-align:middle;"></i> ₹2,800/mo billed annually</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-                            <li class="mb-2">✅ Unlimited Yoga + Dance Fitness</li>
-                            <li class="mb-2">✅ All International timezones</li>
-                            <li class="mb-2">✅ 2 complimentary 1-on-1 private coaching sessions</li>
-                            <li class="mb-2">✅ Priority class booking</li>
-                            <li class="mb-2">✅ Priority WhatsApp support</li>
+                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #444;">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="zap" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> <strong>Unlimited</strong> Yoga + Dance Fitness</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="globe" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> All International timezones</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="user-check" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> 2 complimentary private sessions</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="bookmark" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> Priority class booking</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="message-circle" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> Priority WhatsApp support</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100">Get Started</a>
+                        <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: var(--brand-orange) !important; border-color: var(--brand-orange) !important; box-shadow: 0 8px 20px rgba(232, 105, 10, 0.2);">Get Started</a>
                     </div>
                 </div>
             </div>
 
             <!-- Personal Training -->
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: 2px solid #0B6E6E; box-shadow: 0 10px 30px rgba(11, 110, 110, 0.1);">
+            <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid var(--deep-teal); box-shadow: 0 10px 30px rgba(11, 110, 110, 0.1); background: #ffffff;">
                     <div class="card-header bg-transparent border-0 text-center">
-                        <h3 class="mbr-fonts-style display-5">1-on-1 Private</h3>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--deep-teal);">1-on-1 Private</h3>
                         <div class="price-box my-3">
-                            <span class="mbr-fonts-style display-7">Starting at</span><br>
-                            <span class="mbr-fonts-style display-2"><strong id="price-personal-yoga">₹8,000</strong></span>
-                            <span class="mbr-fonts-style display-7">/month</span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">Starting at</span><br>
+                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong id="price-personal-yoga">₹8,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">/month</span>
                         </div>
                         <div id="annual-personal-yoga" style="display:none;" class="mbr-fonts-style display-7">
-                            <del>₹8,000</del> ₹6,400/mo billed annually
+                            <span style="color: #20ac6b; font-weight: 600;"><i data-lucide="sparkles" style="width:16px; vertical-align:middle;"></i> Save 20% on Annual Billing</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-                            <li class="mb-2"><strong>Premium Tier A (₹8,000):</strong> 12 private classes/mo (3 per week)</li>
-                            <li class="mb-2"><strong>Elite Tier B (₹10,000):</strong> 20 private classes/mo (5 per week)</li>
-                            <li class="mb-2">✅ Fully personalised program</li>
-                            <li class="mb-2">✅ Flexible scheduling across all timezones</li>
-                            <li class="mb-2">✅ Direct WhatsApp access to instructor</li>
+                        <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #444;">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="award" style="color: var(--deep-teal); width:20px; flex-shrink:0;"></i> <strong>Premium Tier A (₹8,000):</strong> 3 sessions/wk</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="award" style="color: var(--deep-teal); width:20px; flex-shrink:0;"></i> <strong>Elite Tier B (₹10,000):</strong> 5 sessions/wk</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="target" style="color: var(--deep-teal); width:20px; flex-shrink:0;"></i> Fully personalised program</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="calendar-days" style="color: var(--deep-teal); width:20px; flex-shrink:0;"></i> Flexible scheduling globally</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="message-square" style="color: var(--deep-teal); width:20px; flex-shrink:0;"></i> Direct instructor access</li>
                         </ul>
                     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="/Online-Personal-Training-classes.html" class="btn btn-primary display-7 w-100" style="background-color: #0B6E6E !important; border-color: #0B6E6E !important;">Explore Personal Training</a>
+                        <a href="/Online-Personal-Training-classes.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background-color: var(--deep-teal) !important; border-color: var(--deep-teal) !important;">Explore Personal Training</a>
                     </div>
                 </div>
             </div>
         </div>
         </div>
 
-<div id="pricing-dance"
-style="display:none;">
+<div id="pricing-dance" style="display:none; background: #0D0D1A; padding: 40px; border-radius: 3rem; margin-top: 20px;">
         <div class="row justify-content-center">
 
   <!-- Dance Fitness Starter -->
-  <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+  <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                     <div class="card-header bg-transparent border-0 text-center">
 
-    <h3>Starter</h3>
+    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Starter</h3>
     <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2"><strong id="price-starter-dance">₹2,000</strong></span><span class="mbr-fonts-style display-7">/month</span>
+      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-starter-dance">₹2,000</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
     </div>
-    <div id="annual-starter-dance" style="display:none;" class="mbr-fonts-style display-7"><del>₹2,000</del>
-    ₹1,600/mo billed annually</div>
+    <div id="annual-starter-dance" style="display:none;" class="mbr-fonts-style display-7">
+        <span style="color: var(--neon-cyan); font-weight: 600;"><i data-lucide="zap" style="width:16px; vertical-align:middle;"></i> ₹1,600/mo billed annually</span>
+    </div>
     </div>
                     <div class="card-body">
-    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-      <li class="mb-2">✅ 20 live dance fitness
-        sessions per month</li>
-      <li class="mb-2">✅ Bollywood, Latin &
-        Hip-Hop fusion</li>
-      <li class="mb-2">✅ 1 timezone slot</li>
-      <li class="mb-2">✅ Real-time instructor
-        corrections</li>
-      <li class="mb-2">✅ Community WhatsApp group</li>
-      <li class="mb-2">✅ Email support</li>
+    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: rgba(255,255,255,0.8);">
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="check-circle-2" style="color: var(--neon-cyan); width:20px; flex-shrink:0;"></i> 12 live dance sessions per month</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="calendar" style="color: var(--neon-cyan); width:20px; flex-shrink:0;"></i> Weekly 3 classes schedule</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="music" style="color: var(--neon-cyan); width:20px; flex-shrink:0;"></i> Bollywood, Latin & Hip-Hop</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="video" style="color: var(--neon-cyan); width:20px; flex-shrink:0;"></i> Real-time instructor corrections</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="users" style="color: var(--neon-cyan); width:20px; flex-shrink:0;"></i> Community WhatsApp group</li>
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100">
+    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important;">
     Get Started</a>
-    <p class="mbr-fonts-style display-7 mt-3">No credit card required.</p>
     </div>
   </div>
 
   <!-- Dance Fitness Growth -->
-  <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: 2px solid #b1740f; box-shadow: 0 15px 40px rgba(177, 116, 15, 0.1); position: relative;">
-                    <span class="badge bg-primary" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem;">⭐ Most Popular</span>
+  <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 2px solid var(--neon-pink); box-shadow: 0 0 40px rgba(236, 72, 153, 0.2); position: relative;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--neon-pink); color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; display: flex; align-items: center; gap: 6px;">
+                        <i data-lucide="flame" style="width:14px; fill: currentColor;"></i> Most Popular
+                    </div>
                     <div class="card-header bg-transparent border-0 text-center">
 
-    <h3>Growth</h3>
+    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Growth</h3>
     <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2"><strong id="price-growth-dance">₹3,500</strong></span><span class="mbr-fonts-style display-7">/month</span>
+      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-growth-dance">₹3,500</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
     </div>
-    <div id="annual-growth-dance" style="display:none;" class="mbr-fonts-style display-7"><del>₹3,500</del>
-    ₹2,800/mo billed annually</div>
+    <div id="annual-growth-dance" style="display:none;" class="mbr-fonts-style display-7">
+        <span style="color: var(--neon-pink); font-weight: 600;"><i data-lucide="zap" style="width:16px; vertical-align:middle;"></i> ₹2,800/mo billed annually</span>
+    </div>
     </div>
                     <div class="card-body">
-    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-      <li class="mb-2">✅ Unlimited live dance
-        fitness sessions</li>
-      <li class="mb-2">✅ All 3 timezone slots
-        (EST, GMT, GST)</li>
-      <li class="mb-2">✅ Bollywood, Latin,
-        Hip-Hop & HIIT</li>
-      <li class="mb-2">✅ 4 complimentary personal
-        sessions per month</li>
-      <li class="mb-2">✅ Priority class booking</li>
-      <li class="mb-2">✅ Community WhatsApp +
-        priority support</li>
+    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: rgba(255,255,255,0.8);">
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="zap" style="color: var(--neon-pink); width:20px; flex-shrink:0;"></i> <strong>Unlimited</strong> Dance + Yoga classes</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="globe" style="color: var(--neon-pink); width:20px; flex-shrink:0;"></i> All 3 timezone slots (EST, GMT, GST)</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="user-check" style="color: var(--neon-pink); width:20px; flex-shrink:0;"></i> 2 complimentary private sessions</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="star" style="color: var(--neon-pink); width:20px; flex-shrink:0;"></i> Priority class booking</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="message-circle" style="color: var(--neon-pink); width:20px; flex-shrink:0;"></i> Priority WhatsApp support</li>
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100">
+    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink)) !important; border: none !important; box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);">
     Get Started</a>
-    <p class="mbr-fonts-style display-7 mt-3">No credit card required.</p>
     </div>
   </div>
 
   <!-- Dance Fitness Personal -->
-  <div class="col-12 col-md-3 mb-4">
-                <div class="card p-4" style="height: 100%; border-radius: 2rem; border: 2px solid #0B6E6E; box-shadow: 0 10px 30px rgba(11, 110, 110, 0.1);">
+  <div class="col-12 col-md-4 mb-4 reveal">
+                <div class="card p-4 tilt-card glass-panel" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                     <div class="card-header bg-transparent border-0 text-center">
 
-    <h3>Personal Training</h3>
+    <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Personal Training</h3>
     <div class="price-box my-3">
-      <span class="mbr-fonts-style display-2"><strong id="price-personal-dance">₹12,000</strong></span><span class="mbr-fonts-style display-7">/month</span>
+      <span class="mbr-fonts-style display-2" style="color: #fff;"><strong id="price-personal-dance">₹8,000</strong></span><span class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.6);">/month</span>
     </div>
-    <div id="annual-personal-dance" style="display:none;" class="mbr-fonts-style display-7"><del>₹12,000</del>
-    ₹9,600/mo billed annually</div>
+    <div id="annual-personal-dance" style="display:none;" class="mbr-fonts-style display-7">
+        <span style="color: var(--neon-cyan); font-weight: 600;"><i data-lucide="sparkles" style="width:16px; vertical-align:middle;"></i> Save 20% on Annual Billing</span>
+    </div>
     </div>
                     <div class="card-body">
-    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0;">
-      <li class="mb-2">✅ 20 live 1-on-1 dance
-        sessions per month</li>
-      <li class="mb-2">✅ Fully personalised
-        dance fitness program</li>
-      <li class="mb-2">✅ Flexible scheduling
-        across all timezones</li>
-      <li class="mb-2">✅ Direct WhatsApp access
-        to Soumya or Parshuram</li>
-      <li class="mb-2">✅ Monthly progress review</li>
-      <li class="mb-2">✅ Priority rescheduling —
-        never lose a session</li>
+    <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: rgba(255,255,255,0.8);">
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="award" style="color: var(--neon-purple); width:20px; flex-shrink:0;"></i> <strong>Premium Tier A (₹8,000):</strong> 3 sessions/wk</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="award" style="color: var(--neon-purple); width:20px; flex-shrink:0;"></i> <strong>Elite Tier B (₹10,000):</strong> 5 sessions/wk</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="target" style="color: var(--neon-purple); width:20px; flex-shrink:0;"></i> Fully personalised dance program</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="calendar-days" style="color: var(--neon-purple); width:20px; flex-shrink:0;"></i> Flexible scheduling globally</li>
+      <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="message-square" style="color: var(--neon-purple); width:20px; flex-shrink:0;"></i> Direct access to instructor</li>
     </ul>
     </div>
                     <div class="card-footer bg-transparent border-0 text-center">
-    <a href="/free-trial.html" class="btn btn-primary display-7 w-100">
+    <a href="/free-trial.html" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.2) !important; color: #fff !important;">
     Get Started</a>
-    <p class="mbr-fonts-style display-7 mt-3">No credit card required.</p>
     </div>
   </div>
 
@@ -622,13 +693,66 @@ style="display:none;">
 </section>
 
 <script>
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // Scroll Reveal Logic
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 3D Tilt Logic
+    document.querySelectorAll('.tilt-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+            // Inner elements lift
+            const inners = card.querySelectorAll('h3, .price-box, li, .btn');
+            inners.forEach(el => {
+                el.style.transform = 'translateZ(30px)';
+                el.style.transition = 'transform 0.1s ease-out';
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            const inners = card.querySelectorAll('h3, .price-box, li, .btn');
+            inners.forEach(el => {
+                el.style.transform = 'translateZ(0px)';
+            });
+        });
+    });
+
     document.getElementById('billing-switch').addEventListener('change', function() {
         const isAnnual = this.checked;
         const prices = {
             starter: isAnnual ? "₹1,600" : "₹2,000",
             growth: isAnnual ? "₹2,800" : "₹3,500",
             personalYoga: isAnnual ? "₹6,400" : "₹8,000",
-            personalDance: isAnnual ? "₹9,600" : "₹12,000"
+            personalDance: isAnnual ? "₹6,400" : "₹8,000" // Updated to match Yoga PT Starter
         };
 
         // Update Yoga Prices & Annual Labels
@@ -749,51 +873,47 @@ style="display:none;">
 
 <script>
 function showPricing(type) {
-  // Hide both sections
-  document.getElementById(
-    'pricing-yoga').style.display
-    = 'none';
-  document.getElementById(
-    'pricing-dance').style.display
-    = 'none';
+  const yogaSection = document.getElementById('pricing-yoga');
+  const danceSection = document.getElementById('pricing-dance');
+  const btnYoga = document.getElementById('btn-yoga');
+  const btnDance = document.getElementById('btn-dance');
 
-  // Reset both buttons
-  document.getElementById(
-    'btn-yoga').style.background
-    = '#ffffff';
-  document.getElementById(
-    'btn-yoga').style.color
-    = '#E8690A';
-  document.getElementById(
-    'btn-dance').style.background
-    = '#ffffff';
-  document.getElementById(
-    'btn-dance').style.color
-    = '#E8690A';
+  // Hide both with fade
+  yogaSection.style.opacity = '0';
+  danceSection.style.opacity = '0';
 
-  // Show selected + highlight button
-  if (type === 'yoga') {
-    document.getElementById(
-      'pricing-yoga').style.display
-      = 'block';
-    document.getElementById(
-      'btn-yoga').style.background
-      = '#E8690A';
-    document.getElementById(
-      'btn-yoga').style.color
-      = '#ffffff';
-  } else {
-    document.getElementById(
-      'pricing-dance').style.display
-      = 'block';
-    document.getElementById(
-      'btn-dance').style.background
-      = '#E8690A';
-    document.getElementById(
-      'btn-dance').style.color
-      = '#ffffff';
-  }
+  setTimeout(() => {
+    yogaSection.style.display = 'none';
+    danceSection.style.display = 'none';
+
+    // Reset buttons
+    btnYoga.style.background = '#ffffff';
+    btnYoga.style.color = '#E8690A';
+    btnYoga.style.borderColor = '#E8690A';
+    btnDance.style.background = '#ffffff';
+    btnDance.style.color = '#E8690A';
+    btnDance.style.borderColor = '#E8690A';
+
+    if (type === 'yoga') {
+      yogaSection.style.display = 'block';
+      setTimeout(() => { yogaSection.style.opacity = '1'; }, 50);
+      btnYoga.style.background = '#E8690A';
+      btnYoga.style.color = '#ffffff';
+    } else {
+      danceSection.style.display = 'block';
+      setTimeout(() => { danceSection.style.opacity = '1'; }, 50);
+      btnDance.style.background = '#E8690A';
+      btnDance.style.color = '#ffffff';
+    }
+
+    // Re-trigger reveal observer for the new section
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }, 300);
 }
+
+// Set initial opacity transition
+document.getElementById('pricing-yoga').style.transition = 'opacity 0.3s ease';
+document.getElementById('pricing-dance').style.transition = 'opacity 0.3s ease';
 </script>
 
 </body>
