@@ -228,6 +228,101 @@
     .tilt-card > * {
       transform: translateZ(20px);
     }
+
+    /* 3D Testimonial Carousel */
+    .testimonial-carousel-container {
+      overflow: hidden;
+      padding: 60px 0;
+      background: #FFFFFF;
+      perspective: 1200px;
+    }
+
+    .testimonial-carousel-track {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: testimonial-scroll 50s linear infinite;
+      padding: 20px 0;
+    }
+
+    @keyframes testimonial-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-350px * 12 - 30px * 12)); }
+    }
+
+    .testimonial-carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    .testimonial-card-3d {
+      width: 350px;
+      background: #F8F5F0;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid rgba(11, 110, 110, 0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: default;
+    }
+
+    .testimonial-card-3d:hover {
+      transform: translateZ(30px) rotateY(8deg) rotateX(2deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border-color: #0B6E6E;
+      background: #FFFFFF;
+    }
+
+    .testimonial-card-3d i {
+      color: #0B6E6E;
+      opacity: 0.2;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card-3d .testimonial-text {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card-3d .client-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .testimonial-card-3d .client-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #E8690A;
+    }
+
+    .testimonial-card-3d .client-details h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #333;
+      margin: 0;
+    }
+
+    .testimonial-card-3d .client-details span {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .dance-card {
+      border-top: 5px solid #E8690A !important;
+    }
+
+    .yoga-card {
+      border-top: 5px solid #0B6E6E !important;
+    }
   </style>
   <meta name="description" content="Join live online yoga and dance fitness classes with expert Indian instructors. Bollywood cardio, Hatha, Vinyasa, Pranayama & PCOD programs across global timezones. Free trial — no card needed.">
   <link rel="canonical" href="https://zugafitness.in/" />
@@ -716,7 +811,7 @@
             <!-- Card 4: Pranayama & Meditation -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="service-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; border-top: 5px solid #E8690A; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;">
-                    <img loading="lazy" src="assets/images/mbr-2-600x400.jpg" alt="Pranayama & Meditation" style="width: 100%; height: 220px; object-fit: cover;">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Pranayama & Meditation" style="width: 100%; height: 220px; object-fit: cover;">
                     <div class="card-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
                         <span style="background: #E8690A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 8px;">No Experience Needed</span>
                         <h3 class="mbr-fonts-style" style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem;"><a href="https://zugafitness.in/Online-Pranayama-Classes.html">Pranayama</a> & Meditation</h3>
@@ -1020,7 +1115,7 @@
 			<div class="item features-without-image col-12 col-lg-4 active">
 				<div class="item-wrapper">
 					<div class="img-wrapper">
-						<img loading="lazy" src="assets/images/shop1.jpg" alt="Live online yoga instruction">
+						<img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Live online yoga instruction">
 					</div>
 					<div class="card-box">
 						<h4 class="card-title mbr-fonts-style mb-0 display-7"><strong>Live</strong><br><strong> Interactive <a href="#features017-1" class="text-primary">Classes</a></strong></h4>
@@ -1033,7 +1128,7 @@
 			<div class="item features-without-image col-12 col-lg-4">
 				<div class="item-wrapper">
 					<div class="img-wrapper">
-						<img loading="lazy" src="assets/images/shop2.jpeg" alt="Unlimited yoga classes online" data-slide-to="1" data-bs-slide-to="1">
+						<img loading="lazy" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=600&q=80" alt="Unlimited yoga classes online" data-slide-to="1" data-bs-slide-to="1">
 					</div>
 					<div class="card-box">
 						<h4 class="card-title mbr-fonts-style mb-0 display-7"><strong>Unlimited</strong><br><strong> Online Access&nbsp;</strong></h4>
@@ -1044,7 +1139,7 @@
 			<div class="item features-without-image col-12 col-lg-4">
 				<div class="item-wrapper">
 					<div class="img-wrapper">
-						<img loading="lazy" src="assets/images/shop3.jpeg" alt="Live Yoga Classes" data-bs-slide-to="2" data-slide-to="2">
+						<img loading="lazy" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80" alt="Live Yoga Classes" data-bs-slide-to="2" data-slide-to="2">
 					</div>
 					<div class="card-box">
 						<h4 class="card-title mbr-fonts-style mb-0 display-7"><strong>Affordable Yoga Membership</strong></h4>
@@ -1138,120 +1233,210 @@
 </section>
 
 <section data-bs-version="5.1" class="people05 cid-uEEJbxVgkG" id="testimonials-5-uEEJbxVgkG">
-	
-
-	
-	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row mb-5 justify-content-center">
 			<div class="col-12 mb-0 content-head">
 				<h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-					<strong>Hear from our yoga community around the world</strong>
+					<strong>Hear from our yoga & dance fitness community</strong>
 				</h3>
-                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7">Hear from our community in the US, UK, Canada, and UAE.</h4>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7">Real stories from our students in the India, US, UK, UAE, and Canada.</h4>
 			</div>
 		</div>
-		<div class="row">
-            <!-- global community Testimonial Placeholder 1 -->
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">"As an global community in London, finding live yoga in my timezone was tough until Zuga. The instructors are amazing!"</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/download-5.jpeg-160x200.jpg" alt="client in UK" data-slide-to="0" data-bs-slide-to="0">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Priya Sharma (UK)</strong></h5>
-					</div>
-				</div>
-			</div>
-            <!-- global community Testimonial Placeholder 2 -->
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">"The PCOD program is life-changing. Even from New York, I feel connected and supported by the instructors."</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/images-3.jpeg-160x106.jpg" data-slide-to="1" data-bs-slide-to="1" alt="client in US">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Anjali K. (USA)</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4 active">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">Zuga Fitness changed my life! I can finally touch my toes!</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/download-5.jpeg-160x200.jpg" alt="client" data-slide-to="0" data-bs-slide-to="0">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Supriya Ranjan</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">The instructors are amazing! They make yoga fun and easy to follow.</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/images-3.jpeg-160x106.jpg" data-slide-to="1" data-bs-slide-to="1" alt="client">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Karthik Jain</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">I love the flexibility of on-demand classes! Perfect for my busy schedule.</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/photo-1676385901160-a86dc9ccdfe1.jpeg" data-slide-to="2" data-bs-slide-to="2" alt="client">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Soundarya</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">Yoga with Zuga is like a breath of fresh air!</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/images.jpeg-160x106.jpg" data-slide-to="4" data-bs-slide-to="4" alt="client">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Manigantan P</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">Affordable and effective! I can’t recommend Zuga enough!</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/download-4.jpeg-160x200.jpg" data-slide-to="6" data-bs-slide-to="6" alt="client">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Sophia</strong>
-						</h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">Finally, a yoga community that feels like home!</p>
-						<div class="img-wrapper mt-4 mb-3">
-							<img loading="lazy" src="assets/images/images-1.jpeg-160x106.jpg" data-slide-to="7" data-bs-slide-to="7" alt="client">
-						</div>
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Suman Kumar</strong></h5>
-					</div>
-				</div>
-			</div>
-		</div>
+
+    <div class="testimonial-carousel-container">
+      <div class="testimonial-carousel-track">
+        <!-- Yoga 1 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"As an global community in London, finding live yoga in my timezone was tough until Zuga. The instructors are amazing!"</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=150&q=80" alt="Priya Sharma">
+            <div class="client-details">
+              <h5>Priya Sharma</h5>
+              <span>London, UK</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dance 1 -->
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"The Bollywood cardio sessions are the highlight of my day! High energy, amazing music and I've lost 4kg in a month."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Rahul V.">
+            <div class="client-details">
+              <h5>Rahul V.</h5>
+              <span>Bangalore, India</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 2 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"The PCOD program is life-changing. Even from New York, I feel connected and supported by the instructors."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&w=150&q=80" alt="Anjali K.">
+            <div class="client-details">
+              <h5>Anjali K.</h5>
+              <span>New York, USA</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dance 2 -->
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"I've never enjoyed cardio this much. The instructors make every step easy to follow even for a beginner like me."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=150&q=80" alt="Sneha M.">
+            <div class="client-details">
+              <h5>Sneha M.</h5>
+              <span>Singapore</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 3 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Zuga Fitness changed my life! I can finally touch my toes and my back pain is completely gone."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1621591410224-f5842c768d4a?auto=format&fit=crop&w=150&q=80" alt="Supriya Ranjan">
+            <div class="client-details">
+              <h5>Supriya Ranjan</h5>
+              <span>Delhi, India</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dance 3 -->
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Perfect way to stay active. The Hip-Hop fusion classes are intense, fun, and the playlist is always fire!"</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=150&q=80" alt="Arjun S.">
+            <div class="client-details">
+              <h5>Arjun S.</h5>
+              <span>Dubai, UAE</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 4 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"The instructors are amazing! They make yoga fun and easy to follow. Highly recommend the morning slots."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1566753323558-f4c099c78d52?auto=format&fit=crop&w=150&q=80" alt="Karthik Jain">
+            <div class="client-details">
+              <h5>Karthik Jain</h5>
+              <span>Mumbai, India</span>
+            </div>
+          </div>
+        </div>
+        <!-- Dance 4 -->
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Zuga's dance fitness is a game-changer. I feel so much more energetic after every class. Best investment for health."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&q=80" alt="Meera R.">
+            <div class="client-details">
+              <h5>Meera R.</h5>
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 5 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"I love the flexibility of live classes! Perfect for my busy corporate schedule in Bangalore."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=150&q=80" alt="Soundarya">
+            <div class="client-details">
+              <h5>Soundarya</h5>
+              <span>Bangalore, India</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 6 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Yoga with Zuga is like a breath of fresh air! The Pranayama sessions helped my anxiety significantly."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1564564321837-a57b60845aa4?auto=format&fit=crop&w=150&q=80" alt="Manigantan P">
+            <div class="client-details">
+              <h5>Manigantan P</h5>
+              <span>Chennai, India</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 7 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Affordable and effective! The personal attention in small groups is what sets them apart."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sophia">
+            <div class="client-details">
+              <h5>Sophia</h5>
+              <span>London, UK</span>
+            </div>
+          </div>
+        </div>
+        <!-- Yoga 8 -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"Finally, a yoga community that feels like home. The vibe is so positive and encouraging."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=150&q=80" alt="Suman Kumar">
+            <div class="client-details">
+              <h5>Suman Kumar</h5>
+              <span>Hyderabad, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicates for seamless loop -->
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"As an global community in London, finding live yoga in my timezone was tough until Zuga. The instructors are amazing!"</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=150&q=80" alt="Priya Sharma">
+            <div class="client-details">
+              <h5>Priya Sharma</h5>
+              <span>London, UK</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"The Bollywood cardio sessions are the highlight of my day! High energy, amazing music and I've lost 4kg in a month."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Rahul V.">
+            <div class="client-details">
+              <h5>Rahul V.</h5>
+              <span>Bangalore, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-3d yoga-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"The PCOD program is life-changing. Even from New York, I feel connected and supported by the instructors."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&w=150&q=80" alt="Anjali K.">
+            <div class="client-details">
+              <h5>Anjali K.</h5>
+              <span>New York, USA</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card-3d dance-card">
+          <i data-lucide="quote"></i>
+          <p class="testimonial-text">"I've never enjoyed cardio this much. The instructors make every step easy to follow even for a beginner like me."</p>
+          <div class="client-info">
+            <img class="client-img" src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=150&q=80" alt="Sneha M.">
+            <div class="client-details">
+              <h5>Sneha M.</h5>
+              <span>Singapore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 	</div>
 </section>
 <section class="video-testimonials" style="padding: 80px 0; background-color: #fffaf2;">
