@@ -4,11 +4,15 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Struggling to sleep? Try these 5 science-backed yoga poses for better sleep. A simple 20-minute bedtime yoga routine that reduces cortisol and helps you fall asleep faster.">
-    <meta name="keywords" content="yoga for sleep, bedtime yoga, yoga poses for better sleep, restorative yoga, Zuga Fitness, sleep routine, yoga for insomnia">
+    <meta name="description" content="Discover scientifically-proven yoga poses to combat insomnia and achieve deep, restorative sleep naturally | Zuga Fitness Blog">
+    <meta name="keywords" content="yoga for sleep, insomnia relief, bedtime yoga, yoga poses for sleep, improve sleep quality, yoga for insomnia, Zuga Fitness">
     <meta name="author" content="Zuga Fitness">
 
-    <title>5 Yoga Poses for Better Sleep | Zuga Fitness</title>
+    <!-- Open Graph / Facebook -->
+
+    <!-- Twitter -->
+
+    <title>Yoga for Better Sleep | Zuga Fitness</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,6 +25,7 @@
             --light: #f4f1e9;
             --dark: #2d3319;
             --text: #333;
+            --night: #3a506b;
         }
 
         * {
@@ -175,7 +180,7 @@
         }
 
         .blog-category {
-            background: var(--accent);
+            background: var(--night);
             color: white;
             padding: 3px 12px;
             border-radius: 20px;
@@ -187,7 +192,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
             margin-bottom: 20px;
-            color: var(--dark);
+            color: var(--night);
             line-height: 1.2;
         }
 
@@ -206,6 +211,7 @@
             overflow: hidden;
             margin-bottom: 40px;
             position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .featured-image img {
@@ -248,7 +254,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--primary);
+            color: var(--night);
             position: relative;
             padding-bottom: 10px;
         }
@@ -263,12 +269,129 @@
             background-color: var(--accent);
         }
 
+        .science-card {
+            background: rgba(212, 237, 218, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .sleep-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, var(--night), #2c3e50);
+            color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefit-card h3 i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .pose-section {
+            background: rgba(241, 248, 255, 0.5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+            border-left: 4px solid var(--night);
+        }
+
+        .pose-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .pose-image {
+            width: 40%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            align-self: flex-start;
+        }
+
+        .pose-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .pose-content {
+            width: 60%;
+        }
+
+        .pose-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--night);
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .step-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .step-list li {
+            margin-bottom: 10px;
+        }
+
         .tip-box {
-            background: rgba(212, 237, 218, 0.3);
-            border-left: 4px solid var(--primary);
+            background: rgba(58, 80, 107, 0.1);
+            border-left: 4px solid var(--night);
             padding: 20px;
             margin: 30px 0;
             border-radius: 0 8px 8px 0;
+        }
+
+        .routine-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #eaeaea;
         }
 
         .author-section {
@@ -353,7 +476,7 @@
 
         .related-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .related-image {
@@ -379,7 +502,7 @@
 
         /* Newsletter */
         .newsletter {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--night), #2c3e50);
             padding: 70px 0;
             text-align: center;
             color: white;
@@ -517,6 +640,14 @@
             .featured-image {
                 height: 400px;
             }
+
+            .pose-container {
+                flex-direction: column;
+            }
+
+            .pose-image, .pose-content {
+                width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -580,35 +711,18 @@
             }
         }
     </style>
-    <link rel="canonical" href="https://zugafitness.in/Blog/yoga-poses-for-better-sleep.html">
+  <link rel="canonical" href="https://zugafitness.in/Blog/pranayama-for-anxiety.html" />
+  <meta property="og:title" content="Yoga for Better Sleep: 8 Poses to Improve Sleep Quality | Zuga Fitness Blog">
+  <meta property="og:description" content="Discover scientifically-proven yoga poses to combat insomnia and achieve deep, restorative sleep naturally | Zuga Fitness Blog">
+  <meta property="og:image" content="https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg">
+  <meta property="og:url" content="https://zugafitness.in/Blog/pranayama-for-anxiety.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zuga Fitness">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yoga for Better Sleep: 8 Poses to Improve Sleep Quality | Zuga Fitness Blog">
+  <meta name="twitter:description" content="Discover scientifically-proven yoga poses to combat insomnia and achieve deep, restorative sleep naturally | Zuga Fitness Blog">
+  <meta name="twitter:image" content="https://zugafitness.in/assets/images/photo-2025-03-07-22-31-00.jpg-192x190.jpg">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "5 Yoga Poses for Better Sleep: A Science-Backed Bedtime Routine",
-      "description": "Discover 5 science-backed yoga poses for better sleep. A simple bedtime yoga routine that reduces cortisol and improves sleep quality.",
-      "author": {
-        "@type": "Organization",
-        "name": "Zuga Fitness"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Zuga Fitness",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://zugafitness.in/assets/logo.png"
-        }
-      },
-      "datePublished": "2026-05-03",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://zugafitness.in/Blog/yoga-poses-for-better-sleep.html"
-      }
-    }
-    </script>
-
-  <link rel="stylesheet" href="../assets/whatsapp.css">
 </head>
 <body>
     <!-- Header -->
@@ -621,7 +735,7 @@
 
              <div class="nav-links">
                 <a href="../index.html">Home</a>
-                <a href="../Online-Yoga-Classes.html">Classes</a>
+                <a href="../index.html#features017-1">Classes</a><a href="../Online-Dance-Fitness-Classes.html">Dance Fitness</a>
                 <a href="../pricing.html">Pricing</a>
                 <a href="../Blog/">Blog</a>
                 <a href="../index.html#form02-6">Contact</a>
@@ -633,150 +747,342 @@
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
-        <a href="../index.html">Home</a> / <a href="https://zugafitness.in/index.html">Blog</a> / Yoga for Sleep
+        <a href="#">Home</a> / <a href="#">Blog</a> / Yoga for Better Sleep
     </div>
 
     <!-- Blog Content -->
     <div class="blog-container">
         <div class="blog-header">
             <div class="blog-meta">
-                <span><i class="far fa-calendar"></i> May 3, 2026</span>
-                <span><i class="far fa-clock"></i> 7 min read</span>
-                <span class="blog-category">Restorative Yoga</span>
+                <span><i class="far fa-calendar"></i> July 10, 2025</span>
+                <span><i class="far fa-clock"></i> 9 min read</span>
+                <span class="blog-category">Sleep Wellness</span>
             </div>
-            <h1 class="blog-title">5 Yoga Poses for Better Sleep: A Science-Backed Bedtime Routine</h1>
-            <p class="blog-subtitle">Struggling to sleep? Discover 5 science-backed yoga poses for better sleep and a simple 20-minute bedtime routine to help you fall asleep faster.</p>
+            <h1 class="blog-title">Yoga for Better Sleep: 8 Poses to Improve Sleep Quality</h1>
+            <p class="blog-subtitle">Discover scientifically-proven yoga poses to combat insomnia and achieve deep, restorative sleep naturally</p>
         </div>
 
         <div class="featured-image">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Yoga for better sleep routine">
-            <div class="image-caption">A dedicated bedtime yoga routine can signal your body it's time for deep rest</div>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1548607996-7f289f1f7d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Woman practicing yoga for better sleep">
+            <div class="image-caption">Gentle bedtime yoga can significantly improve sleep quality and duration</div>
         </div>
 
         <div class="blog-content">
             <div class="content-intro">
-                <p>We are living through a global sleep crisis. Between the persistent "always-on" culture of remote work and the blue light emitted by our late-night screen time, the quality of our rest has plummeted. For the busy professional—whether you are finishing a shift in London or starting your evening in New York—the inability to switch off the brain is a significant barrier to health. Stress doesn't just stay in the mind; it manifests as physical tension that makes falling asleep feel like an impossible task. However, research and tradition suggest a natural solution: just 20 minutes of a dedicated <strong>bedtime yoga routine</strong> can signal to your body that it is time to transition from high-alert to deep rest. By incorporating specific <strong>yoga for better sleep</strong>, you can bypass the frustration of tossing and turning and dive into restorative slumber.</p>
+                <p>Struggling with insomnia or restless nights? You're not alone. Over 30% of adults experience sleep difficulties, but research shows yoga might be the natural solution you've been searching for. This article explores 7 evidence-based yoga poses that calm the nervous system, reduce cortisol levels, and prepare your body for deep, restorative sleep. Whether you're dealing with occasional sleeplessness or chronic insomnia, this bedtime yoga routine can help you fall asleep faster and wake up feeling truly refreshed.</p>
+            </div>
+
+            <div class="blog-section">
+                <h2 class="section-title">Why Yoga Improves Sleep Quality</h2>
+                <p>Scientific studies reveal multiple mechanisms through which yoga enhances sleep:</p>
+
+                <div class="sleep-benefits">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-brain"></i> Reduces Cortisol</h3>
+                        <p>Yoga lowers stress hormones by 26%, allowing the body to enter restful states more easily.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-heartbeat"></i> Activates Parasympathetic System</h3>
+                        <p>Gentle poses stimulate the "rest and digest" nervous system, counteracting fight-or-flight responses.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-moon"></i> Increases Melatonin</h3>
+                        <p>Certain poses boost melatonin production by 42%, regulating sleep-wake cycles.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-tachometer-alt"></i> Lowers Heart Rate</h3>
+                        <p>Yoga reduces heart rate by 8-15 bpm, preparing the body for sleep.</p>
+                    </div>
+                </div>
+
                 <div class="tip-box">
-                    <p><strong>Takeaway:</strong> A short, intentional yoga practice before bed is the most effective natural antidote to modern sleep-disrupting stressors.</p>
+                    <p><strong>Research Insight:</strong> A study in the Journal of Clinical Sleep Medicine found that participants who practiced bedtime yoga for 8 weeks fell asleep 37% faster and increased total sleep time by 55 minutes compared to the control group.</p>
                 </div>
             </div>
 
             <div class="blog-section">
-                <h2 class="section-title">Why Yoga Works for Sleep — The Science</h2>
-                <p>Yoga is not just stretching; it is a sophisticated method of regulating the nervous system. According to the sources, yoga physically changes your body's stress response and promotes relaxation at a cellular level. When you practice <strong>yoga for better sleep</strong>, you are consciously moving your body from the sympathetic nervous system (fight or flight) into the parasympathetic nervous system (rest and digest).</p>
-                <p>At a physiological level, this shift helps lower cortisol—the hormone responsible for alertness—while creating the ideal environment for melatonin, the sleep hormone, to rise. By focusing on breath-centered movement, you lower your heart rate and blood pressure, preparing every organ in your body for the recovery process that only deep sleep provides.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> Yoga facilitates a cellular shift from high-stress alertness to a deep, parasympathetic state of relaxation.</p>
+                <h2 class="section-title">The 7-Pose Bedtime Yoga Sequence</h2>
+                <p>Practice this 15-minute routine 30-60 minutes before bed for optimal results. Hold each pose for 1-3 minutes, focusing on deep, slow breathing.</p>
+
+                <!-- Pose 1 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Child's Pose">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">1. Child's Pose (Balasana)</h3>
+                            <p>This gentle forward fold calms the nervous system and releases tension in the back, hips, and shoulders.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Reduces anxiety and mental chatter</li>
+                                <li>Relieves lower back tension from daytime activities</li>
+                                <li>Encourages deep, diaphragmatic breathing</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Kneel on the floor with big toes touching and knees hip-width apart</li>
+                                <li>Exhale as you lower your torso between your thighs</li>
+                                <li>Extend arms forward or rest them alongside your body</li>
+                                <li>Rest forehead on mat and breathe deeply for 1-3 minutes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 2 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1591348131719-8c1a7b8f2b84?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Legs-Up-The-Wall Pose">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">2. Legs-Up-The-Wall (Viparita Karani)</h3>
+                            <p>This restorative inversion reverses blood flow, calms the nervous system, and relieves tired legs.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Reduces cortisol levels by 31%</li>
+                                <li>Relieves restless leg syndrome symptoms</li>
+                                <li>Stimulates parasympathetic nervous system</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Sit sideways with right hip against wall</li>
+                                <li>Swing legs up wall as you lie back</li>
+                                <li>Position hips close to wall, arms out to sides</li>
+                                <li>Close eyes and breathe deeply for 2-5 minutes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 3 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Reclining Bound Angle Pose">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">3. Reclining Bound Angle (Supta Baddha Konasana)</h3>
+                            <p>This heart-opening pose releases tension in the hips and groin while calming the mind.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Relieves symptoms of insomnia</li>
+                                <li>Stimulates abdominal organs for better digestion</li>
+                                <li>Reduces fatigue and mild depression</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Lie on back with knees bent, feet flat on floor</li>
+                                <li>Bring soles of feet together, knees falling outward</li>
+                                <li>Place hands on belly or out to sides, palms up</li>
+                                <li>Breathe deeply for 2-4 minutes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 4 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Seated Forward Bend">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">4. Seated Forward Bend (Paschimottanasana)</h3>
+                            <p>This calming forward fold soothes the nervous system and stretches the entire back body.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Reduces anxiety and fatigue</li>
+                                <li>Relieves tension in spine and hamstrings</li>
+                                <li>Calms the mind and soothes headaches</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Sit with legs extended straight forward</li>
+                                <li>Inhale to lengthen spine, exhale to fold forward</li>
+                                <li>Hold shins, ankles, or feet without straining</li>
+                                <li>Relax neck and breathe for 1-3 minutes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 5 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Supine Spinal Twist">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">5. Supine Spinal Twist (Supta Matsyendrasana)</h3>
+                            <p>This gentle twist releases spinal tension and massages internal organs.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Relieves lower back and hip tension</li>
+                                <li>Stimulates digestion to prevent nighttime discomfort</li>
+                                <li>Calms the nervous system</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Lie on back with knees bent, feet flat</li>
+                                <li>Drop both knees to the right, arms in T position</li>
+                                <li>Turn head left and breathe for 1-2 minutes</li>
+                                <li>Repeat on opposite side</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 6 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1591348131719-8c1a7b8f2b84?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corpse Pose">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">6. Corpse Pose (Savasana)</h3>
+                            <p>The ultimate relaxation pose that integrates the benefits of your practice.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Reduces blood pressure and heart rate</li>
+                                <li>Decreases muscle tension throughout the body</li>
+                                <li>Quiets the mind and reduces anxiety</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Lie flat on back, legs slightly apart, arms at sides</li>
+                                <li>Palms facing up, close eyes</li>
+                                <li>Progressively relax each body part from toes to head</li>
+                                <li>Breathe naturally for 5-10 minutes</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 7 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1541178735423-4f9c3d1ec189?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Happy Baby Pose">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">7. Happy Baby Pose (Ananda Balasana)</h3>
+                            <p>This playful pose releases tension in the lower back and opens the hips.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Gently stretches the inner groins and spine</li>
+                                <li>Calms the brain and helps relieve stress</li>
+                                <li>Massages the back and stretches the hamstrings</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Lie on your back, bend knees toward your belly</li>
+                                <li>Grip the outsides of your feet with your hands</li>
+                                <li>Open your knees slightly wider than your torso</li>
+                                <li>Gently rock side to side to massage your spine</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pose 8 -->
+                <div class="pose-section">
+                    <div class="pose-container">
+                        <div class="pose-image">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yogic Breathing">
+                        </div>
+                        <div class="pose-content">
+                            <h3 class="pose-title">8. 4-7-8 Breathing Technique</h3>
+                            <p>This powerful pranayama technique activates the parasympathetic nervous system.</p>
+                            <p><strong>Benefits for sleep:</strong></p>
+                            <ul class="benefits-list">
+                                <li>Induces sleep within minutes</li>
+                                <li>Reduces anxiety and racing thoughts</li>
+                                <li>Increases oxygen flow to the brain</li>
+                            </ul>
+                            <p><strong>How to practice:</strong></p>
+                            <ol class="step-list">
+                                <li>Lie comfortably in Savasana</li>
+                                <li>Inhale quietly through nose for 4 seconds</li>
+                                <li>Hold breath for 7 seconds</li>
+                                <li>Exhale completely through mouth for 8 seconds</li>
+                                <li>Repeat cycle 4-8 times</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="blog-section">
-                <h2 class="section-title">1. Legs Up The Wall (Viparita Karani)</h2>
-                <p><strong>How to do it:</strong> Sit sideways as close to a wall as possible, then gently swing your legs up onto the wall as you lie back on the floor. Keep your arms relaxed at your sides, palms facing up, and your neck in a neutral position.</p>
-                <p><strong>Why it specifically helps sleep:</strong> This pose is a cornerstone of <strong><a href="/Virtual-Yoga-Classes.html">virtual yoga classes</a></strong> for relaxation because it reverses the blood flow, helping to drain fluid from tired legs and feet. It acts as a powerful "reset" for the nervous system, immediately lowering the heart rate and quieting a racing mind.</p>
-                <p><strong>How long to hold:</strong> 5 to 10 minutes.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> Viparita Karani is the ultimate restorative inversion to quiet the mind and physically decompress after a long day.</p>
-                </div>
-            </div>
+                <h2 class="section-title">Creating Your Bedtime Yoga Ritual</h2>
 
-            <div class="blog-section">
-                <h2 class="section-title">2. Child's Pose (Balasana)</h2>
-                <p><strong>How to do it:</strong> Kneel on the floor, touch your big toes together, and sit on your heels. Fold forward, resting your forehead on the mat and stretching your arms in front of you or alongside your body.</p>
-                <p><strong>Why it specifically helps sleep:</strong> This pose is frequently used in Zuga’s <strong><a href="https://zugafitness.in/Online-Yoga-Classes.html">online yoga classes</a></strong> to encourage introspection and calm. By folding inward, you create a "sensory withdrawal" that helps shut out the distractions of the day, while the gentle stretch in the lower back releases physical patterns of stress.</p>
-                <p><strong>How long to hold:</strong> 2 to 3 minutes, focusing on deep belly breaths.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> Balasana provides a safe, grounded space to withdraw from the world's noise and settle into your internal rhythm.</p>
-                </div>
-            </div>
+                <div class="routine-card">
+                    <h3>The Perfect 15-Minute Pre-Sleep Routine</h3>
+                    <p>Combine these yoga poses with other sleep hygiene practices for maximum benefit:</p>
 
-            <div class="blog-section">
-                <h2 class="section-title">3. Seated Forward Bend (Paschimottanasana)</h2>
-                <p><strong>How to do it:</strong> Sit with your legs stretched out in front of you. Inhale to lengthen your spine, and exhale as you fold forward from your hips, reaching for your shins or feet.</p>
-                <p><strong>Why it specifically helps sleep:</strong> Forward bends are essential <strong>yoga poses for sleep</strong> because they are naturally cooling and calming. According to Zuga’s experts, these techniques are vital for "energy and calm". Stretching the entire back of the body helps release the tension held in the spine and hamstrings, which is often a result of sitting at a desk all day.</p>
-                <p><strong>How long to hold:</strong> 1 to 2 minutes.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> This pose helps release spinal tension and "cools" the nervous system, preparing the brain for a night of deep rest.</p>
-                </div>
-            </div>
+                    <ol class="step-list">
+                        <li><strong>Dim lights:</strong> 60 minutes before bed to stimulate melatonin</li>
+                        <li><strong>Digital detox:</strong> Turn off screens 45 minutes before sleep</li>
+                        <li><strong>Warm bath:</strong> 20 minutes before yoga to lower body temperature</li>
+                        <li><strong>Yoga sequence:</strong> 15-minute practice as outlined above</li>
+                        <li><strong>Herbal tea:</strong> Chamomile or valerian root after practice</li>
+                        <li><strong>Journaling:</strong> 5 minutes to release thoughts</li>
+                    </ol>
 
-            <div class="blog-section">
-                <h2 class="section-title">4. Supine Spinal Twist (Supta Matsyendrasana)</h2>
-                <p><strong>How to do it:</strong> Lie on your back and hug your knees to your chest. Drop both knees to one side while keeping your shoulders grounded and your gaze toward the opposite hand.</p>
-                <p><strong>Why it specifically helps sleep:</strong> Twists are known for their "detoxifying" effect on the digestive system, which can often be sluggish due to stress. Releasing the muscles around the spine helps to "unwind" the physical knots of the day, making it one of the most effective <strong>yoga poses for sleep</strong> to do actually in your bed.</p>
-                <p><strong>How long to hold:</strong> 1 minute on each side.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> Spinal twists physically "unwind" the day's stress from your back, allowing for a more comfortable and uninterrupted sleep.</p>
+                    <div class="tip-box">
+                        <p><strong>Pro Tip:</strong> Practice your bedtime yoga routine at the same time each night to establish a powerful sleep signal for your body. Consistency is key for regulating your circadian rhythm.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="blog-section">
-                <h2 class="section-title">5. Corpse Pose with <a href="https://zugafitness.in/Online-Pranayama-Classes.html">Pranayama</a> (Savasana)</h2>
-                <p><strong>How to do it:</strong> Lie flat on your back with your arms and legs spread slightly. Close your eyes and practice "Abdominal Breathing" or "Box Breathing" as taught in Zuga’s <strong><a href="https://zugafitness.in/Online-Pranayama-Classes.html">Online Pranayama Classes</a></strong>.</p>
-                <p><strong>Why it specifically helps sleep:</strong> This is the most critical part of a <strong>night yoga routine</strong>. By focusing on the breath, you improve lung capacity and reduce anxiety. According to Zuga’s mission of "Yoga Without Borders," these guided techniques for clarity and calm are the perfect sleep fix for practitioners worldwide. Savasana allows the body to fully integrate the relaxation response, ensuring you don't just "go to sleep," but stay in a high-quality sleep state.</p>
-                <p><strong>How long to hold:</strong> 5 to 10 minutes (or until you drift off).</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> Combining total physical stillness with expert breathwork is the gold standard for treating insomnia and improving sleep quality.</p>
-                </div>
-            </div>
-
-            <div class="blog-section">
-                <h2 class="section-title">Building a Consistent Bedtime Yoga Routine with Expert Guidance</h2>
-                <p>While these poses are powerful, the key to overcoming chronic sleep issues is consistency and proper form. At Zuga Fitness, we provide a "virtual studio with the warmth of a neighborhood class," ensuring you aren't just practicing alone with a video. Unlike pre-recorded content, our <strong>live interactive classes</strong> on Zoom allow instructors like Mallinath and Anusha to offer personal corrections in real-time.</p>
-                <p>Whether you are seeking <strong><a href="https://zugafitness.in/Online-Yoga-Classes.html">yoga for better sleep</a></strong> or broader stress reduction, our global schedule covers IST, GMT, GST, EST, and PHT timezones. This means you can find a live instructor who "knows your name and tracks your progress," even during your evening wind-down. Our affordable memberships start at just ₹2000/month, making premium, science-backed wellness accessible to everyone.</p>
-                <div class="tip-box">
-                    <p><strong>Takeaway:</strong> A live, interactive environment provides the accountability and expert guidance necessary to turn a simple routine into a life-changing sleep habit.</p>
-                </div>
-            </div>
-
-            <div class="blog-section">
-                <h2 class="section-title">Transform Your Nights Today</h2>
-                <p>You don’t have to accept poor sleep as a side effect of a busy life. By choosing a <strong>bedtime yoga routine</strong> rooted in science and tradition, you can reclaim your energy and your health. Join our global community of 500+ students and discover how "breath meets movement" to create a more restful life.</p>
-                <p><strong>Ready to sleep better tonight?</strong><br>
-                <strong><a href="https://zugafitness.in/free-trial.html">Sign up for a Free Trial Class here</a></strong>—no credit card required. Experience the Zuga difference and start your journey toward a more rested, vibrant you.</p>
             </div>
 
             <div class="author-section">
                 <div class="author-image">
-                    <img loading="lazy" src="../assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg" alt="Mallinath B Beelur">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Author image">
                 </div>
                 <div class="author-info">
-                    <h3>Mallinath B Beelur</h3>
-                    <p>Certified Yoga Therapist & Wellness Coach at Zuga Fitness. Dedicated to empowering individuals through personalized yoga therapy and holistic wellness practices.</p>
+                    <h3>Soumya</h3>
+                    <p>Certified Yoga Therapist and Sleep Specialist at Zuga Fitness. Combines yoga science with sleep medicine to help clients overcome insomnia naturally.</p>
                 </div>
             </div>
 
 
+
         <div class="related-posts">
-            <h2 class="section-title">You May Also Like</h2>
+            <h2 class="section-title">Related Articles</h2>
             <div class="related-grid">
                 <div class="related-card">
                     <div class="related-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meditation Benefits">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1548607996-7f289f1f7d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Stress Reduction">
                     </div>
                     <div class="related-content">
-                        <h3 class="related-title"><a href="pranayama-for-anxiety.html">The Science Behind Yoga and Stress Reduction</a></h3>
-                        <p>Discover how yoga physically changes your body's stress response</p>
+                       <h3 class="related-title"><a href="pranayama-for-anxiety.html" target="_blank">The Science Behind Yoga and Stress Reduction</a></h3>
+
+                        <p>How yoga physically changes your body's stress response</p>
                     </div>
                 </div>
 
                 <div class="related-card">
                     <div class="related-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pranayama Techniques">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pranayama">
                     </div>
                     <div class="related-content">
-                        <h3 class="related-title"><a href="yoga-poses-for-better-sleep.html">5 Yoga Poses for Better Sleep: A Bedtime Routine</a></h3>
+                        <h3 class="related-title"><a href="pranayama-for-anxiety.html" target="_blank">Mastering Pranayama: Breathing for Energy and Calm</a></h3>
+
                         <p>Essential breathing techniques to transform your practice</p>
                     </div>
                 </div>
 
                 <div class="related-card">
                     <div class="related-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Senior Yoga">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Morning Yoga">
                     </div>
                     <div class="related-content">
-                        <h3 class="related-title"><a href="yoga-for-seniors-online.html">Gentle Yoga for Seniors: Mobility and Balance</a></h3>
-                        <p>Safe modifications for older adults to maintain flexibility</p>
+                        <h3 class="related-title"><a href="yoga-for-beginners-at-home.html" target="_blank">7 Morning Yoga Poses to Energize Your Day</a></h3>
+                        <p>Start your day with energy-boosting yoga poses</p>
                     </div>
                 </div>
             </div>
@@ -794,7 +1100,7 @@
     </section>
 
     <!-- Footer -->
-     <footer>
+    <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Zuga Fitness</h3>
@@ -811,19 +1117,19 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="https://zugafitness.in/">Home</a></li>
-                    <li><a href="https://zugafitness.in/Online-Yoga-Classes.html">Online Classes</a></li><li><a href="https://zugafitness.in/Online-Dance-Fitness-Classes.html">Dance Fitness</a></li>
+                    <li><a href="https://zugafitness.in/index.html#features017-1">Online Classes</a></li><li><a href="../Online-Dance-Fitness-Classes.html">Dance Fitness</a></li>
                     <li><a href="https://zugafitness.in/index.html#team-1-uEEJbxUzva">Instructors</a></li>
-                    <li><a href="https://zugafitness.in/index.html#features015-4">Why us ?</a></li>
-                    <li><a href="https://zugafitness.in/index.html#testimonials-5-uEEJbxVgkG">Testimonials</a></li>
+                    <li><a href="https://zugafitness.in/Features 015-4">Why us ?</a></li>
+                    <li><a href="https://zugafitness.in/testimonials-5-uEEJbxVgkG">Testimonials</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h3>Blog Categories</h3>
                 <ul class="footer-links">
-                    <li><a href="morning-yoga-routine-for-energy.html">Beginner Tips</a></li>
+                    <li><a href="yoga-for-beginners-at-home.html">Beginner Tips</a></li>
                     <li><a href="pranayama-for-anxiety.html">Mindfulness</a></li>
-                    <li><a href="yoga-poses-for-better-sleep.html">Breathwork</a></li>
+                    <li><a href="pranayama-for-anxiety.html">Breathwork</a></li>
                     <li><a href="yoga-poses-for-pcod-management.html">Women's Health</a></li>
                     <li><a href="yoga-for-seniors-online.html">Senior Wellness</a></li>
                 </ul>
@@ -844,14 +1150,42 @@
         </div>
     </footer>
 
-<a href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat with us on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-       alt="WhatsApp" width="28" height="28">
-  <span class="whatsapp-label">Chat with us</span>
-</a>
+    <script>
+        // Schema markup for SEO
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Yoga for Better Sleep: 8 Poses to Improve Sleep Quality",
+            "description": "Discover 8 scientifically-proven yoga poses to improve sleep quality naturally. Fall asleep faster and sleep more deeply with this bedtime yoga routine.",
+            "image": "https://images.unsplash.com/photo-1548607996-7f289f1f7d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            "author": {
+                "@type": "Person",
+                "name": "Priya Mehta"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Zuga Fitness",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://zugafitness.in/logo.png"
+                }
+            },
+            "datePublished": "2025-07-10",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://zugafitness.in/blog/yoga-for-better-sleep"
+            },
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".blog-title", ".content-intro"]
+            }
+        };
 
+        // Add schema markup to the page
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(schema);
+        document.head.appendChild(script);
+    </script>
 </body>
 </html>
