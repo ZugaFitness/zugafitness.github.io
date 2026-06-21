@@ -161,15 +161,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://zugafitness.in/Blog/corporate-yoga-dance-fitness-bangalore.html</loc>
-    <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
+<url>
     <loc>https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -433,4 +425,10 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://zugafitness.in/Blog/corporate-yoga-dance-fitness-bangalore.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
