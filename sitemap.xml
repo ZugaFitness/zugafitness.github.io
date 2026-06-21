@@ -156,6 +156,13 @@
 
   <!-- Blog Articles -->
   <url>
+    <loc>https://zugafitness.in/Blog/corporate-yoga-day-bangalore.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://zugafitness.in/Blog/corporate-yoga-dance-fitness-bangalore.html</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
