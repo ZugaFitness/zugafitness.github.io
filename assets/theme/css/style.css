@@ -1000,3 +1000,7 @@ blockquote {
     display: none;
   }
 }
+
+.brand-logo {
+  height: 4.3rem;
+}
