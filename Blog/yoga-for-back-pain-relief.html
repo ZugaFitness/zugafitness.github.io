@@ -502,6 +502,26 @@
             color: var(--dark);
         }
 
+
+        .faq-item {
+            margin-bottom: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
         /* Newsletter */
         .newsletter {
             background: linear-gradient(to right, var(--healing), #4a7c59);
@@ -752,7 +772,39 @@
   </script>
 <link rel="canonical" href="https://zugafitness.in/Blog/yoga-for-back-pain-relief.html" />
 
-  <meta name="twitter:site" content="@zugafitness"></head>
+  <meta name="twitter:site" content="@zugafitness"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can online yoga really help with back pain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research suggests certain yoga poses may help ease lower back pain by gently strengthening the muscles that support the spine and improving flexibility in tight hip and hamstring muscles. Live online classes let an instructor watch your form and correct it in real time, which matters for back pain specifically since poor alignment in poses can sometimes worsen discomfort rather than relieve it. As always, check with a doctor before starting if you have a diagnosed spinal condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is online yoga as good as in-person classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people, yes — especially with live (not recorded) classes. The instructor can still see your posture and offer corrections through video, the same way they would in a studio. The main trade-off is hands-on adjustments, which live online classes can't fully replicate. For back pain specifically, live classes with real-time feedback on alignment matter more than the in-person vs. online format itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does online yoga cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At Zuga Fitness, live GROUP yoga classes start at ₹2,000/month for the Starter plan (20 classes/month, one timezone), or ₹3,500/month for the Growth Bundle, which includes unlimited live GROUP yoga and dance fitness classes across all timezones plus 2 complimentary private sessions. You can also try a free trial class before committing to a plan."
+      }
+    }
+  ]
+}
+</script>
+</head>
 <body>
     <!-- Header -->
     <header>
@@ -1082,6 +1134,28 @@
                 </div>
             </div>
 
+
+            <section class="blog-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q1: Can online yoga really help with back pain?</h3>
+                        <p class="faq-answer">Research suggests certain yoga poses may help ease lower back pain by gently strengthening the muscles that support the spine and improving flexibility in tight hip and hamstring muscles. Live online classes let an instructor watch your form and correct it in real time, which matters for back pain specifically since poor alignment in poses can sometimes worsen discomfort rather than relieve it. As always, check with a doctor before starting if you have a diagnosed spinal condition.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q2: Is online yoga as good as in-person classes?</h3>
+                        <p class="faq-answer">For most people, yes &mdash; especially with live (not recorded) classes. The instructor can still see your posture and offer corrections through video, the same way they would in a studio. The main trade-off is hands-on adjustments, which live online classes can't fully replicate. For back pain specifically, live classes with real-time feedback on alignment matter more than the in-person vs. online format itself.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q3: How much does online yoga cost?</h3>
+                        <p class="faq-answer">At Zuga Fitness, live GROUP yoga classes start at &#8377;2,000/month for the Starter plan (20 classes/month, one timezone), or &#8377;3,500/month for the Growth Bundle, which includes unlimited live GROUP yoga and dance fitness classes across all timezones plus 2 complimentary private sessions. You can also try a free trial class before committing to a plan.</p>
+                    </div>
+                </div>
+            </section>
+
             <div class="author-section">
                 <div class="author-image">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1616683699101-ccf0d5d5a439?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Yoga instructor Mallinath B yoga therapist teaching online class">
@@ -1207,6 +1281,8 @@
     </footer>
 
     <script>
+
+
         // Schema markup for SEO
         const schema = {
             "@context": "https://schema.org",
