@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta content="upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Certified yoga instructors for your Bangalore office. Onsite team sessions in Whitefield, Koramangala, HSR Layout &amp; more. Starting at ₹5,000. Book via WhatsApp." name="description"/>
+  <meta content="online yoga class, live yoga online, virtual yoga classes, interactive yoga, Zuga Fitness, Hatha Vinyasa, PCOD yoga" name="keywords"/>
+  <meta content="Zuga Fitness" name="author"/>
+  <title>
+   Corporate Yoga Classes in Bangalore: Bring Wellness to Your Office Team | Zuga Fitness
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root {
+            --primary: #4a7c59;
+            --secondary: #8d9f87;
+            --accent: #d0b49f;
+            --light: #f4f1e9;
+            --dark: #2d3319;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0 5%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #3a6547;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(74, 124, 89, 0.3);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Content */
+        .blog-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+
+        .blog-category {
+            background: var(--accent);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .blog-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .content-intro {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blog-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .tip-box {
+            background: rgba(212, 237, 218, 0.3);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .author-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 50px 0 30px;
+            padding: 20px;
+            background: rgba(208, 180, 159, 0.1);
+            border-radius: 12px;
+        }
+
+        .author-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .share-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .share-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .facebook { background: #e7f3ff; color: #1877f2; }
+        .twitter { background: #e8f4fd; color: #1da1f2; }
+        .pinterest { background: #fbeceb; color: #bd081c; }
+
+        .related-posts {
+            margin: 60px 0;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .related-image {
+            height: 180px;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 70px 0;
+            text-align: center;
+            color: white;
+            margin: 80px 0;
+        }
+
+        .newsletter h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .subscribe-form button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 0 30px 30px 0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .subscribe-form button:hover {
+            background: #c0a088;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .featured-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .blog-title {
+                font-size: 2.3rem;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+
+            .blog-content {
+                padding: 30px 20px;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 10px;
+            }
+
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .subscribe-form input,
+            .subscribe-form button {
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            .social-share {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+  </style>
+  <link href="../assets/whatsapp.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Corporate Yoga Classes in Bangalore: Bring Wellness to Your Office Team",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02",
+  "author": { "@type": "Person", "name": "Mallinath B Beelur" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zuga Fitness",
+    "logo": { "@type": "ImageObject", "url": "https://zugafitness.in/images/logo.png" }
+  },
+  "mainEntityOfPage": "https://zugafitness.in/Blog/corporate-yoga-classes-bangalore.html"
+}
+  </script>
+  <link href="https://zugafitness.in/Blog/corporate-yoga-classes-bangalore.html" rel="canonical"/>
+  <meta content="Corporate Yoga Classes in Bangalore: Bring Wellness to Your Office Team | Zuga Fitness" property="og:title"/>
+  <meta content="Certified yoga instructors for your Bangalore office. Onsite team sessions in Whitefield, Koramangala, HSR Layout &amp; more. Starting at ₹5,000. Book via WhatsApp." property="og:description"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="@zugafitness" name="twitter:site"/>
+  <meta content="Corporate Yoga Classes in Bangalore: Bring Wellness to Your Office Team | Zuga Fitness" name="twitter:title"/>
+  <meta content="Certified yoga instructors for your Bangalore office. Onsite team sessions in Whitefield, Koramangala, HSR Layout &amp; more. Starting at ₹5,000. Book via WhatsApp." name="twitter:description"/>
+ </head>
+ <body>
+  <!-- Header -->
+  <header>
+   <div class="navbar">
+    <div class="logo-container">
+     <div class="logo">
+      Z
+     </div>
+     <div class="logo-text">
+      Zuga Fitness
+     </div>
+    </div>
+    <div class="nav-links">
+     <a href="/">
+      Home
+     </a>
+     <a href="../Online-Yoga-Classes.html">
+      Classes
+     </a>
+     <a href="../pricing.html">
+      Pricing
+     </a>
+     <a href="../Blog/">
+      Blog
+     </a>
+     <a href="/#form02-6">
+      Contact
+     </a>
+    </div>
+    <a class="cta-button" href="../free-trial.html">
+     Try Free Class
+    </a>
+   </div>
+  </header>
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+   <a href="/">
+    Home
+   </a>
+   /
+   <a href="https://zugafitness.in/">
+    Blog
+   </a>
+   Corporate Yoga Classes Bangalore
+  </div>
+  <!-- Blog Content -->
+  <div class="blog-container">
+   <div class="blog-header">
+    <div class="blog-meta">
+     <span>
+      <i class="far fa-calendar">
+      </i>
+      July 2, 2026
+     </span>
+     <span>
+      <i class="far fa-clock">
+      </i>
+      5 min read
+     </span>
+     <span class="blog-category">
+      Corporate
+     </span>
+    </div>
+    <h1 class="blog-title">
+     Corporate Yoga Classes in Bangalore: Bring Wellness to Your Office Team
+    </h1>
+   </div>
+   <div class="featured-image">
+    <img alt="Corporate Yoga Classes in Bangalore" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+    <div class="image-caption">
+     Bring vitality to your office team with onsite corporate yoga sessions
+    </div>
+   </div>
+   <div class="blog-content">
+    <div class="content-intro">
+     <p>
+      In the high-velocity corridors of Bangalore&rsquo;s IT hubs&mdash;from the bustling tech parks of Whitefield and Electronic City to the vibrant start-up ecosystems in Koramangala, HSR Layout, and Indiranagar&mdash;the professional landscape is defined by innovation and intense pressure. However, this high output often comes with a silent cost: employee burnout, rising attrition rates, and a sedentary office culture that degrades physical health and mental clarity. For HR managers and L&amp;D leads, the challenge is no longer just providing perks but implementing credible, professional wellness initiatives that show a genuine return on investment.
+     </p>
+     <p>
+      At Zuga Fitness, we believe that great yoga shouldn't depend on your location, but it should certainly respect the unique needs of your workforce. Since 2023, our mission, "Yoga Without Borders", has brought together students across India, UK, UAE, Canada, Malaysia and South Africa into a virtual studio with the warmth of a neighborhood class. Now, we are bringing that same energy directly to your workplace with specialized
+      <strong>
+       corporate yoga classes bangalore
+      </strong>
+      teams can use to reclaim their focus and vitality.
+     </p>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      Why Bangalore's IT Companies Are Investing in Corporate Yoga
+     </h2>
+     <p>
+      Bangalore's reputation as the Silicon Valley of India means its workforce is subject to global deadlines and high-pressure environments. This often leads to a desk-bound isolation that physically manifests as chronic back pain, poor posture, and cognitive fatigue. Companies in major IT corridors like Whitefield and Electronic City are increasingly recognizing that an
+      <strong>
+       office wellness program bangalore
+      </strong>
+      employees actually engage with is essential for maintaining a high-performance culture.
+     </p>
+     <p>
+      Traditional gym memberships often fail to provide the necessary results because they lack the community and expert-led accountability that busy professionals need. Yoga provides a holistic solution by addressing both physical stagnation and mental stress simultaneously. By bringing energy back to the workplace through onsite sessions, companies can foster a more resilient and connected workforce.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Integrating yoga into the workday addresses the physiological toll of IT life, helping to mitigate burnout and improve long-term employee retention.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      What a Corporate Yoga Session at Your Office Actually Looks Like
+     </h2>
+     <p>
+      When you book a
+      <strong>
+       corporate yoga instructor bangalore
+      </strong>
+      professional for your team, you aren't just getting an exercise class; you are getting a structured anatomical intervention. A typical session at your office is designed to be accessible for everyone, from those performing their first sun salutation to those with a deeper practice. There is no specialized equipment required other than a simple yoga mat and a sense of humor.
+     </p>
+     <p>
+      Our instructors,
+      <strong>
+       <a href="https://zugafitness.in/Mallinath-Portfolio.html">
+        Mallinath
+       </a>
+      </strong>
+      and
+      <strong>
+       <a href="https://zugafitness.in/Anusha-Portfolio.html">
+        Anusha
+       </a>
+      </strong>
+      , provide real-time feedback and personal correction.
+      <strong>
+       Mallinath
+      </strong>
+      , a Hatha and Vinyasa master with over 1,500 hours of experience, focuses on structural alignment and breath-centered movement.
+      <strong>
+       Anusha
+      </strong>
+      , our Women's Wellness &amp; Dance Fitness Specialist, brings high-energy vitality to the mat, ensuring that every session acts as a high-octane metabolic boost for the team.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Professional onsite sessions provide personalized, expert-led instruction that accommodates all fitness levels within your existing office environment.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      The Business Case: What Research Says About Workplace Wellness
+     </h2>
+     <p>
+      For L&amp;D leads under pressure to show ROI, the science behind yoga is compelling. Research suggests that yoga physically changes your body's stress response and promotes relaxation at a cellular level. Studies indicate that consistent practice
+      <strong>
+       may help
+      </strong>
+      reduce anxiety and improve lung capacity through guided techniques for clarity and calm.
+     </p>
+     <p>
+      The power of these
+      <strong>
+       team wellness sessions bangalore
+      </strong>
+      lies in the collective accountability they build. Consider the experience of Ravi M. from Dubai, one of our students across India, UK, UAE, Canada, Malaysia and South Africa. After three failed attempts at traditional gyms, he finally found consistency through the accountability of a live group setting. In a corporate environment, this live GROUP classes dynamic creates a shared culture of health where employees motivate each other to show up and stay consistent.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Research suggests that yoga&rsquo;s impact on the nervous system directly translates to improved executive focus and reduced stress-related absenteeism.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      Onsite vs Online Corporate Yoga &mdash; Which Works for Bangalore Teams?
+     </h2>
+     <p>
+      Zuga Fitness serves the Bangalore community by bringing certified instructors directly to workplaces in areas such as Whitefield, Koramangala, HSR Layout, and Indiranagar. Onsite sessions are the premier choice for companies looking to maximize team building and provide the most direct physical correction. Being in the same room as a
+      <strong>
+       corporate yoga instructor bangalore
+      </strong>
+      allows for tactile feedback that ensures every employee is practicing safely and effectively.
+     </p>
+     <p>
+      However, for hybrid or remote teams,
+      <strong>
+       <a href="https://zugafitness.in/Online-Yoga-Classes.html">
+        online corporate sessions
+       </a>
+      </strong>
+      provide a zero-lag, interactive alternative. Unlike pre-recorded videos, our Zoom-based sessions offer real-time interaction and community connection. Whether onsite or online, our sessions are flexible to fit your schedule, ensuring that wellness never becomes another logistical hurdle for your HR team.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      While onsite training offers the best team-building results, interactive online sessions provide a flexible and scalable alternative for distributed workforces.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      Corporate Dance Fitness: The High-Energy Alternative for Team Sessions
+     </h2>
+     <p>
+      For teams that need a more dynamic metabolic boost to shatter desk fatigue,
+      <strong>
+       <a href="https://zugafitness.in/Blog/corporate-yoga-dance-fitness-bangalore.html">
+        corporate dance fitness
+       </a>
+      </strong>
+      serves as an exhilarating alternative to traditional yoga. Led by
+      <strong>
+       Anusha
+      </strong>
+      , these sessions focus on high-energy cardiovascular health and rhythmic movement.
+     </p>
+     <p>
+      Dance fitness is particularly effective for teams that may find traditional meditative practices too slow. It serves as a high-intensity cardiovascular reset that can improve mood and energy levels in a short amount of time. By offering a variety of styles&mdash;from Hatha and Vinyasa to high-energy dance&mdash;Zuga ensures that your
+      <strong>
+       yoga for IT companies bangalore
+      </strong>
+      initiative remains fresh and engaging for a diverse workforce.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Diversifying your wellness offerings with high-energy dance fitness ensures higher engagement across different employee personality types and energy levels.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      Pricing for Corporate Yoga in Bangalore
+     </h2>
+     <p>
+      We believe in simple, honest
+      <strong>
+       <a href="https://zugafitness.in/pricing.html">
+        pricing
+       </a>
+      </strong>
+      with no hidden fees, allowing HR departments to plan their wellness budgets with total clarity. Our corporate plans are structured to be both affordable and scalable:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Onsite Corporate Sessions (Bangalore Only):
+       </strong>
+       ₹5,000 base fee per session + ₹100 per head. This plan is available across all major Bangalore tech corridors, including Koramangala, HSR Layout, and Indiranagar.
+      </li>
+      <li>
+       <strong>
+        Online Corporate Sessions:
+       </strong>
+       ₹5,000 flat fee per session for up to 50 employees. These are live, interactive GROUP classes conducted via Zoom with real-time instruction from our experts.
+      </li>
+     </ul>
+     <p>
+      These rates provide premium, expert-led wellness at a fraction of the cost of long-term medical interventions or the loss of productivity associated with high employee stress.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Transparent, flat-fee pricing models make it easy for HR teams to implement and scale wellness programs without budgetary surprises.
+     </div>
+    </div>
+    <div class="blog-section">
+     <h2 class="section-title">
+      How to Book a Corporate Yoga Session for Your Team
+     </h2>
+     <p>
+      Transforming your workplace culture from one of burnout to one of vitality starts with a single session. Whether you are looking to book a recurring weekly flow or a one-time team-building event, we make the process easy and professional. Our instructors,
+      <strong>
+       Mallinath
+      </strong>
+      and
+      <strong>
+       Anusha
+      </strong>
+      , are ready to help your team breathe better and stress less.
+     </p>
+     <p>
+      <strong>
+       Ready to bring energy back to your workplace?
+      </strong>
+     </p>
+     <ul>
+      <li>
+       <strong>
+        WhatsApp:
+       </strong>
+       +91 76763 79909
+      </li>
+      <li>
+       <strong>
+        Email:
+       </strong>
+       zugafitness24@gmail.com
+      </li>
+     </ul>
+     <p>
+      Reach out today and we will design a wellness schedule that fits your team's size, location, and goals.
+     </p>
+     <div class="tip-box">
+      <strong>
+       Takeaway:
+      </strong>
+      Getting started is simple&mdash;reach out via WhatsApp or email to design a wellness schedule that fits your company's specific timezone and goals.
+     </div>
+    </div>
+    <div class="author-section">
+     <div class="author-image">
+      <img alt="Mallinath B Beelur" loading="lazy" src="../assets/images/photo-2025-03-08-15-59-42.jpg-518x921.jpeg"/>
+     </div>
+     <div class="author-info">
+      <h3>
+       Mallinath B Beelur
+      </h3>
+      <p>
+       Certified Yoga Therapist &amp; Wellness Coach at Zuga Fitness. Dedicated to empowering individuals through personalized yoga therapy and holistic wellness practices.
+      </p>
+     </div>
+    </div>
+    <div class="related-posts">
+     <h2 class="section-title">
+      You May Also Like
+     </h2>
+     <div class="related-grid">
+      <div class="related-card">
+       <div class="related-image">
+        <img alt="Meditation Benefits" loading="lazy" src="https://images.unsplash.com/photo-1593164842264-854604db2260?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+       </div>
+       <div class="related-content">
+        <h3 class="related-title">
+         <a href="pranayama-for-anxiety.html">
+          The Science Behind Yoga and Stress Reduction
+         </a>
+        </h3>
+        <p>
+         Discover how yoga physically changes your body's stress response
+        </p>
+       </div>
+      </div>
+      <div class="related-card">
+       <div class="related-image">
+        <img alt="Pranayama Techniques" loading="lazy" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+       </div>
+       <div class="related-content">
+        <h3 class="related-title">
+         <a href="yoga-poses-for-better-sleep.html">
+          8 Yoga Poses for Better Sleep: A Bedtime Routine
+         </a>
+        </h3>
+        <p>
+         Essential breathing techniques to transform your practice
+        </p>
+       </div>
+      </div>
+      <div class="related-card">
+       <div class="related-image">
+        <img alt="7 Gentle Yoga Poses for Seniors" loading="lazy" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+       </div>
+       <div class="related-content">
+        <h3 class="related-title">
+         <a href="yoga-for-seniors-online.html">
+          7 Gentle Yoga Poses for Seniors
+         </a>
+        </h3>
+        <p>
+         Safe modifications for older adults to maintain flexibility
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Newsletter -->
+  <section class="newsletter">
+   <h3>
+    Join Our Wellness Community
+   </h3>
+   <p>
+    Subscribe to receive exclusive yoga tips, class updates, and special offers
+   </p>
+   <form class="subscribe-form">
+    <input placeholder="Your email address" required="" type="email"/>
+    <button type="submit">
+     Subscribe
+    </button>
+   </form>
+  </section>
+  <!-- Footer -->
+  <footer>
+   <div class="footer-content">
+    <div class="footer-column">
+     <h3>
+      Zuga Fitness
+     </h3>
+     <p>
+      Making yoga accessible and enjoyable for everyone. Join our community today and transform your practice.
+     </p>
+     <div class="social-links">
+      <a href="https://www.facebook.com/share/15zQqbzBEd/?mibextid=wwXIfr">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a href="https://www.instagram.com/zuga_fitness?igsh=cjgxaXcxOTRpdXhy&amp;utm_source=qr">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a href="https://zugafitness.in/">
+       <i class="fab fa-youtube">
+       </i>
+      </a>
+      <a href="https://zugafitness.in/">
+       <i class="fab fa-pinterest">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div class="footer-column">
+     <h3>
+      Quick Links
+     </h3>
+     <ul class="footer-links">
+      <li>
+       <a href="https://zugafitness.in/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Online-Yoga-Classes.html">
+        Online Classes
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Online-Dance-Fitness-Classes.html">
+        Dance Fitness
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/#team-1-uEEJbxUzva">
+        Instructors
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/#features015-4">
+        Why us ?
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/#testimonials-5-uEEJbxVgkG">
+        Testimonials
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="footer-column">
+     <h3>
+      Blog Categories
+     </h3>
+     <ul class="footer-links">
+      <li>
+       <a href="morning-yoga-routine-for-energy.html">
+        Beginner Tips
+       </a>
+      </li>
+      <li>
+       <a href="pranayama-for-anxiety.html">
+        Mindfulness
+       </a>
+      </li>
+      <li>
+       <a href="yoga-poses-for-better-sleep.html">
+        Breathwork
+       </a>
+      </li>
+      <li>
+       <a href="yoga-poses-for-pcod-management.html">
+        Women's Health
+       </a>
+      </li>
+      <li>
+       <a href="yoga-for-seniors-online.html">
+        Senior Wellness
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="footer-column">
+     <h3>
+      Global Yoga
+     </h3>
+     <ul class="footer-links">
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html">
+        Canada
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html">
+        Dubai &amp; UAE
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html">
+        Germany
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-malaysia-kuala-lumpur-penang.html">
+        Malaysia
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-philippines-manila-cebu.html">
+        Philippines
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-singapore-indian-community.html">
+        Singapore
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-australia-sydney-melbourne.html">
+        Australia
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html">
+        UK &amp; London
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-south-africa-johannesburg-durban.html">
+        South Africa
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html">
+        Japan &amp; South Korea
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/family-yoga-across-timezones.html">
+        Family Yoga
+       </a>
+      </li>
+      <li>
+       <a href="https://zugafitness.in/Blog/online-yoga-classes-france-indians.html">
+        France
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="footer-column">
+     <h3>
+      Contact Us
+     </h3>
+     <ul class="footer-links">
+      <li>
+       <i class="fas fa-map-marker-alt">
+       </i>
+       Bangalore, India
+      </li>
+      <li>
+       <i class="fas fa-phone">
+       </i>
+       +91 76763 79909
+      </li>
+      <li>
+       <i class="fas fa-envelope">
+       </i>
+       zugafitness24@gmail.com
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="copyright">
+    <p>
+     &copy; 2026 Zuga Fitness. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <a aria-label="Chat with us on WhatsApp" class="whatsapp-float" href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes" rel="noopener noreferrer" target="_blank">
+   <img alt="WhatsApp" height="28" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28"/>
+   <span class="whatsapp-label">
+    Chat with us
+   </span>
+  </a>
+ </body>
+</html>
