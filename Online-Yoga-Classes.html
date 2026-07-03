@@ -100,7 +100,7 @@
     .carousel-card h4 {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
-      color: #333333;
+      color: var(--text-color);
       margin-bottom: 0;
     }
 
@@ -114,7 +114,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: #333333;
+      color: var(--text-color);
       background-color: #F8F5F0;
     }
 
@@ -425,7 +425,85 @@
   ]
 }
   </script>
+
+  <style>
+    :root {
+      --primary-color: #E8690A;
+      --secondary-color: #FFF2E6; /* Peach */
+      --text-color: #333333;
+      --light-bg: #FFFaf2; /* Warm Beige */
+      --teal: #0B6E6E;
+      --orange: #E8690A;
+      --soft-orange: #FFDAB9;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .floating-img {
+      animation: float 6s ease-in-out infinite;
+      filter: drop-shadow(0 10px 20px rgba(232,105,10,0.3));
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light-bg) 100%);
+      padding: 100px 0 80px;
+    }
+
+    .zuga-section {
+      padding: 80px 0;
+      border-radius: 30px;
+      margin: 20px 0;
+      box-shadow: 0 10px 30px rgba(232,105,10,0.05);
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      height: 100%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(232,105,10,0.1);
+    }
+    .price-value {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .btn-black-outline {
+      border: 2px solid var(--primary-color);
+      color: var(--text-color) !important;
+      background: transparent;
+      transition: all 0.3s;
+    }
+    .btn-black-outline:hover {
+      background: var(--primary-color);
+      color: white !important;
+    }
+  </style>
 </head>
+
+
 <body>
 
 <section data-bs-version="5.1" class="menu menu2 cid-uEEJbxSjp1" once="menu" id="menu-5-uEEJbxSjp1">
@@ -478,21 +556,25 @@
 </section>
 
 <!-- SECTION 1 — HERO -->
-<section class="hero-section">
+<section class="hero-section fade-in-up">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1 class="display-3 mb-4">Live Online Yoga Classes in India — Real Instructors, Real Results</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">Live online yoga classes across IST, GMT, GST, EST and PHT — with real instructors who know your name.</p>
-        <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="https://zugafitness.in/free-trial.html">Try Your First Class Free →</a>
+        <h1 class="display-3 mb-4" style="color: var(--text-color);">Live Online Yoga Classes in India — Real Instructors, Real Results</h1>
+        <p class="lead mb-5" style="font-size: 1.25rem; color: #555;">Live online yoga classes across IST, GMT, GST, EST and PHT — with real instructors who know your name.</p>
+        <div class="mbr-section-btn d-flex flex-wrap gap-3">
+          <a class="btn btn-orange display-4 m-0" href="https://zugafitness.in/free-trial.html" style="border-radius: 30px; padding: 12px 30px; box-shadow: 0 4px 15px rgba(232,105,10,0.3);">Try Your First Class Free →</a>
+          <a class="btn btn-black-outline display-4 m-0" href="https://api.whatsapp.com/send?phone=+917676379909&text=Hi,%20I%20am%20interested%20in%20your%20yoga%20classes." target="_blank" rel="noopener noreferrer" style="border-radius: 30px; padding: 12px 30px; font-weight: 600;">Contact Us</a>
         </div>
         <p class="mt-3 text-muted">No credit card required.</p>
       </div>
       <div class="col-md-6 text-center">
-        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-             alt="Live online group yoga class"
-             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
+        <div class="image-wrapper" style="position: relative;">
+            <img src="assets/images/hero-yoga-transparent.png"
+                 alt="Live online group yoga class"
+                 class="floating-img"
+                 style="width:100%;max-width:90%;height:auto;border-radius:12px; ">
+        </div>
       </div>
     </div>
   </div>
@@ -548,7 +630,7 @@
 </section>
 
 <!-- SECTION 4 — 6 BENEFITS -->
-<section class="zuga-section" style="background-color: #fafafa;">
+<section class="zuga-section" style="background-color: var(--secondary-color);">
   <div class="container">
     <div class="row">
       <div class="col-md-4 mb-4">
@@ -629,13 +711,13 @@
 </section>
 
 <!-- LEVEL SEGMENTATION COMPONENT -->
-<section class="zuga-section" style="background-color: #0B6E6E;">
+<section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <div class="row">
       <div class="col-md-6 mb-4 mb-md-0">
         <div style="background: white; padding: 40px; border-radius: 20px; height: 100%; display: flex; flex-direction: column;">
-          <h3 class="display-5 mb-3" style="color: #333333;">Online Yoga for Beginners — Building Your Foundation Safely</h3>
-          <p class="display-7 mb-4" style="color: #333333;">Never guess your form or risk joint strain. Our beginner blueprint features slow-paced, intentional Hatha holds with step-by-step guidance on utilizing props like blocks and straps. Master Lead Trainer Mallinath provides real-time virtual posture adjustments via live streams, helping you build a bulletproof habit loop from scratch.</p>
+          <h3 class="display-5 mb-3" style="color: var(--text-color);">Online Yoga for Beginners — Building Your Foundation Safely</h3>
+          <p class="display-7 mb-4" style="color: var(--text-color);">Never guess your form or risk joint strain. Our beginner blueprint features slow-paced, intentional Hatha holds with step-by-step guidance on utilizing props like blocks and straps. Master Lead Trainer Mallinath provides real-time virtual posture adjustments via live streams, helping you build a bulletproof habit loop from scratch.</p>
           <div class="mt-auto">
             <a href="/free-trial.html" class="btn btn-orange display-4">Claim Beginner Free Trial</a>
           </div>
@@ -643,8 +725,8 @@
       </div>
       <div class="col-md-6">
         <div style="background: white; padding: 40px; border-radius: 20px; height: 100%; display: flex; flex-direction: column;">
-          <h3 class="display-5 mb-3" style="color: #333333;">Online Yoga for Advanced — Deepening Biomechanical Edge</h3>
-          <p class="display-7 mb-4" style="color: #333333;">For advanced practitioners seeking complete structural mastery, complex alignment adjustments, and deeper breath retention blocks. Refine your edge under elite supervision across high-intensity Vinyasa tracks and therapeutic spinal safety matrices mapped directly to your lifestyle demands.</p>
+          <h3 class="display-5 mb-3" style="color: var(--text-color);">Online Yoga for Advanced — Deepening Biomechanical Edge</h3>
+          <p class="display-7 mb-4" style="color: var(--text-color);">For advanced practitioners seeking complete structural mastery, complex alignment adjustments, and deeper breath retention blocks. Refine your edge under elite supervision across high-intensity Vinyasa tracks and therapeutic spinal safety matrices mapped directly to your lifestyle demands.</p>
           <div class="mt-auto">
             <a href="/pricing.html" class="btn btn-orange display-4">View Advanced Growth Plans</a>
           </div>
@@ -716,7 +798,7 @@
 </section>
 
 <!-- SECTION 8 — PRICING -->
-<section class="zuga-section" style="background-color: #fafafa;">
+<section class="zuga-section" style="background-color: var(--secondary-color);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Simple, Honest Pricing</h2>
     <div class="row">
@@ -926,21 +1008,21 @@
             <div class="row-links">
                 <ul class="header-menu">
                 <li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/" class="text-white text-primary">Home</a>
+                    <a href="https://zugafitness.in/" class=" text-primary">Home</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/Online-Yoga-Classes.html" class="text-white text-primary">Group Classes</a>
+                    <a href="https://zugafitness.in/Online-Yoga-Classes.html" class=" text-primary">Group Classes</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/Online-Personal-Training-classes.html" class="text-white text-primary">Personal Training</a>
+                    <a href="https://zugafitness.in/Online-Personal-Training-classes.html" class=" text-primary">Personal Training</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/Online-Pranayama-Classes.html" class="text-white text-primary">Pranayama</a>
+                    <a href="https://zugafitness.in/Online-Pranayama-Classes.html" class=" text-primary">Pranayama</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/Online-Yoga-Classes-For-PCOD.html" class="text-white text-primary">PCOD Yoga</a>
+                    <a href="https://zugafitness.in/Online-Yoga-Classes-For-PCOD.html" class=" text-primary">PCOD Yoga</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/pricing.html" class="text-white text-primary">Pricing</a>
+                    <a href="https://zugafitness.in/pricing.html" class=" text-primary">Pricing</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="https://zugafitness.in/Blog/" class="text-white text-primary">Blog</a>
+                    <a href="https://zugafitness.in/Blog/" class=" text-primary">Blog</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="/#form02-6" class="text-white text-primary">Contact</a>
+                    <a href="/#form02-6" class=" text-primary">Contact</a>
                   </li></ul>
               </div>
 
@@ -948,18 +1030,18 @@
                 <h4 class="mbr-fonts-style display-5 mb-4 text-center"><strong>Yoga for Indians Worldwide</strong></h4>
                 <div class="row-links">
                     <ul class="header-menu" style="justify-content: center; opacity: 0.8;">
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html" class="text-white">Canada</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html" class="text-white">Dubai & UAE</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html" class="text-white">Germany</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-malaysia-kuala-lumpur-penang.html" class="text-white">Malaysia</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-philippines-manila-cebu.html" class="text-white">Philippines</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-singapore-indian-community.html" class="text-white">Singapore</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-australia-sydney-melbourne.html" class="text-white">Australia</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html" class="text-white">London & UK</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-south-africa-johannesburg-durban.html" class="text-white">South Africa</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html" class="text-white">Japan & South Korea</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/family-yoga-across-timezones.html" class="text-white">Global Family Yoga</a></li>
-                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-france-indians.html" class="text-white">France</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html" class="">Canada</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html" class="">Dubai & UAE</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html" class="">Germany</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-malaysia-kuala-lumpur-penang.html" class="">Malaysia</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-philippines-manila-cebu.html" class="">Philippines</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-singapore-indian-community.html" class="">Singapore</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-australia-sydney-melbourne.html" class="">Australia</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html" class="">London & UK</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-south-africa-johannesburg-durban.html" class="">South Africa</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html" class="">Japan & South Korea</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/family-yoga-across-timezones.html" class="">Global Family Yoga</a></li>
+                        <li class="header-menu-item mbr-fonts-style display-7"><a href="https://zugafitness.in/Blog/online-yoga-classes-france-indians.html" class="">France</a></li>
                     </ul>
                 </div>
             </div>
