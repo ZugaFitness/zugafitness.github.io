@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/zuga-logo.webp" type="image/webp">
 
-  <title>Online Personal Yoga Training | Zuga Fitness</title>
-  <meta name="description" content="Private 1-on-1 online yoga sessions with expert instructors at Zuga Fitness. Personalised plans for beginners, injuries, PCOD and postpartum. Free consultation.">
+  <title>1-on-1 Online Personal Fitness & Yoga Training | Zuga Fitness</title>
+  <meta name="description" content="Intense 1-on-1 online personal fitness and yoga training. Expert coaches for strength, conditioning, and flexibility. Book your free consultation.">
     <!-- Open Graph Tags -->
-  <meta property="og:title" content="Online Personal Yoga Training | Zuga Fitness">
-  <meta property="og:description" content="Private 1-on-1 online yoga sessions with expert instructors at Zuga Fitness. Personalised plans built for your body and goals.">
+  <meta property="og:title" content="1-on-1 Online Personal Fitness & Yoga Training | Zuga Fitness">
+  <meta property="og:description" content="Intense 1-on-1 online personal fitness and yoga training. Expert coaches for strength, conditioning, and flexibility.">
   <meta property="og:url" content="https://zugafitness.in/Online-Personal-Training-classes.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://zugafitness.in/assets/images/zuga-logo.webp">
@@ -87,17 +87,19 @@
     }
 
     :root {
-      --orange: #E8690A;
-      --teal: #0B6E6E;
-      --bg: #FFFFFF;
-      --text: #333333;
-      --light-bg: #F8F5F0;
+      --orange: #FF4B2B;
+      --teal: #1A1A1A;
+      --bg: #111111;
+      --text: #FFFFFF;
+      --light-bg: #1A1A1A;
+      --card-bg: #222222;
+      --border-color: #333333;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      color: #333333;
-      background-color: #F8F5F0;
+      color: var(--text);
+      background-color: var(--bg);
     }
 
     h1, h2 {
@@ -138,6 +140,186 @@
     .btn-white-outline:hover {
       background-color: #fff !important;
       color: var(--teal) !important;
+    }
+
+
+    .btn-orange {
+      background-color: var(--orange) !important;
+      border-color: var(--orange) !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      padding: 1rem 2.5rem !important;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+    }
+
+    .btn-orange:hover {
+      background-color: #e03e1f !important;
+      border-color: #e03e1f !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 75, 43, 0.6);
+    }
+
+    .btn-dark-outline {
+      background-color: transparent !important;
+      border: 1px solid #444 !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      padding: 0.5rem 1.5rem !important;
+      font-weight: 500 !important;
+      transition: all 0.3s ease;
+    }
+    .btn-dark-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border-color: #fff !important;
+    }
+
+    /* Carousel */
+    .zuga-carousel-container {
+      background: var(--bg);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .carousel-card {
+      background: var(--card-bg);
+      border-top: 3px solid var(--orange);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .carousel-card h4 {
+      color: #fff;
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      background-color: var(--light-bg);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Generic Section */
+    .zuga-section {
+      background-color: var(--bg) !important;
+      color: #fff;
+    }
+
+    /* Benefits Grid */
+    .benefit-card {
+      background: var(--card-bg);
+      border-bottom: 4px solid var(--orange);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: #fff;
+    }
+
+    /* Instructor Section */
+    .avatar {
+      background: #333;
+      color: #fff;
+    }
+    .avatar.teal {
+      color: #fff;
+    }
+    .instructor-card {
+      background: var(--card-bg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: #fff;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Pricing Section */
+    .pricing-card {
+      background: var(--card-bg);
+      border: 2px solid var(--orange);
+      color: #fff;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background-color: var(--light-bg);
+      color: #fff;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .text-muted {
+      color: #aaa !important;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .stat-item h3 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    .stat-item h3 span {
+      color: var(--orange);
+    }
+    .stat-item p {
+      font-size: 0.8rem;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .tags-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 400px;
+      border-radius: 20px;
+      background: url('assets/images/home-workout.webp') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .video-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+    }
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+    }
+    .play-btn:hover {
+      transform: scale(1.1);
+      border-color: #fff;
+    }
+    .play-btn svg {
+      fill: #fff;
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
     }
 
     /* Hero Section */
@@ -220,6 +402,7 @@
       padding-bottom: 15px;
     }
     .faq-question {
+      color: #fff;
       font-weight: 600;
       cursor: pointer;
       display: flex;
@@ -247,8 +430,9 @@
   {
     "@context": "https://schema.org/",
     "@type": "Service",
-    "name": "Online Personal Yoga Training",
-    "description": "Private 1-on-1 online yoga sessions with expert instructors at Zuga Fitness. Personalised plans built for your body and goals.",
+    "serviceType": "1-on-1 Online Personal Fitness & Yoga Training | Zuga Fitness",
+    "name": "Online Personal Fitness Training",
+    "description": "Intense 1-on-1 online personal fitness and yoga training. Expert coaches for strength, conditioning, and flexibility. Book your free consultation.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Zuga Fitness",
@@ -261,6 +445,43 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link rel="stylesheet" href="assets/whatsapp.css">
 <link rel="canonical" href="https://zugafitness.in/Online-Personal-Training-classes.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How is personal training different from group classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike group classes where the sequence is fixed for everyone, personal training is 100% customised. Your instructor monitors your form every second, adjusts the pace based on your energy levels that day, and focuses specifically on your health goals."
+      }
+    }, {
+      "@type": "Question",
+      "name": "What if I have an injury or medical condition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is where personal training shines. We specialise in therapeutic modifications for injuries, working with you safely to build strength and flexibility."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How do I pick my session time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "During your free consultation, we'll discuss your preferred timing. We offer flexible slots across all time zones to ensure your practice fits seamlessly into your life."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How long before I see results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most students feel a difference in their energy and flexibility within the first 2-3 weeks. For specific strength or health goals, we typically see significant progress within 8-12 weeks of consistent practice."
+      }
+    }]
+  }
+  </script>
+
 </head>
 <body>
 
@@ -270,7 +491,7 @@
 			<div class="navbar-brand">
 				<span class="navbar-logo">
 					<a href="https://zugafitness.in">
-						<img loading="lazy" src="assets/images/zuga-logo.webp" alt="zuga fitness logo" class="brand-logo">
+						<img fetchpriority="high" loading="lazy" src="assets/images/zuga-logo.webp" alt="zuga fitness logo" class="brand-logo">
 					</a>
 				</span>
 				<span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-4" href="https://zugafitness.in">Zuga Fitness</a></span>
@@ -313,22 +534,89 @@
 	</nav>
 </section>
 
+
 <!-- HERO SECTION -->
-<section class="hero-section">
+<section class="hero-section zuga-section" style="padding-top: 200px; padding-bottom: 80px; position: relative; z-index: 1;">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6">
-        <h1 class="display-3 mb-4">Your Goals. Your Pace. Your Practice.</h1>
-        <p class="lead mb-5" style="font-size: 1.25rem;">1-on-1 online yoga sessions built entirely around you — your body, your schedule, your progress.</p>
-        <div class="mbr-section-btn">
-          <a class="btn btn-orange display-4" href="/personal-training-consultation.html">Book Free Consultation</a>
+      <div class="col-lg-6">
+        <h1 class="display-2 mb-4" style="font-weight: 800; text-transform: uppercase; line-height: 1.1;">Push Your<br>Limits with Us</h1>
+        <p class="lead mb-4" style="font-size: 1.1rem; color: #aaa;">From beginner to advanced, experience 1-on-1 personal workouts designed to help you achieve peak performance and exceed your fitness goals.</p>
+
+        <div class="d-flex align-items-center gap-4 mb-4 flex-wrap">
+          <a class="btn btn-orange display-4" href="/personal-training-consultation.html">Join Now »</a>
+          <a href="#" class="d-flex align-items-center text-white" style="text-decoration: none; font-weight: 600;">
+             <span class="play-icon me-2" style="background: var(--orange); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
+               <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+             </span>
+             Watch Video
+          </a>
         </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <div class="d-flex" style="margin-right: 15px;">
+             <img alt="Zuga Fitness Image" decoding="async" loading="lazy" src="https://randomuser.me/api/portraits/women/44.jpg" style="width:40px;height:40px;border-radius:50%;border:2px solid #111;margin-right:-15px;z-index:3;position:relative;">
+             <img alt="Zuga Fitness Image" decoding="async" loading="lazy" src="https://randomuser.me/api/portraits/men/32.jpg" style="width:40px;height:40px;border-radius:50%;border:2px solid #111;margin-right:-15px;z-index:2;position:relative;">
+             <img alt="Zuga Fitness Image" decoding="async" loading="lazy" src="https://randomuser.me/api/portraits/women/68.jpg" style="width:40px;height:40px;border-radius:50%;border:2px solid #111;z-index:1;position:relative;">
+          </div>
+          <div>
+            <div style="color: var(--orange); font-size: 0.9rem;">★★★★★</div>
+            <div style="font-size: 0.8rem; color: #aaa;">4.9★ Google Reviews</div>
+          </div>
+        </div>
+
+        <div class="tags-container">
+           <span class="btn-dark-outline">Personal Training</span>
+           <span class="btn-dark-outline">Strength</span>
+           <span class="btn-dark-outline">Yoga</span>
+           <span class="btn-dark-outline">Flexibility</span>
+           <span class="btn-dark-outline">Functional Workouts</span>
+        </div>
+
       </div>
-      <div class="col-md-6 text-center lottie-container">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-             alt="Personal yoga training session online"
-             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;">
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <img decoding="async" loading="lazy" src="assets/images/home-workout.webp"
+             alt="Online Personal Training Workout at Home"
+             style="width:100%;max-width:100%;height:auto;border-radius:12px;object-fit:cover;box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS & VIDEO SECTION -->
+<section class="zuga-section" style="padding-top: 40px;">
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-8">
+          <h5 style="color: var(--orange); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">About Us</h5>
+          <h2 class="display-3 mb-4" style="font-weight: 800; text-transform: uppercase;">Your <span style="color: var(--orange);">Fitness</span> Journey Starts Here</h2>
+          <p style="color: #aaa; font-size: 1.1rem; max-width: 800px;">At Zuga Fitness, we are dedicated to helping you unlock your full fitness potential. With expert trainers and personalized plans, we provide the perfect environment to push your limits and achieve your goals.</p>
+
+          <div class="stats-row">
+             <div class="stat-item">
+                <h3>10<span>+</span></h3>
+                <p>Years of Excellence</p>
+             </div>
+             <div class="stat-item">
+                <h3>Thousands</h3>
+                <p>Global Students</p>
+             </div>
+             <div class="stat-item">
+                <h3>100<span>%</span></h3>
+                <p>Personalised Plans</p>
+             </div>
+             <div class="stat-item">
+                <h3>Expert</h3>
+                <p>Trainers</p>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <div class="video-placeholder">
+       <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+       </div>
     </div>
   </div>
 </section>
@@ -336,17 +624,17 @@
 <div class="zuga-carousel-container">
   <div class="zuga-carousel-track">
     <!-- Group 1 -->
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Women's Wellness & PCOD</h4></div></div>
     <!-- Duplicated for seamless loop -->
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Corporate Weekday Pop-Ups</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Live Virtual Studio</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Breathwork & Meditation</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Back Pain Relief</h4></div></div>
-    <div class="zuga-carousel-item"><div class="carousel-card"><h4>Women's Wellness & PCOD</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Corporate Weekday Pop-Ups</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Live Virtual Studio</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Breathwork & Meditation</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Back Pain Relief</h4></div></div>
+    <div class="zuga-carousel-item"><div class="carousel-card" style="background: var(--card-bg);"><h4>Women's Wellness & PCOD</h4></div></div>
   </div>
 </div>
 
@@ -383,7 +671,7 @@
 </section>
 
 <!-- KEY BENEFITS -->
-<section class="zuga-section" style="background-color: #fafafa;">
+<section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <div class="row">
       <div class="col-md-4 mb-4">
@@ -471,7 +759,7 @@
     <div class="row align-items-center">
       <div class="col-md-6 mb-5 mb-md-0">
         <h2 class="display-4 mb-4">What to Expect</h2>
-        <ol class="display-7" style="padding-left: 1.5rem; line-height: 2.2;">
+        <ol class="display-7" style="padding-left: 1.5rem; line-height: 2.2; color: #ccc;">
           <li>Free 20-minute consultation call first</li>
           <li>Instructor designs your personalised practice plan</li>
           <li>Sessions on Zoom — you pick the time</li>
@@ -496,29 +784,31 @@
 <section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Meet Your Instructors</h2>
+
     <div class="row">
       <div class="col-md-6">
         <div class="instructor-card">
-          <div class="avatar">M</div>
+          <div class="avatar" style="color: var(--orange);">M</div>
           <h3>Mallinath</h3>
-          <p class="display-7">1,500+ hours taught | 8+ yoga specializations</p>
-          <p class="text-muted">Expert in Hatha & Vinyasa | Authentic Indian yoga tradition</p>
+          <p class="display-7">1,500+ hours taught | Strength & Conditioning Expert</p>
+          <p class="text-muted">Expert in Functional Fitness, HIIT, and Hatha Yoga. Integrating ancient yoga traditions with modern biomechanics to push your physical limits safely.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="instructor-card">
-          <div class="avatar teal">A</div>
+          <div class="avatar teal" style="color: var(--orange);">A</div>
           <h3>Anusha</h3>
-          <p class="display-7">Anusha — 500+ hours. Certified Dance & Dance Fitness Instructor, Women's Wellness, PCOD & Postpartum Specialist.</p>
-          <p class="text-muted">Expert in PCOD & Postpartum yoga | Warm, encouraging teaching style</p>
+          <p class="display-7">Dance Fitness Lead | Personal Training Specialist</p>
+          <p class="text-muted">Certified Dance Fitness Instructor and High-Intensity Training specialist. Focuses on cardiovascular endurance, core strength, and empowering women's fitness.</p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- STUDENT TESTIMONIAL -->
-<section class="zuga-section" style="background-color: #F8F5F0;">
+<section class="zuga-section" style="background-color: var(--bg);">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
@@ -537,7 +827,7 @@
       <h2 class="display-4 mb-3">Custom Pricing — Built Around You</h2>
       <p class="display-7 mb-5">Every personal training plan is priced based on your goals and session frequency. Start with a free consultation.</p>
       <h4 class="mb-4 text-start">What's included:</h4>
-      <ul class="display-7 mb-5 text-start" style="list-style: none; padding: 0; line-height: 2;">
+      <ul class="display-7 mb-5 text-start" style="list-style: none; padding: 0; line-height: 2; color: #ccc;">
         <li><span style="color: var(--orange);">✔</span> Free 20-min consultation</li>
         <li><span style="color: var(--orange);">✔</span> Personalised practice plan</li>
         <li><span style="color: var(--orange);">✔</span> 1-on-1 Zoom sessions</li>
@@ -553,7 +843,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="zuga-section" style="background-color: #fafafa;">
+<section class="zuga-section" style="background-color: var(--light-bg);">
   <div class="container">
     <h2 class="display-4 text-center mb-5">Common Questions</h2>
     <div class="row justify-content-center">
@@ -579,7 +869,7 @@
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">How long before I see results? <span>+</span></div>
           <div id="faq4" class="collapse mt-3">
-            <p>Most students feel a difference in their energy and flexibility within the first 2-3 weeks. For specific health goals like weight loss or <a href="/Blog/"yoga-for-hormonal-balance-7-poses.html">hormonal balance</a>, we typically see significant progress within 8-12 weeks of consistent practice.</p>
+            <p>Most students feel a difference in their energy and flexibility within the first 2-3 weeks. For specific health goals like weight loss or <a href="/Blog/yoga-for-hormonal-balance-7-poses.html" style="color: var(--orange);">hormonal balance</a>, we typically see significant progress within 8-12 weeks of consistent practice.</p>
           </div>
         </div>
       </div>
@@ -687,7 +977,7 @@
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat with us on WhatsApp" rel="noopener noreferrer">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+  <img decoding="async" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
        alt="WhatsApp" width="28" height="28">
   <span class="whatsapp-label">Chat with us</span>
 </a>
