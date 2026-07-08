@@ -1935,4 +1935,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
+
+ <url>
+  <loc>https://zugafitness.in/Blog/online-yoga-busy-professionals-12-hour-workdays.html</loc>
+  <lastmod>2026-07-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+ </url>
 </urlset>
