@@ -12,7 +12,7 @@
    https://zugafitness.in/
   </loc>
   <lastmod>
-   2026-06-25
+   2026-07-09
   </lastmod>
   <changefreq>
    daily
@@ -26,7 +26,7 @@
    https://zugafitness.in/Online-Dance-Fitness-Classes.html
   </loc>
   <lastmod>
-   2026-06-25
+   2026-07-09
   </lastmod>
   <changefreq>
    monthly
@@ -109,7 +109,7 @@
   <loc>
    https://zugafitness.in/Online-Yoga-Classes.html
   </loc>
-  <lastmod>2026-07-04</lastmod>
+  <lastmod>2026-07-09</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.9</priority>
  </url>
@@ -1959,5 +1959,9 @@
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <loc>https://zugafitness.in/Blog/why-august-1st-perfect-day-start-weight-loss-transformation.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
