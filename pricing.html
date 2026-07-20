@@ -217,6 +217,9 @@
         transform: none !important; /* Disable reveal on mobile if it causes gaps */
       }
     }
+    .weight-loss-float {
+      display: none !important;
+    }
   </style>
 
   <!-- Structured Data: Local Business, Service & FAQ -->
@@ -278,8 +281,8 @@
       "@type": "OfferCatalog",
       "name": "Online Wellness Services",
       "itemListElement": [
-        { "@type": "Offer", "name": "Starter Plan", "price": "3500", "priceCurrency": "INR" },
-        { "@type": "Offer", "name": "90-Day Weightloss Challenge", "price": "13000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Starter Plan", "price": "2000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Growth Plan", "price": "3500", "priceCurrency": "INR" },
         { "@type": "Offer", "name": "Premium Personal Training", "price": "8000", "priceCurrency": "INR" }
       ]
     }
@@ -341,8 +344,8 @@
       "@type": "OfferCatalog",
       "name": "Wellness Plans",
       "itemListElement": [
-        { "@type": "Offer", "name": "Starter Plan", "price": "3500", "priceCurrency": "INR" },
-        { "@type": "Offer", "name": "90-Day Weightloss Challenge", "price": "13000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Starter Plan", "price": "2000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Growth Plan", "price": "3500", "priceCurrency": "INR" },
         { "@type": "Offer", "name": "Premium Personal Training", "price": "8000", "priceCurrency": "INR" }
       ]
     }
@@ -355,8 +358,8 @@
     "@type": "OfferCatalog",
     "name": "Wellness Plans",
     "itemListElement": [
-        { "@type": "Offer", "name": "Starter Plan", "price": "3500", "priceCurrency": "INR" },
-        { "@type": "Offer", "name": "90-Day Weightloss Challenge", "price": "13000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Starter Plan", "price": "2000", "priceCurrency": "INR" },
+        { "@type": "Offer", "name": "Growth Plan", "price": "3500", "priceCurrency": "INR" },
         { "@type": "Offer", "name": "Premium Personal Training", "price": "8000", "priceCurrency": "INR" }
       ]
   }
@@ -412,7 +415,7 @@
 						<a class="nav-link link text-black text-primary display-4" href="/#form02-6">Contact</a>
 					</li></ul>
 
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!">Try Free Class</a></div>
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20know%20more%20about%20Zuga%20Yoga%20and%20Dance%20classes.">Try Free Class</a></div>
 			</div>
 		</div>
 	</nav>
@@ -427,107 +430,84 @@
     </div>
 </section>
 
-<section class="pricing-cards" style="padding-bottom: 80px; background-color: #fffaf2;">
+<section class="pricing-cards" style="padding-top: 80px; padding-bottom: 80px; background-color: #fffaf2;">
     <div class="container">
-                <div id="pricing-grid">
         <div class="row justify-content-center">
-            <!-- Starter Plan -->
+
+            <!-- Card 1: Starter Plan -->
             <div class="col-12 col-md-4 mb-4 reveal">
-                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid #ddd; box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: #ffffff; position: relative;">
-                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #dc3545; color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; display: flex; align-items: center; gap: 6px; white-space: nowrap;">
-                        <i data-lucide="alert-circle" style="width:14px; fill: currentColor;"></i> LIMITED: Only 10 Slots Per Batch!
-                    </div>
-                    <div class="card-header bg-transparent border-0 text-center mt-3">
-                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--deep-teal);">Starter Plan</h3>
+                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #ffffff;">
+                    <div class="card-header bg-transparent border-0 text-center mt-4">
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #333;">Starter Plan</h3>
                         <div class="price-box my-3">
-                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong>₹3,500</strong></span>
-                            <span class="mbr-fonts-style display-7" style="color: #666;">/month</span>
+                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong>₹2,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">/ month</span>
                         </div>
+                        <p class="mbr-fonts-style display-7" style="color: #555; font-weight: 600; margin-bottom: 20px;">Choose Your Track:</p>
                     </div>
                     <div class="card-body">
                         <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #444;">
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="check-circle-2" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> 20 live GROUP classes per month</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="clock" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Access to 2 timezone slots</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="users" style="color: #20ac6b; width:20px; flex-shrink:0;"></i> Live instruction from Mallinath & Anusha</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> <span>Yoga: 5 days per week OR<br>Dance Fitness: 3 days per week</span></li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> Live GROUP classes with real-time instruction</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> Access to 1 timezone slot (EST, GMT, or GST)</li>
                         </ul>
                     </div>
-                    <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: var(--deep-teal) !important; border-color: var(--deep-teal) !important;">Claim 1 of 10 Spots</a>
+                    <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20know%20more%20about%20the%20Starter%20Plan." class="btn btn-outline-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; color: var(--deep-teal); border: 2px solid var(--deep-teal);">Get Started</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 90-Day Weightloss Challenge -->
+            <!-- Card 2: Growth Plan -->
             <div class="col-12 col-md-4 mb-4 reveal">
                 <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid var(--brand-orange); box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1); position: relative; background: #ffffff;">
-                    <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: #dc3545; color: #fff; padding: 6px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; z-index: 10; display: flex; align-items: center; gap: 4px; text-align: center; width: 90%; justify-content: center; line-height: 1.2;">
-                        <i data-lucide="alert-triangle" style="width:14px; fill: currentColor; flex-shrink: 0;"></i> ULTRA-EXCLUSIVE: Only 5 Slots Per Batch! (15 Total Spots)
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--brand-orange); color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; white-space: nowrap; box-shadow: 0 4px 10px rgba(232, 105, 10, 0.3);">
+                        MOST POPULAR
                     </div>
-                    <div style="position: absolute; top: 15px; right: -10px; background: var(--brand-orange); color: #fff; padding: 4px 15px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; transform: rotate(15deg); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">BEST VALUE</div>
                     <div class="card-header bg-transparent border-0 text-center mt-4">
-                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brand-orange); font-size: 1.6rem;">90-Day Weightloss Challenge</h3>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brand-orange); font-size: 1.8rem;">Growth Plan</h3>
                         <div class="price-box my-3">
-                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong>₹13,000</strong></span>
-                            <span class="mbr-fonts-style display-7" style="color: #666;">/ 3 months<br><span style="color: #20ac6b; font-weight: bold;">(Save ₹2,000!)</span><br><small>OR ₹5,000 / month</small></span>
+                            <span class="mbr-fonts-style display-2" style="color: #333;"><strong>₹3,500</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #666;">/ month</span>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #444;">
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="zap" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> <strong>Unlimited</strong> live GROUP classes across all 3 timezones (EST, GMT, GST)</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="globe" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> All 8 yoga styles + Zumba & Functional Workouts</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="smartphone" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> Direct WhatsApp access to the "Squad" (Anusha & Mallinath)</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="target" style="color: var(--brand-orange); width:20px; flex-shrink:0;"></i> Guaranteed Accountability & Expert Coaching</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> UNLIMITED live GROUP classes</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> Access to ALL styles (Yoga, Dance Fitness, Functional Strength)</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> Access to ALL 3 timezones (EST, GMT, GST)</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: var(--brand-orange); width:20px; flex-shrink:0; margin-top: 2px;"></i> 2 complimentary 1-on-1 personal sessions per month</li>
                         </ul>
                     </div>
-                    <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: var(--brand-orange) !important; border-color: var(--brand-orange) !important; box-shadow: 0 8px 20px rgba(232, 105, 10, 0.2);">Claim 1 of 5 Spots</a>
+                    <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20know%20more%20about%20the%20Unlimited%20Growth%20Plan." class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: var(--brand-orange) !important; border-color: var(--brand-orange) !important; box-shadow: 0 8px 20px rgba(232, 105, 10, 0.2);">Go Unlimited</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Personal Training -->
+            <!-- Card 3: Personal Training -->
             <div class="col-12 col-md-4 mb-4 reveal">
-                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid #ffd700; box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15); position: relative; background: #1a1a1a;">
-                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ffd700; color: #1a1a1a; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; display: flex; align-items: center; gap: 6px; white-space: nowrap; box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);">
-                        <i data-lucide="star" style="width:14px; fill: currentColor;"></i> EXCLUSIVE: Only 2 Slots Per Batch!
-                    </div>
+                <div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid #222; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); position: relative; background: #1a1a1a;">
                     <div class="card-header bg-transparent border-0 text-center mt-3">
-                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #ffd700;">Personal Training</h3>
-                        <p class="mbr-fonts-style display-7" style="color: #aaa; margin-bottom: 20px;">1-on-1 Private</p>
-                        <div class="price-box my-3" style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 15px; border: 1px solid rgba(255, 215, 0, 0.2);">
-                            <div style="margin-bottom: 15px; text-align: left; position: relative;">
-                                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 5px;">
-                                    <span class="mbr-fonts-style display-5" style="color: #fff;"><strong>₹10,000</strong><span style="font-size: 1rem; color: #aaa; font-weight: normal;"> / month</span></span>
-                                    <span style="background: #ffd700; color: #1a1a1a; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">MAXIMUM RESULTS</span>
-                                </div>
-                                <div style="color: #ccc; font-size: 0.9rem;">(5 Days a Week)</div>
-                            </div>
-                            <hr style="border-color: rgba(255, 215, 0, 0.2); margin: 10px 0;">
-                            <div style="text-align: left;">
-                                <span class="mbr-fonts-style display-5" style="color: #fff;"><strong>₹8,000</strong><span style="font-size: 1rem; color: #aaa; font-weight: normal;"> / month</span></span>
-                                <div style="color: #ccc; font-size: 0.9rem;">(3 Days a Week)</div>
-                            </div>
+                        <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff; font-size: 1.6rem;">1-on-1 Personal Training</h3>
+                        <div class="price-box my-4">
+                            <span class="mbr-fonts-style display-2" style="color: #fff;"><strong>₹8,000</strong></span>
+                            <span class="mbr-fonts-style display-7" style="color: #aaa;">/ month<br><small>(3 Days a Week)</small></span>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul class="mbr-fonts-style display-7" style="list-style: none; padding: 0; color: #e0e0e0;">
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="video" style="color: #ffd700; width:20px; flex-shrink:0;"></i> 1-on-1 Live Zoom Sessions (Customized to your schedule)</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="activity" style="color: #ffd700; width:20px; flex-shrink:0;"></i> 100% Customized workout & yoga plans tailored to your body</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="message-circle" style="color: #ffd700; width:20px; flex-shrink:0;"></i> Direct WhatsApp access to your instructor (Anusha or Mallinath)</li>
-                            <li class="mb-3 d-flex align-items-center gap-2"><i data-lucide="clock" style="color: #ffd700; width:20px; flex-shrink:0;"></i> Priority scheduling across all timezones</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: #fff; width:20px; flex-shrink:0; margin-top: 2px;"></i> 1-on-1 Live Zoom sessions tailored to your schedule</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: #fff; width:20px; flex-shrink:0; margin-top: 2px;"></i> 100% customized plans tailored to your body</li>
+                            <li class="mb-3 d-flex align-items-start gap-2"><i data-lucide="check" style="color: #fff; width:20px; flex-shrink:0; margin-top: 2px;"></i> Priority scheduling & direct WhatsApp access to your instructor</li>
                         </ul>
                     </div>
-                    <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!" class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: #ffd700 !important; color: #1a1a1a !important; border-color: #ffd700 !important; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);">Claim 1 of 2 Private Spots</a>
+                    <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                        <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20know%20more%20about%201-on-1%20Personal%20Training." class="btn btn-primary display-7 w-100" style="border-radius: 50px; font-weight: 700; background: #fff !important; color: #1a1a1a !important; border-color: #fff !important;">Book a Consultation</a>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </div>
 
-        <div class="text-center mt-5">
-            <a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!" class="mbr-fonts-style display-7 text-primary">Not sure which plan fits you? → Try a free class first</a>
         </div>
     </div>
 </section>
@@ -540,7 +520,7 @@
                 <div id="pricing-faq" class="accordion">
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq1">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse1" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">Can I switch plans anytime?</span>
                                 <span>+</span>
                             </button>
@@ -553,7 +533,7 @@
                     </div>
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq2">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse2" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">Do you offer family or couples plans?</span>
                                 <span>+</span>
                             </button>
@@ -567,7 +547,7 @@
                     <!-- More FAQs can be added here following the same structure -->
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq3">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse3" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">What happens if I miss a class?</span>
                                 <span>+</span>
                             </button>
@@ -580,7 +560,7 @@
                     </div>
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq4">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse4" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">Is there a refund policy?</span>
                                 <span>+</span>
                             </button>
@@ -593,7 +573,7 @@
                     </div>
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq5">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse5" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">Can I attend classes from any country?</span>
                                 <span>+</span>
                             </button>
@@ -606,7 +586,7 @@
                     </div>
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq6">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">What equipment do I need?</span>
                                 <span>+</span>
                             </button>
@@ -619,7 +599,7 @@
                     </div>
                     <div class="card mb-3" style="border: none; border-bottom: 1px solid #eee; border-radius: 0;">
                         <div class="card-header p-0" id="faq7">
-                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse7" style="text-decoration: none; color: black; padding: 20px;">
+                            <button class="btn btn-link w-100 text-left d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" style="text-decoration: none; color: black; padding: 20px;">
                                 <span class="mbr-fonts-style display-5" style="font-size: 1.3rem;">Do you offer long-term membership discounts?</span>
                                 <span>+</span>
                             </button>
@@ -652,7 +632,7 @@
                 <p class="mbr-text mbr-fonts-style display-7">Average Rating</p>
             </div>
             <div class="col-6 col-md-3">
-                <h3 class="mbr-section-title mbr-fonts-style display-5"><strong>🧘 8</strong></h3>
+                <h3 class="mbr-section-title mbr-fonts-style display-5"><strong>8</strong></h3>
                 <p class="mbr-text mbr-fonts-style display-7">Yoga Styles Offered</p>
             </div>
         </div>
@@ -806,13 +786,13 @@
 
 
 
-<a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20claim%20a%20spot%20in%20the%20Zuga%20Challenge!"
+<a href="https://wa.me/917676379909?text=Hi!%20I%20want%20to%20know%20more%20about%20Zuga%20Yoga%20and%20Dance%20classes."
    class="whatsapp-float"
    target="_blank"
-   aria-label="Claim Your Spot" rel="noopener noreferrer">
+   aria-label="Chat with us" rel="noopener noreferrer">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
        alt="WhatsApp" width="28" height="28">
-  <span class="whatsapp-label">Claim Your Spot</span>
+  <span class="whatsapp-label">Chat with us</span>
 </a>
 
 
