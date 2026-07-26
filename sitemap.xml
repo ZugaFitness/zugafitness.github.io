@@ -575,20 +575,7 @@
    0.8
   </priority>
  </url>
- <url>
-  <loc>
-   https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html
-  </loc>
-  <lastmod>
-   2026-06-25
-  </lastmod>
-  <changefreq>
-   weekly
-  </changefreq>
-  <priority>
-   0.8
-  </priority>
- </url>
+
  <url>
   <loc>
    https://zugafitness.in/Blog/live-vs-recorded-online-yoga-classes.html
@@ -659,20 +646,7 @@
    0.8
   </priority>
  </url>
- <url>
-  <loc>
-   https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html
-  </loc>
-  <lastmod>
-   2026-06-25
-  </lastmod>
-  <changefreq>
-   weekly
-  </changefreq>
-  <priority>
-   0.8
-  </priority>
- </url>
+
  <url>
   <loc>
    https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html
@@ -1465,12 +1439,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://zugafitness.in/Blog/live-vs-recorded-online-yoga-classes.html</loc>
     <lastmod>2026-06-25</lastmod>
@@ -1501,12 +1470,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://zugafitness.in/Blog/online-yoga-classes-dubai-uae-indian-expats.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html</loc>
     <lastmod>2026-06-25</lastmod>
@@ -1746,6 +1710,7 @@
   <url>
     <loc>https://zugafitness.in/Blog/yoga-for-pcod-working-women-india.html</loc>
     <lastmod>2026-07-03</lastmod>
+  </url>
   <url>
     <loc>https://zugafitness.in/Blog/online-dance-classes-no-equipment-space.html</loc>
     <lastmod>2026-07-02</lastmod>
@@ -1755,6 +1720,7 @@
 
   <url>
     <loc>https://zugafitness.in/Blog/dance-fitness-weight-loss-real-results.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1819,10 +1785,6 @@
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <loc>https://zugafitness.in/Blog/why-august-1st-perfect-day-start-weight-loss-transformation.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
   <url>
@@ -1840,6 +1802,10 @@
   <url>
     <loc>https://zugafitness.in/wlc-form.html</loc>
     <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zugafitness.in/Blog/free-3-day-yoga-zumba-strength-training-trial.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -1862,6 +1828,8 @@
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zugafitness.in/Blog/postpartum-yoga-safe-exercises-new-moms.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1874,11 +1842,11 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://zugafitness.in/usa-online-yoga-classes.html</loc>
-    <lastmod>2026-07-24T11:42:28+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+  <loc>https://zugafitness.in/usa-online-yoga-classes.html</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
   <url>
     <loc>https://zugafitness.in/Blog/moorcha-pranayama-benefits.html</loc>
     <lastmod>2026-07-24</lastmod>
@@ -1891,4 +1859,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+ <url>
+  <loc>https://zugafitness.in/uk-online-yoga-classes.html</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
+ <url>
+  <loc>https://zugafitness.in/uae-online-yoga-classes.html</loc>
+  <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
 </urlset>
