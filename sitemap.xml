@@ -618,49 +618,10 @@
    0.8
   </priority>
  </url>
- <url>
-  <loc>
-   https://zugafitness.in/Blog/online-yoga-classes-australia-sydney-melbourne.html
-  </loc>
-  <lastmod>
-   2026-06-25
-  </lastmod>
-  <changefreq>
-   weekly
-  </changefreq>
-  <priority>
-   0.8
-  </priority>
- </url>
- <url>
-  <loc>
-   https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html
-  </loc>
-  <lastmod>
-   2026-06-25
-  </lastmod>
-  <changefreq>
-   weekly
-  </changefreq>
-  <priority>
-   0.8
-  </priority>
- </url>
 
- <url>
-  <loc>
-   https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html
-  </loc>
-  <lastmod>
-   2026-06-25
-  </lastmod>
-  <changefreq>
-   weekly
-  </changefreq>
-  <priority>
-   0.8
-  </priority>
- </url>
+
+
+
  <url>
   <loc>
    https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html
@@ -1458,25 +1419,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://zugafitness.in/Blog/online-yoga-classes-australia-sydney-melbourne.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://zugafitness.in/Blog/online-yoga-classes-canada-vancouver-toronto.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
-  <url>
-    <loc>https://zugafitness.in/Blog/online-yoga-classes-germany-berlin-munich.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+
+
   <url>
     <loc>https://zugafitness.in/Blog/online-yoga-classes-japan-south-korea.html</loc>
     <lastmod>2026-06-25</lastmod>
@@ -1869,6 +1815,25 @@
  <url>
   <loc>https://zugafitness.in/uae-online-yoga-classes.html</loc>
   <lastmod>2026-07-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
+
+ <url>
+  <loc>https://zugafitness.in/germany-online-yoga-classes.html</loc>
+  <lastmod>2026-07-27</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
+ <url>
+  <loc>https://zugafitness.in/canada-online-yoga-classes.html</loc>
+  <lastmod>2026-07-27</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+ </url>
+ <url>
+  <loc>https://zugafitness.in/australia-online-yoga-classes.html</loc>
+  <lastmod>2026-07-27</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
  </url>
