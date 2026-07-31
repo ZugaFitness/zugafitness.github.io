@@ -207,7 +207,7 @@
 <div class="flex items-center gap-3">
 <a href="/index.html" class="flex items-center gap-3">
 <img loading="lazy" src="/assets/images/zuga-logo.webp" alt="Zuga Fitness logo" class="h-10 w-auto">
-<h1 class="text-headline-md font-headline-md font-black tracking-tighter text-primary hidden sm:block">ZUGA FITNESS</h1>
+<span class="text-headline-md font-headline-md font-black tracking-tighter text-primary hidden sm:block">ZUGA FITNESS</span>
 </a>
 </div>
 <div class="flex items-center gap-6">
@@ -218,9 +218,6 @@
 <a class="hover:text-primary transition-colors" href="/Blog/index.html">Blog</a>
 <a class="hover:text-primary transition-colors" href="/index.html#form02-6">Contact</a>
 </nav>
-<a href="/free-trial.html" class="bg-primary text-on-primary font-label-bold px-6 py-2 rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-300 active:scale-95">
-            Try Free Class
-        </a>
 </div>
 </header>
 <main class="pt-20">
@@ -233,19 +230,19 @@
 <span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-bold mb-6 animate-bounce">
                     BANGALORE'S VIBRANT ENERGY
                 </span>
-<h2 class="font-headline-xl text-5xl md:text-headline-xl text-on-background mb-6 leading-none">
-                    Fuel Your <span class="text-primary">Vibrant Momentum</span>
-</h2>
+<h1 class="font-headline-xl text-5xl md:text-headline-xl text-on-background mb-6 leading-none">
+                    Corporate Wellness Bangalore:<br/>Fuel Your <span class="text-primary">Vibrant Momentum</span>
+</h1>
 <p class="font-body-lg text-xl md:text-body-lg text-on-surface-variant mb-10 max-w-xl">
                     Revolutionary Corporate Yoga &amp; Zumba experiences designed to ignite peak performance and employee joy in the heart of Bangalore.
                 </p>
 <div class="flex flex-col md:flex-row gap-4">
-<button class="bg-primary-container text-on-primary-container font-headline-md px-10 py-5 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse-slow">
-                        BOOK A DEMO
-                    </button>
-<button class="border-2 border-primary text-primary font-headline-md px-10 py-5 rounded-xl hover:bg-primary/5 transition-all">
+<a href="#inquiry" class="bg-primary-container text-on-primary-container font-headline-md px-10 py-5 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse-slow inline-block text-center">
+                        REQUEST PROPOSAL
+                    </a>
+<a href="#services" class="border-2 border-primary text-primary font-headline-md px-10 py-5 rounded-xl hover:bg-primary/5 transition-all inline-block text-center">
                         VIEW SERVICES
-                    </button>
+                    </a>
 </div>
 </div>
 </div>
@@ -257,65 +254,250 @@
 <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mb-4"><strong>Takeaway:</strong> Choose from stress-relieving corporate yoga or high-energy Zumba to boost your team's wellbeing year-round.</p>
 <div class="w-24 h-1.5 bg-primary-container mx-auto rounded-full"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-6xl mx-auto">
+
+<div class="relative max-w-6xl mx-auto flex flex-col md:flex-row gap-gutter overflow-hidden h-[800px] md:h-[650px]" id="services-container">
 <!-- Corporate Yoga -->
-<div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group border border-outline-variant/30">
-<div class="h-72 relative overflow-hidden">
+<div id="card-yoga" class="flex-1 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 ease-in-out group border border-outline-variant/30 flex flex-col relative w-full">
+<div class="h-72 relative overflow-hidden shrink-0">
 <img alt="Yoga Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNi4gJN8mCr3vc2aeoCr7LGIdZuGXJCsWWxe8WEm10yBWfI2g4LZdOjUY81OKdRHMFSny1MOVGhC1bmnvTeQJSps01WtH3QLri83bwnpz9f3ea67zFy6Qjuffqm6XYeq3Xkd9SK-Or76e_Sce8JuZ5ek_BoVpHRmdaWhCLRoNrWkylkqbW7YjVRWerUclKOVsn9Cm10ShgF1J22LLJd4zIxcvLgNjKF1fb0sTEBhGScnAKGazqb191"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-6 left-6 flex items-center gap-2">
 <span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-label-sm font-label-bold backdrop-blur-md">ZEN FOCUS</span>
 </div>
 </div>
-<div class="p-8">
+<div class="p-8 flex flex-col flex-grow relative overflow-y-auto">
 <h3 class="font-headline-md text-primary mb-4">Corporate Yoga</h3>
-<p class="font-body-md text-on-surface-variant mb-6 text-lg">Harness mental clarity and physical resilience. Perfect for teams looking to destress and realign during the work day.</p>
-<a class="text-primary font-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
-                        Dive Deeper <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
+<p class="font-body-md text-on-surface-variant mb-6 text-lg" id="yoga-intro">Harness mental clarity and physical resilience. Perfect for teams looking to destress and realign during the work day.</p>
+
+<div id="yoga-details" class="hidden opacity-0 transition-opacity duration-700 ease-in-out mt-4 text-left">
+<h4 class="font-headline-md text-secondary mb-3 text-xl">The Zen Advantage</h4>
+<ul class="space-y-4 mb-8">
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="psychology">psychology</span>
+        <div>
+            <strong class="text-on-surface">Enhanced Focus & Clarity</strong>
+            <p class="text-on-surface-variant text-sm mt-1">Mindfulness techniques scientifically proven to reduce cognitive load, allowing employees to tackle complex tasks with sharper attention.</p>
+        </div>
+    </li>
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+        <div>
+            <strong class="text-on-surface">Posture Correction & Relief</strong>
+            <p class="text-on-surface-variant text-sm mt-1">Targeted stretching counteracts the effects of prolonged desk work, alleviating neck, shoulder, and lower back pain.</p>
+        </div>
+    </li>
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="spa">spa</span>
+        <div>
+            <strong class="text-on-surface">Stress Reduction</strong>
+            <p class="text-on-surface-variant text-sm mt-1">Deep pranayama (breathing) exercises activate the parasympathetic nervous system, drastically lowering cortisol and workplace anxiety.</p>
+        </div>
+    </li>
+</ul>
+<a href="#inquiry" class="bg-primary text-on-primary font-headline-md px-6 py-3 rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all text-center inline-block w-full sm:w-auto">Request a Quote</a>
+</div>
+
+<div class="mt-auto pt-6 flex justify-between items-center w-full">
+<button id="btn-yoga-expand" class="text-primary font-label-bold flex items-center gap-2 group-hover:gap-4 transition-all focus:outline-none">
+    Dive Deeper <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button id="btn-yoga-collapse" class="hidden text-outline font-label-bold flex items-center gap-2 hover:text-primary transition-all focus:outline-none">
+    <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span> Close
+</button>
 </div>
 </div>
+</div>
+
 <!-- Corporate Zumba -->
-<div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group border border-outline-variant/30">
-<div class="h-72 relative overflow-hidden">
+<div id="card-zumba" class="flex-1 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 ease-in-out group border border-outline-variant/30 flex flex-col relative w-full">
+<div class="h-72 relative overflow-hidden shrink-0">
 <img alt="Zumba Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFF2Z6UQZKefz9xRy3XCz7vrzYvwBjj04wEKnfSLbJE8F1m8jheK5bb4eYBNEAAXZfe5n8p9DikQb5iKC-yJvw29fXCpNVDJcnIyq71zHsEGiBzLAmZpSFX9jc72yUAnKFDiRNH4PuPk_jVNnF5IJNFIFplW5bukpUsrC_LmkVRXDMm-xgoLJwGerILMEIu2-kzGfAAIwsaFGo0kVCC4yjLDrJ5MLL_N7L6lJ2Nl_dSj-oQb-yM-W-"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-6 left-6 flex items-center gap-2">
 <span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-label-sm font-label-bold backdrop-blur-md">HIGH ENERGY</span>
 </div>
 </div>
-<div class="p-8">
+<div class="p-8 flex flex-col flex-grow relative overflow-y-auto">
 <h3 class="font-headline-md text-primary mb-4">Corporate Zumba</h3>
-<p class="font-body-md text-on-surface-variant mb-6 text-lg">Explosive cardio sessions that build community and break through the 4 PM slump with pure joy.</p>
-<a class="text-primary font-label-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
-                        Get Moving <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
+<p class="font-body-md text-on-surface-variant mb-6 text-lg" id="zumba-intro">Explosive cardio sessions that build community and break through the 4 PM slump with pure joy.</p>
+
+<div id="zumba-details" class="hidden opacity-0 transition-opacity duration-700 ease-in-out mt-4 text-left">
+<h4 class="font-headline-md text-secondary mb-3 text-xl">The High Energy Boost</h4>
+<ul class="space-y-4 mb-8">
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="favorite">favorite</span>
+        <div>
+            <strong class="text-on-surface">Cardiovascular Health</strong>
+            <p class="text-on-surface-variant text-sm mt-1">Intense, fun routines that elevate heart rates, burn calories, and improve overall stamina and physical fitness.</p>
+        </div>
+    </li>
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="celebration">celebration</span>
+        <div>
+            <strong class="text-on-surface">Endorphin Rush</strong>
+            <p class="text-on-surface-variant text-sm mt-1">High-BPM music and dynamic movement release massive amounts of 'feel-good' hormones, instantly lifting workplace morale.</p>
+        </div>
+    </li>
+    <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="diversity_3">diversity_3</span>
+        <div>
+            <strong class="text-on-surface">Team Bonding & Connection</strong>
+            <p class="text-on-surface-variant text-sm mt-1">Dancing together breaks down hierarchical barriers, creating a shared experience that fosters genuine camaraderie and collaboration.</p>
+        </div>
+    </li>
+</ul>
+<a href="#inquiry" class="bg-primary text-on-primary font-headline-md px-6 py-3 rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all text-center inline-block w-full sm:w-auto">Request a Quote</a>
+</div>
+
+<div class="mt-auto pt-6 flex justify-between items-center w-full">
+<button id="btn-zumba-expand" class="text-primary font-label-bold flex items-center gap-2 group-hover:gap-4 transition-all focus:outline-none">
+    Get Moving <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button id="btn-zumba-collapse" class="hidden text-outline font-label-bold flex items-center gap-2 hover:text-primary transition-all focus:outline-none">
+    <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span> Close
+</button>
 </div>
 </div>
+</div>
+
 </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cardYoga = document.getElementById('card-yoga');
+        const cardZumba = document.getElementById('card-zumba');
+
+        const btnYogaExpand = document.getElementById('btn-yoga-expand');
+        const btnYogaCollapse = document.getElementById('btn-yoga-collapse');
+        const yogaDetails = document.getElementById('yoga-details');
+        const yogaIntro = document.getElementById('yoga-intro');
+
+        const btnZumbaExpand = document.getElementById('btn-zumba-expand');
+        const btnZumbaCollapse = document.getElementById('btn-zumba-collapse');
+        const zumbaDetails = document.getElementById('zumba-details');
+        const zumbaIntro = document.getElementById('zumba-intro');
+
+        // Functions for Yoga
+        btnYogaExpand.addEventListener('click', () => {
+            // Hide Zumba smoothly
+            cardZumba.classList.remove('flex-1');
+            cardZumba.classList.add('w-0', 'opacity-0', '!p-0', '!border-none', 'overflow-hidden');
+
+            // Toggle Content
+            yogaIntro.classList.add('hidden');
+            yogaDetails.classList.remove('hidden');
+            setTimeout(() => yogaDetails.classList.remove('opacity-0'), 100);
+
+            btnYogaExpand.classList.add('hidden');
+            btnYogaCollapse.classList.remove('hidden');
+        });
+
+        btnYogaCollapse.addEventListener('click', () => {
+            // Restore Layout
+            cardZumba.classList.add('flex-1');
+            cardZumba.classList.remove('w-0', 'opacity-0', '!p-0', '!border-none', 'overflow-hidden');
+
+            // Toggle Content
+            yogaDetails.classList.add('opacity-0');
+            setTimeout(() => {
+                yogaDetails.classList.add('hidden');
+                yogaIntro.classList.remove('hidden');
+            }, 300);
+
+            btnYogaCollapse.classList.add('hidden');
+            btnYogaExpand.classList.remove('hidden');
+        });
+
+        // Functions for Zumba
+        btnZumbaExpand.addEventListener('click', () => {
+            // Hide Yoga smoothly
+            cardYoga.classList.remove('flex-1');
+            cardYoga.classList.add('w-0', 'opacity-0', '!p-0', '!border-none', 'overflow-hidden');
+
+            // Toggle Content
+            zumbaIntro.classList.add('hidden');
+            zumbaDetails.classList.remove('hidden');
+            setTimeout(() => zumbaDetails.classList.remove('opacity-0'), 100);
+
+            btnZumbaExpand.classList.add('hidden');
+            btnZumbaCollapse.classList.remove('hidden');
+        });
+
+        btnZumbaCollapse.addEventListener('click', () => {
+            // Restore Layout
+            cardYoga.classList.add('flex-1');
+            cardYoga.classList.remove('w-0', 'opacity-0', '!p-0', '!border-none', 'overflow-hidden');
+
+            // Toggle Content
+            zumbaDetails.classList.add('opacity-0');
+            setTimeout(() => {
+                zumbaDetails.classList.add('hidden');
+                zumbaIntro.classList.remove('hidden');
+            }, 300);
+
+            btnZumbaCollapse.classList.add('hidden');
+            btnZumbaExpand.classList.remove('hidden');
+        });
+    });
+</script>
 <!-- Gallery Section -->
-<section class="py-xl bg-surface-container-low reveal" id="gallery">
+<section class="py-xl bg-surface-container-low reveal overflow-hidden" id="gallery">
 <div class="px-margin-mobile md:px-margin-desktop mb-12">
 <h2 class="font-headline-lg text-on-surface text-center">The Zuga Experience</h2>
 <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mb-4 text-center"><strong>Takeaway:</strong> See how our onsite sessions transform ordinary workspaces into vibrant wellness environments.</p>
 <p class="text-on-surface-variant font-body-lg text-center">Captured moments of vitality and connection across Bangalore's leading tech parks.</p>
 </div>
-<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:col-span-2">
-<img alt="Corporate Fitness Workshop in Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-de6efe5e.jpg"/>
-</div>
-<div class="relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64">
-<img alt="Zumba Classes in Whitefield, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-0d11007f.jpg"/>
-</div>
-<div class="relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64">
-<img alt="Corporate Meditation in Electronic City, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192610-cd7107e6.webp"/>
-</div>
-<div class="relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:col-span-2">
-<img alt="Yoga Classes in Koramangala, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192605-128fc33c.jpg"/>
-</div>
-</div>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+</style>
+
+<div class="relative w-full overflow-hidden">
+    <!-- Gradient Masks for smooth fade on edges -->
+    <div class="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none"></div>
+
+    <div class="animate-marquee flex gap-6 px-4">
+        <!-- First set of images -->
+        <div class="flex-none w-[300px] md:w-[450px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Corporate Fitness Workshop in Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-de6efe5e.jpg"/>
+        </div>
+        <div class="flex-none w-[250px] md:w-[350px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Zumba Classes in Whitefield, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-0d11007f.jpg"/>
+        </div>
+        <div class="flex-none w-[300px] md:w-[400px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Corporate Meditation in Electronic City, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192610-cd7107e6.webp"/>
+        </div>
+        <div class="flex-none w-[350px] md:w-[500px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Yoga Classes in Koramangala, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192605-128fc33c.jpg"/>
+        </div>
+
+        <!-- Duplicated set of images for seamless looping -->
+        <div class="flex-none w-[300px] md:w-[450px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Corporate Fitness Workshop in Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-de6efe5e.jpg"/>
+        </div>
+        <div class="flex-none w-[250px] md:w-[350px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Zumba Classes in Whitefield, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192607-0d11007f.jpg"/>
+        </div>
+        <div class="flex-none w-[300px] md:w-[400px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Corporate Meditation in Electronic City, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192610-cd7107e6.webp"/>
+        </div>
+        <div class="flex-none w-[350px] md:w-[500px] relative rounded-3xl overflow-hidden shadow-xl group border-4 border-white h-64 md:h-80">
+            <img alt="Yoga Classes in Koramangala, Bangalore" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" src="/assets/images/new-folder/whatsapp-image-2025-07-07-at-192605-128fc33c.jpg"/>
+        </div>
+    </div>
 </div>
 </section>
 <!-- Pricing Section -->
@@ -323,47 +505,37 @@
 <div class="text-center mb-16">
 <h2 class="font-headline-lg text-on-surface">Investment in Wellness</h2>
 <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mb-4"><strong>Takeaway:</strong> We offer transparent, flat-rate pricing for premium corporate wellness sessions.</p>
-<p class="font-body-lg text-on-surface-variant">Plans tailored for every organization size.</p>
+<p class="font-body-lg text-on-surface-variant">Plans tailored to integrate seamlessly into your corporate culture.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-<!-- Spark Tier -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<!-- Occasional Booking -->
 <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-outline-variant/30 flex flex-col hover:scale-105 transition-transform duration-300">
-<span class="text-primary font-label-bold tracking-widest uppercase mb-4">SPARK</span>
-<h3 class="font-headline-xl text-on-surface mb-4">₹15k<span class="text-lg font-body-md text-on-surface-variant">/mo</span></h3>
-<p class="font-body-md text-on-surface-variant mb-8 flex-grow">Entry level wellness to ignite your team's spirit. Perfect for small startups.</p>
+<span class="text-primary font-label-bold tracking-widest uppercase mb-4">THE CATALYST SESSION</span>
+<h3 class="font-headline-xl text-on-surface mb-4">₹5,000<span class="text-lg font-body-md text-on-surface-variant">/session</span></h3>
+<p class="font-body-md text-on-surface-variant mb-8 flex-grow text-lg">Perfect for offsites, mental health awareness days, or testing the waters with a single powerful session.</p>
 <ul class="space-y-4 mb-10 text-on-surface">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> 2 Sessions / Month</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> Essential Yoga or Zumba</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> Hybrid Support</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> Choose Yoga or Zumba</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> Up to 60 Minutes Duration</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> At Your Office Premises</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" data-icon="check">check</span> Certified Expert Instructor</li>
 </ul>
-<button class="w-full border-2 border-primary text-primary font-label-bold py-4 rounded-xl hover:bg-primary/5 transition-colors">Start Spark</button>
+<a href="#inquiry" class="block text-center w-full border-2 border-primary text-primary font-label-bold py-4 rounded-xl hover:bg-primary/5 transition-colors">Book a Session</a>
 </div>
-<!-- Vitality Tier -->
+<!-- Monthly Package -->
 <div class="bg-primary text-on-primary p-10 rounded-[2rem] shadow-2xl flex flex-col scale-105 relative z-10 overflow-hidden group">
 <div class="absolute top-0 right-0 p-4">
-<span class="bg-white/20 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">POPULAR</span>
+<span class="bg-white/20 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">BEST VALUE</span>
 </div>
-<span class="font-label-bold tracking-widest uppercase mb-4 opacity-80">VITALITY</span>
-<h3 class="font-headline-xl mb-4">₹45k<span class="text-lg font-body-md opacity-80">/mo</span></h3>
-<p class="font-body-md mb-8 flex-grow opacity-90 text-lg">Comprehensive care for mid-to-large teams. Our most sought-after rhythm.</p>
+<span class="font-label-bold tracking-widest uppercase mb-4 opacity-80">THE MOMENTUM MONTHLY</span>
+<h3 class="font-headline-xl mb-4">₹15,000<span class="text-lg font-body-md opacity-80">/4 classes</span></h3>
+<p class="font-body-md mb-8 flex-grow opacity-90 text-lg">Build a consistent culture of health. A dedicated weekly slot for your team's physical and mental rejuvenation.</p>
 <ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> 8 Sessions / Month</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> Combined Disciplines</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> Monthly Progress Reports</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> 4 Classes per Month</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> Mix & Match Yoga and Zumba</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> Priority Scheduling</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined" data-icon="check">check</span> Dedicated Account Manager</li>
 </ul>
-<button class="w-full bg-white text-primary font-headline-md py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-pulse-slow">Ignite Vitality</button>
-</div>
-<!-- Elite Tier -->
-<div class="bg-inverse-surface text-on-primary-fixed p-10 rounded-[2rem] shadow-xl flex flex-col hover:scale-105 transition-transform duration-300">
-<span class="text-primary-fixed font-label-bold tracking-widest uppercase mb-4">ELITE</span>
-<h3 class="font-headline-xl text-primary-fixed mb-4">₹90k<span class="text-lg font-body-md text-primary-fixed-dim">/mo</span></h3>
-<p class="font-body-md text-surface-container-highest mb-8 flex-grow">Unrestricted access to wellness luxury. The gold standard for MNCs.</p>
-<ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed" data-icon="check">check</span> Unlimited Sessions</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed" data-icon="check">check</span> Senior Master Coaches</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed" data-icon="check">check</span> Personal Wellness Apps</li>
-</ul>
-<button class="w-full bg-primary-fixed text-on-primary-fixed font-label-bold py-4 rounded-xl hover:bg-primary-fixed-dim transition-colors">Join Elite</button>
+<a href="#inquiry" class="block text-center w-full bg-white text-primary font-headline-md py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-pulse-slow">Secure Your Month</a>
 </div>
 </div>
 </section>
@@ -710,7 +882,14 @@ Yes, Zuga Fitness offers on-site corporate yoga sessions across Bangalore. Our t
       });
     }
 </script>
-<a aria-label="Chat with us on WhatsApp" class="whatsapp-float" href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20classes" rel="noopener noreferrer" target="_blank">
+<!-- Creative Floating CTA -->
+<a href="#inquiry" class="fixed bottom-24 right-6 md:bottom-8 md:right-auto md:left-1/2 md:-translate-x-1/2 z-[60] bg-primary text-on-primary font-headline-md px-6 py-3 md:px-8 md:py-4 rounded-full shadow-2xl hover:scale-105 hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0px_10px_30px_rgba(160,65,0,0.4)] active:scale-95 transition-all duration-300 flex items-center gap-3 border-2 border-white/20 animate-bounce">
+    <span class="material-symbols-outlined hidden md:block" data-icon="rocket_launch">rocket_launch</span>
+    <span class="whitespace-nowrap">Transform Your Workplace</span>
+    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-label-bold ml-2">Get a Quote</span>
+</a>
+
+<a aria-label="Chat with us on WhatsApp" class="whatsapp-float z-[50]" href="https://wa.me/917676379909?text=Hi%20Zuga!%20I%27d%20like%20to%20know%20more%20about%20your%20corporate%20wellness%20classes" rel="noopener noreferrer" target="_blank">
 <img alt="WhatsApp" height="28" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28"/>
 <span class="whatsapp-label">Chat with us</span>
 </a>
