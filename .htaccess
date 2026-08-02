@@ -12,3 +12,5 @@ Redirect 301 /Blog/online-yoga-classes-germany-berlin-munich.html /germany-onlin
 Redirect 301 /Blog/online-yoga-classes-canada-vancouver-toronto.html /canada-online-yoga-classes.html
 Redirect 301 /Blog/online-yoga-classes-australia-sydney-melbourne.html /australia-online-yoga-classes.html
 Redirect 301 /corporate-yoga-day-bangalore.html /corporate-wellness-bangalore.html
+
+Redirect 301 /Blog/corporate-yoga-day-bangalore.html /Blog/corporate-wellness-bangalore.html
