@@ -559,7 +559,7 @@
         <p class="lead mb-4" style="font-size: 1.1rem; color: #aaa;">From beginner to advanced, experience customized live online yoga or dance fitness personal training designed to help you achieve peak performance, build functional strength, and gently work towards exceeding your fitness goals.</p>
 
         <div class="d-flex align-items-center gap-4 mb-4 flex-wrap">
-          <a class="btn btn-orange display-4" href="#pt-application">Apply for a PT Spot</a>
+          <a class="btn btn-orange display-4" href="#pt-application">Apply for Your PT Roadmap</a>
           <a href="#" class="d-flex align-items-center text-white" style="text-decoration: none; font-weight: 600;">
              <span class="play-icon me-2" style="background: var(--orange); border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">
                <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -607,7 +607,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="alert alert-warning" style="background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold; margin: 20px 0;">
-          ⚠️ HIGH DEMAND: Onboarding for the upcoming batch closes in 7 days. Only 2 Personal Training slots remain per timezone.
+          ⚠️ EXCLUSIVE ROSTER: To ensure 100% dedication, we strictly limit our global Personal Training roster to 20 active clients. Currently, 17 spots are filled.
         </div>
       </div>
     </div>
@@ -916,7 +916,7 @@
                 <li><span style="color: var(--orange);">✔</span> Monthly plan review</li>
               </ul>
               <div class="mbr-section-btn">
-                <a class="btn btn-orange display-4 w-100" href="#pt-application">Apply for a PT Spot</a>
+                <a class="btn btn-orange display-4 w-100" href="#pt-application">Apply for Your PT Roadmap</a>
               </div>
             </div>
           </div>
@@ -933,7 +933,7 @@
                 <li><span style="color: var(--orange);">✔</span> ₹500 trial session (adjustable with admission)</li>
               </ul>
               <div class="mbr-section-btn">
-                <a class="btn btn-orange display-4 w-100" href="#pt-application">Apply for a PT Spot</a>
+                <a class="btn btn-orange display-4 w-100" href="#pt-application">Apply for Your PT Roadmap</a>
               </div>
             </div>
           </div>
@@ -961,21 +961,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <h2 style="text-align: center; color: #333; margin-bottom: 10px;">Apply for Personal Training</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">Fill out the form below and we'll get back to you within 24 hours to schedule your ₹500 trial session.</p>
+        <h2 style="text-align: center; color: #333; margin-bottom: 10px;">Apply for Your Personalized PT Roadmap</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">Submit your details. Our lead therapist will review your profile and send you a personalized 15-minute roadmap via WhatsApp within 2 hours. No sales pitch, just a clear plan.</p>
         <div class="mt-4 mb-4 text-center">
-          <p><strong>Takeaway:</strong> Start your personalized fitness journey today by applying for one of our limited personal training spots.</p>
+          <p style="color: #666;"><strong>Takeaway:</strong> Start your personalized fitness journey today by applying for your free 15-min roadmap via WhatsApp.</p>
         </div>
 
-        <form action="https://formspree.io/f/mnjlyoqr" method="POST" style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <form action="/submit-pt-application" method="POST" style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
           <div class="form-group mb-3">
             <label for="name" style="color: #333; font-weight: bold;">Full Name *</label>
             <input type="text" class="form-control" id="name" name="name" required style="border: 1px solid #ddd; padding: 12px;">
-          </div>
-
-          <div class="form-group mb-3">
-            <label for="email" style="color: #333; font-weight: bold;">Email Address *</label>
-            <input type="email" class="form-control" id="email" name="email" required style="border: 1px solid #ddd; padding: 12px;">
           </div>
 
           <div class="form-group mb-3">
@@ -983,69 +978,20 @@
             <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="+1 XXX XXX XXXX" required style="border: 1px solid #ddd; padding: 12px;">
           </div>
 
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="timezone" style="color: #333; font-weight: bold;">Your Timezone *</label>
-              <select class="form-control" id="timezone" name="timezone" required style="border: 1px solid #ddd; padding: 12px;">
-                <option value="">Select Timezone</option>
-                <option value="EST">US - Eastern (EST)</option>
-                <option value="PST">US - Pacific (PST)</option>
-                <option value="GMT">UK (GMT)</option>
-                <option value="CEST">Germany/Europe (CEST)</option>
-                <option value="GST">UAE (GST)</option>
-                <option value="IST">India (IST)</option>
-                <option value="AEST">Australia (AEST)</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label for="goal" style="color: #333; font-weight: bold;">Primary Goal *</label>
-              <select class="form-control" id="goal" name="goal" required style="border: 1px solid #ddd; padding: 12px;">
-                <option value="">Select Goal</option>
-                <option value="yoga-beginner">Yoga - Beginner</option>
-                <option value="yoga-advanced">Yoga - Advanced</option>
-                <option value="dance-fitness">Dance Fitness/Zumba</option>
-                <option value="weight-loss">Weight Loss</option>
-                <option value="back-pain">Back Pain Relief</option>
-                <option value="pcod">PCOD/Hormonal Balance</option>
-                <option value="strength">Strength & Conditioning</option>
-                <option value="flexibility">Flexibility</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-
           <div class="form-group mb-3">
-            <label for="experience" style="color: #333; font-weight: bold;">Experience Level</label>
-            <select class="form-control" id="experience" name="experience" style="border: 1px solid #ddd; padding: 12px;">
-              <option value="complete-beginner">Complete Beginner (Never practiced)</option>
-              <option value="beginner">Beginner (Some experience)</option>
-              <option value="intermediate">Intermediate (Regular practice)</option>
-              <option value="advanced">Advanced (Years of practice)</option>
+            <label for="goal" style="color: #333; font-weight: bold;">Primary Goal *</label>
+            <select class="form-control" id="goal" name="goal" required style="border: 1px solid #ddd; padding: 12px;">
+              <option value="">Select Your Primary Focus</option>
+              <option value="postpartum">Postpartum / C-Section Recovery</option>
+              <option value="pcod">PCOD / Hormonal Balance</option>
+              <option value="back-pain">Back Pain / Posture Correction</option>
+              <option value="dance-fitness">Dance Fitness / Cardio Endurance</option>
+              <option value="strength">Functional Strength & Conditioning</option>
+              <option value="other">Other (Specify in chat)</option>
             </select>
           </div>
 
-          <div class="form-group mb-3">
-            <label for="message" style="color: #333; font-weight: bold;">Tell us about your goals & any injuries/health conditions</label>
-            <textarea class="form-control" id="message" name="message" rows="4" style="border: 1px solid #ddd; padding: 12px;"></textarea>
-          </div>
-
-          <div class="form-group mb-3">
-            <label for="plan" style="color: #333; font-weight: bold;">Which PT plan are you interested in?</label>
-            <select class="form-control" id="plan" name="plan" style="border: 1px solid #ddd; padding: 12px;">
-              <option value="">Select Plan</option>
-              <option value="8000">₹8,000/month (3 days/week)</option>
-              <option value="10000">₹10,000/month (5 days/week)</option>
-              <option value="unsure">Not sure yet</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block w-100" style="background-color: #E8690A; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 5px; margin-top: 20px; color: #fff;">Submit Application</button>
-
-          <p style="text-align: center; color: #666; font-size: 14px; margin-top: 15px;">
-            <small>🔒 Your information is secure. We'll respond within 24 hours.</small>
-          </p>
+          <button type="submit" class="btn btn-primary btn-block" style="background-color: #E8690A; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 5px; margin-top: 20px; color: #fff;">Get My Free 15-Min Roadmap via WhatsApp</button>
         </form>
       </div>
     </div>
@@ -1097,7 +1043,7 @@
   <div class="container">
     <h2 class="display-3 mb-4">Ready for online personal training built just for you?</h2>
     <div class="mbr-section-btn mt-5 mb-4">
-      <a class="btn btn-white-outline display-4" href="#pt-application">Apply for a PT Spot</a>
+      <a class="btn btn-white-outline display-4" href="#pt-application">Apply for Your PT Roadmap</a>
     </div>
     <div class="mt-4">
       <p><strong>Takeaway:</strong> Don't miss out on securing your dedicated spot—apply now to transform your health with personalized guidance.</p>
