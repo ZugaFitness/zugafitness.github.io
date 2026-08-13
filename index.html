@@ -1841,6 +1841,55 @@
 <span class="btn-loading" style="display:none">Sending... ⏳</span>
 </button>
 <div class="form-success" style="display:none">
+<form
+  id="zuga-contact-form"
+  action="https://formspree.io/f/mnjlyoqr"
+  method="POST"
+  novalidate
+>
+  <!-- Spam protection -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="📩 New Contact Message — Zuga Fitness" />
+
+  <!-- Redirect -->
+  <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+
+  <div class="form-group">
+    <label for="contact-name">Full Name *</label>
+    <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+    <span class="field-error">Please enter your name</span>
+  </div>
+
+  <div class="form-group">
+    <label for="contact-email">Email Address *</label>
+    <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+    <span class="field-error">Please enter a valid email</span>
+  </div>
+
+  <div class="form-group">
+    <label for="contact-phone">Phone / WhatsApp</label>
+    <input type="tel" id="contact-phone" name="phone" placeholder="+91 or international" />
+  </div>
+  <div class="form-group">
+    <label for="preferred-time">Preferred time for call *</label>
+    <input type="text" id="preferred-time" required name="preferred_time" placeholder="e.g., Morning, after 5pm" />
+  </div>
+
+  <div class="form-group">
+    <label for="contact-message">Message *</label>
+    <textarea id="contact-message" name="message" rows="4"
+      placeholder="How can we help you?" required></textarea>
+    <span class="field-error">Please enter your message</span>
+  </div>
+
+  <button type="submit" id="contact-submit-btn">
+    <span class="btn-text">Send Message</span>
+    <span class="btn-loading" style="display:none">Sending... ⏳</span>
+  </button>
+
+  <div class="form-success" style="display:none">
     ✅ Message received! We'll get back to you within 24 hours.
   </div>
 <div class="form-error" style="display:none">
