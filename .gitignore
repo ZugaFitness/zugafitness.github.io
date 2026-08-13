@@ -1,3 +1,6 @@
 node_modules/\npackage.json\npackage-lock.json\nverification/\nscreenshot.js
 server.log
 node_modules/
+update_tier1.py
+update_tier2.py
+test_check.py
