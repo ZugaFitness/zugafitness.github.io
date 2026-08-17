@@ -1,26 +1,24 @@
-from playwright.sync_api import sync_playwright
+import re
 
-def run_cuj(page):
-    page.goto("file:///app/Online-Personal-Training-classes.html")
-    page.wait_for_timeout(500)
+files = [
+    'pricing.html',
+    'Online-Yoga-Classes.html',
+    'Online-Dance-Fitness-Classes.html',
+    'Online-Personal-Training-classes.html',
+    'Online-Pranayama-Classes.html'
+]
 
-    # Scroll to Takeaways
-    page.evaluate("window.scrollTo(0, document.body.scrollHeight/2)")
-    page.wait_for_timeout(500)
+for file in files:
+    with open(file, 'r') as f:
+        content = f.read()
 
-    # Check updated color of Apply button
-    page.screenshot(path="/app/verification.png")
-    page.wait_for_timeout(1000)
+    issues = []
+    if '2,000' in content or '"2000"' in content: issues.append("Old price 2,000 found")
+    if '3,500' in content or '"3500"' in content: issues.append("Old price 3,500 found")
+    if '8,000' in content or '"8000"' in content: issues.append("Old price 8,000 found")
+    if '10,000' in content or '"10000"' in content: issues.append("Old price 10,000 found")
 
-if __name__ == "__main__":
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            record_video_dir="/app/videos"
-        )
-        page = context.new_page()
-        try:
-            run_cuj(page)
-        finally:
-            context.close()
-            browser.close()
+    if issues:
+        print(f"Issues in {file}: {issues}")
+    else:
+        print(f"No old prices found in {file}")
