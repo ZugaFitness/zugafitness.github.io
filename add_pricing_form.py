@@ -1,8 +1,5 @@
 import re
 
-with open("corporate-wellness-bangalore.html", "r") as f:
-    content = f.read()
-
 pricing_and_form_html = """
 <div class="row mb-5 justify-content-center">
   <div class="col-lg-8">
@@ -31,12 +28,20 @@ pricing_and_form_html = """
 </div>
 """
 
-# Insert it immediately after the new Zumba section (before the closing div/section of #programs)
-content = re.sub(
-    r'(<p><strong>Takeaway:</strong> Corporate Zumba is a fun, high-energy cardio workout that doubles as an effective team-building activity\.</p>\n  </div>\n</div>)',
-    r'\1\n' + pricing_and_form_html,
-    content
-)
+def insert_pricing_form(content):
+    # Insert it immediately after the new Zumba section (before the closing div/section of #programs)
+    content = re.sub(
+        r'(<p><strong>Takeaway:</strong> Corporate Zumba is a fun, high-energy cardio workout that doubles as an effective team-building activity\.</p>\n  </div>\n</div>)',
+        r'\1\n' + pricing_and_form_html,
+        content
+    )
+    return content
 
-with open("corporate-wellness-bangalore.html", "w") as f:
-    f.write(content)
+if __name__ == '__main__':
+    with open("corporate-wellness-bangalore.html", "r") as f:
+        content = f.read()
+
+    new_content = insert_pricing_form(content)
+
+    with open("corporate-wellness-bangalore.html", "w") as f:
+        f.write(new_content)
