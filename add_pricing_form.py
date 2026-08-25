@@ -28,6 +28,9 @@ pricing_and_form_html = """
 </div>
 """
 
+def add_pricing_form_to_html(content):
+    # Insert it immediately after the new Zumba section (before the closing div/section of #programs)
+    return re.sub(
 def insert_pricing_form(content):
     # Insert it immediately after the new Zumba section (before the closing div/section of #programs)
     content = re.sub(
@@ -35,6 +38,18 @@ def insert_pricing_form(content):
         r'\1\n' + pricing_and_form_html,
         content
     )
+
+def main():
+    with open("corporate-wellness-bangalore.html", "r") as f:
+        content = f.read()
+
+    content = add_pricing_form_to_html(content)
+
+    with open("corporate-wellness-bangalore.html", "w") as f:
+        f.write(content)
+
+if __name__ == "__main__":
+    main()
     return content
 
 if __name__ == '__main__':
