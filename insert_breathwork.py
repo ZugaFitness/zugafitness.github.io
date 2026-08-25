@@ -1,8 +1,5 @@
 import re
 
-with open('Online-Pranayama-Classes.html', 'r') as f:
-    content = f.read()
-
 # We need to inject a new "Group Breathwork" section immediately AFTER the "Why 30 Minutes?" section
 # and BEFORE the "1-on-1 Protocol Tracks" section.
 
@@ -50,10 +47,23 @@ new_section = """<section id="group-breathwork" style="padding: 40px 0; backgrou
 
 """
 
-if target_text in content:
-    content = content.replace(target_text, new_section + target_text)
+def inject_breathwork(content):
+    if target_text in content:
+        content = content.replace(target_text, new_section + target_text)
+    return content
 
-with open('Online-Pranayama-Classes.html', 'w') as f:
-    f.write(content)
+def main():
+    with open('Online-Pranayama-Classes.html', 'r') as f:
+        content = f.read()
 
-print("Injected Group Breathwork successfully.")
+    new_content = inject_breathwork(content)
+
+    if new_content != content:
+        with open('Online-Pranayama-Classes.html', 'w') as f:
+            f.write(new_content)
+        print("Injected Group Breathwork successfully.")
+    else:
+        print("Group Breathwork already injected or target not found.")
+
+if __name__ == "__main__":
+    main()
