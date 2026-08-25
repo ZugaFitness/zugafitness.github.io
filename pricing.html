@@ -182,6 +182,14 @@
     }
 
     /* Mobile Optimizations */
+
+    /* Ensure pricing cards stretch to equal height on desktop (md and up) */
+    @media (min-width: 768px) {
+      .pricing-cards .card.tilt-card {
+        height: 100%;
+      }
+    }
+
     @media (max-width: 767px) {
       #pricing-dance {
         padding: 30px 15px !important;
@@ -193,7 +201,6 @@
       }
       .card.p-4 {
         padding: 1.5rem !important;
-        height: auto !important; /* Fix excessive height on mobile */
       }
       .pricing-header {
         padding-top: 80px !important;
@@ -412,7 +419,7 @@
 <div class="row justify-content-center">
 <!-- Card 1: Starter Plan -->
 <div class="col-12 col-md-4 mb-4 reveal">
-<div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #ffffff;">
+<div class="card p-4 tilt-card" style="border-radius: 2rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.03); background: #ffffff;">
 <div class="card-header bg-transparent border-0 text-center mt-4">
 <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #333;">Group Classes</h3>
 <div class="price-box my-3">
@@ -435,7 +442,7 @@
 </div>
 <!-- Card 2: Growth Plan -->
 <div class="col-12 col-md-4 mb-4 reveal">
-<div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid var(--brand-orange); box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1); position: relative; background: #ffffff;">
+<div class="card p-4 tilt-card" style="border-radius: 2rem; border: 2px solid var(--brand-orange); box-shadow: 0 15px 40px rgba(232, 105, 10, 0.1); position: relative; background: #ffffff;">
 <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--brand-orange); color: #fff; padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; white-space: nowrap; box-shadow: 0 4px 10px rgba(232, 105, 10, 0.3);">
                         MOST POPULAR
                     </div>
@@ -461,7 +468,7 @@
 </div>
 <!-- Card 3: Personal Training -->
 <div class="col-12 col-md-4 mb-4 reveal">
-<div class="card p-4 tilt-card" style="height: 100%; border-radius: 2rem; border: 2px solid #222; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); position: relative; background: #1a1a1a;">
+<div class="card p-4 tilt-card" style="border-radius: 2rem; border: 2px solid #222; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); position: relative; background: #1a1a1a;">
 <div class="card-header bg-transparent border-0 text-center mt-3">
 <h3 class="mbr-fonts-style display-5" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff; font-size: 1.6rem;">1-on-1 Personal Training</h3>
 <div class="price-box my-4">
