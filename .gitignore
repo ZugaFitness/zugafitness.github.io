@@ -6,3 +6,4 @@ update_tier2.py
 test_check.py
 __pycache__/
 .pytest_cache/
+__pycache__/
