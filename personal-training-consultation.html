@@ -270,9 +270,9 @@
                         <span class="error-msg" id="phone-error">Please enter your WhatsApp number</span>
                       </div>
                       <div class="form-group">
-                        <label for="preferred-time">Preferred Time *</label>
-                        <input type="text" id="preferred-time" name="preferred_time" placeholder="e.g., Morning, after 5pm" required />
-                        <span class="error-msg" id="preferred-time-error">Please enter your preferred time</span>
+                        <label for="preferred-time-for-call">Preferred Time *</label>
+                        <input type="text" id="preferred-time-for-call" name="preferred_time_for_call" placeholder="e.g., Morning, after 5pm" required />
+                        <span class="error-msg" id="preferred-time-for-call-error">Please enter your preferred time</span>
                       </div>
 
                       <div class="form-group">
@@ -468,8 +468,9 @@
     const timezone = document.getElementById('timezone');
     const experience = document.getElementById('experience');
     const goal = document.getElementById('goal');
+    const preferredTime = document.getElementById('preferred-time-for-call');
 
-    [name, email, phone, timezone, experience, goal].forEach(field => {
+    [name, email, phone, timezone, experience, goal, preferredTime].forEach(field => {
       if (!field.value.trim()) {
         field.classList.add('input-error');
         valid = false;
