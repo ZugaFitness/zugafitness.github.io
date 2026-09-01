@@ -1,0 +1,19 @@
+Title: Fix GSC Deduplication, Internal Links, Metadata & Syntax Error
+
+Fixes 3 critical GSC items:
+1. Deduplicated back-pain pages:
+   - Copied refreshed content from `asanas-guide` to `relief`.
+   - Setup a 301 redirect in `.htaccess` from `asanas-guide` to `relief`.
+   - Updated internal links across the site to point to `relief`.
+   - Removed `asanas-guide` from `sitemap.xml`.
+   - Checked canonical points to itself.
+
+2. Review Snippets (GSC ghost error):
+   - Investigated the entire codebase for `AggregateRating` and `Review` schemas.
+   - Found none exist. Trustpilot integrations are present but do not inject self-serving schema. Ghost error ignored.
+
+3. Online Yoga Classes Metadata & Linking:
+   - Restored original title/meta (Old title: "Live Online Yoga Classes | Virtual Yoga from Home (EST, GMT, GST)" -> Restored Title: "Online Yoga Classes India | Live Group Sessions for Beginners & Beyond | Zuga Fitness").
+   - Added exactly one varied anchor (`online yoga classes` and `live online yoga classes`) to all August blog posts contextually to restore missing internal links without spamming.
+
+4. Unrelated Fix: Fixed Python syntax error in `add_pricing_form.py` which was breaking tests.
