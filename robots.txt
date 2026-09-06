@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /Mallinath-Portfolio.html
-Disallow: /Anusha-Portfolio.html
 
 Sitemap: https://zugafitness.in/sitemap.xml
