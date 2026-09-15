@@ -7,3 +7,6 @@ test_check.py
 __pycache__/
 .pytest_cache/
 __pycache__/
+venv/
+venv2/
+venv2
