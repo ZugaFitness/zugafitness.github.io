@@ -40,39 +40,66 @@
 }
 
 .zwc-header {
-  background: #25D366;
+  background: linear-gradient(135deg, #2c5f2d 0%, #4a7c59 100%);
   color: #fff;
-  padding: 16px 20px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  box-sizing: border-box;
 }
 
-.zwc-header h2 {
+.zwc-header h3 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  line-height: 1.3;
+  z-index: 2;
+  color: #fff;
 }
 
-.zwc-header h2 svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+.zwc-header p.zwc-sub {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  z-index: 2;
+  color: #fff;
+}
+
+.zwc-sunrise-svg {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 120px;
+  height: 120px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .zwc-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   cursor: pointer;
   line-height: 1;
   padding: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0.8;
   transition: opacity 0.2s;
+  z-index: 3;
 }
 
 .zwc-close:hover {
@@ -83,13 +110,7 @@
   padding: 20px;
 }
 
-.zwc-body p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-}
+
 
 .zwc-form-group {
   margin-bottom: 16px;
@@ -128,27 +149,24 @@ textarea.zwc-form-control {
   background: #25D366;
   color: #fff;
   border: none;
-  padding: 12px;
+  padding: 14px;
   border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  margin-top: 10px;
 }
 
 .zwc-submit:hover {
   background: #1da851;
 }
 
-.zwc-submit svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
+
 
 @media (max-width: 768px) {
   #zuga-whatsapp-concierge.visible {
@@ -161,5 +179,35 @@ textarea.zwc-form-control {
   }
   #zuga-whatsapp-concierge.visible .zwc-modal {
     transform: translateY(0);
+  }
+}
+
+
+.zwc-phone-row {
+  display: flex;
+  gap: 8px;
+}
+
+.zwc-phone-row select {
+  flex: 0 0 40%;
+  width: 40%;
+}
+
+.zwc-phone-row input[type="tel"] {
+  flex: 1;
+  width: 60%;
+}
+
+
+.zwc-micro {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .zwc-header {
+    min-height: 100px;
   }
 }
