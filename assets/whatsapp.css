@@ -36,3 +36,12 @@
     display: none;
   }
 }
+
+.whatsapp-float img {
+  width: 28px !important;
+  height: 28px !important;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}

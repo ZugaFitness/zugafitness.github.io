@@ -1031,3 +1031,12 @@ blockquote {
 .key-takeaways li:last-child {
   margin-bottom: 0;
 }
+
+.whatsapp-float img {
+  width: 28px !important;
+  height: 28px !important;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
