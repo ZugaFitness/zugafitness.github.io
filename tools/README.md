@@ -16,3 +16,21 @@ This directory contains operational scripts that support the build pipeline and 
 
 ### Other scripts
 There are various other Python scripts in this directory (e.g., `fix_yoga_page.py`, `add_pricing_form.py`, `update_schema.py`) utilized for batch updates, DOM manipulation, and repository formatting checks.
+
+## Anusha Portfolio Updates
+The following scripts were used to modify the `Anusha-Portfolio.html` file by manipulating the DOM directly using regular expressions:
+- `add_animations.py`: Add intersection observer for fade in animations.
+- `clean_old_cta.py`: Cleans up the old CTA section.
+- `fix_missing_specialties.py`: Restores the specialties section structure.
+- `fix_reels.py`: Fixes closing div issues in the reels marquee.
+- `fix_syntax.py`: Fixes general HTML syntax issues.
+- `replace_bio.py`: Replaces the biography content.
+- `replace_cta.py`: Replaces the call-to-action content.
+- `replace_gallery.py`: Overhauls the gallery layout.
+- `replace_hero.py`: Redesigns the hero section with a video background.
+- `replace_reels.py`: Replaces static reels with auto-sliding ones.
+- `replace_reels3.py`: Refines the marquee animation and dimensions.
+- `replace_specialties.py`: Replaces specialties content.
+- `replace_specialties2.py`: Finishes specialties replacements.
+
+Usage: Run these via `python <script_name>.py` to regenerate the DOM state if testing.
