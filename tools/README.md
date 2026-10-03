@@ -34,8 +34,3 @@ The following scripts were used to modify the `Anusha-Portfolio.html` file by ma
 - `replace_specialties2.py`: Finishes specialties replacements.
 
 Usage: Run these via `python <script_name>.py` to regenerate the DOM state if testing.
-
-- `generate_wlc_sales_page.py`: Generates the 90-Day Weight Loss Challenge sales page HTML content.
-- `add_promo_bar.py`: Injects the WLC promo bar into `index.html` and `Online-Dance-Fitness-Classes.html`.
-- `update_whatsapp_concierge.py`: Adds exclusions to the WhatsApp concierge script.
-- `update_sitemap.py`: Updates the sitemap with priority 0.8 and today's lastmod for the WLC page.
