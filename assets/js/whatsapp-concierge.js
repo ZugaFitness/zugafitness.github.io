@@ -19,6 +19,21 @@
 
   if (isSubmitted() || isDismissed()) return;
 
+  const EXCLUDED_PAGES = [
+    '/free-trial.html',
+    '/thank-you.html',
+    '/personal-training-consultation.html',
+    '/weight-loss-challenge.html',
+    '/wlc-form.html',
+    '/wlc-thank-you.html',
+    '/wlc-vault.html'
+  ];
+
+  if (EXCLUDED_PAGES.some(page => window.location.pathname.toLowerCase().endsWith(page.toLowerCase()))) {
+    return; // Do not show on excluded pages
+  }
+
+
   const countries = [
     { name: "Australia", code: "+61", tz: "Australia/" },
     { name: "Brazil", code: "+55", tz: "America/Sao_Paulo" },
