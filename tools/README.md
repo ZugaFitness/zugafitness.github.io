@@ -34,3 +34,13 @@ The following scripts were used to modify the `Anusha-Portfolio.html` file by ma
 - `replace_specialties2.py`: Finishes specialties replacements.
 
 Usage: Run these via `python <script_name>.py` to regenerate the DOM state if testing.
+
+### `generate_distribution_pack.py`
+- **Purpose**: Generates off-page SEO distribution assets (LinkedIn article version, Medium canonical version, Quora answer seed, Pinterest pin texts, and expert quote angles) deterministically without external API calls based on a blog post URL or local file path.
+- **Requirement**: No LLM APIs to be used. Depends on BeautifulSoup for deterministic parsing.
+- **CLI Usage**: Pass one or more local file paths.
+- **Example Invocation**:
+  ```bash
+  python tools/generate_distribution_pack.py Blog/is-zumba-good-for-weight-loss.html
+  ```
+- **Dependencies**: Uses `sys`, `os`, `re`, `bs4` (BeautifulSoup).
