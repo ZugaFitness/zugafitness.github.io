@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuga Pinterest Pin Template</title>
+    <!-- Use Lora from Google Fonts for headline -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Exact dimensions required */
+        :root {
+            --brand-coral: #E65C4F;
+            --brand-dark: #1F2937;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1000px;
+            height: 1500px;
+            overflow: hidden;
+            position: relative;
+            background-color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pin-container {
+            width: 1000px;
+            height: 1500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dynamic Background Image */
+        .pin-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000px;
+            height: 1500px;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        /* Gradient Overlay to make text readable */
+        .pin-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000px;
+            height: 1500px;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.2) 0%,
+                rgba(0, 0, 0, 0.4) 40%,
+                rgba(0, 0, 0, 0.85) 90%,
+                rgba(0, 0, 0, 0.95) 100%
+            );
+            z-index: 2;
+        }
+
+        /* Text Content Area */
+        .pin-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1000px;
+            padding: 80px 80px 120px 80px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Top Badge/Eyebrow */
+        .pin-badge {
+            display: inline-block;
+            background-color: var(--brand-coral);
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 24px;
+            border-radius: 40px;
+            margin-bottom: 40px;
+            width: fit-content;
+        }
+
+        /* Lora Headline - max 6 words */
+        .pin-headline {
+            font-family: 'Lora', serif;
+            font-size: 110px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            text-shadow: 2px 4px 16px rgba(0,0,0,0.5);
+            /* Ensure it wraps cleanly */
+            max-width: 900px;
+        }
+
+        /* Subhead */
+        .pin-subhead {
+            font-size: 42px;
+            font-weight: 400;
+            color: #f3f4f6;
+            line-height: 1.4;
+            max-width: 800px;
+            text-shadow: 1px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* Bottom Logo */
+        .pin-logo-container {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            z-index: 4;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .pin-logo {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="pin-container">
+        <!-- Background Image (replace src) -->
+        <img src="../assets/images/home-workout.webp" alt="Pin Background" class="pin-bg" id="dynamic-bg">
+
+        <!-- Dark Gradient Overlay -->
+        <div class="pin-overlay"></div>
+
+        <!-- Content -->
+        <div class="pin-content">
+            <div class="pin-badge" id="dynamic-badge">New Guide</div>
+            <h1 class="pin-headline" id="dynamic-headline">Bold Lora Headline Max Six Words</h1>
+            <p class="pin-subhead" id="dynamic-subhead">Clear subhead context that makes users want to click and read the full post.</p>
+        </div>
+
+        <!-- Logo -->
+        <div class="pin-logo-container">
+            <img src="../assets/images/zuga-logo.webp" alt="Zuga Fitness" class="pin-logo">
+        </div>
+    </div>
+</body>
+</html>
