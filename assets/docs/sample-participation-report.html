@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Sample Participation Report | Zuga Fitness</title>
+    <style>
+        :root {
+            --brand-primary: #1F2937; /* Dark Gray */
+            --brand-secondary: #4B5563; /* Medium Gray */
+            --brand-accent: #9CA3AF; /* Light Gray */
+            --brand-bg: #F3F4F6;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffebee;
+            color: #c62828;
+            padding: 5px 20px;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: 1px solid #c62828;
+            z-index: 10;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--brand-primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-zuga {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-agency {
+            border: 1px dashed var(--brand-secondary);
+            padding: 10px 20px;
+            color: var(--brand-secondary);
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .report-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .report-title h1 {
+            margin: 0;
+            color: var(--brand-primary);
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .report-title p {
+            margin: 5px 0 0;
+            color: var(--brand-secondary);
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-left: 4px solid var(--brand-primary);
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--brand-primary);
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .stat-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .stat-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--brand-primary);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--brand-secondary);
+            text-transform: uppercase;
+        }
+
+        .quotes {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .quote-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            font-style: italic;
+            color: #555;
+        }
+
+        .quote-item::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -5px;
+            font-size: 24px;
+            color: var(--brand-accent);
+            font-family: Georgia, serif;
+        }
+
+        .quote-author {
+            display: block;
+            font-size: 12px;
+            color: var(--brand-secondary);
+            margin-top: 5px;
+            font-style: normal;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--brand-secondary);
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+                max-width: 100%;
+            }
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                border: 1px solid #ddd;
+                border-left: 4px solid #000;
+            }
+            .watermark {
+                border-color: #000;
+                color: #000;
+            }
+            .stat-value, .section-title {
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="watermark">SAMPLE FORMAT - ILLUSTRATIVE DATA</div>
+
+    <div class="header">
+        <img src="/assets/images/zuga-logo.webp" alt="Zuga Fitness" class="logo-zuga">
+        <div class="logo-agency">[AGENCY LOGO]</div>
+    </div>
+
+    <div class="report-title">
+        <h1>Post-Session Participation Report</h1>
+        <p><strong>Client:</strong> Acme Corp India | <strong>Date:</strong> October 12, 2023 | <strong>Session:</strong> Desk Yoga & Posture Clinic</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Attendance</h2>
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-value">50</div>
+                <div class="stat-label">Registered</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">42</div>
+                <div class="stat-label">Attended</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">84%</div>
+                <div class="stat-label">Turnout Rate</div>
+            </div>
+        </div>
+        <p style="font-size: 14px; color: #666; margin: 0;"><strong>Note:</strong> Attendance exceeded typical 60% industry benchmark for voluntary afternoon sessions.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Energy & Engagement</h2>
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-value">9.2 / 10</div>
+                <div class="stat-label">Average Session Rating</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Completed Full 45 Mins</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Verbatim Feedback</h2>
+        <ul class="quotes">
+            <li class="quote-item">
+                "I've had lower back pain all week from sitting at my desk, and the stretches we did today completely relieved it. I feel so much lighter!"
+                <span class="quote-author">- Participant (Anonymous)</span>
+            </li>
+            <li class="quote-item">
+                "The instructor was fantastic. She made sure everyone was doing the poses correctly, even the beginners. Really engaging session."
+                <span class="quote-author">- Participant (Anonymous)</span>
+            </li>
+            <li class="quote-item">
+                "Loved the focus on neck and shoulder tension. This is exactly what we need during crunch time in the middle of the quarter."
+                <span class="quote-author">- Participant (Anonymous)</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Instructor Notes</h2>
+        <p style="margin: 0; font-size: 14px;"><strong>Room Setup for Next Session:</strong> Please ensure the projector screen in Conference Room B is raised before the session starts to allow full visibility of the instructor from the back rows.</p>
+    </div>
+
+    <div class="footer">
+        Confidential Report - Generated by Zuga Fitness for Partner Agency Review.
+    </div>
+
+</div>
+
+</body>
+</html>
