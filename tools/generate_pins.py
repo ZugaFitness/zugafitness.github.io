@@ -6,6 +6,13 @@ import json
 # Define the data for the 5 pins
 PINS = [
     {
+        "slug": "zumba-vs-gym-vs-yoga-weight-loss",
+        "badge": "health",
+        "headline": "Zumba vs Gym Cardio vs Yoga",
+        "subhead": "Which Actually Burns More Fat?",
+        "bg_image": "../assets/images/online-zumba-classes-at-home.webp"
+    },
+    {
         "slug": "online-yoga-classes-for-pcod",
         "badge": "Women's Health",
         "headline": "Manage PCOD Naturally with Yoga",
