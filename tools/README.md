@@ -44,3 +44,12 @@ Usage: Run these via `python <script_name>.py` to regenerate the DOM state if te
   python tools/generate_distribution_pack.py Blog/is-zumba-good-for-weight-loss.html
   ```
 - **Dependencies**: Uses `sys`, `os`, `re`, `bs4` (BeautifulSoup).
+
+### `validate_schema.py`
+- **Purpose**: Systemic check to validate JSON-LD schema blocks across all HTML files. Checks for valid JSON syntax and verifies required fields for `BlogPosting` and `FAQPage` schemas.
+- **CLI Usage**: Run without arguments to validate all HTML files in the repository.
+- **Example Invocation**:
+  ```bash
+  python tools/validate_schema.py
+  ```
+- **Dependencies**: Uses `json`, `glob`, `bs4` (BeautifulSoup).
