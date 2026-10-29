@@ -23,7 +23,7 @@
 | https://zugafitness.in/Blog/hatha-vs-vinyasa-yoga.html | [PARTNER: paste Medium story URL] | |
 | https://zugafitness.in/Blog/hire-yoga-trainer-yoga-day-bangalore.html | [PARTNER: paste Medium story URL] | |
 | https://zugafitness.in/Blog/how-chennai-professionals-using-online-yoga-beat-traffic-heat.html | [PARTNER: paste Medium story URL] | |
-| https://zugafitness.in/Blog/how-long-yoga-takes-to-transform-your-body.html | [PARTNER: paste Medium story URL] | |
+| https://zugafitness.in/Blog/yoga-results-timeline-how-long-to-see-changes.html | [PARTNER: paste Medium story URL] | |
 | https://zugafitness.in/Blog/how-to-create-perfect-home-yoga-space.html | [PARTNER: paste Medium story URL] | |
 | https://zugafitness.in/Blog/is-zumba-good-for-weight-loss.html | [PARTNER: paste Medium story URL] | |
 | https://zugafitness.in/Blog/kids-yoga-benefits.html | [PARTNER: paste Medium story URL] | |
