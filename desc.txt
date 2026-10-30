@@ -1,0 +1,20 @@
+SEO Sweep: C-Section rewrite, Batch 3 CTR, Pillar absorptions
+
+| Validation Gate | Expected | Actual (Grep Count) | Status |
+|---|---|---|---|
+| Old Batch-3 Titles Absent | 0 | 0 | PASS |
+| New Batch-3 Titles Present | >0 | 9 | PASS |
+| Verbatim Takeaways & FAQs | >0 | 2 | PASS |
+| Reciprocal Cross-links Present | >0 | 2 | PASS |
+| YMYL Absence | 0 | 0 | PASS |
+| One H1 per Touched Page | 1 | 1 | PASS |
+| JSON-LD Schema Validity | Zero failures | Zero failures | PASS |
+
+### POST-MERGE PARTNER ACTIONS
+GSC Request Indexing for the following 6 URLs:
+1. https://zugafitness.in/Blog/yoga-after-c-section-recovery-online.html
+2. https://zugafitness.in/Blog/is-zumba-good-for-weight-loss.html
+3. https://zugafitness.in/Blog/corporate-yoga-classes-bangalore.html
+4. https://zugafitness.in/Blog/live-online-yoga-class-london-timezone.html
+5. https://zugafitness.in/Blog/zumba-vs-gym-vs-yoga-weight-loss.html
+6. https://zugafitness.in/Blog/yoga-results-timeline-how-long-to-see-changes.html
