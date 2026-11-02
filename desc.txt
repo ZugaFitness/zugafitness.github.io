@@ -1,3 +1,21 @@
+## PR2 Gates and Validations
+
+| Check | Expected | Actual | Status |
+|---|---|---|---|
+| Indexable vs Unique Loc | 147 | 147 | PASS |
+| Sitemap deduplication | Total = Unique | Total = Unique | PASS |
+| Canonical matches file path | 0 failures | 0 failures | PASS |
+| Broken internal links | 0 failures | 0 failures | PASS |
+| Broken image src | 0 failures | 0 failures | PASS |
+| Root stubs hardened | canonical + noindex | canonical + noindex | PASS |
+| thank-you.html absent | yes | yes | PASS |
+| lastmod on added URLs | 2026-11-01 | 2026-11-01 | PASS |
+| Rewrite-method diff hygiene | verified idempotent | verified idempotent | PASS |
+| url-freeze vs content-inventory set diff | empty | empty | PASS |
+| docs/template-reference-base.html schema | zero schema | zero schema | PASS |
+| docs/template-reference-blog.html schema | tokenized BlogPosting | tokenized BlogPosting | PASS |
+| docs/template-reference count of MAIN CONTENT PLACEHOLDER | exactly 1 | exactly 1 | PASS |
+
 SEO Sweep: C-Section rewrite, Batch 3 CTR, Pillar absorptions
 
 | Validation Gate | Expected | Actual (Grep Count) | Status |
