@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://zugafitness.in/sitemap.xml
+Disallow: /live_html/
