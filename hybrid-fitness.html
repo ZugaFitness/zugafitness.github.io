@@ -206,34 +206,6 @@ body.loaded .lm:nth-child(2) span{transform:none;transition-delay:.22s}
 .orb-hint{margin-top:1.4rem;text-align:center;font-size:.85rem;color:var(--soft)}
 .orb-hint svg{width:14px;height:14px;vertical-align:-2px;margin-right:.3rem;color:var(--clay)}
 
-/* ============ Marquee ============ */
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding:1.15rem 0}
-.mq-track{display:flex;width:max-content;animation:mq 30s linear infinite}
-.marquee:hover .mq-track{animation-play-state:paused}
-@keyframes mq{to{transform:translateX(-50%)}}
-.mq-group{display:flex;align-items:center;gap:2.8rem;padding-right:2.8rem}
-.mq-group span{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.9rem);white-space:nowrap;letter-spacing:-.01em}
-.mq-group span.it{font-style:italic;color:var(--clay);font-weight:400}
-.mq-star{width:15px;height:15px;color:var(--clay);flex:none}
-
-/* ============ Philosophy ============ */
-.philo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem);align-items:start}
-.pull{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.28;letter-spacing:-.01em}
-.pull em{color:var(--clay)}
-.pull-by{margin-top:1.6rem;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
-.philo-copy p{color:var(--soft);margin-bottom:1.3rem;max-width:52ch}
-.philo-copy p strong{color:var(--ink);font-weight:600}
-.sig{display:flex;align-items:center;gap:.9rem;margin-top:2rem}
-.sig img{width:46px;height:46px;border-radius:50%}
-.sig-name{font-family:var(--serif);font-size:1.05rem}
-.sig-role{font-size:.78rem;color:var(--soft)}
-.stats{display:flex;flex-wrap:wrap;margin-top:clamp(3rem,6vw,4.5rem);border-top:1px solid var(--line);padding-top:2.2rem}
-.stat{flex:1;min-width:190px;padding:0 2rem 1rem 0}
-.stat + .stat{border-left:1px solid var(--line);padding-left:2rem}
-.stat b{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,3.8vw,3rem);letter-spacing:-.02em}
-.stat b i{font-style:normal;color:var(--clay)}
-.stat span{display:block;font-size:.85rem;color:var(--soft);margin-top:.2rem}
-
 /* ============ Schedule ============ */
 #schedule{background:var(--paper2);border-block:1px solid var(--line)}
 .sched-note{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--soft);margin-top:1.6rem}
@@ -779,7 +751,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <p class="foot-h">Studio</p>
         <ul class="foot-links">
-          <li><a href="#practice">Our approach</a></li>
           <li><a href="#schedule">Weekly schedule</a></li>
           <li><a href="#teachers">Teachers</a></li>
           <li><a href="#membership">Membership</a></li>
@@ -1134,17 +1105,6 @@ $('#burger').addEventListener('click', () => { mmenu.classList.add('open'); lock
 $('#mmenuClose').addEventListener('click', () => { mmenu.classList.remove('open'); lock(false); });
 $$('.mmenu-links a, .mmenu-foot a').forEach(a =>
   a.addEventListener('click', () => { mmenu.classList.remove('open'); lock(false); }));
-
-/* ================= Marquee ================= */
-(function(){
-  const words = ['Yoga','Dance Fitness','Strength','Conditioning','Mobility','Cardio','Breathwork','Endurance'];
-  const star = '<svg class="mq-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1"/></svg>';
-  const group = '<div class="mq-group">' +
-    words.map((w, i) => `<span class="${i % 2 ? 'it' : ''}">${w}</span>${star}`).join('') + '</div>';
-  $('#mqTrack').innerHTML = group + group;
-})();
-
-
 
 /* Ten-pack CTA */
 $$('[data-pack]').forEach(b => b.addEventListener('click', () => {
