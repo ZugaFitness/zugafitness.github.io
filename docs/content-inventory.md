@@ -141,7 +141,9 @@
 | /Online-Yoga-Classes.html | money | - | indexable | y | 0 |
 | /Online-kids-Yoga-Classes.html | other | - | indexable | y | 0 |
 | /Virtual-Yoga-Classes-For-senior.html | other | - | indexable | y | 0 |
+| /weight-loss-challenge.html | money | - | indexable | y | 0 |
 | /Virtual-Yoga-Classes.html | money | - | indexable | y | 0 |
+| /hybrid-fitness.html | money | - | indexable | y | 0 |
 | /Yoga-Classes-In-Bangalore/ | core | - | indexable | y | 0 |
 | /Yoga-Classes-In-Bangalore/Apartment-Yoga.html | other | - | indexable | y | 0 |
 | /Yoga-Classes-In-Bangalore/Apartment-Zumba.html | other | - | indexable | y | 0 |
