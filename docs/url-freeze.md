@@ -131,6 +131,7 @@ Base Domain: https://zugafitness.in
 | /Online-kids-Yoga-Classes.html | indexable | y | y |  |
 | /Virtual-Yoga-Classes-For-senior.html | indexable | y | y |  |
 | /Virtual-Yoga-Classes.html | indexable | y | y |  |
+| /hybrid-fitness.html | indexable | y | y |  |
 | /Yoga-Classes-In-Bangalore/ | indexable | y | y |  |
 | /Yoga-Classes-In-Bangalore/Apartment-Yoga.html | indexable | y | y |  |
 | /Yoga-Classes-In-Bangalore/Apartment-Zumba.html | indexable | y | y |  |
