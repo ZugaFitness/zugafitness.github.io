@@ -80,9 +80,7 @@
     </url>
     <url>
         <loc>https://zugafitness.in/Online-Pranayama-Classes.html</loc>
-        <lastmod>
-   2026-06-25
-  </lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>
    monthly
   </changefreq>
@@ -1107,7 +1105,7 @@
     </url>
     <url>
         <loc>https://zugafitness.in/Blog/yoga-and-strength-training-for-pcod.html</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -1240,7 +1238,7 @@
     </url>
     <url>
         <loc>https://zugafitness.in/Blog/zumba-vs-gym-vs-yoga-weight-loss.html</loc>
-        <lastmod>2026-10-30</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -1258,7 +1256,7 @@
     </url>
     <url>
         <loc>https://zugafitness.in/Blog/yoga-for-pcos-safe-poses-stress-hormones.html</loc>
-        <lastmod>2026-10-28</lastmod>
+        <lastmod>2026-11-01</lastmod>
     </url>
     <url>
         <loc>https://zugafitness.in/hybrid-fitness.html</loc>
@@ -1268,4 +1266,23 @@
         <loc>https://zugafitness.in/global-personal-training-mind-body.html</loc>
         <lastmod>2026-11-05</lastmod>
     </url>
+
+  <url>
+    <loc>https://zugafitness.in/privacy-policy.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/terms-of-service.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zugafitness.in/refund-policy.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
