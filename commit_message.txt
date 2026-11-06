@@ -1,0 +1,9 @@
+PR1 fixes: Claims, H1 demotions, asides, legal pages, footer trust block and string normalization
+
+- Corrected claim texts in Blog cards and articles based on verbatim texts
+- Demoted redundant H1 tags to H2 across affected pages (Pranayama, Trainer Bench, Zumba vs Gym)
+- Inserted two verbatim medical asides in specific locations
+- Created privacy-policy.html, terms-of-service.html, and refund-policy.html with the verified schemas
+- Added the 3 new legal pages and touched pages correctly to the sitemap.xml
+- Safely injected footer trust block into all allowed HTML files
+- Cleaned string normalizations properly utilizing regex constraints to preserve SVG properties and Malinnath's correct hours.
