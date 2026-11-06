@@ -145,6 +145,84 @@ body::after{content:"";position:fixed;inset:0;z-index:200;pointer-events:none;op
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
 .reveal.in{opacity:1;transform:none}
 
+/* ============ Marquee ============ */
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper2);
+  border-block: 1px solid var(--line);
+  padding: 1.5rem 0;
+  white-space: nowrap;
+  display: flex;
+}
+.marquee {
+  display: inline-flex;
+  gap: 2rem;
+  animation: scroll-marquee 20s linear infinite;
+}
+.marquee span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--clay);
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+}
+.marquee span::after {
+  content: "*";
+  color: var(--ink);
+  font-style: normal;
+  display: inline-block;
+  transform: translateY(6px);
+}
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 2rem)); }
+}
+
+/* ============ The Practice Quotes ============ */
+#practice {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.practice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.p-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  line-height: 1.4;
+  color: var(--ink);
+  position: relative;
+  padding: 0 1rem;
+}
+.p-quote::before {
+  content: "“";
+  display: block;
+  font-family: var(--serif);
+  font-size: 4rem;
+  color: var(--clay-l);
+  line-height: 0.5;
+  margin-bottom: 0.5rem;
+}
+.p-author {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+@media (max-width: 768px) {
+  .practice-grid { grid-template-columns: 1fr; gap: 4rem; }
+}
+
 /* ============ Announcement bar ============ */
 .annc{background:var(--ink);color:var(--paper);text-align:center;padding:.6rem 3rem;font-size:.83rem;position:relative;z-index:51}
 .annc a{color:var(--clay-l);font-weight:700;text-decoration:underline;text-underline-offset:3px}
@@ -484,7 +562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-solid btn-sm" href="#signup">Start Free Trial <i data-lucide="arrow-right"></i></a>
+      <a class="btn btn-solid btn-sm" href="#membership">Join Now <i data-lucide="arrow-right"></i></a>
       <button class="burger" id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
     </div>
   </div>
@@ -503,7 +581,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#faq" style="transition-delay:.26s"><em>FAQ</em></a>
   </nav>
   <div class="mmenu-foot">
-    <a class="btn btn-solid" href="#signup">Start Free Trial <i data-lucide="arrow-right"></i></a>
+    <a class="btn btn-solid" href="#membership">Join Now <i data-lucide="arrow-right"></i></a>
   </div>
 </div>
 
@@ -520,7 +598,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </h1>
         <p class="hero-sub">The Zuga Hybrid Fitness Method. Daily live online sessions of Strength & Conditioning, Dance Fitness, Yoga, and Pranayama designed to keep your body guessing and your energy high.</p>
         <div class="hero-ctas">
-          <a class="btn btn-solid" href="#signup">Start Your Free Trial <i data-lucide="arrow-right"></i></a>
+          <a class="btn btn-solid" href="#membership">Join Now <i data-lucide="arrow-right"></i></a>
           <a class="link-arrow" href="#schedule">View This Week's Schedule <i data-lucide="arrow-down"></i></a>
         </div>
         <a class="chip" href="#schedule"><span class="dot"></span><span id="nextInfo">Loading next class…</span></a>
@@ -538,6 +616,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
+
+  <!-- Marquee Banner -->
+  <div class="marquee-wrap reveal" style="padding: 2rem 0; background: var(--paper);">
+    <div class="marquee" aria-hidden="true">
+      <span>pranayama</span>
+      <span>dance fitness</span>
+      <span>strength &amp; conditioning</span>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <span>pranayama</span>
+      <span>dance fitness</span>
+      <span>strength &amp; conditioning</span>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <span>pranayama</span>
+      <span>dance fitness</span>
+      <span>strength &amp; conditioning</span>
+    </div>
+  </div>
 
   <!-- Schedule -->
   <section class="sec" id="schedule">
@@ -569,6 +666,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="float-img" id="floatImg" aria-hidden="true">
     <div class="fi-card tint tint-c"><img id="fiImg" alt=""></div>
   </div>
+
+  <!-- The Practice / Quotes -->
+  <section class="sec" id="practice" style="padding-top: 5rem;">
+    <div class="wrap reveal">
+      <p class="eyebrow" style="justify-content: center;">The Practice</p>
+      <h2 class="title">Movement that <em>Matters.</em></h2>
+      <div class="practice-grid">
+        <div class="p-quote">
+          Strength isn't built in a day, but in the small choices we make repeatedly. Show up, tune in, and watch yourself transform from the inside out.
+          <span class="p-author">— Mallinath</span>
+        </div>
+        <div class="p-quote">
+          Fitness shouldn't feel like a chore. Find the joy in movement, let go of perfection, and let the rhythm carry you to your strongest self.
+          <span class="p-author">— Anusha</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Teachers -->
   <section class="sec" id="teachers">
@@ -621,14 +736,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <li><i data-lucide="check"></i><span><strong>Cancel anytime</strong> — two clicks, no guilt-trip screens.</span></li>
           </ul>
-          <a class="btn btn-solid" href="#signup">Start Your Free Trial <i data-lucide="arrow-right"></i></a>
+          <a class="btn btn-solid" href="#membership">Join Now <i data-lucide="arrow-right"></i></a>
         </div>
         <div class="mem-side">
           <div class="opt">
             <h4>Drop-In Class</h4>
             <p>Join any single live class online.</p>
             <div class="opt-foot">
-              <span class="opt-price">₹499 <i>(or equivalent USD)</i></span>
+              <span class="opt-price">₹249</span>
               <a class="btn btn-ghost btn-sm" href="#schedule">Book a class</a>
             </div>
           </div>
@@ -683,26 +798,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section class="sec cta" id="signup">
-    <div class="wrap reveal">
-      <p class="eyebrow">Free for seven days</p>
-      <h2>Begin <em>where you are.</em></h2>
-      <p class="cta-sub">Seven days of unlimited live classes. No card required, no app to install — just a link and a mat-sized patch of floor.</p>
-      <form class="cta-form" id="suForm" novalidate>
-        <input type="email" id="suEmail" placeholder="you@example.com" autocomplete="email" aria-label="Email address">
-        <button class="btn btn-clay" type="submit">Claim my week <i data-lucide="arrow-right"></i></button>
-      </form>
-      <p class="form-err" id="suErr"></p>
-      <div class="cta-done" id="suDone">
-        <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-        <p>You're in. Check your inbox for your first class.</p>
-      </div>
-      <p class="cta-micro">By continuing you agree to our <a href="#privacy" style="text-decoration: underline;" onclick="showLegal('privacy', event)">Privacy Policy</a>, <a href="#terms" style="text-decoration: underline;" onclick="showLegal('terms', event)">Terms of Service</a>, and <a href="#refund" style="text-decoration: underline;" onclick="showLegal('refund', event)">Refund Policy</a>.</p>
-    </div>
-  </section>
-
 
   <!-- Contact Form Section -->
   <section class="sec" id="contact" style="background: var(--card);">
@@ -1148,32 +1243,6 @@ $$('.faq-item').forEach(item => {
   });
 });
 
-/* ================= Signup form ================= */
-$('#suForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const email = $('#suEmail').value.trim();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-    $('#suErr').textContent = 'That email doesn\u2019t look quite right — mind checking it?';
-    $('#suEmail').focus();
-    return;
-  }
-  $('#suErr').textContent = '';
-  const message = `Hi Zuga! I'd like to claim my free week for Hybrid Fitness. My email is: ${email}`;
-  const waUrl = `https://wa.me/919844607121?text=${encodeURIComponent(message)}`;
-
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'whatsapp_lead', {
-      'event_category': 'engagement',
-      'event_label': 'hybrid_fitness_trial'
-    });
-  }
-
-  window.open(waUrl, '_blank', 'noopener,noreferrer');
-
-  $('#suForm').style.display = 'none';
-  $('#suDone').classList.add('show');
-});
-
 /* Global escape hatch */
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
@@ -1202,6 +1271,7 @@ $('#tzSelect').addEventListener('change', (e) => {
   }
   renderSchedule();
   bindSchedule();
+  $$('#schedList .reveal').forEach(el => io.observe(el));
 });
 
 
