@@ -1,3 +1,4 @@
+SUPERSEDED - canonical now zumba-vs-gym-vs-yoga-weight-loss.html
 # Distribution Pack for Is Zumba Good for Weight Loss? A Trainer's Honest Calorie Math
 
 ## 1. LinkedIn Article Version
