@@ -169,7 +169,7 @@ Base Domain: https://zugafitness.in
 | /live_html/usa.html | utility-noindex | n | n | shadow duplicate - retire at migration |
 | /online-yoga-personal-training.html | indexable | y | y |  |
 | /personal-training-consultation.html | indexable | y | y |  |
-| /pricing.html | redirect-stub | n | y | convert to a real 301 via _redirects at the February Cloudflare cutover |
+| /pricing.html | indexable | y | y |  |
 | /seo/pinterest-pin-template.html | indexable | n | n |  |
 | /thank-you.html | utility-noindex | y | y | form or success page |
 | /trainer-bench.html | indexable | y | y |  |
