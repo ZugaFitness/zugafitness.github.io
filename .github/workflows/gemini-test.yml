@@ -1,0 +1,39 @@
+
+name: Gemini CLI Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gemini:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Gemini CLI
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          prompt: |
+            You are the technical development assistant
+            for Zuga Fitness.
+
+            Repository: ZugaFitness/zugafitness.github.io
+
+            Inspect the repository and provide:
+
+            1. Website architecture overview.
+            2. Important folders and files.
+            3. Technical SEO implementation overview.
+            4. Existing development and deployment workflows.
+            5. Five highest-priority improvements.
+
+            Do not modify, create or delete any files.
+            Do not commit or push changes.
+
+            Provide a concise technical report.
