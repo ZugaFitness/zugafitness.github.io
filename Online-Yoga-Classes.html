@@ -975,6 +975,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="_subject" value="🧘 New Group Class Booking — Zuga Fitness" />
         <input type="hidden" name="_next" value="https://zugafitness.in/thank-you.html" />
+        <input type="hidden" name="service_enquired" value="Online Yoga Classes" />
 
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -1213,7 +1214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
 
         if (response.ok) {
-          form.querySelectorAll('.form-group, button, h2').forEach(el => el.style.display = 'none');
+          form.querySelectorAll('.form-group, button').forEach(el => el.style.display = 'none');
           if (successBox) successBox.style.display = 'block';
           setTimeout(function() {
             window.location.href = '/thank-you.html';
