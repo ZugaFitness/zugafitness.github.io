@@ -73,6 +73,7 @@ Base Domain: https://zugafitness.in
 | /Blog/sleep-yoga-poses.html | indexable | y | y |  |
 | /Blog/truth-about-online-yoga-myths-vs-reality.html | indexable | y | y |  |
 | /Blog/virtual-fitness-corporate-yoga-dubai.html | indexable | y | y |  |
+| /Blog/what-is-hybrid-fitness-four-disciplines-one-plan.html | indexable | y | y | new hybrid fitness pillar post |
 | /Blog/when-to-start-yoga-after-childbirth.html | redirect-stub | n | n | preserve redirect semantics |
 | /Blog/why-90-days-magic-number-weight-loss.html | indexable | y | y |  |
 | /Blog/why-august-1st-perfect-day-start-weight-loss-transformation.html | indexable | y | y |  |
@@ -169,7 +170,7 @@ Base Domain: https://zugafitness.in
 | /live_html/usa.html | utility-noindex | n | n | shadow duplicate - retire at migration |
 | /online-yoga-personal-training.html | indexable | y | y |  |
 | /personal-training-consultation.html | indexable | y | y |  |
-| /pricing.html | indexable | y | y |  |
+| /pricing.html | redirect-stub | n | n | meta-refresh to /hybrid-fitness.html#pricing; use a 301 redirect at the edge |
 | /seo/pinterest-pin-template.html | indexable | n | n |  |
 | /thank-you.html | utility-noindex | y | y | form or success page |
 | /trainer-bench.html | indexable | y | y |  |
